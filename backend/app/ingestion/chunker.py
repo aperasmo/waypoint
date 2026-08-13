@@ -102,12 +102,15 @@ def split_text(text: str, max_chars: int = MAX_CHARS, overlap: int = OVERLAP_CHA
     if len(text) <= max_chars:
         return [text]
 
-    paragraphs = [p for p in re.split(r"\n\s*\n", text) if p.strip()]
+    # The HTML conversion emits one line per element and no blank lines, so
+    # a line is the only boundary available. Blank-line splitting was tried
+    # first and silently never fired.
+    paragraphs = [p for p in text.split("\n") if p.strip()]
     pieces: list[str] = []
     current = ""
 
     for para in paragraphs:
-        candidate = f"{current}\n\n{para}" if current else para
+        candidate = f"{current}\n{para}" if current else para
         if len(candidate) <= max_chars:
             current = candidate
             continue
@@ -115,7 +118,7 @@ def split_text(text: str, max_chars: int = MAX_CHARS, overlap: int = OVERLAP_CHA
         if current:
             pieces.append(current)
             tail = current[-overlap:] if overlap else ""
-            current = f"{tail}\n\n{para}" if tail else para
+            current = f"{tail}\n{para}" if tail else para
         else:
             current = para
 
