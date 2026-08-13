@@ -18,6 +18,10 @@ class Settings(BaseSettings):
 
     app_name: str = "Waypoint"
     environment: str = "development"
+    openai_api_key: str
+    embedding_model: str = "text-embedding-3-small"
+    embedding_dim: int = 1536
+    embedding_batch_size: int = 100    
 
     # Required. No default, so a missing value fails at startup, not mid-request.
     database_url: str

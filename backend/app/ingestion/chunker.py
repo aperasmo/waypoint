@@ -8,6 +8,7 @@ from __future__ import annotations
 import json
 import re
 from dataclasses import dataclass, field
+from datetime import date, datetime
 from pathlib import Path
 
 import frontmatter
@@ -34,7 +35,7 @@ class Chunk:
     section_code: str
     title: str
     source_url: str
-    effective_date: str | None
+    effective_date: date | None
     content_hash: str | None
     chunk_index: int
     chunk_total: int
@@ -55,6 +56,7 @@ class ChunkReport:
     files_missing: list[str] = field(default_factory=list)
     files_split: list[str] = field(default_factory=list)
     chars_stripped: dict[str, int] = field(default_factory=dict)
+    dates_unparsed: dict[str, str] = field(default_factory=dict)
 
 
 def strip_navigation(body: str) -> str:
@@ -127,6 +129,19 @@ def split_text(text: str, max_chars: int = MAX_CHARS, overlap: int = OVERLAP_CHA
 
     return pieces
 
+def parse_effective_date(raw: str | None) -> date | None:
+    """Parse the manifest's day-first date string.
+
+    Returns None rather than raising. A section with an unreadable date is
+    still worth serving; losing the whole page over a formatting quirk is
+    the worse outcome. Failures are recorded in the report instead.
+    """
+    if not raw:
+        return None
+    try:
+        return datetime.strptime(raw.strip(), "%d/%m/%Y").date()
+    except (ValueError, AttributeError):
+        return None
 
 def chunk_file(path: Path, entry: dict, report: ChunkReport) -> list[Chunk]:
     post = frontmatter.load(path)
@@ -142,7 +157,10 @@ def chunk_file(path: Path, entry: dict, report: ChunkReport) -> list[Chunk]:
     if not body:
         report.files_skipped_empty.append(entry["section_code"])
         return []
-
+    raw_date = entry.get("effective_date")
+    effective = parse_effective_date(raw_date)
+    if raw_date and effective is None:
+        report.dates_unparsed[entry["section_code"]] = str(raw_date)
     pieces = split_text(body)
     if len(pieces) > 1:
         report.files_split.append(entry["section_code"])
@@ -152,7 +170,7 @@ def chunk_file(path: Path, entry: dict, report: ChunkReport) -> list[Chunk]:
             section_code=entry["section_code"],
             title=title,
             source_url=entry.get("source_url", ""),
-            effective_date=entry.get("effective_date"),
+            effective_date=effective,
             content_hash=entry.get("content_hash"),
             chunk_index=i,
             chunk_total=len(pieces),
