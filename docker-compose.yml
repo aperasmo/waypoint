@@ -1,0 +1,22 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: waypoint-db
+    environment:
+      POSTGRES_USER: waypoint
+      # Local development only. Production credentials come from the host
+      # environment, never from this file.
+      POSTGRES_PASSWORD: waypoint123
+      POSTGRES_DB: waypoint
+    ports:
+      - "5434:5432"
+    volumes:
+      - waypoint_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U waypoint -d waypoint"]
+      interval: 5s
+      timeout: 10s
+      retries: 10
+
+volumes:
+  waypoint_pgdata:
