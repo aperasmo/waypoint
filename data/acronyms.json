@@ -1,0 +1,69 @@
+{
+  "_note": "Acronyms users say that the corpus does not use, or uses rarely. Counts measured against the ingested corpus on 14/08/2026 and should be re-checked when coverage expands. mode 'replace' drops the acronym; 'append' keeps it alongside the expansion. Acronyms already common in the corpus (ANZSCO 12, ESOL 9, IELTS 5, PTE 5, TOEFL 5, INZ 45) are deliberately absent: query and corpus already share that vocabulary, so expanding them would move the query away from matching text.",
+  "acronyms": [
+    {
+      "term": "PSWV",
+      "expansion": "post-study work visa",
+      "mode": "replace",
+      "corpus_count": 0,
+      "note": "Confirmed failure. Retrieval returned the correct section at rank 4 with the acronym, rank 1 with it expanded."
+    },
+    {
+      "term": "SMC",
+      "expansion": "Skilled Migrant Category",
+      "mode": "replace",
+      "corpus_count": 0
+    },
+    {
+      "term": "SV",
+      "expansion": "student visa",
+      "mode": "replace",
+      "corpus_count": 0
+    },
+    {
+      "term": "RV",
+      "expansion": "resident visa",
+      "mode": "replace",
+      "corpus_count": 0
+    },
+    {
+      "term": "PR",
+      "expansion": "permanent resident visa",
+      "mode": "replace",
+      "corpus_count": 0,
+      "note": "Split from RV deliberately. PR is taken as permanent residence, RV as residence generally. Users often say PR loosely for both, so this mapping may retrieve narrower content than some people intend."
+    },
+    {
+      "term": "RSE",
+      "expansion": "Recognised Seasonal Employer",
+      "mode": "replace",
+      "corpus_count": 0,
+      "note": "Corpus absence measured; user usage assumed, not observed."
+    },
+    {
+      "term": "WTR",
+      "expansion": "Work to Residence",
+      "mode": "replace",
+      "corpus_count": 0,
+      "note": "Corpus absence measured; user usage assumed, not observed."
+    },
+    {
+      "term": "AEWV",
+      "expansion": "accredited employer work visa",
+      "mode": "append",
+      "corpus_count": 2
+    },
+    {
+      "term": "NZQF",
+      "expansion": "New Zealand Qualifications Framework",
+      "mode": "append",
+      "corpus_count": 2
+    },
+    {
+      "term": "IRD",
+      "expansion": "Inland Revenue",
+      "mode": "append",
+      "corpus_count": 2
+    }
+  ]
+}

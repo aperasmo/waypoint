@@ -29,11 +29,14 @@ class Settings(BaseSettings):
     # Corpus lives outside backend/ because the scraper and the API both read it.
     corpus_dir: Path = REPO_ROOT / "data"
     manifest_filename: str = "manifest.json"
+    acronyms_filename: str = "acronyms.json"
 
     @property
     def manifest_path(self) -> Path:
         return self.corpus_dir / self.manifest_filename
-
+    @property
+    def acronyms_path(self) -> Path:
+        return self.corpus_dir / self.acronyms_filename
 
 @lru_cache
 def get_settings() -> Settings:
