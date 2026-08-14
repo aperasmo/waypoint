@@ -1,0 +1,155 @@
+{
+  "_note": "Expected sections validated against the corpus snapshot ingested 14/08/2026 (124 sections, manifest collected 09/08/2026). A section code existing does not prove its content answers the question, and INZ revises content while section codes stay the same, so re-validate after any corpus refresh. expected_behavior is one of: answer, clarify. Only retrieval is scored today; abstention and clarification quality need ask.py and human judgment, and are deliberately not automated yet. Questions whose answers fall outside the current corpus live in docs/COVERAGE-GAPS.md, so this file measures retrieval rather than coverage.",
+  "questions": [
+    {
+      "question": "can I do uber eats while on a student visa",
+      "expected_sections": ["U13.1"],
+      "expected_behavior": "answer",
+      "note": "vocabulary gap: gig work must map to self-employment"
+    },
+    {
+      "question": "can I work 40 hours during uni holidays on my student visa",
+      "expected_sections": ["U13.15"],
+      "expected_behavior": "answer",
+      "note": "'uni holidays' must map to scheduled vacations. Verify the hours figure in this snapshot before trusting any answer built on it; the live manual may differ."
+    },
+    {
+      "question": "im doing a masters by research can I work full time all year",
+      "expected_sections": ["U13.15"],
+      "expected_behavior": "answer",
+      "note": "qualification-specific exception to the weekly limit"
+    },
+    {
+      "question": "my internship is compulsory for my degree does it count as work",
+      "expected_sections": ["U13.5"],
+      "expected_behavior": "answer",
+      "note": "'internship' must map to practical experience required by the course"
+    },
+    {
+      "question": "my parents transferred 20k into my account yesterday is that okay for student visa",
+      "expected_sections": ["U3.20"],
+      "expected_behavior": "answer",
+      "note": "funds source and availability, not just the threshold amount"
+    },
+    {
+      "question": "how much is the show money for a student visa",
+      "expected_sections": ["U3.20"],
+      "expected_behavior": "answer",
+      "note": "vocabulary gap, 'show money' vs 'sufficient funds'. Returned at rank 3 in manual testing."
+    },
+    {
+      "question": "can I switch from IT to nursing without getting a new student visa",
+      "expected_sections": ["U3.40"],
+      "expected_behavior": "answer",
+      "note": "'switch course' must map to variation of conditions"
+    },
+    {
+      "question": "do phd students need medical insurance for their student visa",
+      "expected_sections": ["U3.45"],
+      "expected_behavior": "answer",
+      "note": "exception retrieval, PhD students exempt from the general insurance condition"
+    },
+    {
+      "question": "can I wait for AIP before paying my tuition fees",
+      "expected_sections": ["U3.10"],
+      "expected_behavior": "answer",
+      "note": "AIP is deliberately absent from acronyms.json. If this fails, the list needs extending; pre-empting it would hide the signal."
+    },
+    {
+      "question": "im doing a phd in nz will my 8 year old have to pay international school fees",
+      "expected_sections": ["U8.25"],
+      "expected_behavior": "answer",
+      "note": "dependent child treatment linked to the parent's PhD student status"
+    },
+    {
+      "question": "I finished my degree 4 months ago can I still apply for PSWV",
+      "expected_sections": ["WD3.1"],
+      "expected_behavior": "answer",
+      "note": "acronym plus time window. Acronym expansion verified working."
+    },
+    {
+      "question": "can I get another post study work visa if I go back to school and study something else",
+      "expected_sections": ["WD3.1"],
+      "expected_behavior": "answer",
+      "note": "paraphrase gap around applicants previously granted a PSWV"
+    },
+    {
+      "question": "can I start my own business on a post study work visa",
+      "expected_sections": ["WD3.5"],
+      "expected_behavior": "answer",
+      "note": "contrastive with student visa self-employment rules"
+    },
+    {
+      "question": "how long is the approval for PSWV",
+      "expected_sections": ["WD3.5"],
+      "expected_behavior": "answer",
+      "note": "rank 4 before acronym expansion, rank 1 after. Regression guard for the acronym feature."
+    },
+    {
+      "question": "my PSWV is from a level 6 diploma can I work as a barista",
+      "expected_sections": ["WD3.5"],
+      "expected_behavior": "answer",
+      "note": "occupation relevance. Appendix 13 is not in the corpus, so a complete answer may be impossible even with correct retrieval."
+    },
+    {
+      "question": "im only coming to nz for 8 months do I still need a medical or chest xray",
+      "expected_sections": ["A4.25"],
+      "expected_behavior": "answer",
+      "note": "temporary entry medical and chest X-ray requirements"
+    },
+    {
+      "question": "my police clearance is 7 months old can I still use it for my visa",
+      "expected_sections": ["A5.10"],
+      "expected_behavior": "answer",
+      "note": "document validity, general six-month rule with exceptions"
+    },
+    {
+      "question": "I already have 6 points for SMC but I don't have a job offer can I apply for residency",
+      "expected_sections": ["SR3.10"],
+      "expected_behavior": "answer",
+      "note": "multi-requirement trap. SMC expansion verified in acronyms.json."
+    },
+    {
+      "question": "do I need a medical for my visa",
+      "expected_sections": ["A4.25"],
+      "expected_behavior": "clarify",
+      "note": "visa type, intended duration, age, and prior medical evidence all missing"
+    },
+    {
+      "question": "do I need a police clearance",
+      "expected_sections": ["A5.10"],
+      "expected_behavior": "answer",
+      "note": "Reclassified from clarify. A5.10 likely states the requirement plainly enough that a conditional answer beats a question back. Over-clarifying is its own failure mode. Revisit once ask.py exists and the retrieved text can be read against this."
+    },
+    {
+      "question": "is 15000 enough show money for my student visa",
+      "expected_sections": ["U3.20"],
+      "expected_behavior": "clarify",
+      "note": "sufficiency depends on programme duration and maintenance arrangements; the figure alone decides nothing"
+    },
+    {
+      "question": "can I work full time on my student visa",
+      "expected_sections": ["U13.15"],
+      "expected_behavior": "clarify",
+      "note": "depends on qualification type, visa conditions, and whether the work falls within a scheduled vacation"
+    },
+    {
+      "question": "I finished my course can I get a PSWV",
+      "expected_sections": ["WD3.1"],
+      "expected_behavior": "clarify",
+      "note": "qualification level, study duration, completion timing, visa expiry, and any prior PSWV are all unknown"
+    },
+    {
+      "question": "can I change my course without changing my visa",
+      "expected_sections": ["U3.40"],
+      "expected_behavior": "clarify",
+      "note": "depends what is changing: programme, provider, location, or qualification level"
+    },
+    {
+      "question": "I have 6 points can I apply for residence",
+      "expected_sections": ["SR3.15", "SR3.20"],
+      "expected_behavior": "clarify",
+      "note": "false-confidence trap. Points and skilled employment are separate requirements in separate sections, so retrieving only one is a partial pass worth tracking separately."
+    }
+  ]
+}
