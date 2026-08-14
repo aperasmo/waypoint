@@ -31,6 +31,13 @@ class Settings(BaseSettings):
     manifest_filename: str = "manifest.json"
     acronyms_filename: str = "acronyms.json"
 
+    answer_model: str = "gpt-5.4-mini"
+    answer_max_tokens: int = 800
+    # 'none' assumes the task is reading provided text rather than reasoning
+    # about policy. Worth re-testing against the eval set: classifying Type
+    # A/B/C is a judgment call and may want more deliberation than answering.
+    answer_reasoning_effort: str = "none"
+
     @property
     def manifest_path(self) -> Path:
         return self.corpus_dir / self.manifest_filename

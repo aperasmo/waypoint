@@ -9,6 +9,7 @@ from app.api.routes import browse
 from app.config import get_settings
 from app.db.session import dispose_engine
 
+from app.api.routes import ask, browse
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -42,7 +43,7 @@ app.add_middleware(
 )
 
 app.include_router(browse.router)
-
+app.include_router(ask.router)
 
 @app.get("/health")
 async def health() -> dict[str, str]:
