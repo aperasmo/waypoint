@@ -1,0 +1,145 @@
+{
+  "_note": "Plain-English browse taxonomy. Every group and branch below maps to section codes confirmed present in the corpus snapshot ingested 14/08/2026 (124 sections). Labels were written from actual section titles, not from an assumed structure, and branches with no content behind them were deliberately not created. This taxonomy is for human browsing only. It must NOT be used as a hard retrieval filter: a question like 'I'm on a student visa, do I need a police certificate' spans two groups, and filtering to one would break it. Re-validate after any corpus refresh, since new prefixes will not appear here automatically.",
+  "groups": [
+    {
+      "id": "study",
+      "label": "Study in New Zealand",
+      "description": "Student visa requirements, work rights while studying, and study conditions.",
+      "prefixes": ["U"],
+      "branches": [
+        {
+          "label": "Getting a student visa",
+          "prefixes": ["U2", "U3"],
+          "note": "Who needs one, offer of place, enrolment, tuition fees, funds, insurance, changing study conditions."
+        },
+        {
+          "label": "Working while you study",
+          "prefixes": ["U13"],
+          "note": "Work conditions for all students, tertiary students, and practical experience required by a course."
+        },
+        {
+          "label": "Your visa length and conditions",
+          "prefixes": ["U6"],
+          "note": "Currency, conditions, further visas, graduation, programmes over three months."
+        },
+        {
+          "label": "Study programmes and providers",
+          "prefixes": ["U5", "U7"],
+          "note": "Provider status, tertiary institutions, part-time study, second and subsequent programmes."
+        },
+        {
+          "label": "Fees and dependent children",
+          "prefixes": ["U4", "U8"],
+          "note": "Fee-paying foreign students and dependent children of student visa holders."
+        }
+      ]
+    },
+    {
+      "id": "post_study_work",
+      "label": "Work in New Zealand after studying",
+      "description": "Post-study work visa eligibility, duration, and conditions.",
+      "prefixes": ["WD"],
+      "branches": [
+        {
+          "label": "Applying for a post-study work visa",
+          "prefixes": ["WD2", "WD3"],
+          "note": "Only four sections in this group, so it is not split further."
+        }
+      ]
+    },
+    {
+      "id": "residence",
+      "label": "Get residence in New Zealand",
+      "description": "Skilled residence pathways and the general rules that apply to residence applications.",
+      "prefixes": ["SR", "R"],
+      "branches": [
+        {
+          "label": "Skilled Migrant Category",
+          "prefixes": ["SR1", "SR2", "SR3"],
+          "note": "Points, skilled employment, English language, skill categories."
+        },
+        {
+          "label": "Green List roles",
+          "prefixes": ["SR4", "SR5"],
+          "note": "Tier 1 Straight to Residence and Tier 2 Work to Residence."
+        },
+        {
+          "label": "Care workforce and transport roles",
+          "prefixes": ["SR6", "SR7"],
+          "note": "Sector-specific work to residence pathways."
+        },
+        {
+          "label": "Applying for residence",
+          "prefixes": ["R1", "R2"],
+          "note": "Who may be included, how to lodge, fees and levies."
+        },
+        {
+          "label": "How applications are assessed",
+          "prefixes": ["R5"],
+          "note": "Verification, evidence, age, approvals and declines, travel conditions, migrant levy. Includes content about applications being declined and bans on grant, which a browsing user should not meet by surprise."
+        },
+        {
+          "label": "Confirming or transferring a resident visa",
+          "prefixes": ["R7"],
+          "note": "Relevant when a passport is renewed or replaced."
+        }
+      ]
+    },
+    {
+      "id": "health_character",
+      "label": "Meet health and character requirements",
+      "description": "Medical, chest X-ray, police certificate and character requirements that may apply across different visa types.",
+      "prefixes": ["A4", "A5"],
+      "branches": [
+        {
+          "label": "Health requirements for residence",
+          "prefixes": ["A4.10", "A4.20", "A4.45", "A4.50", "A4.55", "A4.60"],
+          "note": "The corpus splits health rules by residence vs temporary entry rather than by document type, so the branches follow that split."
+        },
+        {
+          "label": "Health requirements for temporary visas",
+          "prefixes": ["A4.15", "A4.25", "A4.65"],
+          "note": "Includes the medical and chest X-ray rules for visitor, student and work visas."
+        },
+        {
+          "label": "Medical certificates and waivers",
+          "prefixes": ["A4.1", "A4.5", "A4.30", "A4.40", "A4.70", "A4.74", "A4.75"],
+          "note": "Completing certificates, waiver determination, and exceptions."
+        },
+        {
+          "label": "Police certificates and character checks",
+          "prefixes": ["A5.1", "A5.5", "A5.10", "A5.15"],
+          "note": "What is required and how character is assessed."
+        },
+        {
+          "label": "Convictions and other character issues",
+          "prefixes": ["A5.20", "A5.25", "A5.30", "A5.35", "A5.45"],
+          "note": "Split by residence vs temporary entry, same as the health group."
+        }
+      ]
+    },
+    {
+      "id": "employers",
+      "label": "Employ migrant workers",
+      "description": "Employer accreditation requirements and process. Written for employers rather than visa applicants.",
+      "prefixes": ["WA2"],
+      "branches": [
+        {
+          "label": "Accreditation requirements",
+          "prefixes": ["WA2.1", "WA2.10", "WA2.15", "WA2.20", "WA2.25", "WA2.60"],
+          "note": "Includes standard accreditation, triangular employment, franchisees, and definitions."
+        },
+        {
+          "label": "Applying and being assessed",
+          "prefixes": ["WA2.5", "WA2.30", "WA2.35", "WA2.40"],
+          "note": "Applying, subsequent applications, processing and verification."
+        },
+        {
+          "label": "After accreditation is granted",
+          "prefixes": ["WA2.45", "WA2.50", "WA2.55"],
+          "note": "Currency, ongoing verification, suspension and revocation."
+        }
+      ]
+    }
+  ]
+}
