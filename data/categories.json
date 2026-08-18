@@ -8,9 +8,9 @@
       "prefixes": ["U"],
       "branches": [
         {
-          "label": "Getting a student visa",
-          "prefixes": ["U2", "U3"],
-          "note": "Who needs one, offer of place, enrolment, tuition fees, funds, insurance, changing study conditions."
+        "label": "Student visa basics and applying",
+        "prefixes": ["U1", "U2", "U3"],
+        "note": "Student visa objectives, who needs one, offer of place, enrolment, tuition fees, funds, insurance, and changing study conditions."
         },
         {
           "label": "Working while you study",
@@ -28,9 +28,9 @@
           "note": "Provider status, tertiary institutions, part-time study, second and subsequent programmes."
         },
         {
-          "label": "Fees and dependent children",
-          "prefixes": ["U4", "U8"],
-          "note": "Fee-paying foreign students and dependent children of student visa holders."
+        "label": "Fees, partners and dependent children",
+        "prefixes": ["U4", "U8", "V3.10"],
+        "note": "Fee-paying foreign students, dependent children of student visa holders, and the indexed rule for partners and dependent children of student or work visa holders."
         }
       ]
     },
@@ -41,9 +41,9 @@
       "prefixes": ["WD"],
       "branches": [
         {
-          "label": "Applying for a post-study work visa",
-          "prefixes": ["WD2", "WD3"],
-          "note": "Only four sections in this group, so it is not split further."
+        "label": "Post-study work visa rules",
+        "prefixes": ["WD1", "WD2", "WD3"],
+        "note": "Objective, eligibility, application requirements, visa duration, and conditions."
         }
       ]
     },

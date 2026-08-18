@@ -3,7 +3,7 @@ section_code: "SR2.10"
 title: "SR2.10 English Language Requirements"
 source_url: "https://www.immigration.govt.nz/opsmanual/77808.htm"
 effective_date: "26/06/2024"
-fetched_date: "2026-08-09"
+fetched_date: "2026-08-16"
 ---
 
 SR2.10 English Language Requirements
@@ -22,20 +22,13 @@ Appendix 17
 the applicant has been awarded full or provisional registration by a New Zealand organisation authorised by law to give occupational registration, and registration involves an assessment that their overseas qualification(s) is comparable with a New Zealand qualification that is included in the List of Qualifications Exempt from Assessment.
 SR2.10.5 Acceptable English language test results for principal applicants
 The following English language test results are acceptable:
-Test
-Minimum score required
-International English Language Testing System (IELTS) - General or Academic Module
-Overall score of 6.5 or more
-Test of English as a Foreign Language Internet-based Test (TOEFL iBT)
-Overall score of 79 or more
-Pearson Test of English Academic (PTE Academic)
-Overall score of 58 or more
-B2 First (First Certificate in English) (formerly Cambridge English: First (FCE))
-or
-B2 First for Schools (First Certificate in English) (formerly Cambridge English: First (FCE) for Schools)
-Overall score of 176 or more
-Occupational English Test (OET)
-Grade C+ or higher in all four skills (Listening, Reading, Writing and Speaking)*
+| Test | Minimum score required |
+| --- | --- |
+| International English Language Testing System (IELTS) - General or Academic Module | Overall score of 6.5 or more |
+| Test of English as a Foreign Language Internet-based Test (TOEFL iBT) | Overall score of 79 or more |
+| Pearson Test of English Academic (PTE Academic) | Overall score of 58 or more |
+| B2 First (First Certificate in English) (formerly Cambridge English: First (FCE)) or B2 First for Schools (First Certificate in English) (formerly Cambridge English: First (FCE) for Schools) | Overall score of 176 or more |
+| Occupational English Test (OET) | Grade C+ or higher in all four skills (Listening, Reading, Writing and Speaking)* |
 *A score of Grade C+ or higher in all four skills is required for the OET as there is no overall grade for this test.
 SR2.10.10 English language requirements for non-principal applicants
 Partners and dependent children aged 16 and older who are included in a Skilled Residence application must:
@@ -51,76 +44,37 @@ SR2.10.15 Decision to request English language test
 Full consideration must be given to all evidence of English language ability provided before a decision to request an English language test under SR2.10.10(d) is made. If an English language test result is requested, the reason(s) behind the decision must be clearly documented and conveyed to the applicant.
 SR2.10.20 Acceptable English language test results for non-principal applicants
 The following English language test results are acceptable:
-Test
-Minimum score required
-International English Language Testing System (IELTS) - General or Academic Module
-Overall score of 5.0 or more
-Test of English as a Foreign Language Internet-based Test (TOEFL iBT)
-Overall score of 35 or more
-Pearson Test of English Academic (PTE Academic)
-Overall score of 36 or more
-B2 First (First Certificate in English) (formerly Cambridge English: First (FCE))
-or
-B2 First for Schools (First Certificate in English) (formerly Cambridge English: First (FCE) for Schools)
-Overall score of 154 or more
-Occupational English Test (OET)
-Grade C or higher in all four skills (Listening, Reading, Writing and Speaking)*
+| Test | Minimum score required |
+| --- | --- |
+| International English Language Testing System (IELTS) - General or Academic Module | Overall score of 5.0 or more |
+| Test of English as a Foreign Language Internet-based Test (TOEFL iBT) | Overall score of 35 or more |
+| Pearson Test of English Academic (PTE Academic) | Overall score of 36 or more |
+| B2 First (First Certificate in English) (formerly Cambridge English: First (FCE)) or B2 First for Schools (First Certificate in English) (formerly Cambridge English: First (FCE) for Schools) | Overall score of 154 or more |
+| Occupational English Test (OET) | Grade C or higher in all four skills (Listening, Reading, Writing and Speaking)* |
 *A score of Grade C or higher in all four skills is required for the OET as there is no overall grade for this test.
 SR2.10.25 Pre-purchase of ESOL tuition
 Instead of meeting the minimum standard of English, non-principal applicants may pre-purchase ESOL tuition. ESOL tuition must be pre-purchased from the Tertiary Education Commission (TEC) by paying the required charge to Immigration New Zealand (INZ), who collect this charge on behalf of TEC.
 Applicants must pay any ESOL charge due, sign the ESOL Agreement and return it to INZ within the time specified by INZ before a resident visa is granted.
 SR2.10.30 Amount of ESOL tuition to be pre-purchased by non-principal applicants
 The amount of ESOL tuition to be pre-purchased is determined by the applicant's English language test results according to the following table:
-Test
-Overall score
-Charge to be paid
-ESOL entitlement
-International English Language Testing System (IELTS) - General or Academic Module
-4.5 or more but less than 5.0
-NZ$1,735
-NZ$1,531.82
-Test of English as a Foreign Language Internet-based Test (TOEFL iBT)
-32 to 34
-Pearson Test of English Academic (PTE Academic)
-30 to 35
-B2 First (First Certificate in English) (formerly Cambridge English: First (FCE))
-or
-B2 First for Schools (First Certificate in English) (formerly Cambridge English: First (FCE) for Schools)
-147 to 153
-Occupational English Test (OET)
-Not applicable (see SR2.10.20)
-IELTS - General or Academic Module
-4.0 or more, but less than 4.5
-NZ$3,420
-NZ$3,063.64
-TOEFL iBT
-31
-PTE Academic
-29
-B2 First (First Certificate in English) (formerly Cambridge English: First (FCE))
-or
-B2 First for Schools (First Certificate in English) (formerly Cambridge English: First (FCE) for Schools)
-142 to 146
-OET
-Failed to achieve Grade C or higher in all four skills (Listening, Reading, Writing and Speaking), but achieved at least Grade D in all four skills*
-IELTS - General or Academic Module
-3.5 or more, but less than 4.0
-NZ$5,110
-NZ$4,600.00
-IELTS - General or Academic Module
-Less than 3.5
-NZ$6,795
-NZ$6,131.82
-TOEFL iBT
-Less than 31
-PTE Academic
-Less than 29
-B2 First (First Certificate in English) (formerly Cambridge English: First (FCE))
-or
-B2 First for Schools (First Certificate in English) (formerly Cambridge English: First (FCE) for Schools)
-Less than 142
-OET
-Failed to achieve at least Grade D in all four skills (Listening, Reading, Writing and Speaking)*
+| Test | Overall score | Charge to be paid | ESOL entitlement |
+| --- | --- | --- | --- |
+| International English Language Testing System (IELTS) - General or Academic Module | 4.5 or more but less than 5.0 | NZ$1,735 | NZ$1,531.82 |
+| Test of English as a Foreign Language Internet-based Test (TOEFL iBT) | 32 to 34 | NZ$1,735 | NZ$1,531.82 |
+| Pearson Test of English Academic (PTE Academic) | 30 to 35 | NZ$1,735 | NZ$1,531.82 |
+| B2 First (First Certificate in English) (formerly Cambridge English: First (FCE)) or B2 First for Schools (First Certificate in English) (formerly Cambridge English: First (FCE) for Schools) | 147 to 153 | NZ$1,735 | NZ$1,531.82 |
+| Occupational English Test (OET) | Not applicable (see SR2.10.20) | NZ$1,735 | NZ$1,531.82 |
+| IELTS - General or Academic Module | 4.0 or more, but less than 4.5 | NZ$3,420 | NZ$3,063.64 |
+| TOEFL iBT | 31 | NZ$3,420 | NZ$3,063.64 |
+| PTE Academic | 29 | NZ$3,420 | NZ$3,063.64 |
+| B2 First (First Certificate in English) (formerly Cambridge English: First (FCE)) or B2 First for Schools (First Certificate in English) (formerly Cambridge English: First (FCE) for Schools) | 142 to 146 | NZ$3,420 | NZ$3,063.64 |
+| OET | Failed to achieve Grade C or higher in all four skills (Listening, Reading, Writing and Speaking), but achieved at least Grade D in all four skills* | NZ$3,420 | NZ$3,063.64 |
+| IELTS - General or Academic Module | 3.5 or more, but less than 4.0 | NZ$5,110 | NZ$4,600.00 |
+| IELTS - General or Academic Module | Less than 3.5 | NZ$6,795 | NZ$6,131.82 |
+| TOEFL iBT | Less than 31 | NZ$6,795 | NZ$6,131.82 |
+| PTE Academic | Less than 29 | NZ$6,795 | NZ$6,131.82 |
+| B2 First (First Certificate in English) (formerly Cambridge English: First (FCE)) or B2 First for Schools (First Certificate in English) (formerly Cambridge English: First (FCE) for Schools) | Less than 142 | NZ$6,795 | NZ$6,131.82 |
+| OET | Failed to achieve at least Grade D in all four skills (Listening, Reading, Writing and Speaking)* | NZ$6,795 | NZ$6,131.82 |
 * A score in all four skills is required for the OET as there is no overall grade for this test.
 The charge includes the applicant's ESOL tuition entitlement, as well as the INZ and TEC administration costs.
 If an applicant has not submitted English language test results when requested, the maximum charge of NZ$6,795 applies.

@@ -32,7 +32,7 @@
       "file": "residence\\SR3.15.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/77813.htm",
       "effective_date": "09/03/2026",
-      "content_hash": "0629908466b289fa"
+      "content_hash": "3956eecaac5859d0"
     },
     {
       "section_code": "SR3.20",
@@ -48,7 +48,7 @@
       "file": "residence\\SR2.10.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/77808.htm",
       "effective_date": "26/06/2024",
-      "content_hash": "3c8c8f6c03f7ad01"
+      "content_hash": "0d21c77d761b0017"
     },
     {
       "section_code": "WD1",
@@ -152,7 +152,7 @@
       "file": "residence\\SR3.30.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/80475.htm",
       "effective_date": "09/10/2023",
-      "content_hash": "e70aab8403866f1b"
+      "content_hash": "eaa2bde171426e41"
     },
     {
       "section_code": "SR3.35",
@@ -536,7 +536,7 @@
       "file": "student-visa\\U8.25.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/42649.htm",
       "effective_date": "13/05/2019",
-      "content_hash": "834c8f377144331f"
+      "content_hash": "3944fdb76f1f78df"
     },
     {
       "section_code": "U13",
@@ -946,7 +946,8 @@
       "title": "R2.40 Mandatory requirements for lodging an application for a residence class visa",
       "file": "generic-residence\\R2.40.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/44893.htm",
-      "effective_date": "12/04/2022"
+      "effective_date": "12/04/2022",
+      "content_hash": "71399d6d4f5e2843"
     },
     {
       "section_code": "R2.60",

@@ -1,0 +1,74 @@
+[
+  {
+    "section_code": "V3.10",
+    "title": "V3.10 Partners and dependent children of student or work visa holders",
+    "old_effective_date": "09/03/2026",
+    "new_effective_date": "09/03/2026",
+    "detected_via": "missing_local_file",
+    "source_url": "https://www.immigration.govt.nz/opsmanual/46189.htm",
+    "checked_at": "2026-08-16 12:32:13"
+  },
+  {
+    "section_code": "SR3.15",
+    "title": "SR3.15 Points Summary",
+    "old_effective_date": "09/03/2026",
+    "new_effective_date": "09/03/2026",
+    "detected_via": "content_hash",
+    "source_url": "https://www.immigration.govt.nz/opsmanual/77813.htm",
+    "checked_at": "2026-08-16 14:19:36"
+  },
+  {
+    "section_code": "SR2.10",
+    "title": "SR2.10 English Language Requirements",
+    "old_effective_date": "26/06/2024",
+    "new_effective_date": "26/06/2024",
+    "detected_via": "content_hash",
+    "source_url": "https://www.immigration.govt.nz/opsmanual/77808.htm",
+    "checked_at": "2026-08-16 14:19:37"
+  },
+  {
+    "section_code": "SR3.30",
+    "title": "SR3.30 Points for New Zealand registration, licensing, or certification",
+    "old_effective_date": "09/10/2023",
+    "new_effective_date": "09/10/2023",
+    "detected_via": "content_hash",
+    "source_url": "https://www.immigration.govt.nz/opsmanual/80475.htm",
+    "checked_at": "2026-08-16 14:19:37"
+  },
+  {
+    "section_code": "U8.25",
+    "title": "U8.25 Dependent children of holders of student visas",
+    "old_effective_date": "13/05/2019",
+    "new_effective_date": "13/05/2019",
+    "detected_via": "content_hash",
+    "source_url": "https://www.immigration.govt.nz/opsmanual/42649.htm",
+    "checked_at": "2026-08-16 15:40:55"
+  },
+  {
+    "section_code": "R2.40",
+    "title": "R2.40 Mandatory requirements for lodging an application for a residence class visa",
+    "old_effective_date": "12/04/2022",
+    "new_effective_date": "12/04/2022",
+    "detected_via": "maintenance_refresh",
+    "source_url": "https://www.immigration.govt.nz/opsmanual/44893.htm",
+    "checked_at": "2026-08-16 15:40:55"
+  },
+  {
+    "section_code": "U8.25",
+    "title": "U8.25 Dependent children of holders of student visas",
+    "old_effective_date": "13/05/2019",
+    "new_effective_date": "13/05/2019",
+    "detected_via": "content_hash",
+    "source_url": "https://www.immigration.govt.nz/opsmanual/42649.htm",
+    "checked_at": "2026-08-16 15:59:51"
+  },
+  {
+    "section_code": "R2.40",
+    "title": "R2.40 Mandatory requirements for lodging an application for a residence class visa",
+    "old_effective_date": "12/04/2022",
+    "new_effective_date": "12/04/2022",
+    "detected_via": "content_hash",
+    "source_url": "https://www.immigration.govt.nz/opsmanual/44893.htm",
+    "checked_at": "2026-08-16 15:59:51"
+  }
+]
