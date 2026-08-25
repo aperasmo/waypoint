@@ -1,0 +1,211 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/inter";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --font-heading: var(--font-sans);
+    --font-sans: 'Inter Variable', sans-serif;
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar: var(--sidebar);
+    --color-chart-5: var(--chart-5);
+    --color-chart-4: var(--chart-4);
+    --color-chart-3: var(--chart-3);
+    --color-chart-2: var(--chart-2);
+    --color-chart-1: var(--chart-1);
+    --color-ring: var(--ring);
+    --color-input: var(--input);
+    --color-border: var(--border);
+    --color-destructive: var(--destructive);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-accent: var(--accent);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-muted: var(--muted);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-secondary: var(--secondary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary: var(--primary);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-popover: var(--popover);
+    --color-card-foreground: var(--card-foreground);
+    --color-card: var(--card);
+    --color-foreground: var(--foreground);
+    --color-background: var(--background);
+    --color-waypoint-navy: var(--waypoint-navy);
+    --color-waypoint-navy-light: var(--waypoint-navy-light);
+    --color-waypoint-teal: var(--waypoint-teal);
+    --color-waypoint-teal-soft: var(--waypoint-teal-soft);
+    --color-waypoint-gold: var(--waypoint-gold);
+    --color-waypoint-gold-soft: var(--waypoint-gold-soft);
+    --color-waypoint-success: var(--waypoint-success);
+    --color-waypoint-success-soft: var(--waypoint-success-soft);
+    --color-waypoint-warning: var(--waypoint-warning);
+    --color-waypoint-warning-soft: var(--waypoint-warning-soft);
+    --color-waypoint-info: var(--waypoint-info);
+    --color-waypoint-info-soft: var(--waypoint-info-soft);
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+    --radius-2xl: calc(var(--radius) * 1.8);
+    --radius-3xl: calc(var(--radius) * 2.2);
+    --radius-4xl: calc(var(--radius) * 2.6);
+
+    --color-waypoint-navy: var(--waypoint-navy);
+    --color-waypoint-navy-light: var(--waypoint-navy-light);
+
+    --color-waypoint-blue: var(--waypoint-blue);
+    --color-waypoint-blue-soft: var(--waypoint-blue-soft);
+
+    --color-waypoint-gold: var(--waypoint-gold);
+    --color-waypoint-gold-soft: var(--waypoint-gold-soft);
+
+    --color-waypoint-success: var(--waypoint-success);
+    --color-waypoint-success-soft: var(--waypoint-success-soft);
+
+    --color-waypoint-warning: var(--waypoint-warning);
+    --color-waypoint-warning-soft: var(--waypoint-warning-soft);
+
+    --color-waypoint-info: var(--waypoint-info);
+    --color-waypoint-info-soft: var(--waypoint-info-soft);    
+}
+
+:root {
+    --background: #f7f8f6;
+    --foreground: #132333;
+
+    --card: #ffffff;
+    --card-foreground: #132333;
+
+    --popover: #ffffff;
+    --popover-foreground: #132333;
+
+    --primary: #087f7c;
+    --primary-foreground: #ffffff;
+
+    --secondary: #eef3f2;
+    --secondary-foreground: #173443;
+
+    --muted: #f1f3f1;
+    --muted-foreground: #687783;
+
+    --accent: #e6f3f1;
+    --accent-foreground: #075e5d;
+
+    --destructive: #b42318;
+
+    --border: #dce2e2;
+    --input: #d4dddd;
+    --ring: #0b918b;
+
+    --chart-1: #087f7c;
+    --chart-2: #1769aa;
+    --chart-3: #d99a18;
+    --chart-4: #4f785e;
+    --chart-5: #74558d;
+
+    --radius: 0.75rem;
+
+    --sidebar: #ffffff;
+    --sidebar-foreground: #132333;
+    --sidebar-primary: #087f7c;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #e6f3f1;
+    --sidebar-accent-foreground: #075e5d;
+    --sidebar-border: #dce2e2;
+    --sidebar-ring: #0b918b;
+
+    /* Waypoint brand */
+    --waypoint-navy: #08263b;
+    --waypoint-navy-light: #10364d;
+
+    --waypoint-teal: #087f7c;
+    --waypoint-teal-soft: #e3f4f1;
+
+    --waypoint-gold: #d99a18;
+    --waypoint-gold-soft: #fff2c9;
+
+    /* Evidence states */
+    --waypoint-success: #287854;
+    --waypoint-success-soft: #e9f5ee;
+
+    --waypoint-warning: #a56312;
+    --waypoint-warning-soft: #fff2df;
+
+    --waypoint-info: #236ca3;
+    --waypoint-info-soft: #e9f2f9;    
+
+    /* Waypoint brand */
+    --waypoint-navy: #002858;
+    --waypoint-navy-light: #063d6b;
+
+    --waypoint-blue: #0878c0;
+    --waypoint-blue-soft: #eaf3fa;
+
+    --waypoint-gold: #d9a21b;
+    --waypoint-gold-soft: #fff3cf;
+
+    /* Evidence states */
+    --waypoint-success: #16825d;
+    --waypoint-success-soft: #e8f5ef;
+
+    --waypoint-warning: #c46624;
+    --waypoint-warning-soft: #fff0e5;
+
+    --waypoint-info: #2879b8;
+    --waypoint-info-soft: #eaf3fa;    
+}
+
+.dark {
+    --background: oklch(0.145 0 0);
+    --foreground: oklch(0.985 0 0);
+    --card: oklch(0.205 0 0);
+    --card-foreground: oklch(0.985 0 0);
+    --popover: oklch(0.205 0 0);
+    --popover-foreground: oklch(0.985 0 0);
+    --primary: #0878c0;
+    --primary-foreground: #ffffff;
+    --secondary: oklch(0.269 0 0);
+    --secondary-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.269 0 0);
+    --muted-foreground: oklch(0.708 0 0);
+    --accent: oklch(0.269 0 0);
+    --accent-foreground: oklch(0.985 0 0);
+    --destructive: oklch(0.704 0.191 22.216);
+    --border: oklch(1 0 0 / 10%);
+    --input: oklch(1 0 0 / 15%);
+    --ring: #0878c0;
+    --chart-1: oklch(0.87 0 0);
+    --chart-2: oklch(0.556 0 0);
+    --chart-3: oklch(0.439 0 0);
+    --chart-4: oklch(0.371 0 0);
+    --chart-5: oklch(0.269 0 0);
+    --sidebar: oklch(0.205 0 0);
+    --sidebar-foreground: oklch(0.985 0 0);
+    --sidebar-primary: oklch(0.488 0.243 264.376);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.269 0 0);
+    --sidebar-accent-foreground: oklch(0.985 0 0);
+    --sidebar-border: oklch(1 0 0 / 10%);
+    --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    }
+  body {
+    @apply bg-background text-foreground;
+    }
+  html {
+    @apply font-sans;
+    }
+}
