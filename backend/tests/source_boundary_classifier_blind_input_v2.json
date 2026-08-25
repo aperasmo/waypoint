@@ -1,0 +1,291 @@
+{
+  "schema": "waypoint-source-boundary-classifier-blind-input-v2",
+  "status": "FROZEN_BLIND_INPUT_READY_FOR_EXECUTION_BUNDLE",
+  "frozen_on": "2026-08-25",
+  "source_artifacts": {
+    "production_runtime_sha256": "FF879300C09B195681E109E5B4F5D807C89216E986AE4AA9338B104FA99AAD0E",
+    "classifier_implementation_v2_sha256": "8193FCDDB48585EC8A8BA8BCC477D123011B50F2F38531BEB2D88836975FF949",
+    "classifier_design_v3_sha256": "0EFBA11ECA5EE07A41BBB841817B93CB469BFA5B48BF42DF268B6A8F3257356B",
+    "independent_contract_pack_v5_sha256": "1B3CEA56504E3932C7DCA342DF99DC22523A4676B1C22714B9A122DDD566E67B",
+    "acceptance_thresholds_v2_sha256": "1BDD2ED8950D6E3E612C66DCD5384BD5E0CAC784E39A70C3CE09EAD5C310D277",
+    "implementation_review_v2_sha256": "222C11F1CEEDE217CB9F34B7771E837BCB2E92065C7D1C4FB42CC0F18A85FA1A"
+  },
+  "blind_contract": {
+    "case_count": 40,
+    "allowed_case_fields": [
+      "case_id",
+      "trusted_source_context",
+      "unsupported_proposition"
+    ],
+    "gold_fields_present": false,
+    "expected_outputs_present": false,
+    "basis_present": false,
+    "contrast_groups_present": false,
+    "thresholds_present": false,
+    "model_calls": 0
+  },
+  "cases": [
+    {
+      "case_id": "iv4_001",
+      "unsupported_proposition": "Whether a visa holder must satisfy an ongoing condition specified by immigration instructions before changing employer.",
+      "trusted_source_context": null
+    },
+    {
+      "case_id": "iv4_002",
+      "unsupported_proposition": "Whether a dependent child may be included when an immigration instruction sets an age and dependency requirement.",
+      "trusted_source_context": null
+    },
+    {
+      "case_id": "iv4_003",
+      "unsupported_proposition": "Whether an applicant can be exempted from a normally required immigration criterion under an instruction-defined exception.",
+      "trusted_source_context": null
+    },
+    {
+      "case_id": "iv4_004",
+      "unsupported_proposition": "Whether immigration instructions require a minimum period of qualifying employment before a residence pathway can be used.",
+      "trusted_source_context": null
+    },
+    {
+      "case_id": "iv4_005",
+      "unsupported_proposition": "Whether a newly certified immigration amendment applies before the local Operational Manual index has incorporated it.",
+      "trusted_source_context": {
+        "publisher_family": "immigration_new_zealand",
+        "publication_family": "certified_amendment",
+        "authority_role": "immigration_instruction_owner",
+        "certification_status": "certified",
+        "incorporation_status": "not_yet_indexed"
+      }
+    },
+    {
+      "case_id": "iv4_006",
+      "unsupported_proposition": "Which certified amendment controls where the indexed Manual still contains the superseded wording.",
+      "trusted_source_context": {
+        "publisher_family": "immigration_new_zealand",
+        "publication_family": "certified_amendment",
+        "authority_role": "immigration_instruction_owner",
+        "certification_status": "certified",
+        "incorporation_status": "stale_local_index"
+      }
+    },
+    {
+      "case_id": "iv4_007",
+      "unsupported_proposition": "Whether a certified instruction change is already controlling even though the local corpus has not yet been refreshed.",
+      "trusted_source_context": {
+        "publisher_family": "immigration_new_zealand",
+        "publication_family": "certified_amendment",
+        "authority_role": "immigration_instruction_owner",
+        "certification_status": "certified",
+        "incorporation_status": "not_yet_indexed"
+      }
+    },
+    {
+      "case_id": "iv4_008",
+      "unsupported_proposition": "Which statutory provision gives immigration officers the legal power to require specified information.",
+      "trusted_source_context": null
+    },
+    {
+      "case_id": "iv4_009",
+      "unsupported_proposition": "Whether regulations legally authorise the imposition of an immigration-related levy.",
+      "trusted_source_context": null
+    },
+    {
+      "case_id": "iv4_010",
+      "unsupported_proposition": "Whether an enactment permits information sharing between Immigration New Zealand and another public agency.",
+      "trusted_source_context": null
+    },
+    {
+      "case_id": "iv4_011",
+      "unsupported_proposition": "How long Immigration New Zealand is presently estimating for most applications in a named visa category.",
+      "trusted_source_context": null
+    },
+    {
+      "case_id": "iv4_012",
+      "unsupported_proposition": "Whether an Immigration New Zealand online submission portal is open for new applications today.",
+      "trusted_source_context": null
+    },
+    {
+      "case_id": "iv4_013",
+      "unsupported_proposition": "Whether the remaining quota for a capped Immigration New Zealand application category is currently exhausted.",
+      "trusted_source_context": null
+    },
+    {
+      "case_id": "iv4_014",
+      "unsupported_proposition": "What appointment slots Immigration New Zealand is currently showing for a service centre.",
+      "trusted_source_context": null
+    },
+    {
+      "case_id": "iv4_015",
+      "unsupported_proposition": "What total application charge is payable today for a visa lodged from a particular country.",
+      "trusted_source_context": null
+    },
+    {
+      "case_id": "iv4_016",
+      "unsupported_proposition": "What immigration levy amount is included in the fee currently charged for a specified application type.",
+      "trusted_source_context": null
+    },
+    {
+      "case_id": "iv4_017",
+      "unsupported_proposition": "What additional service fee an applicant currently pays when using a specified Immigration New Zealand application channel.",
+      "trusted_source_context": null
+    },
+    {
+      "case_id": "iv4_018",
+      "unsupported_proposition": "How an Immigration New Zealand internal administration circular instructs staff to handle a particular processing situation.",
+      "trusted_source_context": {
+        "publisher_family": "immigration_new_zealand",
+        "publication_family": "inz_iac",
+        "certification_status": "not_applicable",
+        "incorporation_status": "not_applicable"
+      }
+    },
+    {
+      "case_id": "iv4_019",
+      "unsupported_proposition": "What an Immigration New Zealand Advice to Staff publication says about applying an operational procedure.",
+      "trusted_source_context": {
+        "publisher_family": "immigration_new_zealand",
+        "publication_family": "inz_advice_to_staff",
+        "certification_status": "not_applicable",
+        "incorporation_status": "not_applicable"
+      }
+    },
+    {
+      "case_id": "iv4_020",
+      "unsupported_proposition": "Which steps an official Immigration New Zealand form guide directs applicants to follow when supplying supporting material.",
+      "trusted_source_context": {
+        "publisher_family": "immigration_new_zealand",
+        "publication_family": "inz_form_or_guide",
+        "certification_status": "not_applicable",
+        "incorporation_status": "not_applicable"
+      }
+    },
+    {
+      "case_id": "iv4_021",
+      "unsupported_proposition": "How a foreign civil registry requires a person to request a replacement birth certificate from that registry.",
+      "trusted_source_context": null
+    },
+    {
+      "case_id": "iv4_022",
+      "unsupported_proposition": "What procedure a foreign police records office uses to issue an official police clearance certificate.",
+      "trusted_source_context": null
+    },
+    {
+      "case_id": "iv4_023",
+      "unsupported_proposition": "How a foreign passport authority requires a damaged passport to be replaced.",
+      "trusted_source_context": null
+    },
+    {
+      "case_id": "iv4_024",
+      "unsupported_proposition": "How a New Zealand government qualifications agency assesses whether an overseas qualification is comparable to a local one.",
+      "trusted_source_context": null
+    },
+    {
+      "case_id": "iv4_025",
+      "unsupported_proposition": "How an external government identity agency verifies an official identity record through its own service.",
+      "trusted_source_context": null
+    },
+    {
+      "case_id": "iv4_026",
+      "unsupported_proposition": "Which verification service a public records agency provides to confirm the authenticity of a document already issued.",
+      "trusted_source_context": null
+    },
+    {
+      "case_id": "iv4_027",
+      "unsupported_proposition": "Whether a person's immigration status makes them eligible for a publicly funded health service administered outside INZ.",
+      "trusted_source_context": null
+    },
+    {
+      "case_id": "iv4_028",
+      "unsupported_proposition": "Whether a temporary resident can access a government education subsidy administered by the education authority.",
+      "trusted_source_context": null
+    },
+    {
+      "case_id": "iv4_029",
+      "unsupported_proposition": "Whether a person's current visa status qualifies them for a public housing service administered by another agency.",
+      "trusted_source_context": null
+    },
+    {
+      "case_id": "iv4_030",
+      "unsupported_proposition": "Which evidence a professional registration body requires when assessing overseas professional competence.",
+      "trusted_source_context": null
+    },
+    {
+      "case_id": "iv4_031",
+      "unsupported_proposition": "What clinical criteria an authorised medical assessor applies when completing a specialist fitness assessment.",
+      "trusted_source_context": null
+    },
+    {
+      "case_id": "iv4_032",
+      "unsupported_proposition": "What standards an approved professional assessor uses to evaluate occupational competence.",
+      "trusted_source_context": null
+    },
+    {
+      "case_id": "iv4_033",
+      "unsupported_proposition": "Which electronic arrival declaration system a foreign border authority requires travellers to use for its border process.",
+      "trusted_source_context": {
+        "publisher_family": "other_official_authority",
+        "publication_family": "other_official_service",
+        "authority_role": "other_official_operational_owner",
+        "certification_status": "not_applicable",
+        "incorporation_status": "not_applicable"
+      }
+    },
+    {
+      "case_id": "iv4_034",
+      "unsupported_proposition": "What reporting procedure an overseas customs administration requires importers to use for its own customs operation.",
+      "trusted_source_context": {
+        "publisher_family": "other_official_authority",
+        "publication_family": "other_official_service",
+        "authority_role": "other_official_operational_owner",
+        "certification_status": "not_applicable",
+        "incorporation_status": "not_applicable"
+      }
+    },
+    {
+      "case_id": "iv4_035",
+      "unsupported_proposition": "Whether a recently announced immigration-related procedural change is already authoritative.",
+      "trusted_source_context": null
+    },
+    {
+      "case_id": "iv4_036",
+      "unsupported_proposition": "Which official organisation controls an unspecified overseas clearance process.",
+      "trusted_source_context": null
+    },
+    {
+      "case_id": "iv4_037",
+      "unsupported_proposition": "Whether an unnamed current service value found on an official website belongs to Immigration New Zealand or another agency.",
+      "trusted_source_context": null
+    },
+    {
+      "case_id": "iv4_038",
+      "unsupported_proposition": "What procedure an official overseas authority requires, where its operational role is not stated and no trusted source metadata is available.",
+      "trusted_source_context": null
+    },
+    {
+      "case_id": "iv4_039",
+      "unsupported_proposition": "Whether an immigration-related fee mentioned in an undated secondary document is the current payable amount or only a historical legal reference.",
+      "trusted_source_context": null
+    },
+    {
+      "case_id": "iv4_040",
+      "unsupported_proposition": "Which operational rule applies when a source description could refer either to certified immigration instructions or to an uncertified staff guidance document.",
+      "trusted_source_context": null
+    }
+  ],
+  "authorisations": {
+    "blind_runner_v2_construction_authorised": true,
+    "scorer_v2_construction_authorised": true,
+    "leakage_guard_v2_construction_authorised": true,
+    "execution_bundle_review_v2_construction_authorised": true,
+    "classifier_model_run_authorised": false,
+    "prediction_authorisation_freeze_authorised": false,
+    "candidate_v7_build_authorised": false,
+    "production_runtime_change_authorised": false,
+    "fresh_external_v3_holdout_authorised": false
+  },
+  "next_engineering_task": {
+    "name": "source_boundary_classifier_execution_bundle_v2",
+    "authorised": true,
+    "model_calls": 0,
+    "purpose": "Construct the blind runner, scorer, leakage guard, and execution-bundle review pinned to this blind artifact."
+  }
+}

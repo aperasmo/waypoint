@@ -1,0 +1,751 @@
+{
+  "schema": "waypoint-answer-failure-taxonomy-candidate-v2-draft",
+  "status": "DRAFT_FOR_HUMAN_REVIEW_DO_NOT_TUNE",
+  "candidate_name": "evidence_adequacy_v2",
+  "source_inventory_sha256": "CAFC74F7985B7F0222C79924281EC36D19B32278A57D7C72DD3DCC4214A7A53B",
+  "runtime_ask_sha256": "FF879300C09B195681E109E5B4F5D807C89216E986AE4AA9338B104FA99AAD0E",
+  "failure_count": 28,
+  "primary_mechanism_definitions": {
+    "authoritative_home_resolution_failure": "The model chose the wrong authoritative home for a material unsupported proposition, confusing missing Operational Manual policy with information maintained by an external authority, live service, professional guideline, issuing body, or other regime.",
+    "scope_entailment_overreach": "The model treated related, adjacent, partial, differently scoped, or non-exhaustive supplied text as if it entailed the exact proposition needed to answer the question.",
+    "scope_entailment_underreach": "The supplied rule was sufficient for the information need, but the model unnecessarily declared a corpus gap instead of applying the available general, closed, or exhaustive rule."
+  },
+  "primary_mechanism_counts": {
+    "authoritative_home_resolution_failure": 13,
+    "scope_entailment_overreach": 11,
+    "scope_entailment_underreach": 4
+  },
+  "secondary_mechanism_counts": {
+    "adjacent_general_rule_used_for_category_specific_requirement": 2,
+    "approval_rule_used_for_separate_temporary_status_consequence": 1,
+    "closed_character_rule_underused": 1,
+    "closed_or_exhaustive_exception_rule_underused": 1,
+    "different_visa_or_application_context_treated_as_same_rule": 1,
+    "external_agency_service_or_assessment_type": 1,
+    "external_clinic_or_service_process": 1,
+    "external_fee_or_charge_schedule": 1,
+    "external_issuing_authority_procedure": 3,
+    "external_organisation_definition_or_entitlement": 1,
+    "external_professional_or_assessor_guideline": 2,
+    "external_regime_or_entitlement": 1,
+    "general_rule_explicitly_covers_specific_case": 1,
+    "live_or_service_process_information": 1,
+    "live_or_service_processing_information": 1,
+    "missing_manual_rule_wrongly_externalised": 1,
+    "negative_conclusion_inferred_from_non_exhaustive_silence": 2,
+    "partial_process_treated_as_complete_rule": 1,
+    "qualification_rule_treated_as_complete_evidence_rule": 1,
+    "related_status_rule_used_for_separate_application_consequence": 1,
+    "relationship_criterion_present_but_evidence_rule_missing": 1,
+    "substantive_criterion_present_but_documentary_evidence_rule_missing": 1,
+    "supplied_general_structure_not_recognised_as_sufficient": 1
+  },
+  "transition_by_primary_counts": {
+    "authoritative_home_resolution_failure|corpus_gap->external_source_required": 1,
+    "authoritative_home_resolution_failure|external_source_required->corpus_gap": 10,
+    "authoritative_home_resolution_failure|external_source_required->sufficient": 2,
+    "scope_entailment_overreach|corpus_gap->sufficient": 11,
+    "scope_entailment_underreach|sufficient->corpus_gap": 4
+  },
+  "root_family_summary": {
+    "authoritative_home_resolution_failure": {
+      "count": 13,
+      "share_of_failures_percent": 46.4
+    },
+    "scope_entailment_overreach": {
+      "count": 11,
+      "share_of_failures_percent": 39.3
+    },
+    "scope_entailment_underreach": {
+      "count": 4,
+      "share_of_failures_percent": 14.3
+    }
+  },
+  "methodology": [
+    "This taxonomy is derived only from already-retired external v1 and v2 development failures.",
+    "The taxonomy is diagnostic metadata and must never be imported by runtime code.",
+    "Primary mechanisms describe recurring reasoning failures rather than immigration-specific answer rules.",
+    "No prompt or runtime change should be made until the draft taxonomy is reviewed.",
+    "Any future candidate informed by this taxonomy requires a new untouched external holdout before generalisation claims."
+  ],
+  "items": [
+    {
+      "dataset": "external_v1",
+      "case_id": "ext_ab8d1185fdfd0481",
+      "question": "I have a PhD student visa for more than three years with unrestricted work rights. Am I treated like a work visa holder for publicly funded health care?",
+      "gold_evidence_status": "external_source_required",
+      "predicted_evidence_status": "corpus_gap",
+      "transition": "external_source_required->corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "U3.45"
+      ],
+      "predicted_citations": [
+        "U3.45",
+        "A4.15"
+      ],
+      "predicted_answer": "The provided sections do not contain the rule that says whether a PhD student visa holder with unrestricted work rights is treated like a work visa holder for publicly funded health care. The sections do show that PhD students are exempt from the insurance requirement for fee-paying foreign students [U3.45], and they show how publicly funded health services are considered in the acceptable standard of health test for temporary entry class visas [A4.15], but they do not provide the specific policy that links a PhD student visa holder to work visa holder treatment for publicly funded health care.",
+      "predicted_decision_boundary": "general_information",
+      "predicted_missing_information": [],
+      "adjudication_note": "Eligibility for publicly funded healthcare is determined outside this Operational Manual corpus.",
+      "primary_mechanism": "authoritative_home_resolution_failure",
+      "secondary_mechanism": "external_regime_or_entitlement",
+      "mechanism_definition": "The model chose the wrong authoritative home for a material unsupported proposition, confusing missing Operational Manual policy with information maintained by an external authority, live service, professional guideline, issuing body, or other regime.",
+      "human_review_status": "PENDING"
+    },
+    {
+      "dataset": "external_v1",
+      "case_id": "ext_66c81763e3cbd5cf",
+      "question": "We want to hire a migrant worker. Do we need employer accreditation and a Job Check before the worker applies?",
+      "gold_evidence_status": "corpus_gap",
+      "predicted_evidence_status": "sufficient",
+      "transition": "corpus_gap->sufficient",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "WA2.1",
+        "WA2.5"
+      ],
+      "predicted_citations": [
+        "WA2.5",
+        "WA2.10"
+      ],
+      "predicted_answer": "Yes. The provided sections say that employer accreditation is required for employer accreditation applications, and they also refer to Job Check applications as part of the Accredited Employer work visa process. They also state that employer accreditation and Job Check application fees are costs the employer must not pass on to workers or applicants. However, the sections provided do not set out the full Job Check process or every step needed before the worker applies, so I can only say that employer accreditation is a published requirement and Job Check is part of the same process context. [WA2.5] [WA2.10]",
+      "predicted_decision_boundary": "general_information",
+      "predicted_missing_information": [],
+      "adjudication_note": "Employer accreditation is covered, but the Job Check and AEWV applicant sequence requires WA3/work-visa instructions not present in the corpus.",
+      "primary_mechanism": "scope_entailment_overreach",
+      "secondary_mechanism": "partial_process_treated_as_complete_rule",
+      "mechanism_definition": "The model treated related, adjacent, partial, differently scoped, or non-exhaustive supplied text as if it entailed the exact proposition needed to answer the question.",
+      "human_review_status": "PENDING"
+    },
+    {
+      "dataset": "external_v1",
+      "case_id": "ext_85192ee7adceec0c",
+      "question": "My partner and I both have skilled jobs in New Zealand. How do we decide which of us should be the principal applicant for Straight to Residence?",
+      "gold_evidence_status": "sufficient",
+      "predicted_evidence_status": "corpus_gap",
+      "transition": "sufficient->corpus_gap",
+      "expected_sections": [
+        "SR4.5",
+        "R2.1"
+      ],
+      "partial_support_sections": [],
+      "predicted_citations": [
+        "SR4.1",
+        "R2.1",
+        "SR3.35"
+      ],
+      "predicted_answer": "The provided sections do not contain the rule for deciding which partner should be the principal applicant for Straight to Residence. They only state the objective of the Green List: Straight to Residence sub-category and some general partnership and skilled-work rules. To answer your question, the missing policy material would need to be the Straight to Residence instructions that say who may be the principal applicant and how principal applicant status is determined when both partners have skilled jobs.",
+      "predicted_decision_boundary": "general_information",
+      "predicted_missing_information": [],
+      "adjudication_note": "SR4.5 identifies what the principal applicant must meet for Straight to Residence; R2.1 defines the principal applicant and who may be included.",
+      "primary_mechanism": "scope_entailment_underreach",
+      "secondary_mechanism": "supplied_general_structure_not_recognised_as_sufficient",
+      "mechanism_definition": "The supplied rule was sufficient for the information need, but the model unnecessarily declared a corpus gap instead of applying the available general, closed, or exhaustive rule.",
+      "human_review_status": "PENDING"
+    },
+    {
+      "dataset": "external_v1",
+      "case_id": "ext_71375d721d37bdde",
+      "question": "How long are partner-of-worker and dependent-child student visas taking when they are linked to an AEWV holder?",
+      "gold_evidence_status": "external_source_required",
+      "predicted_evidence_status": "corpus_gap",
+      "transition": "external_source_required->corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "V3.10"
+      ],
+      "predicted_citations": [
+        "V3.10"
+      ],
+      "predicted_answer": "The provided sections do not contain the processing-time rule for partner-of-worker or dependent-child student visas linked to an AEWV holder. They do contain eligibility rules for partners and dependent children of Accredited Employer work visa holders, including when a visitor visa may be granted and the minimum income threshold, but not how long these visas are taking.",
+      "predicted_decision_boundary": "general_information",
+      "predicted_missing_information": [],
+      "adjudication_note": "The visa relationship rules are partly indexed, but the question asks for current processing times.",
+      "primary_mechanism": "authoritative_home_resolution_failure",
+      "secondary_mechanism": "live_or_service_processing_information",
+      "mechanism_definition": "The model chose the wrong authoritative home for a material unsupported proposition, confusing missing Operational Manual policy with information maintained by an external authority, live service, professional guideline, issuing body, or other regime.",
+      "human_review_status": "PENDING"
+    },
+    {
+      "dataset": "external_v1",
+      "case_id": "ext_0b69af212aa242f4",
+      "question": "How much is the visa fee for a partner of a New Zealand resident?",
+      "gold_evidence_status": "external_source_required",
+      "predicted_evidence_status": "corpus_gap",
+      "transition": "external_source_required->corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R2.60"
+      ],
+      "predicted_citations": [
+        "R2.60"
+      ],
+      "predicted_answer": "The provided sections do not contain the visa fee for a partner of a New Zealand resident. [R2.60] says the fee payable depends on the fee specified for the type of application and that the fee payable is determined by the principal applicant’s country of citizenship, but it does not give the actual fee amount for this visa type. The missing policy material is the specific fee schedule or fee table for partner-of-resident applications.",
+      "predicted_decision_boundary": "general_information",
+      "predicted_missing_information": [],
+      "adjudication_note": "R2.60 explains fee mechanics but not the current numeric partner-visa fee.",
+      "primary_mechanism": "authoritative_home_resolution_failure",
+      "secondary_mechanism": "external_fee_or_charge_schedule",
+      "mechanism_definition": "The model chose the wrong authoritative home for a material unsupported proposition, confusing missing Operational Manual policy with information maintained by an external authority, live service, professional guideline, issuing body, or other regime.",
+      "human_review_status": "PENDING"
+    },
+    {
+      "dataset": "external_v1",
+      "case_id": "ext_588ee3ee0b20790d",
+      "question": "My engineering degree is related to a Green List role but I am unsure whether my qualification meets the listed requirement. What qualification evidence does INZ use?",
+      "gold_evidence_status": "corpus_gap",
+      "predicted_evidence_status": "sufficient",
+      "transition": "corpus_gap->sufficient",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "SR4.5",
+        "SR5.5"
+      ],
+      "predicted_citations": [
+        "SR4.5",
+        "SR3.25"
+      ],
+      "predicted_answer": "INZ says the qualification evidence for a Green List occupation is the qualification itself, and if the Green List requirement is for a New Zealand qualification and the qualification is from outside New Zealand, an International Qualification Assessment (IQA) from NZQA. The manual also says an IQA assesses an overseas qualification by stating the learning outcomes of the closest New Zealand equivalent qualification, the NZQF level and qualification type of that equivalent qualification, and any verification of the applicant’s qualifications undertaken by NZQA. For qualification points claims, applicants must provide their qualification certificate and, if the qualification is from outside New Zealand, either an IQA from NZQA or the qualification must be on the List of Qualifications Exempt from Assessment. [SR4.5] [SR3.25]",
+      "predicted_decision_boundary": "general_information",
+      "predicted_missing_information": [],
+      "adjudication_note": "The corpus describes general qualification/IQA evidence, but deciding whether the degree meets a specific Green List role requires the occupation requirements in Appendix 13, which is not indexed.",
+      "primary_mechanism": "scope_entailment_overreach",
+      "secondary_mechanism": "qualification_rule_treated_as_complete_evidence_rule",
+      "mechanism_definition": "The model treated related, adjacent, partial, differently scoped, or non-exhaustive supplied text as if it entailed the exact proposition needed to answer the question.",
+      "human_review_status": "PENDING"
+    },
+    {
+      "dataset": "external_v2",
+      "case_id": "ext2_023fa6cd6621a24a",
+      "question": "For a spouse applying for a Partner of a Student Work Visa, which purpose should be selected when requesting a police clearance certificate from the issuing country?",
+      "gold_evidence_status": "external_source_required",
+      "predicted_evidence_status": "corpus_gap",
+      "transition": "external_source_required->corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "A5.10",
+        "A5.5"
+      ],
+      "predicted_citations": [
+        "A5.10",
+        "A5.5"
+      ],
+      "predicted_answer": "The provided sections say police certificates are required for some temporary entry class visa applications and that instructions on how to obtain police certificates from specific countries are available on the INZ website, but they do not say which purpose should be selected for a spouse applying for a Partner of a Student Work Visa. That purpose-selection instruction is missing from the supplied manual sections.",
+      "predicted_decision_boundary": "general_information",
+      "predicted_missing_information": [],
+      "adjudication_note": "The Operational Manual sets when police certificates are required and points applicants to country-specific obtaining instructions, but choosing a purpose/category on a foreign issuing authority's form depends on those external country-specific instructions.",
+      "primary_mechanism": "authoritative_home_resolution_failure",
+      "secondary_mechanism": "external_issuing_authority_procedure",
+      "mechanism_definition": "The model chose the wrong authoritative home for a material unsupported proposition, confusing missing Operational Manual policy with information maintained by an external authority, live service, professional guideline, issuing body, or other regime.",
+      "human_review_status": "PENDING"
+    },
+    {
+      "dataset": "external_v2",
+      "case_id": "ext2_b01b08c9e689cb55",
+      "question": "If a foreign police-certificate application form offers several purpose categories, does the wording chosen on that form matter to Immigration New Zealand?",
+      "gold_evidence_status": "external_source_required",
+      "predicted_evidence_status": "corpus_gap",
+      "transition": "external_source_required->corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "A5.10",
+        "A5.5"
+      ],
+      "predicted_citations": [
+        "A5.10",
+        "A5.5",
+        "R2.40"
+      ],
+      "predicted_answer": "The supplied sections do not say whether the wording chosen on a foreign police-certificate application form matters to Immigration New Zealand. They do say that police certificates must meet INZ’s requirements about age, timing, language, and the countries covered, and that INZ provides instructions on how to obtain police certificates from specific countries. But there is no provided rule about the purpose category selected on the foreign form.",
+      "predicted_decision_boundary": "general_information",
+      "predicted_missing_information": [],
+      "adjudication_note": "Whether wording on a foreign police-certificate request form matters is determined by the issuing authority/country-specific certificate instructions outside this corpus; the manual only states general certificate requirements.",
+      "primary_mechanism": "authoritative_home_resolution_failure",
+      "secondary_mechanism": "external_issuing_authority_procedure",
+      "mechanism_definition": "The model chose the wrong authoritative home for a material unsupported proposition, confusing missing Operational Manual policy with information maintained by an external authority, live service, professional guideline, issuing body, or other regime.",
+      "human_review_status": "PENDING"
+    },
+    {
+      "dataset": "external_v2",
+      "case_id": "ext2_370bd814453c5733",
+      "question": "Does a partner applying alongside a student need a different type of police certificate from the one normally used for immigration purposes?",
+      "gold_evidence_status": "external_source_required",
+      "predicted_evidence_status": "corpus_gap",
+      "transition": "external_source_required->corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "A5.5",
+        "A5.10"
+      ],
+      "predicted_citations": [
+        "A5.10",
+        "A5.5"
+      ],
+      "predicted_answer": "The provided sections say that police certificates are required for some temporary entry class visa applications, and that applicants for temporary entry class visas must obtain police certificates from their country of citizenship and any country where they have lived for five or more years since age 17, subject to the listed exceptions. They also say that for any further temporary entry class visa application as a partner or dependant of a student enrolled in a Doctor of Philosophy (PhD) programme, previously submitted police certificates can be accepted if made within 36 months of issue. However, the supplied text does not state whether a partner applying alongside a student needs a different type of police certificate from the one normally used for immigration purposes. That specific rule is missing from the provided sections.",
+      "predicted_decision_boundary": "general_information",
+      "predicted_missing_information": [],
+      "adjudication_note": "The corpus contains general police-certificate rules, but whether a partner needs a particular certificate type is governed by country-specific obtaining instructions referenced outside the corpus.",
+      "primary_mechanism": "authoritative_home_resolution_failure",
+      "secondary_mechanism": "external_issuing_authority_procedure",
+      "mechanism_definition": "The model chose the wrong authoritative home for a material unsupported proposition, confusing missing Operational Manual policy with information maintained by an external authority, live service, professional guideline, issuing body, or other regime.",
+      "human_review_status": "PENDING"
+    },
+    {
+      "dataset": "external_v2",
+      "case_id": "ext2_682333d9b9c172f4",
+      "question": "For a Green List Straight to Residence role, can extensive relevant work experience make up for a bachelor's degree that is in a different field from the occupation?",
+      "gold_evidence_status": "corpus_gap",
+      "predicted_evidence_status": "sufficient",
+      "transition": "corpus_gap->sufficient",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "SR4.5",
+        "SR4.10"
+      ],
+      "predicted_citations": [
+        "SR3.20"
+      ],
+      "predicted_answer": "Yes, the supplied sections say work experience can be relevant to employment if the employer considers, and an immigration officer is satisfied, that the work experience is directly applicable to the employment, or if the offer of employment could not reasonably have been made, or the employment could not reasonably have been undertaken, without that work experience. They also say qualifications are relevant if the major subject area of the recognised qualification is directly applicable to the employment, or if an immigration officer is satisfied the qualification was a key factor in the employer’s decision to employ the applicant. However, the sections do not say that extensive relevant work experience can automatically make up for a bachelor’s degree in a different field; they only set out how relevance of work experience and qualifications is assessed. [SR3.20]",
+      "predicted_decision_boundary": "general_information",
+      "predicted_missing_information": [],
+      "adjudication_note": "Straight to Residence requires meeting the occupation-specific Tier 1 requirements in Appendix 13. Appendix 13 is absent, so the corpus cannot determine whether work experience can substitute for a differently related degree for the particular role.",
+      "primary_mechanism": "scope_entailment_overreach",
+      "secondary_mechanism": "adjacent_general_rule_used_for_category_specific_requirement",
+      "mechanism_definition": "The model treated related, adjacent, partial, differently scoped, or non-exhaustive supplied text as if it entailed the exact proposition needed to answer the question.",
+      "human_review_status": "PENDING"
+    },
+    {
+      "dataset": "external_v2",
+      "case_id": "ext2_d2f88ceae65b9b46",
+      "question": "If a Green List role requires qualification assessment, how do I know whether I need a standard IQA or a Skilled Shortage List IQA?",
+      "gold_evidence_status": "external_source_required",
+      "predicted_evidence_status": "corpus_gap",
+      "transition": "external_source_required->corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "SR4.5",
+        "SR3.25"
+      ],
+      "predicted_citations": [
+        "SR4.5",
+        "SR5.5",
+        "SR3.25"
+      ],
+      "predicted_answer": "The provided sections say that, for Green List evidence, a qualification can be supported by the qualification itself, and if the Green List requirement is for a New Zealand qualification and the qualification is from outside New Zealand, an IQA from NZQA. They also say that an IQA assesses an overseas qualification and states the NZQF level and qualification type of the closest New Zealand equivalent qualification. However, the supplied sections do not explain when a Green List role requires a standard IQA versus a Skilled Shortage List IQA. That distinction is not set out in the provided text, so I cannot identify the operative rule from this corpus alone.",
+      "predicted_decision_boundary": "general_information",
+      "predicted_missing_information": [],
+      "adjudication_note": "The corpus explains when an IQA may be needed and what an IQA does, but it does not define a Skilled Shortage List IQA or which NZQA assessment product to request; that is authoritative NZQA/application-service information outside this corpus.",
+      "primary_mechanism": "authoritative_home_resolution_failure",
+      "secondary_mechanism": "external_agency_service_or_assessment_type",
+      "mechanism_definition": "The model chose the wrong authoritative home for a material unsupported proposition, confusing missing Operational Manual policy with information maintained by an external authority, live service, professional guideline, issuing body, or other regime.",
+      "human_review_status": "PENDING"
+    },
+    {
+      "dataset": "external_v2",
+      "case_id": "ext2_67e067ccdae249ea",
+      "question": "For an offshore Straight to Residence applicant, what matters if the job is highly relevant to their experience but their formal degree title is not closely related?",
+      "gold_evidence_status": "corpus_gap",
+      "predicted_evidence_status": "sufficient",
+      "transition": "corpus_gap->sufficient",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "SR4.5",
+        "SR4.10"
+      ],
+      "predicted_citations": [
+        "SR3.20"
+      ],
+      "predicted_answer": "For skilled employment, the qualification does not have to have a closely related title if the qualification is relevant in the way the manual describes. The manual says qualifications are relevant if the major subject area of the principal applicant's recognised qualification is directly applicable to the employment, or if an immigration officer is satisfied that the qualification was a key factor in the employer's decision to employ the principal applicant in that position. It also says work experience is relevant if the employer considers, and an immigration officer is satisfied, that the work experience is directly applicable to the employment, or the offer of employment could not reasonably have been made, or the employment could not reasonably have been undertaken, if the principal applicant did not have that work experience. [SR3.20]",
+      "predicted_decision_boundary": "general_information",
+      "predicted_missing_information": [],
+      "adjudication_note": "Whether the applicant's formal qualification satisfies a Straight to Residence role depends on the occupation-specific requirements in Appendix 13, which is not in the corpus.",
+      "primary_mechanism": "scope_entailment_overreach",
+      "secondary_mechanism": "adjacent_general_rule_used_for_category_specific_requirement",
+      "mechanism_definition": "The model treated related, adjacent, partial, differently scoped, or non-exhaustive supplied text as if it entailed the exact proposition needed to answer the question.",
+      "human_review_status": "PENDING"
+    },
+    {
+      "dataset": "external_v2",
+      "case_id": "ext2_559a57944943aab5",
+      "question": "Does entering New Zealand as a visitor while a partnership residence application is pending affect the residence application itself?",
+      "gold_evidence_status": "corpus_gap",
+      "predicted_evidence_status": "sufficient",
+      "transition": "corpus_gap->sufficient",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R5.75"
+      ],
+      "predicted_citations": [
+        "R5.75"
+      ],
+      "predicted_answer": "No. The provided manual section says that applying for a residence class visa while in New Zealand does not give the person the right to remain in New Zealand while the application is considered, does not make their presence lawful, does not give the right to apply for or be granted any other visa while the application is considered, and does not prevent deportation. It does not say that entering New Zealand as a visitor affects the residence application itself. [R5.75]",
+      "predicted_decision_boundary": "general_information",
+      "predicted_missing_information": [],
+      "adjudication_note": "The corpus separates residence-application status from temporary status but does not contain the operative rule on how entering as a visitor while an offshore partnership residence application is pending affects that application.",
+      "primary_mechanism": "scope_entailment_overreach",
+      "secondary_mechanism": "related_status_rule_used_for_separate_application_consequence",
+      "mechanism_definition": "The model treated related, adjacent, partial, differently scoped, or non-exhaustive supplied text as if it entailed the exact proposition needed to answer the question.",
+      "human_review_status": "PENDING"
+    },
+    {
+      "dataset": "external_v2",
+      "case_id": "ext2_b4eaf7443c1ead5d",
+      "question": "If a partnership residence visa is approved after the applicant has already entered New Zealand as a visitor, what happens to the temporary visa status?",
+      "gold_evidence_status": "corpus_gap",
+      "predicted_evidence_status": "sufficient",
+      "transition": "corpus_gap->sufficient",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R5.65",
+        "R5.66"
+      ],
+      "predicted_citations": [
+        "R5.65"
+      ],
+      "predicted_answer": "An approved partnership residence class visa will result in the grant of a resident visa, unless otherwise stated. The provided sections do not say that the person’s earlier temporary visa status is cancelled or otherwise changed when that happens. They do say that if the resident visa is granted in New Zealand, the health-related visa condition applies for three months from the date the visa was granted. [R5.65]",
+      "predicted_decision_boundary": "general_information",
+      "predicted_missing_information": [],
+      "adjudication_note": "R5.65 establishes that approval normally results in a resident visa, but the rule governing what happens to an existing temporary visa when residence is granted in New Zealand is not present.",
+      "primary_mechanism": "scope_entailment_overreach",
+      "secondary_mechanism": "approval_rule_used_for_separate_temporary_status_consequence",
+      "mechanism_definition": "The model treated related, adjacent, partial, differently scoped, or non-exhaustive supplied text as if it entailed the exact proposition needed to answer the question.",
+      "human_review_status": "PENDING"
+    },
+    {
+      "dataset": "external_v2",
+      "case_id": "ext2_888971954ec7678a",
+      "question": "Can about three months of living together be enough evidence for a New Zealand partnership work visa?",
+      "gold_evidence_status": "corpus_gap",
+      "predicted_evidence_status": "sufficient",
+      "transition": "corpus_gap->sufficient",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R2.1"
+      ],
+      "predicted_citations": [
+        "R2.1"
+      ],
+      "predicted_answer": "Yes, the manual says immigration officers may include any period immediately before a marriage when they are satisfied the couple was living together in an interdependent partnership akin to a marriage, and it also says that if a partnership is genuine and stable but is less than the 12 months required, a partner’s residence application may be deferred so the qualifying period can be met, with a work visa possible for that period. The sections do not say that about three months of living together is automatically enough evidence by itself; they only describe how officers may assess the relationship and what can happen if the 12-month period has not yet been met. [R2.1]",
+      "predicted_decision_boundary": "general_information",
+      "predicted_missing_information": [],
+      "adjudication_note": "R2.1 contains residence partnership rules, including a 12-month requirement for residence, but the partnership work-visa instructions governing how much cohabitation evidence is enough are absent.",
+      "primary_mechanism": "scope_entailment_overreach",
+      "secondary_mechanism": "different_visa_or_application_context_treated_as_same_rule",
+      "mechanism_definition": "The model treated related, adjacent, partial, differently scoped, or non-exhaustive supplied text as if it entailed the exact proposition needed to answer the question.",
+      "human_review_status": "PENDING"
+    },
+    {
+      "dataset": "external_v2",
+      "case_id": "ext2_4ff8da290ce9fb3e",
+      "question": "If a couple lives rent-free with a parent, can a signed statement from that parent help prove that they are living together?",
+      "gold_evidence_status": "corpus_gap",
+      "predicted_evidence_status": "sufficient",
+      "transition": "corpus_gap->sufficient",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R2.1"
+      ],
+      "predicted_citations": [
+        "R2.1"
+      ],
+      "predicted_answer": "Yes, a signed statement can be relevant evidence in some relationship contexts, but the sections provided do not say that a signed statement from a parent can prove that a couple are living together. For partners, the manual says the principal applicant must provide evidence of the relationship and evidence that the partnership is genuine and stable, and that the onus of proving this lies with the principal applicant and partner [R2.1]. The provided sections do not list the types of evidence for proving a couple are living together, so this question cannot be answered from the supplied text.",
+      "predicted_decision_boundary": "general_information",
+      "predicted_missing_information": [],
+      "adjudication_note": "R2.1 requires partnership evidence but the detailed evidence types referenced at F2.20.15 are absent, so the corpus cannot establish whether a parent's signed cohabitation statement is accepted for a partnership work visa.",
+      "primary_mechanism": "scope_entailment_overreach",
+      "secondary_mechanism": "relationship_criterion_present_but_evidence_rule_missing",
+      "mechanism_definition": "The model treated related, adjacent, partial, differently scoped, or non-exhaustive supplied text as if it entailed the exact proposition needed to answer the question.",
+      "human_review_status": "PENDING"
+    },
+    {
+      "dataset": "external_v2",
+      "case_id": "ext2_298d0e015f4e8ec2",
+      "question": "After securing a Working Holiday Visa place, should the applicant arrange the immigration medical immediately or wait for instructions from Immigration New Zealand?",
+      "gold_evidence_status": "external_source_required",
+      "predicted_evidence_status": "corpus_gap",
+      "transition": "external_source_required->corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "A4.25",
+        "A4.30"
+      ],
+      "predicted_citations": [
+        "A4.25",
+        "A4.30"
+      ],
+      "predicted_answer": "The provided sections say that applicants for temporary entry class visas intending to stay in New Zealand for more than 12 months must include a completed Medical Certificate and Chest X-ray Certificate with the application, and that these certificates must be completed by an Immigration New Zealand-appointed panel physician and radiologist if required. However, the sections do not say whether a Working Holiday Visa applicant should arrange the medical immediately after securing a place or wait for instructions from Immigration New Zealand. That timing instruction is missing from the supplied manual sections.",
+      "predicted_decision_boundary": "general_information",
+      "predicted_missing_information": [],
+      "adjudication_note": "The health instructions describe certificate requirements and panel physicians, but whether a Working Holiday applicant should book immediately or wait for application instructions is current application-process guidance outside this corpus.",
+      "primary_mechanism": "authoritative_home_resolution_failure",
+      "secondary_mechanism": "live_or_service_process_information",
+      "mechanism_definition": "The model chose the wrong authoritative home for a material unsupported proposition, confusing missing Operational Manual policy with information maintained by an external authority, live service, professional guideline, issuing body, or other regime.",
+      "human_review_status": "PENDING"
+    },
+    {
+      "dataset": "external_v2",
+      "case_id": "ext2_1a4d4735dba2c2c1",
+      "question": "For an initial immigration medical after a Working Holiday Visa application, is a referral from a doctor required before attending an approved clinic?",
+      "gold_evidence_status": "external_source_required",
+      "predicted_evidence_status": "sufficient",
+      "transition": "external_source_required->sufficient",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "A4.30"
+      ],
+      "predicted_citations": [
+        "A4.30"
+      ],
+      "predicted_answer": "No. The provided instructions say that the Medical Certificate and Chest X-ray Certificate must be completed by an Immigration New Zealand-appointed panel physician and radiologist if required, or by a registered medical practitioner and radiologist if there is no New Zealand-appointed panel in that country. They do not say that a separate referral from a doctor is required before attending an approved clinic. The sections also say an immigration officer may refer medical certificates for assessment if they are not satisfied about health, but that is a referral by Immigration New Zealand, not a doctor’s referral before the medical examination.",
+      "predicted_decision_boundary": "general_information",
+      "predicted_missing_information": [],
+      "adjudication_note": "A4.30 requires approved panel physicians in relevant countries but does not state whether a doctor's referral is needed to attend a clinic; that appointment/referral process is maintained outside the Operational Manual.",
+      "primary_mechanism": "authoritative_home_resolution_failure",
+      "secondary_mechanism": "external_clinic_or_service_process",
+      "mechanism_definition": "The model chose the wrong authoritative home for a material unsupported proposition, confusing missing Operational Manual policy with information maintained by an external authority, live service, professional guideline, issuing body, or other regime.",
+      "human_review_status": "PENDING"
+    },
+    {
+      "dataset": "external_v2",
+      "case_id": "ext2_25bac28c54e142ab",
+      "question": "What evidence can show that an adult child remains financially dependent on a parent for a dependent-child residence application?",
+      "gold_evidence_status": "corpus_gap",
+      "predicted_evidence_status": "sufficient",
+      "transition": "corpus_gap->sufficient",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R2.1",
+        "R5.5"
+      ],
+      "predicted_citations": [],
+      "predicted_answer": "For a child aged 21 to 24, immigration officers must consider the whole application and all relevant factors when deciding whether the child is totally or substantially reliant on the principal applicant and/or the principal applicant's partner for financial support. The manual says they must take into account: whether the child is in paid employment, including whether it is full time or part time and its duration; whether the child has any other independent means of financial support; whether the child is living with parents or another family member and the extent to which other support is provided; and whether the child is studying, including whether it is full time or part time. If the child is in paid employment and is working part time under certain visa conditions, that work is not to be considered in this assessment. The manual also says evidence of actual dependence may be required for children aged 21 to 24. [R2.1.30] [R2.1.35]",
+      "predicted_decision_boundary": "general_information",
+      "predicted_missing_information": [],
+      "adjudication_note": "R2.1 identifies the factors used to assess financial dependence and says evidence may be required, but it does not specify the actual documentary evidence that can demonstrate those factors.",
+      "primary_mechanism": "scope_entailment_overreach",
+      "secondary_mechanism": "substantive_criterion_present_but_documentary_evidence_rule_missing",
+      "mechanism_definition": "The model treated related, adjacent, partial, differently scoped, or non-exhaustive supplied text as if it entailed the exact proposition needed to answer the question.",
+      "human_review_status": "PENDING"
+    },
+    {
+      "dataset": "external_v2",
+      "case_id": "ext2_7d2e80a946efbc21",
+      "question": "Does a previous overseas student-visa refusal automatically prevent approval of a New Zealand student visa?",
+      "gold_evidence_status": "corpus_gap",
+      "predicted_evidence_status": "sufficient",
+      "transition": "corpus_gap->sufficient",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "A5.20",
+        "A5.45",
+        "U3.1"
+      ],
+      "predicted_citations": [
+        "U3.1",
+        "A5.20"
+      ],
+      "predicted_answer": "No. The provided student visa instructions say applicants must meet the health and character requirements under A4 and A5, and A5 lists specific character-related grounds that can make a person ineligible, including certain convictions, deportation/exclusion, or being likely to commit offences or pose risks. A previous overseas student-visa refusal is not listed here as an automatic bar to a New Zealand student visa. The instructions provided do not say that such a refusal by itself prevents approval. [U3.1] [A5.20]",
+      "predicted_decision_boundary": "general_information",
+      "predicted_missing_information": [],
+      "adjudication_note": "The character sections do not list a foreign visa refusal itself as an automatic character bar, but the student-visa bona fide rules at E5 are absent, so the corpus cannot fully determine how such a refusal affects approval.",
+      "primary_mechanism": "scope_entailment_overreach",
+      "secondary_mechanism": "negative_conclusion_inferred_from_non_exhaustive_silence",
+      "mechanism_definition": "The model treated related, adjacent, partial, differently scoped, or non-exhaustive supplied text as if it entailed the exact proposition needed to answer the question.",
+      "human_review_status": "PENDING"
+    },
+    {
+      "dataset": "external_v2",
+      "case_id": "ext2_90d50f9d92d085da",
+      "question": "What does Immigration New Zealand consider when a visa medical review involves a past mental-health history?",
+      "gold_evidence_status": "external_source_required",
+      "predicted_evidence_status": "corpus_gap",
+      "transition": "external_source_required->corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "A4.15",
+        "A4.30",
+        "A4.40"
+      ],
+      "predicted_citations": [
+        "A4.30",
+        "A4.70"
+      ],
+      "predicted_answer": "The provided sections say that, when assessing health, Immigration New Zealand medical assessors may refer to any source of relevant guidelines or advice, including the Ministry of Health and Ministry of Education, and that officers may consider advice from an Immigration New Zealand medical assessor on medical matters such as prognosis. However, the supplied text does not contain any specific rule about what is considered in a visa medical review involving a past mental-health history. That specific policy material is missing from the provided sections.",
+      "predicted_decision_boundary": "general_information",
+      "predicted_missing_information": [],
+      "adjudication_note": "The manual gives the general temporary health test and medical-review process, but A4.30 states medical assessors also use the Immigration New Zealand Guidelines for Medical Assessors and other medical guidance. Detailed treatment of a past mental-health history therefore depends on authoritative material outside this corpus.",
+      "primary_mechanism": "authoritative_home_resolution_failure",
+      "secondary_mechanism": "external_professional_or_assessor_guideline",
+      "mechanism_definition": "The model chose the wrong authoritative home for a material unsupported proposition, confusing missing Operational Manual policy with information maintained by an external authority, live service, professional guideline, issuing body, or other regime.",
+      "human_review_status": "PENDING"
+    },
+    {
+      "dataset": "external_v2",
+      "case_id": "ext2_cce51047e3ea8b52",
+      "question": "Can historic self-harm or mental-health treatment still affect a visa health assessment if the applicant has been stable for many years?",
+      "gold_evidence_status": "external_source_required",
+      "predicted_evidence_status": "sufficient",
+      "transition": "external_source_required->sufficient",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "A4.15",
+        "A4.30",
+        "A4.40"
+      ],
+      "predicted_citations": [
+        "A4.10"
+      ],
+      "predicted_answer": "Yes. For residence class visas, the manual says applicants are assessed against acceptable standard of health criteria, and one of the listed conditions is “major psychiatric illness and/or addiction including any psychiatric condition that has required hospitalisation and/or where significant support is required” [A4.10]. The provided text does not say that long-term stability by itself removes that condition from consideration, so the historic self-harm or mental-health treatment could still be relevant if it falls within that listed condition.",
+      "predicted_decision_boundary": "general_information",
+      "predicted_missing_information": [],
+      "adjudication_note": "The general health criteria are present, but determining how historic self-harm or long-term stability is medically assessed depends on the medical assessor's reports/guidelines referenced outside the corpus.",
+      "primary_mechanism": "authoritative_home_resolution_failure",
+      "secondary_mechanism": "external_professional_or_assessor_guideline",
+      "mechanism_definition": "The model chose the wrong authoritative home for a material unsupported proposition, confusing missing Operational Manual policy with information maintained by an external authority, live service, professional guideline, issuing body, or other regime.",
+      "human_review_status": "PENDING"
+    },
+    {
+      "dataset": "external_v2",
+      "case_id": "ext2_d8797e336a9cc692",
+      "question": "For an international student, is an unpaid clinical placement required by the programme treated as practical experience or as employment for visa purposes?",
+      "gold_evidence_status": "sufficient",
+      "predicted_evidence_status": "corpus_gap",
+      "transition": "sufficient->corpus_gap",
+      "expected_sections": [
+        "U13.5"
+      ],
+      "partial_support_sections": [],
+      "predicted_citations": [
+        "U13.5"
+      ],
+      "predicted_answer": "The provided sections do not contain the operative rule for whether an unpaid clinical placement required by a programme is treated as practical experience or as employment for visa purposes. Section [U13.5] says a student visa may be granted with conditions to allow work to fulfil a requirement of practical experience if an immigration officer is satisfied that practical experience is a course requirement, and it says that if an applicant’s main activity will be work they may be directed to apply for a work visa. But the supplied text does not state how an unpaid clinical placement is classified for visa purposes.",
+      "predicted_decision_boundary": "general_information",
+      "predicted_missing_information": [],
+      "adjudication_note": "U13.5 directly covers work undertaken to fulfil a practical-experience requirement of a New Zealand programme and states that student-visa conditions may be granted for that practical experience.",
+      "primary_mechanism": "scope_entailment_underreach",
+      "secondary_mechanism": "general_rule_explicitly_covers_specific_case",
+      "mechanism_definition": "The supplied rule was sufficient for the information need, but the model unnecessarily declared a corpus gap instead of applying the available general, closed, or exhaustive rule.",
+      "human_review_status": "PENDING"
+    },
+    {
+      "dataset": "external_v2",
+      "case_id": "ext2_8c067aa632151edd",
+      "question": "Can a medical waiver be considered for a Working Holiday Visa applicant who does not meet the normal acceptable-standard-of-health requirement?",
+      "gold_evidence_status": "sufficient",
+      "predicted_evidence_status": "corpus_gap",
+      "transition": "sufficient->corpus_gap",
+      "expected_sections": [
+        "A4.65"
+      ],
+      "partial_support_sections": [],
+      "predicted_citations": [
+        "A4.65",
+        "A4.70",
+        "A4.60"
+      ],
+      "predicted_answer": "The provided sections do not contain the rule for Working Holiday Visa applicants. They do say that medical waivers for temporary entry class visas are generally not considered unless the applicant falls within listed exceptions, and the only temporary-entry work-visa exception shown is for seconded business personnel [A4.65], with separate rules for some residence applicants [A4.60] and the general waiver test [A4.70]. But the specific policy for Working Holiday Visa applicants is not provided here, so I cannot confirm from this corpus whether a medical waiver can be considered for that visa type.",
+      "predicted_decision_boundary": "general_information",
+      "predicted_missing_information": [],
+      "adjudication_note": "A4.65 exhaustively identifies the temporary-entry applicants who may be considered for a medical waiver; a Working Holiday applicant is not among those categories.",
+      "primary_mechanism": "scope_entailment_underreach",
+      "secondary_mechanism": "closed_or_exhaustive_exception_rule_underused",
+      "mechanism_definition": "The supplied rule was sufficient for the information need, but the model unnecessarily declared a corpus gap instead of applying the available general, closed, or exhaustive rule.",
+      "human_review_status": "PENDING"
+    },
+    {
+      "dataset": "external_v2",
+      "case_id": "ext2_6f3fabde7896acbe",
+      "question": "Does a New Zealand Resident Visa itself expire, or is it mainly the travel conditions that can expire?",
+      "gold_evidence_status": "corpus_gap",
+      "predicted_evidence_status": "sufficient",
+      "transition": "corpus_gap->sufficient",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R5.66"
+      ],
+      "predicted_citations": [
+        "R5.66",
+        "R5.65"
+      ],
+      "predicted_answer": "Yes. The supplied sections say resident visas are granted with travel conditions, including first-arrival and multiple-entry travel conditions, and that the currency of those travel conditions is determined by the residence category. They also say that if a resident visa holder wants to travel outside the validity of their multiple entry travel conditions, they may apply for a variation of travel conditions, and if they fail to travel within the validity of their first travel condition they must submit a further residence class visa application. The sections provided do not say that the resident visa itself expires in the way the travel conditions do. [R5.66] [R5.65]",
+      "predicted_decision_boundary": "general_information",
+      "predicted_missing_information": [],
+      "adjudication_note": "R5.66 establishes that resident-visa travel conditions have a defined currency, but the corpus does not directly contain the broader rule needed to state whether the underlying resident status/visa itself expires.",
+      "primary_mechanism": "scope_entailment_overreach",
+      "secondary_mechanism": "negative_conclusion_inferred_from_non_exhaustive_silence",
+      "mechanism_definition": "The model treated related, adjacent, partial, differently scoped, or non-exhaustive supplied text as if it entailed the exact proposition needed to answer the question.",
+      "human_review_status": "PENDING"
+    },
+    {
+      "dataset": "external_v2",
+      "case_id": "ext2_ac14beba20a48211",
+      "question": "When an organisation asks whether someone is a permanent resident, can a holder of a New Zealand Resident Visa be treated the same as a Permanent Resident Visa holder?",
+      "gold_evidence_status": "external_source_required",
+      "predicted_evidence_status": "corpus_gap",
+      "transition": "external_source_required->corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R5.65",
+        "R5.66"
+      ],
+      "predicted_citations": [
+        "R5.65",
+        "R5.66"
+      ],
+      "predicted_answer": "The provided sections do not contain the rule that defines whether a New Zealand Resident Visa holder can be treated the same as a Permanent Resident Visa holder when someone asks whether a person is a permanent resident. The sections do show that a resident visa holder may later qualify for a permanent resident visa under RV2, and that resident visas and permanent resident visas are treated as different visa outcomes in the manual, but they do not state any equivalence rule for answering an organisation’s question about permanent resident status. The missing policy material is the section that expressly says whether a Resident Visa counts as permanent resident status, or any definition of “permanent resident” for this purpose.",
+      "predicted_decision_boundary": "general_information",
+      "predicted_missing_information": [],
+      "adjudication_note": "The Operational Manual distinguishes Resident and Permanent Resident Visas, but whether an external organisation treats a Resident Visa holder as a 'permanent resident' depends on that organisation's own authoritative definition or eligibility rules.",
+      "primary_mechanism": "authoritative_home_resolution_failure",
+      "secondary_mechanism": "external_organisation_definition_or_entitlement",
+      "mechanism_definition": "The model chose the wrong authoritative home for a material unsupported proposition, confusing missing Operational Manual policy with information maintained by an external authority, live service, professional guideline, issuing body, or other regime.",
+      "human_review_status": "PENDING"
+    },
+    {
+      "dataset": "external_v2",
+      "case_id": "ext2_139daec2a4cbe690",
+      "question": "Can an overseas good-behaviour bond or similar non-custodial sentence affect whether an applicant meets New Zealand temporary-visa character requirements?",
+      "gold_evidence_status": "sufficient",
+      "predicted_evidence_status": "corpus_gap",
+      "transition": "sufficient->corpus_gap",
+      "expected_sections": [
+        "A5.20",
+        "A5.45"
+      ],
+      "partial_support_sections": [],
+      "predicted_citations": [
+        "A5.45"
+      ],
+      "predicted_answer": "The provided sections do not contain the operative rule for whether an overseas good-behaviour bond or similar non-custodial sentence affects temporary-visa character requirements. The temporary-entry character section provided says a person will not be granted a temporary entry class visa if they have been convicted of certain offences, including any offence for which they have been imprisoned, and certain New Zealand offences punishable by imprisonment for three months or more, but it does not state how a non-custodial overseas bond or similar sentence is treated. The missing policy material is the specific manual rule that links overseas non-custodial sentences, such as good-behaviour bonds, to the temporary-entry character assessment.",
+      "predicted_decision_boundary": "general_information",
+      "predicted_missing_information": [],
+      "adjudication_note": "The character rules distinguish convictions and imprisonment-based thresholds; a non-custodial disposition requires assessment of the underlying conviction and facts rather than being treated as an automatic imprisonment bar.",
+      "primary_mechanism": "scope_entailment_underreach",
+      "secondary_mechanism": "closed_character_rule_underused",
+      "mechanism_definition": "The supplied rule was sufficient for the information need, but the model unnecessarily declared a corpus gap instead of applying the available general, closed, or exhaustive rule.",
+      "human_review_status": "PENDING"
+    },
+    {
+      "dataset": "external_v2",
+      "case_id": "ext2_b9c0792e1eafc5b7",
+      "question": "If my AEWV application is still pending, can I travel to New Zealand first under visa-waiver visitor status and wait for the work visa decision there?",
+      "gold_evidence_status": "corpus_gap",
+      "predicted_evidence_status": "external_source_required",
+      "transition": "corpus_gap->external_source_required",
+      "expected_sections": [],
+      "partial_support_sections": [],
+      "predicted_citations": [],
+      "predicted_answer": "The provided sections do not contain the rule about whether a person with a pending AEWV application may enter New Zealand as a visa-waiver visitor and remain there while the work visa is decided. The sections provided only cover medical waivers and post-study work visa instructions, not visa-waiver entry or the effect of a pending AEWV application on travel or stay. To answer this, an authoritative source outside this corpus is needed for the visa-waiver entry conditions and any rules about holding or waiting in New Zealand while an AEWV is pending.",
+      "predicted_decision_boundary": "case_specific_application",
+      "predicted_missing_information": [
+        "The published visa-waiver visitor entry rule and any rule about whether a pending AEWV application allows entry to New Zealand and waiting there for the decision"
+      ],
+      "adjudication_note": "The corpus does not contain the general visitor/visa-waiver entry and bona fide rules or the AEWV applicant-side instructions needed to determine whether a person may enter as a visitor while an AEWV is pending.",
+      "primary_mechanism": "authoritative_home_resolution_failure",
+      "secondary_mechanism": "missing_manual_rule_wrongly_externalised",
+      "mechanism_definition": "The model chose the wrong authoritative home for a material unsupported proposition, confusing missing Operational Manual policy with information maintained by an external authority, live service, professional guideline, issuing body, or other regime.",
+      "human_review_status": "PENDING"
+    }
+  ]
+}

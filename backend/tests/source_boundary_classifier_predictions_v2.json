@@ -1,0 +1,401 @@
+{
+  "schema": "waypoint-source-boundary-classifier-predictions-v2",
+  "status": "FIRST_UNTOUCHED_INDEPENDENT_RUN_COMPLETE",
+  "completed_at_utc": "2026-08-25T01:05:53.776294+00:00",
+  "source_artifacts": {
+    "classifier_implementation_v2_sha256": "8193FCDDB48585EC8A8BA8BCC477D123011B50F2F38531BEB2D88836975FF949",
+    "classifier_prompt_sha256": "4A5C725B528FF09F7EEC3B306FD44F1ABDA99C6EC5EE5DFBB2E451F4ECA350C2",
+    "blind_input_v2_sha256": "22D3A1C184F95D65D9571191A1FFF01AD251050C554BA6D96F15FBABBFDF9D6B",
+    "acceptance_thresholds_v2_sha256": "1BDD2ED8950D6E3E612C66DCD5384BD5E0CAC784E39A70C3CE09EAD5C310D277",
+    "run_authorisation_v2_sha256": "566E7E9CAE745588BE7043A0D42CC96DDA0B95322821C3916409B43B32AE1C80"
+  },
+  "execution_contract": {
+    "model": "gpt-5.4-mini",
+    "reasoning_effort": "none",
+    "max_completion_tokens": 800,
+    "temperature": 0.0,
+    "case_count": 40,
+    "model_call_attempts": 40,
+    "one_model_call_per_case": true,
+    "sequential": true,
+    "automatic_retry": false,
+    "repair_call": false,
+    "fallback_model": false
+  },
+  "results": {
+    "completed_predictions": 40,
+    "errors": 0,
+    "scoring_performed": false,
+    "gold_loaded": false,
+    "threshold_file_loaded": false
+  },
+  "cases": [
+    {
+      "case_id": "iv4_001",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "certified_immigration_instructions",
+      "source_class": "operational_manual_instruction",
+      "responsible_authority_type": "immigration_new_zealand",
+      "basis": "This is a substantive immigration-instruction rule about an ongoing visa condition and a requirement before changing employer, which is the kind of eligibility/condition/obligation owned by certified operational manual instructions."
+    },
+    {
+      "case_id": "iv4_002",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "certified_immigration_instructions",
+      "source_class": "operational_manual_instruction",
+      "responsible_authority_type": "immigration_new_zealand",
+      "basis": "This is a substantive immigration eligibility rule about whether a dependent child can be included under an age and dependency requirement, which is the kind of criterion ordinarily owned by certified immigration instructions."
+    },
+    {
+      "case_id": "iv4_003",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "certified_immigration_instructions",
+      "source_class": "operational_manual_instruction",
+      "responsible_authority_type": "immigration_new_zealand",
+      "basis": "This is a substantive immigration-instruction rule about an instruction-defined exception to a normally required criterion, which is the kind of eligibility/exception requirement owned by certified operational manual instructions."
+    },
+    {
+      "case_id": "iv4_004",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "certified_immigration_instructions",
+      "source_class": "operational_manual_instruction",
+      "responsible_authority_type": "immigration_new_zealand",
+      "basis": "The proposition asks about a substantive immigration eligibility requirement or condition within immigration instructions, namely a minimum qualifying employment period for a residence pathway."
+    },
+    {
+      "case_id": "iv4_005",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "certified_immigration_instructions",
+      "source_class": "manual_instruction_transition",
+      "responsible_authority_type": "immigration_new_zealand",
+      "basis": "Trusted context explicitly establishes a certified Immigration New Zealand amendment that is not yet indexed locally, which matches the transition class for authoritative manual-instruction amendments pending incorporation."
+    },
+    {
+      "case_id": "iv4_006",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "certified_immigration_instructions",
+      "source_class": "manual_instruction_transition",
+      "responsible_authority_type": "immigration_new_zealand",
+      "basis": "Trusted context establishes a certified immigration amendment from Immigration New Zealand with a stale local index, so the authoritative home is the transition/amendment class rather than the indexed Manual."
+    },
+    {
+      "case_id": "iv4_007",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "certified_immigration_instructions",
+      "source_class": "manual_instruction_transition",
+      "responsible_authority_type": "immigration_new_zealand",
+      "basis": "Trusted context explicitly matches a certified Immigration New Zealand amendment that is not yet indexed locally, so the authoritative home is the transition class for certified instruction changes."
+    },
+    {
+      "case_id": "iv4_008",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "legislation_or_regulation",
+      "source_class": "legislation_or_regulation",
+      "responsible_authority_type": "new_zealand_legislature_or_regulator",
+      "basis": "The proposition asks for the statutory provision that confers legal power on immigration officers, which is a legal-authority question rather than an operational immigration instruction."
+    },
+    {
+      "case_id": "iv4_009",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "legislation_or_regulation",
+      "source_class": "legislation_or_regulation",
+      "responsible_authority_type": "new_zealand_legislature_or_regulator",
+      "basis": "The proposition asks about whether regulations legally authorise a levy, which is a question of legal authority/basis rather than an operational instruction or current payable amount."
+    },
+    {
+      "case_id": "iv4_010",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "legislation_or_regulation",
+      "source_class": "legislation_or_regulation",
+      "responsible_authority_type": "new_zealand_legislature_or_regulator",
+      "basis": "The proposition asks about whether an enactment permits information sharing, which is a legal-authority question about statutory/regulatory power rather than an operational immigration instruction or service rule."
+    },
+    {
+      "case_id": "iv4_011",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "official_inz_non_manual",
+      "source_class": "inz_live_service_information",
+      "responsible_authority_type": "immigration_new_zealand",
+      "basis": "A presently estimated processing timeframe for most applications is a current, time-varying Immigration New Zealand service value rather than a substantive immigration rule."
+    },
+    {
+      "case_id": "iv4_012",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "official_inz_non_manual",
+      "source_class": "inz_live_service_information",
+      "responsible_authority_type": "immigration_new_zealand",
+      "basis": "This asks about the current operational state of an Immigration New Zealand submission portal today, which is a time-varying service availability value rather than a substantive immigration rule."
+    },
+    {
+      "case_id": "iv4_013",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "official_inz_non_manual",
+      "source_class": "inz_live_service_information",
+      "responsible_authority_type": "immigration_new_zealand",
+      "basis": "This is a current, time-varying INZ service state/value about quota availability for a capped application category, which fits live service information rather than a substantive manual rule."
+    },
+    {
+      "case_id": "iv4_014",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "official_inz_non_manual",
+      "source_class": "inz_live_service_information",
+      "responsible_authority_type": "immigration_new_zealand",
+      "basis": "This asks for a current, time-varying INZ service state/value: appointment slot availability currently shown for a service centre."
+    },
+    {
+      "case_id": "iv4_015",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "official_inz_non_manual",
+      "source_class": "current_fee_or_charge_information",
+      "responsible_authority_type": "immigration_new_zealand",
+      "basis": "The proposition asks for a current payable application charge amount, which is a time-varying fee/charge rather than an immigration rule or legal basis."
+    },
+    {
+      "case_id": "iv4_016",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "official_inz_non_manual",
+      "source_class": "current_fee_or_charge_information",
+      "responsible_authority_type": "immigration_new_zealand",
+      "basis": "The proposition asks for a current immigration levy amount included in a fee currently charged for an application type, which is a current payable charge/value rather than a rule or legal basis."
+    },
+    {
+      "case_id": "iv4_017",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "official_inz_non_manual",
+      "source_class": "current_fee_or_charge_information",
+      "responsible_authority_type": "immigration_new_zealand",
+      "basis": "The proposition asks for a currently payable additional service fee tied to an Immigration New Zealand application channel, which is a current charge/fee amount rather than a substantive immigration rule."
+    },
+    {
+      "case_id": "iv4_018",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "official_inz_non_manual",
+      "source_class": "inz_non_manual_procedure_or_interpretation",
+      "responsible_authority_type": "immigration_new_zealand",
+      "basis": "The proposition is about an Immigration New Zealand internal administration circular (publication_family=inz_iac) instructing staff on procedure, which is a non-Manual INZ procedural/interpretive publication."
+    },
+    {
+      "case_id": "iv4_019",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "official_inz_non_manual",
+      "source_class": "inz_non_manual_procedure_or_interpretation",
+      "responsible_authority_type": "immigration_new_zealand",
+      "basis": "The proposition is explicitly about an Immigration New Zealand Advice to Staff publication, which is a non-Manual procedural publication owned by INZ."
+    },
+    {
+      "case_id": "iv4_020",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "official_inz_non_manual",
+      "source_class": "inz_non_manual_procedure_or_interpretation",
+      "responsible_authority_type": "immigration_new_zealand",
+      "basis": "The proposition is about instructions in an Immigration New Zealand form guide, and the trusted context identifies the publication family as inz_form_or_guide under Immigration New Zealand, which fits the non-Manual procedural/interpretive source class."
+    },
+    {
+      "case_id": "iv4_021",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "responsible_external_official_authority",
+      "source_class": "foreign_issuing_authority_procedure",
+      "responsible_authority_type": "foreign_issuing_authority",
+      "basis": "The proposition is about the procedure a foreign civil registry uses to issue or replace one of its own records (a birth certificate), which is owned by the foreign authority in an issuing role."
+    },
+    {
+      "case_id": "iv4_022",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "responsible_external_official_authority",
+      "source_class": "foreign_issuing_authority_procedure",
+      "responsible_authority_type": "foreign_issuing_authority",
+      "basis": "The proposition is about the procedure used by a foreign police records office in its issuing role for an official police clearance certificate, which fits a foreign authority’s document-issuing procedure."
+    },
+    {
+      "case_id": "iv4_023",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "responsible_external_official_authority",
+      "source_class": "foreign_issuing_authority_procedure",
+      "responsible_authority_type": "foreign_issuing_authority",
+      "basis": "The proposition is about a foreign passport authority’s procedure for replacing a damaged passport, which is an issuing-role document replacement process owned by the foreign authority."
+    },
+    {
+      "case_id": "iv4_024",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "responsible_external_official_authority",
+      "source_class": "external_agency_assessment_or_service",
+      "responsible_authority_type": "external_government_agency",
+      "basis": "The proposition describes an assessment service owned by a New Zealand government qualifications agency, which is a non-immigration external agency function rather than an immigration instruction or legal rule."
+    },
+    {
+      "case_id": "iv4_025",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "responsible_external_official_authority",
+      "source_class": "external_agency_assessment_or_service",
+      "responsible_authority_type": "external_government_agency",
+      "basis": "The proposition describes a verification service performed by an external government identity agency, which is an administrative assessment/service owned by a non-professional external official agency rather than immigration instructions or a foreign issuing-role procedure."
+    },
+    {
+      "case_id": "iv4_026",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "responsible_external_official_authority",
+      "source_class": "foreign_issuing_authority_procedure",
+      "responsible_authority_type": "foreign_issuing_authority",
+      "basis": "The proposition is about a public records agency’s verification service for confirming authenticity of an already issued document, which is an official document-issuance/verification function owned by the issuing authority."
+    },
+    {
+      "case_id": "iv4_027",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "responsible_external_official_authority",
+      "source_class": "external_entitlement_or_service_regime",
+      "responsible_authority_type": "public_service_authority",
+      "basis": "The proposition is about eligibility for a separately administered public health service outside immigration instructions, with immigration status used as an input to that external entitlement decision."
+    },
+    {
+      "case_id": "iv4_028",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "responsible_external_official_authority",
+      "source_class": "external_entitlement_or_service_regime",
+      "responsible_authority_type": "public_service_authority",
+      "basis": "This is eligibility for access to a separately administered public subsidy/service regime outside immigration instructions, with the education authority as the administering body."
+    },
+    {
+      "case_id": "iv4_029",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "responsible_external_official_authority",
+      "source_class": "external_entitlement_or_service_regime",
+      "responsible_authority_type": "public_service_authority",
+      "basis": "The proposition is about eligibility for a separately administered public housing service outside immigration instructions, with visa status used as an input to that external entitlement decision."
+    },
+    {
+      "case_id": "iv4_030",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "responsible_external_official_authority",
+      "source_class": "professional_or_assessor_guidance",
+      "responsible_authority_type": "professional_or_assessment_authority",
+      "basis": "The proposition concerns evidence requirements used by a professional registration body when assessing overseas professional competence, which is owned by a professional/registration assessor role rather than immigration instructions or a generic external agency service."
+    },
+    {
+      "case_id": "iv4_031",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "responsible_external_official_authority",
+      "source_class": "professional_or_assessor_guidance",
+      "responsible_authority_type": "professional_or_assessment_authority",
+      "basis": "The proposition is about clinical criteria applied by an authorised medical assessor in a specialist fitness assessment, which is owned by a specialist-assessor/clinical role rather than immigration instructions or a generic external service."
+    },
+    {
+      "case_id": "iv4_032",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "responsible_external_official_authority",
+      "source_class": "professional_or_assessor_guidance",
+      "responsible_authority_type": "professional_or_assessment_authority",
+      "basis": "The proposition is about standards used by an approved professional assessor to evaluate occupational competence, which is guidance/requirements owned by a professional or specialist assessor role rather than immigration instructions or a generic external service."
+    },
+    {
+      "case_id": "iv4_033",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "responsible_external_official_authority",
+      "source_class": "other_official_external_authority",
+      "responsible_authority_type": "other_official_authority",
+      "basis": "The proposition is about a foreign border authority’s operational service requirement, and the trusted context identifies an other_official_authority with authority_role=other_official_operational_owner, which fits the last-resort external official operational owner class."
+    },
+    {
+      "case_id": "iv4_034",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "responsible_external_official_authority",
+      "source_class": "other_official_external_authority",
+      "responsible_authority_type": "other_official_authority",
+      "basis": "The proposition is about a reporting procedure owned by an overseas customs administration in its official operational role, and the trusted context explicitly identifies an other_official_authority with authority_role=other_official_operational_owner."
+    },
+    {
+      "case_id": "iv4_035",
+      "status": "prediction",
+      "resolution_status": "unresolved",
+      "source_domain": "unresolved",
+      "source_class": "unresolved",
+      "responsible_authority_type": "unresolved",
+      "basis": "The proposition is about whether a recently announced procedural change is already authoritative, but no trusted source context is provided to establish a context-gated amendment source, and the wording does not clearly identify a specific authoritative home beyond that ambiguity."
+    },
+    {
+      "case_id": "iv4_036",
+      "status": "prediction",
+      "resolution_status": "resolved",
+      "source_domain": "responsible_external_official_authority",
+      "source_class": "other_official_external_authority",
+      "responsible_authority_type": "other_official_authority",
+      "basis": "The proposition asks about control of an unspecified overseas clearance process by an official organisation, which is a generic external official operational owner and does not clearly fit a more specific source class."
+    },
+    {
+      "case_id": "iv4_037",
+      "status": "prediction",
+      "resolution_status": "unresolved",
+      "source_domain": "unresolved",
+      "source_class": "unresolved",
+      "responsible_authority_type": "unresolved",
+      "basis": "The proposition is meta-level and does not identify a substantive immigration rule or a clearly owned live service value; with no trusted source context, ownership between Immigration New Zealand and another agency remains genuinely ambiguous."
+    },
+    {
+      "case_id": "iv4_038",
+      "status": "prediction",
+      "resolution_status": "unresolved",
+      "source_domain": "unresolved",
+      "source_class": "unresolved",
+      "responsible_authority_type": "unresolved",
+      "basis": "The proposition refers only to an unspecified overseas authority and does not state an issuing role or any other specific authoritative owner; with no trusted source metadata, the source home cannot be assigned to a more specific external class."
+    },
+    {
+      "case_id": "iv4_039",
+      "status": "prediction",
+      "resolution_status": "unresolved",
+      "source_domain": "unresolved",
+      "source_class": "unresolved",
+      "responsible_authority_type": "unresolved",
+      "basis": "The proposition is about whether a fee reference is current payable information or merely a historical legal reference, but the prompt does not identify a clear authoritative source role or provide trusted context to resolve the ownership."
+    },
+    {
+      "case_id": "iv4_040",
+      "status": "prediction",
+      "resolution_status": "unresolved",
+      "source_domain": "unresolved",
+      "source_class": "unresolved",
+      "responsible_authority_type": "unresolved",
+      "basis": "The proposition is about source-home ambiguity between certified immigration instructions and uncertified staff guidance, but no trusted context is provided to resolve whether it belongs to a manual instruction or a non-manual procedural/interpretive publication."
+    }
+  ],
+  "authorisations": {
+    "scoring_authorised": false,
+    "prediction_result_freeze_authorised": true,
+    "repeat_run_authorised": false,
+    "candidate_v7_build_authorised": false,
+    "production_runtime_change_authorised": false
+  }
+}

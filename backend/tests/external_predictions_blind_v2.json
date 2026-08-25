@@ -1,0 +1,1318 @@
+{
+  "schema": "waypoint-external-predictions-blind-v2",
+  "status": "FIRST_UNTOUCHED_HOLDOUT_V2_PREDICTIONS",
+  "source_blind_sha256": "9A0D08AD48D49D6F83509F57251AD191BEAE1BF5DE05D680670BFA46961B1FED",
+  "source_gold_sha256_recorded_in_blind": "D584326117A4CEF64C869225AD9186FF95C1D0753ED93706A0748C6ABCC4FA36",
+  "candidate_freeze_sha256": "0600D79FFC375C7CC8FC358722EE51A98B0D979188F61FF8B4CBD7412A1CB03C",
+  "runtime_ask_sha256": "FF879300C09B195681E109E5B4F5D807C89216E986AE4AA9338B104FA99AAD0E",
+  "prediction_count": 60,
+  "production_entrypoint": "app.api.routes.ask.ask",
+  "predictions": [
+    {
+      "case_id": "ext2_023fa6cd6621a24a",
+      "question": "For a spouse applying for a Partner of a Student Work Visa, which purpose should be selected when requesting a police clearance certificate from the issuing country?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The provided sections say police certificates are required for some temporary entry class visa applications and that instructions on how to obtain police certificates from specific countries are available on the INZ website, but they do not say which purpose should be selected for a spouse applying for a Partner of a Student Work Visa. That purpose-selection instruction is missing from the supplied manual sections.",
+      "citations": [
+        {
+          "section_code": "A5.10",
+          "title": "A5.10 Police certificates",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/41439.htm",
+          "effective_date": "2015-07-06"
+        },
+        {
+          "section_code": "A5.5",
+          "title": "A5.5 Character checks",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/45181.htm",
+          "effective_date": "2025-12-08"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_b01b08c9e689cb55",
+      "question": "If a foreign police-certificate application form offers several purpose categories, does the wording chosen on that form matter to Immigration New Zealand?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do not say whether the wording chosen on a foreign police-certificate application form matters to Immigration New Zealand. They do say that police certificates must meet INZ’s requirements about age, timing, language, and the countries covered, and that INZ provides instructions on how to obtain police certificates from specific countries. But there is no provided rule about the purpose category selected on the foreign form.",
+      "citations": [
+        {
+          "section_code": "A5.10",
+          "title": "A5.10 Police certificates",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/41439.htm",
+          "effective_date": "2015-07-06"
+        },
+        {
+          "section_code": "A5.5",
+          "title": "A5.5 Character checks",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/45181.htm",
+          "effective_date": "2025-12-08"
+        },
+        {
+          "section_code": "R2.40",
+          "title": "R2.40 Mandatory requirements for lodging an application for a residence class visa",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/44893.htm",
+          "effective_date": "2022-04-12"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_370bd814453c5733",
+      "question": "Does a partner applying alongside a student need a different type of police certificate from the one normally used for immigration purposes?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The provided sections say that police certificates are required for some temporary entry class visa applications, and that applicants for temporary entry class visas must obtain police certificates from their country of citizenship and any country where they have lived for five or more years since age 17, subject to the listed exceptions. They also say that for any further temporary entry class visa application as a partner or dependant of a student enrolled in a Doctor of Philosophy (PhD) programme, previously submitted police certificates can be accepted if made within 36 months of issue. However, the supplied text does not state whether a partner applying alongside a student needs a different type of police certificate from the one normally used for immigration purposes. That specific rule is missing from the provided sections.",
+      "citations": [
+        {
+          "section_code": "A5.10",
+          "title": "A5.10 Police certificates",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/41439.htm",
+          "effective_date": "2015-07-06"
+        },
+        {
+          "section_code": "A5.5",
+          "title": "A5.5 Character checks",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/45181.htm",
+          "effective_date": "2025-12-08"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_8b2e20071365d73e",
+      "question": "If I first hold a Partner of a New Zealander Work Visa and later switch to a PhD student visa, does that interrupt or reset the partnership time relevant to a future residence application?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "case_specific_application",
+      "answer": "The provided sections do not contain the operative rule about whether time spent on a Partner of a New Zealander Work Visa continues to count, pauses, or resets if the person later changes to a PhD student visa. The sections do show that for partnership-based residence applications, immigration officers may count any period immediately prior to a marriage where they are satisfied the couple was living together in an interdependent partnership akin to marriage, and that a residence application can be declined or deferred if the partnership is genuine and stable but under the required 12 months [R2.1]. However, the supplied text does not include the rule that links a work visa, a student visa, and the partnership time requirement for a future residence application. That missing policy material is needed to answer your question.",
+      "citations": [
+        {
+          "section_code": "R2.1",
+          "title": "R2.1 Who may be included in an application",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46504.htm",
+          "effective_date": "2024-10-01"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_14db5e8fdd3c2a92",
+      "question": "Could having held a partnership-based work visa before applying for a student visa create a genuine-intentions issue because I may ultimately want to remain in New Zealand?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "case_specific_application",
+      "answer": "The provided sections do not contain the genuine-intentions rule for student visas, so I cannot say from this corpus whether a prior partnership-based work visa could create that issue. The sections provided cover dependent children of student visa holders, post-study work visas, partners and dependent children of student or work visa holders, and practical experience work conditions, but they do not include the student-visa genuine-intentions policy or any rule linking a previous partnership-based work visa to that assessment.",
+      "citations": [
+        {
+          "section_code": "U8.25",
+          "title": "U8.25 Dependent children of holders of student visas",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/42649.htm",
+          "effective_date": "2019-05-13"
+        },
+        {
+          "section_code": "WD3.5",
+          "title": "WD3.5 Currency and conditions of Post-study work visas",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/71752.htm",
+          "effective_date": "2026-04-20"
+        },
+        {
+          "section_code": "V3.10",
+          "title": "V3.10 Partners and dependent children of student or work visa holders",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46189.htm",
+          "effective_date": "2026-03-09"
+        },
+        {
+          "section_code": "U13.5",
+          "title": "U13.5 Work conditions for practical experience requirements",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/47538.htm",
+          "effective_date": "2013-12-02"
+        },
+        {
+          "section_code": "WD3.1",
+          "title": "WD3.1 Determining a Post-Study work visa",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/71685.htm",
+          "effective_date": "2024-11-18"
+        }
+      ],
+      "missing_information": [
+        "the student-visa genuine-intentions policy and any rule about how a prior partnership-based work visa affects that assessment"
+      ],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_d807f50f0d30cbd0",
+      "question": "Can medical and police documents prepared for a partnership work visa be reused if I later apply for a New Zealand student visa?",
+      "interpreted_as": null,
+      "outcome": "answered",
+      "evidence_status": "sufficient",
+      "decision_boundary": "general_information",
+      "answer": "Yes, the manual says some police certificates and medical certificates can be reused for a later temporary entry class visa application if they were provided with an earlier application and are still within the stated time limits. For police certificates, they can be accepted for any further temporary entry class visa application other than a student visa under U4.10 if the later application is made within 24 months of the certificate date; for further student visa applications, the reuse rule is narrower and applies only to a fee-paying foreign student or a PhD student, or a partner/dependent of a PhD student, within the stated periods. For medical certificates, a temporary entry class visa applicant does not ordinarily need to provide them again if they were provided with an earlier visa application, the applicant was assessed as having an acceptable standard of health based on them, and they were issued less than 36 months before the current application. The manual sections provided do not say that a partnership work visa medical or police document can automatically be reused for a later student visa in every case; the student-visa reuse rules are specific. [A5.10] [A4.25]",
+      "citations": [
+        {
+          "section_code": "A5.10",
+          "title": "A5.10 Police certificates",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/41439.htm",
+          "effective_date": "2015-07-06"
+        },
+        {
+          "section_code": "A4.25",
+          "title": "A4.25 Medical and Chest X-ray Certificates: temporary entry class visa applications",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46507.htm",
+          "effective_date": null
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_148b00724488db84",
+      "question": "For a Partner of a Student Work Visa, can relationship-support letters from family or friends be typed rather than handwritten?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The provided sections do not contain the rule about whether relationship-support letters from family or friends for a Partner of a Student Work Visa must be handwritten or may be typed. The only relationship-evidence provision supplied says principal applicants must provide evidence of their relationship and evidence that the partnership is genuine and stable, and that F2.20.15 sets out the types of evidence required, but that supporting section is not provided here. So the missing policy material is the specific evidence rule in F2.20.15 or any related instruction about the format of letters.",
+      "citations": [
+        {
+          "section_code": "R2.1",
+          "title": "R2.1 Who may be included in an application",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46504.htm",
+          "effective_date": "2024-10-01"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_84003cea05261d51",
+      "question": "Is there a required or recommended number of letters from family, friends, community leaders, or professionals when proving a partnership?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The provided sections say principal applicants must provide evidence of their relationship with their partner and evidence that the partnership is genuine and stable, and that the types of evidence are set out in F2.20.15. However, the supplied text does not include any rule about how many letters from family, friends, community leaders, or professionals are required or recommended. That specific evidence rule is missing from the provided sections.",
+      "citations": [
+        {
+          "section_code": "R2.1",
+          "title": "R2.1 Who may be included in an application",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46504.htm",
+          "effective_date": "2024-10-01"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_ed95554266040d72",
+      "question": "Can immediate family members such as parents or siblings provide supporting letters for a New Zealand partnership visa application?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The provided sections do not contain the rule about who may provide supporting letters for a New Zealand partnership visa application. The sections shown discuss evidence of relationship with a partner and other visa topics, but they do not state whether immediate family members such as parents or siblings may provide supporting letters for a partnership visa application.",
+      "citations": [],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_682333d9b9c172f4",
+      "question": "For a Green List Straight to Residence role, can extensive relevant work experience make up for a bachelor's degree that is in a different field from the occupation?",
+      "interpreted_as": null,
+      "outcome": "answered",
+      "evidence_status": "sufficient",
+      "decision_boundary": "general_information",
+      "answer": "Yes, the supplied sections say work experience can be relevant to employment if the employer considers, and an immigration officer is satisfied, that the work experience is directly applicable to the employment, or if the offer of employment could not reasonably have been made, or the employment could not reasonably have been undertaken, without that work experience. They also say qualifications are relevant if the major subject area of the recognised qualification is directly applicable to the employment, or if an immigration officer is satisfied the qualification was a key factor in the employer’s decision to employ the applicant. However, the sections do not say that extensive relevant work experience can automatically make up for a bachelor’s degree in a different field; they only set out how relevance of work experience and qualifications is assessed. [SR3.20]",
+      "citations": [
+        {
+          "section_code": "SR3.20",
+          "title": "SR3.20 Skilled employment",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/79840.htm",
+          "effective_date": "2026-03-09"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_d2f88ceae65b9b46",
+      "question": "If a Green List role requires qualification assessment, how do I know whether I need a standard IQA or a Skilled Shortage List IQA?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The provided sections say that, for Green List evidence, a qualification can be supported by the qualification itself, and if the Green List requirement is for a New Zealand qualification and the qualification is from outside New Zealand, an IQA from NZQA. They also say that an IQA assesses an overseas qualification and states the NZQF level and qualification type of the closest New Zealand equivalent qualification. However, the supplied sections do not explain when a Green List role requires a standard IQA versus a Skilled Shortage List IQA. That distinction is not set out in the provided text, so I cannot identify the operative rule from this corpus alone.",
+      "citations": [
+        {
+          "section_code": "SR4.5",
+          "title": "SR4.5 Summary of requirements",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77816.htm",
+          "effective_date": "2024-02-28"
+        },
+        {
+          "section_code": "SR5.5",
+          "title": "SR5.5 Summary of requirements",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77820.htm",
+          "effective_date": "2024-02-28"
+        },
+        {
+          "section_code": "SR3.25",
+          "title": "SR3.25 Skill categories",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/80474.htm",
+          "effective_date": "2026-03-09"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_67e067ccdae249ea",
+      "question": "For an offshore Straight to Residence applicant, what matters if the job is highly relevant to their experience but their formal degree title is not closely related?",
+      "interpreted_as": null,
+      "outcome": "answered",
+      "evidence_status": "sufficient",
+      "decision_boundary": "general_information",
+      "answer": "For skilled employment, the qualification does not have to have a closely related title if the qualification is relevant in the way the manual describes. The manual says qualifications are relevant if the major subject area of the principal applicant's recognised qualification is directly applicable to the employment, or if an immigration officer is satisfied that the qualification was a key factor in the employer's decision to employ the principal applicant in that position. It also says work experience is relevant if the employer considers, and an immigration officer is satisfied, that the work experience is directly applicable to the employment, or the offer of employment could not reasonably have been made, or the employment could not reasonably have been undertaken, if the principal applicant did not have that work experience. [SR3.20]",
+      "citations": [
+        {
+          "section_code": "SR3.20",
+          "title": "SR3.20 Skilled employment",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/79840.htm",
+          "effective_date": "2026-03-09"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_081012202ca2bd5a",
+      "question": "If a Partner of a New Zealander Resident Visa is still being processed, can the applicant enter New Zealand on a visitor visa in the meantime?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "case_specific_application",
+      "answer": "The supplied sections do not contain the operative rule for whether a person whose Partner of a New Zealander Resident Visa application is still being processed can enter New Zealand on a visitor visa in the meantime. The only related material provided says that applying for a residence class visa while in New Zealand does not give a person the right to apply for or be granted any other visa while that residence application is considered [R5.75], but that is a general rule and does not provide the specific partner-of-a-New-Zealander-resident-visa visitor-visa instruction you asked about. The missing policy material would need to be the specific manual section governing visitor visas for partners of New Zealand residents.",
+      "citations": [
+        {
+          "section_code": "R5.75",
+          "title": "R5.75 Status of people applying for a residence class visa while in New Zealand",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/31004.htm",
+          "effective_date": "2010-11-29"
+        }
+      ],
+      "missing_information": [
+        "The specific Operational Manual rule for visitor visas for partners of New Zealand resident visa holders while the residence application is still in progress."
+      ],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_559a57944943aab5",
+      "question": "Does entering New Zealand as a visitor while a partnership residence application is pending affect the residence application itself?",
+      "interpreted_as": null,
+      "outcome": "answered",
+      "evidence_status": "sufficient",
+      "decision_boundary": "general_information",
+      "answer": "No. The provided manual section says that applying for a residence class visa while in New Zealand does not give the person the right to remain in New Zealand while the application is considered, does not make their presence lawful, does not give the right to apply for or be granted any other visa while the application is considered, and does not prevent deportation. It does not say that entering New Zealand as a visitor affects the residence application itself. [R5.75]",
+      "citations": [
+        {
+          "section_code": "R5.75",
+          "title": "R5.75 Status of people applying for a residence class visa while in New Zealand",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/31004.htm",
+          "effective_date": "2010-11-29"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_b4eaf7443c1ead5d",
+      "question": "If a partnership residence visa is approved after the applicant has already entered New Zealand as a visitor, what happens to the temporary visa status?",
+      "interpreted_as": null,
+      "outcome": "answered",
+      "evidence_status": "sufficient",
+      "decision_boundary": "general_information",
+      "answer": "An approved partnership residence class visa will result in the grant of a resident visa, unless otherwise stated. The provided sections do not say that the person’s earlier temporary visa status is cancelled or otherwise changed when that happens. They do say that if the resident visa is granted in New Zealand, the health-related visa condition applies for three months from the date the visa was granted. [R5.65]",
+      "citations": [
+        {
+          "section_code": "R5.65",
+          "title": "R5.65 Approved applications for residence class visas",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/31002.htm",
+          "effective_date": "2025-12-14"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_888971954ec7678a",
+      "question": "Can about three months of living together be enough evidence for a New Zealand partnership work visa?",
+      "interpreted_as": null,
+      "outcome": "answered",
+      "evidence_status": "sufficient",
+      "decision_boundary": "general_information",
+      "answer": "Yes, the manual says immigration officers may include any period immediately before a marriage when they are satisfied the couple was living together in an interdependent partnership akin to a marriage, and it also says that if a partnership is genuine and stable but is less than the 12 months required, a partner’s residence application may be deferred so the qualifying period can be met, with a work visa possible for that period. The sections do not say that about three months of living together is automatically enough evidence by itself; they only describe how officers may assess the relationship and what can happen if the 12-month period has not yet been met. [R2.1]",
+      "citations": [
+        {
+          "section_code": "R2.1",
+          "title": "R2.1 Who may be included in an application",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46504.htm",
+          "effective_date": "2024-10-01"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_4ff8da290ce9fb3e",
+      "question": "If a couple lives rent-free with a parent, can a signed statement from that parent help prove that they are living together?",
+      "interpreted_as": null,
+      "outcome": "answered",
+      "evidence_status": "sufficient",
+      "decision_boundary": "general_information",
+      "answer": "Yes, a signed statement can be relevant evidence in some relationship contexts, but the sections provided do not say that a signed statement from a parent can prove that a couple are living together. For partners, the manual says the principal applicant must provide evidence of the relationship and evidence that the partnership is genuine and stable, and that the onus of proving this lies with the principal applicant and partner [R2.1]. The provided sections do not list the types of evidence for proving a couple are living together, so this question cannot be answered from the supplied text.",
+      "citations": [
+        {
+          "section_code": "R2.1",
+          "title": "R2.1 Who may be included in an application",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46504.htm",
+          "effective_date": "2024-10-01"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_f5282f30bc8783fd",
+      "question": "Can strong joint evidence such as a bank account and utility bills compensate for a relatively short period of living together in a partnership work visa application?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections say a partner included in a residence class visa application must be living together in a genuine and stable partnership and must have been living together in such a relationship for 12 months or more when the application is assessed [R2.1]. They also say the principal applicant must provide evidence of the relationship and evidence that the partnership is genuine and stable, and that the types of evidence required are set out in F2.20.15 [R2.1]. However, the provided sections do not include the operative policy on what evidence can be used to prove the relationship or whether strong joint evidence such as a bank account and utility bills can offset a shorter period of living together. That missing evidence rule is needed to answer your question.",
+      "citations": [
+        {
+          "section_code": "R2.1",
+          "title": "R2.1 Who may be included in an application",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46504.htm",
+          "effective_date": "2024-10-01"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_bd93bde6770d371d",
+      "question": "Can a holder of a Partner of a New Zealander Work Visa undertake an apprenticeship in New Zealand?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The provided sections do not contain the rule for whether a holder of a Partner of a New Zealander Work Visa may undertake an apprenticeship in New Zealand. The sections supplied cover visitor visas for partners and dependent children, practical experience work conditions for student visas, and post-study work visas, but they do not provide the operative policy for apprenticeships for this visa holder.",
+      "citations": [],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_97111216187d29b0",
+      "question": "For a partner work visa holder, is an apprenticeship treated as study, work, or study that is required for employment?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The provided sections do not state how an apprenticeship is treated for a partner work visa holder. The only relevant material here says that holders of a Post-Study work visa may be able to undertake work, and that some holders are restricted to work in the occupation related to the qualification, but it does not define whether an apprenticeship counts as study, work, or study required for employment for partner work visa purposes. That operative rule is missing from the supplied manual sections.",
+      "citations": [
+        {
+          "section_code": "WD3.5",
+          "title": "WD3.5 Currency and conditions of Post-study work visas",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/71752.htm",
+          "effective_date": "2026-04-20"
+        },
+        {
+          "section_code": "WD2",
+          "title": "WD2 Lodging an application under Post-Study work visa instructions",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/71683.htm",
+          "effective_date": "2025-12-16"
+        },
+        {
+          "section_code": "V3.10",
+          "title": "V3.10 Partners and dependent children of student or work visa holders",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46189.htm",
+          "effective_date": "2026-03-09"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_75fac29b9803b887",
+      "question": "If a work visa permits only limited study but also allows study required for a job, can a longer apprenticeship fit within that work-related study exception?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The provided sections do not contain the operative rule for the work-visa study-condition exception you are asking about. They do show that some post-study work visas may allow study-related work conditions and that certain post-study work visas have work restrictions, but they do not provide the rule defining when study is permitted on a work visa, what counts as study required for a job, or whether a longer apprenticeship fits that exception. The missing policy material would need to come from the relevant work visa study-condition instructions in the Operational Manual.",
+      "citations": [
+        {
+          "section_code": "WD3.5",
+          "title": "WD3.5 Currency and conditions of Post-study work visas",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/71752.htm",
+          "effective_date": "2026-04-20"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_81b22969808fa4fb",
+      "question": "After successfully submitting a New Zealand Working Holiday Visa application when places open, how soon should the applicant expect a confirmation email?",
+      "interpreted_as": null,
+      "outcome": "type_b",
+      "evidence_status": "external_source_required",
+      "decision_boundary": "general_information",
+      "answer": "The provided manual sections do not contain any rule about how soon a confirmation email is sent after a Working Holiday Visa application is submitted. That timing would need to come from an authoritative source outside these sections, such as Immigration New Zealand’s application processing or notification information.",
+      "citations": [],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_298d0e015f4e8ec2",
+      "question": "After securing a Working Holiday Visa place, should the applicant arrange the immigration medical immediately or wait for instructions from Immigration New Zealand?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The provided sections say that applicants for temporary entry class visas intending to stay in New Zealand for more than 12 months must include a completed Medical Certificate and Chest X-ray Certificate with the application, and that these certificates must be completed by an Immigration New Zealand-appointed panel physician and radiologist if required. However, the sections do not say whether a Working Holiday Visa applicant should arrange the medical immediately after securing a place or wait for instructions from Immigration New Zealand. That timing instruction is missing from the supplied manual sections.",
+      "citations": [
+        {
+          "section_code": "A4.25",
+          "title": "A4.25 Medical and Chest X-ray Certificates: temporary entry class visa applications",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46507.htm",
+          "effective_date": null
+        },
+        {
+          "section_code": "A4.30",
+          "title": "A4.30 Completion of medical certificates",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/44859.htm",
+          "effective_date": "2021-10-05"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_1a4d4735dba2c2c1",
+      "question": "For an initial immigration medical after a Working Holiday Visa application, is a referral from a doctor required before attending an approved clinic?",
+      "interpreted_as": null,
+      "outcome": "answered",
+      "evidence_status": "sufficient",
+      "decision_boundary": "general_information",
+      "answer": "No. The provided instructions say that the Medical Certificate and Chest X-ray Certificate must be completed by an Immigration New Zealand-appointed panel physician and radiologist if required, or by a registered medical practitioner and radiologist if there is no New Zealand-appointed panel in that country. They do not say that a separate referral from a doctor is required before attending an approved clinic. The sections also say an immigration officer may refer medical certificates for assessment if they are not satisfied about health, but that is a referral by Immigration New Zealand, not a doctor’s referral before the medical examination.",
+      "citations": [
+        {
+          "section_code": "A4.30",
+          "title": "A4.30 Completion of medical certificates",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/44859.htm",
+          "effective_date": "2021-10-05"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_75b41153a0296647",
+      "question": "Can periods of living together during repeated overseas visits be added together when assessing how long a couple has lived together for a New Zealand partnership application?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The provided sections say that immigration officers may include any period immediately prior to any marriage where they are satisfied the couple was living together in an interdependent partnership akin to a marriage, and that the required 12 months of partnership does not have to be completed consecutively in the work context. However, the supplied text does not state whether separate periods of living together during repeated overseas visits can be added together for the partnership duration test. That rule is missing from the provided manual sections.",
+      "citations": [
+        {
+          "section_code": "R2.1",
+          "title": "R2.1 Who may be included in an application",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46504.htm",
+          "effective_date": "2024-10-01"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_3bdbe7674b1f81bf",
+      "question": "Is a joint bank account mandatory evidence for a New Zealand partnership visa, or can a couple prove the relationship in other ways?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The provided sections do not contain the operative evidence rule for proving a partnership for a New Zealand partnership visa. They mention that an immigration officer assesses whether a partnership is genuine and stable, but they do not provide the relationship evidence list or say whether a joint bank account is mandatory or optional. The missing policy material is the section that sets out the evidence of relationship with a partner.",
+      "citations": [
+        {
+          "section_code": "R2.1",
+          "title": "R2.1 Who may be included in an application",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46504.htm",
+          "effective_date": "2024-10-01"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_76eb5cb67e246f86",
+      "question": "Is joint ownership of property required to prove a genuine and stable partnership for a New Zealand visa?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The provided sections do not state that joint ownership of property is required to prove a genuine and stable partnership. They do say that if an immigration officer is not satisfied the couple are living together in a partnership that is genuine and stable, the partner will not be granted a residence class visa, and if the partnership is genuine and stable but has lasted less than 12 months, different consequences apply depending on whether the principal applicant’s residence depends on the partner or the partner’s attributes. However, the actual evidence rules for proving a genuine and stable partnership are not included in the supplied sections.",
+      "citations": [
+        {
+          "section_code": "R2.1",
+          "title": "R2.1 Who may be included in an application",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46504.htm",
+          "effective_date": "2024-10-01"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_ddc7067c6419a82a",
+      "question": "If I hold a Partner of a New Zealander Work Visa, do I still need an employer to sponsor my employment?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The provided sections do not contain the operative rule for a Partner of a New Zealander Work Visa. They only show rules for partners and dependent children of certain other work visa holders, and one separate rule where a religious organisation sponsors dependent children of a Religious Worker visa holder. I cannot confirm from these sections whether a Partner of a New Zealander Work Visa holder needs an employer to sponsor employment. The missing policy material is the section that specifically sets the work rights or employment conditions for Partner of a New Zealander Work Visa holders.",
+      "citations": [
+        {
+          "section_code": "V3.10",
+          "title": "V3.10 Partners and dependent children of student or work visa holders",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46189.htm",
+          "effective_date": "2026-03-09"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_88bb7b72c7160f36",
+      "question": "Does an employer need to be accredited before hiring someone who already holds an open partnership-based work visa?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections explain employer accreditation requirements, but they do not state whether an employer must be accredited before hiring someone who already holds an open partnership-based work visa. The missing policy material is the rule that links this visa type to employer accreditation, including whether accreditation is required at the point of hiring.",
+      "citations": [
+        {
+          "section_code": "WA2.1",
+          "title": "WA2.1 Overview",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77100.htm",
+          "effective_date": "2025-12-08"
+        },
+        {
+          "section_code": "WA2.10",
+          "title": "WA2.10 Requirements for all employers",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77102.htm",
+          "effective_date": "2025-09-29"
+        },
+        {
+          "section_code": "WA2.5",
+          "title": "WA2.5 Applying for employer accreditation",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77101.htm",
+          "effective_date": "2022-05-23"
+        },
+        {
+          "section_code": "WA2.35",
+          "title": "WA2.35 Processing and verification requirements",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77112.htm",
+          "effective_date": "2025-12-08"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_7a8dac2d6b8342b6",
+      "question": "Can a Partner of a New Zealander Work Visa holder work for different employers without obtaining a new employer-specific visa?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The provided sections do not contain the rule you asked about. They cover partners and dependent children of student or work visa holders, visitor visa eligibility, and some work-visa-related partner provisions, but they do not state whether a Partner of a New Zealander Work Visa holder may work for different employers without obtaining a new employer-specific visa. The missing policy material would need to be the specific instructions for that partner work visa category and any conditions on employer change or employer-specific work rights.",
+      "citations": [
+        {
+          "section_code": "V3.10",
+          "title": "V3.10 Partners and dependent children of student or work visa holders",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46189.htm",
+          "effective_date": "2026-03-09"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_40d58c149c58bec6",
+      "question": "Can a 24-year-old who is already working still qualify as a dependent child for New Zealand residence if a parent continues to provide substantial financial support?",
+      "interpreted_as": null,
+      "outcome": "type_c",
+      "evidence_status": "sufficient",
+      "decision_boundary": "case_specific_application",
+      "answer": "A child aged 21 to 24 can be a dependent child only if they are single, have no children of their own, and are totally or substantially reliant on the principal applicant and/or the principal applicant's partner for financial support. When deciding whether a 21 to 24-year-old is totally or substantially reliant, immigration officers must consider the whole application, including whether the child is in paid employment, whether that employment is full time or part time and its duration, whether the child has any other independent means of financial support, whether the child is living with parents or another family member and the extent of other support provided, and whether the child is studying. So the fact that a 24-year-old is already working does not by itself rule out dependency, but this cannot be decided from the manual text alone because the actual dependence assessment depends on the full set of facts. [R2.1] [R2.1.30] [R2.1.35]",
+      "citations": [
+        {
+          "section_code": "R2.1",
+          "title": "R2.1 Who may be included in an application",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46504.htm",
+          "effective_date": "2024-10-01"
+        }
+      ],
+      "missing_information": [
+        "whether the 24-year-old is single",
+        "whether the 24-year-old has any child(ren) of their own",
+        "the extent of the 24-year-old's paid employment and duration",
+        "whether the 24-year-old has other independent means of financial support",
+        "whether the 24-year-old is living with parents or another family member and the extent of other support provided",
+        "whether the 24-year-old is studying and whether that is full time or part time"
+      ],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_25bac28c54e142ab",
+      "question": "What evidence can show that an adult child remains financially dependent on a parent for a dependent-child residence application?",
+      "interpreted_as": null,
+      "outcome": "answered",
+      "evidence_status": "sufficient",
+      "decision_boundary": "general_information",
+      "answer": "For a child aged 21 to 24, immigration officers must consider the whole application and all relevant factors when deciding whether the child is totally or substantially reliant on the principal applicant and/or the principal applicant's partner for financial support. The manual says they must take into account: whether the child is in paid employment, including whether it is full time or part time and its duration; whether the child has any other independent means of financial support; whether the child is living with parents or another family member and the extent to which other support is provided; and whether the child is studying, including whether it is full time or part time. If the child is in paid employment and is working part time under certain visa conditions, that work is not to be considered in this assessment. The manual also says evidence of actual dependence may be required for children aged 21 to 24. [R2.1.30] [R2.1.35]",
+      "citations": [],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_2cfee41b7bc3f928",
+      "question": "For an adult dependent-child residence application, how do being unmarried, having no children, earning a salary, and receiving regular parental support interact?",
+      "interpreted_as": null,
+      "outcome": "answered",
+      "evidence_status": "sufficient",
+      "decision_boundary": "general_information",
+      "answer": "For a dependent child aged 21 to 24, the published rule says the child must be single, have no child(ren) of their own, and be totally or substantially reliant on the principal applicant and/or the principal applicant’s partner for financial support. In assessing that reliance, immigration officers consider the whole application, including whether the child is in paid employment, whether they have other independent means of financial support, whether they live with parents or another family member and the extent of other support provided, and whether they are studying. If the child is working part time under the specified visa conditions, that work is not counted when deciding whether they are totally or substantially reliant. [R2.1.30] [R2.1.35]\n\nSo, being unmarried and having no children are part of the dependency test, but earning a salary and receiving regular parental support are also relevant factors in the reliance assessment. The manual does not say that any one of those facts alone decides the issue. [R2.1.30] [R2.1.35]",
+      "citations": [],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_a613efe4b0b7e501",
+      "question": "When applying for a New Zealand student visa, must I disclose a previous student-visa refusal from another country?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The provided sections do not contain the operative rule about whether a student-visa applicant must disclose a previous student-visa refusal from another country. The sections do say that all student visa applicants must meet the generic temporary entry class character requirements under A4 and A5, and they include rules about false, misleading, or withheld information in visa applications, but they do not state any disclosure requirement for prior refusals from other countries. The missing policy material would need to come from the Operational Manual section that specifically sets out disclosure obligations for visa applications.",
+      "citations": [
+        {
+          "section_code": "U3.1",
+          "title": "U3.1 Summary",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/44905.htm",
+          "effective_date": "2022-09-07"
+        },
+        {
+          "section_code": "A5.45",
+          "title": "A5.45 Convictions, charges and other matters which may cause applicants not to meet character requirements for temporary entry",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/43627.htm",
+          "effective_date": "2023-09-25"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_7d2e80a946efbc21",
+      "question": "Does a previous overseas student-visa refusal automatically prevent approval of a New Zealand student visa?",
+      "interpreted_as": null,
+      "outcome": "answered",
+      "evidence_status": "sufficient",
+      "decision_boundary": "general_information",
+      "answer": "No. The provided student visa instructions say applicants must meet the health and character requirements under A4 and A5, and A5 lists specific character-related grounds that can make a person ineligible, including certain convictions, deportation/exclusion, or being likely to commit offences or pose risks. A previous overseas student-visa refusal is not listed here as an automatic bar to a New Zealand student visa. The instructions provided do not say that such a refusal by itself prevents approval. [U3.1] [A5.20]",
+      "citations": [
+        {
+          "section_code": "U3.1",
+          "title": "U3.1 Summary",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/44905.htm",
+          "effective_date": "2022-09-07"
+        },
+        {
+          "section_code": "A5.20",
+          "title": "A5.20 Who must not be granted a visa or entry permission",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/35057.htm",
+          "effective_date": "2023-09-25"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_2898b389bde85a65",
+      "question": "If I choose a one-year diploma before progressing to a master's degree, can that study pathway affect how Immigration New Zealand assesses whether my study intentions are genuine?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The provided sections do say that, when changing programme of study, an immigration officer must be satisfied that the applicant remains a bona fide applicant, and that the officer may consider factors including the time elapsed since the original visa was granted and whether the level and/or subject area of the proposed programme are significantly different from the original programme [U3.40]. However, the supplied text does not contain the actual bona fide/genuine intentions test itself, so it does not fully answer how a one-year diploma before a master's degree affects that assessment.",
+      "citations": [
+        {
+          "section_code": "U3.40",
+          "title": "U3.40 Students who wish to change their study conditions",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/40311.htm",
+          "effective_date": "2025-12-08"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_90d50f9d92d085da",
+      "question": "What does Immigration New Zealand consider when a visa medical review involves a past mental-health history?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The provided sections say that, when assessing health, Immigration New Zealand medical assessors may refer to any source of relevant guidelines or advice, including the Ministry of Health and Ministry of Education, and that officers may consider advice from an Immigration New Zealand medical assessor on medical matters such as prognosis. However, the supplied text does not contain any specific rule about what is considered in a visa medical review involving a past mental-health history. That specific policy material is missing from the provided sections.",
+      "citations": [
+        {
+          "section_code": "A4.30",
+          "title": "A4.30 Completion of medical certificates",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/44859.htm",
+          "effective_date": "2021-10-05"
+        },
+        {
+          "section_code": "A4.70",
+          "title": "A4.70 Determination of whether a medical waiver should be granted (residence and temporary entry)",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/44864.htm",
+          "effective_date": "2025-03-17"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_cce51047e3ea8b52",
+      "question": "Can historic self-harm or mental-health treatment still affect a visa health assessment if the applicant has been stable for many years?",
+      "interpreted_as": null,
+      "outcome": "answered",
+      "evidence_status": "sufficient",
+      "decision_boundary": "general_information",
+      "answer": "Yes. For residence class visas, the manual says applicants are assessed against acceptable standard of health criteria, and one of the listed conditions is “major psychiatric illness and/or addiction including any psychiatric condition that has required hospitalisation and/or where significant support is required” [A4.10]. The provided text does not say that long-term stability by itself removes that condition from consideration, so the historic self-harm or mental-health treatment could still be relevant if it falls within that listed condition.",
+      "citations": [
+        {
+          "section_code": "A4.10",
+          "title": "A4.10 Acceptable standard of health (applicants for residence)",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46506.htm",
+          "effective_date": "2024-03-16"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_62a87ec1d951cc37",
+      "question": "When assessing health requirements, does it matter that counselling and treatment have been privately funded rather than relying on New Zealand public services?",
+      "interpreted_as": null,
+      "outcome": "answered",
+      "evidence_status": "sufficient",
+      "decision_boundary": "general_information",
+      "answer": "No. For residence applications, the manual says that when there is a relatively high probability an applicant will require health services for which demand in New Zealand is not being met, the ability to gain access to the private health system has no bearing on whether the applicant is unlikely to impose significant demands on New Zealand’s health services. For temporary entry applications, the assessment also takes into account whether there is a relatively high probability the applicant will need publicly funded health services, and the ability to gain access to the private health system, or to pay for health services, pharmaceuticals, or residential care, has no bearing on that assessment. The same kind of rule appears for ORS-related special education assessments, where the ability to pay for education services has no bearing. [A4.10] [A4.15]",
+      "citations": [
+        {
+          "section_code": "A4.10",
+          "title": "A4.10 Acceptable standard of health (applicants for residence)",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46506.htm",
+          "effective_date": "2024-03-16"
+        },
+        {
+          "section_code": "A4.15",
+          "title": "A4.15 Acceptable standard of health (applicants for temporary entry class visas)",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/44856.htm",
+          "effective_date": "2025-03-17"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_d8797e336a9cc692",
+      "question": "For an international student, is an unpaid clinical placement required by the programme treated as practical experience or as employment for visa purposes?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The provided sections do not contain the operative rule for whether an unpaid clinical placement required by a programme is treated as practical experience or as employment for visa purposes. Section [U13.5] says a student visa may be granted with conditions to allow work to fulfil a requirement of practical experience if an immigration officer is satisfied that practical experience is a course requirement, and it says that if an applicant’s main activity will be work they may be directed to apply for a work visa. But the supplied text does not state how an unpaid clinical placement is classified for visa purposes.",
+      "citations": [
+        {
+          "section_code": "U13.5",
+          "title": "U13.5 Work conditions for practical experience requirements",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/47538.htm",
+          "effective_date": "2013-12-02"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_3f6de8c6859da28a",
+      "question": "If a student visa only shows ordinary work-hour conditions, does a compulsory clinical placement need a variation of conditions before the student can undertake it?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The provided sections say a student visa may be granted with conditions allowing work, and that a student visa holder with work conditions may work in order to fulfil a requirement of practical experience if an immigration officer is satisfied that practical experience is a course requirement [U13.1, U13.5]. However, the supplied text does not state whether a compulsory clinical placement is treated as practical experience or whether it can be undertaken without a variation of conditions. That operative rule is missing from the provided sections.",
+      "citations": [
+        {
+          "section_code": "U13.1",
+          "title": "U13.1 Work conditions for all students",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/47536.htm",
+          "effective_date": "2013-12-02"
+        },
+        {
+          "section_code": "U13.5",
+          "title": "U13.5 Work conditions for practical experience requirements",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/47538.htm",
+          "effective_date": "2013-12-02"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_cf68d61927964d2b",
+      "question": "If a clinical placement is paid, does the time spent on that placement count toward the student's permitted work-hour limit?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The provided sections do not contain the operative rule for whether paid clinical placement time counts toward a student’s permitted work-hour limit. The student work-rights section says students may be granted conditions to work up to 25 hours in any given week, but it does not say how clinical placement is treated. The remuneration section and the work-experience sections are about different topics and do not supply the missing rule for clinical placement counting.",
+      "citations": [
+        {
+          "section_code": "U13.15",
+          "title": "U13.15 Work conditions for students enrolled at a tertiary institution or private training establishment",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/47535.htm",
+          "effective_date": "2025-11-03"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_96f7bcc940fb7cf5",
+      "question": "Can a New Zealand Working Holiday Visa be declined because the applicant has a chronic illness that is in remission but requires an expensive ongoing medicine?",
+      "interpreted_as": null,
+      "outcome": "type_c",
+      "evidence_status": "sufficient",
+      "decision_boundary": "case_specific_application",
+      "answer": "A Working Holiday Visa is a temporary entry class visa, and applicants for temporary entry class visas must have an acceptable standard of health unless they have a medical waiver. For temporary entry class visas, an applicant is considered to have an acceptable standard of health only if they are unlikely to impose significant costs or demands on New Zealand's health services during their intended stay. The manual says that assessment of significant costs can include whether there is a relatively high probability the applicant will need publicly funded health services, including high cost pharmaceuticals. It also says that the ability to pay for health services or pharmaceuticals, access to private health care, health insurance, or help from family or others has no bearing on that assessment. So a chronic illness in remission could still lead to decline if it creates a relatively high probability of significant costs, including high cost pharmaceuticals, but the manual does not let me decide the outcome for this person without more facts about the condition and likely health-service costs. [A4.15] [A4.15.1] [A4.65]",
+      "citations": [
+        {
+          "section_code": "A4.15",
+          "title": "A4.15 Acceptable standard of health (applicants for temporary entry class visas)",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/44856.htm",
+          "effective_date": "2025-03-17"
+        },
+        {
+          "section_code": "A4.65",
+          "title": "A4.65 Medical waivers (applicants for temporary entry class visas)",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/44863.htm",
+          "effective_date": "2025-09-29"
+        }
+      ],
+      "missing_information": [
+        "Whether the applicant's condition is likely to impose significant costs or demands on New Zealand's health services during the intended stay",
+        "Whether the applicant has been granted a medical waiver"
+      ],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_1e02544f011e036f",
+      "question": "If a Working Holiday Visa applicant brings enough medication for the planned stay and does not expect to use New Zealand-funded treatment, how does that affect the health assessment?",
+      "interpreted_as": null,
+      "outcome": "answered",
+      "evidence_status": "sufficient",
+      "decision_boundary": "general_information",
+      "answer": "For a Working Holiday Visa applicant, the health test is whether they are unlikely to impose significant costs or demands on New Zealand’s health services during their intended stay, and the manual says that the ability to pay for health services or the possession of health insurance has no bearing on that assessment. So bringing enough medication for the planned stay, or not expecting to use New Zealand-funded treatment, does not by itself change the health assessment under the published rule. The assessment still turns on whether there is a relatively high probability the applicant will need publicly funded health services during their stay, including hospitalisation, residential care, high cost pharmaceuticals, or high cost disability services. [A4.15]",
+      "citations": [
+        {
+          "section_code": "A4.15",
+          "title": "A4.15 Acceptable standard of health (applicants for temporary entry class visas)",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/44856.htm",
+          "effective_date": "2025-03-17"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_8c067aa632151edd",
+      "question": "Can a medical waiver be considered for a Working Holiday Visa applicant who does not meet the normal acceptable-standard-of-health requirement?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The provided sections do not contain the rule for Working Holiday Visa applicants. They do say that medical waivers for temporary entry class visas are generally not considered unless the applicant falls within listed exceptions, and the only temporary-entry work-visa exception shown is for seconded business personnel [A4.65], with separate rules for some residence applicants [A4.60] and the general waiver test [A4.70]. But the specific policy for Working Holiday Visa applicants is not provided here, so I cannot confirm from this corpus whether a medical waiver can be considered for that visa type.",
+      "citations": [
+        {
+          "section_code": "A4.65",
+          "title": "A4.65 Medical waivers (applicants for temporary entry class visas)",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/44863.htm",
+          "effective_date": "2025-09-29"
+        },
+        {
+          "section_code": "A4.70",
+          "title": "A4.70 Determination of whether a medical waiver should be granted (residence and temporary entry)",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/44864.htm",
+          "effective_date": "2025-03-17"
+        },
+        {
+          "section_code": "A4.60",
+          "title": "A4.60 Medical waivers (applicants for residence class visas)",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/45636.htm",
+          "effective_date": "2025-09-29"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_16470dc278eeee1f",
+      "question": "For New Zealand immigration status, what is the practical difference between a Resident Visa and a Permanent Resident Visa?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do not contain the operative rule that explains the practical difference between a Resident Visa and a Permanent Resident Visa. They do show that a resident visa can have travel conditions, and that a resident visa holder who wants to travel outside those travel conditions may apply for a variation if they do not qualify for a permanent resident visa [R5.66], but the sections do not state what a permanent resident visa is, what rights or travel conditions it has, or how it differs in practice from a resident visa. That missing policy material is needed to answer the question.",
+      "citations": [
+        {
+          "section_code": "R5.66",
+          "title": "R5.66 Travel conditions on resident visas",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/44894.htm",
+          "effective_date": "2025-04-01"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_6f3fabde7896acbe",
+      "question": "Does a New Zealand Resident Visa itself expire, or is it mainly the travel conditions that can expire?",
+      "interpreted_as": null,
+      "outcome": "answered",
+      "evidence_status": "sufficient",
+      "decision_boundary": "general_information",
+      "answer": "Yes. The supplied sections say resident visas are granted with travel conditions, including first-arrival and multiple-entry travel conditions, and that the currency of those travel conditions is determined by the residence category. They also say that if a resident visa holder wants to travel outside the validity of their multiple entry travel conditions, they may apply for a variation of travel conditions, and if they fail to travel within the validity of their first travel condition they must submit a further residence class visa application. The sections provided do not say that the resident visa itself expires in the way the travel conditions do. [R5.66] [R5.65]",
+      "citations": [
+        {
+          "section_code": "R5.66",
+          "title": "R5.66 Travel conditions on resident visas",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/44894.htm",
+          "effective_date": "2025-04-01"
+        },
+        {
+          "section_code": "R5.65",
+          "title": "R5.65 Approved applications for residence class visas",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/31002.htm",
+          "effective_date": "2025-12-14"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_ac14beba20a48211",
+      "question": "When an organisation asks whether someone is a permanent resident, can a holder of a New Zealand Resident Visa be treated the same as a Permanent Resident Visa holder?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The provided sections do not contain the rule that defines whether a New Zealand Resident Visa holder can be treated the same as a Permanent Resident Visa holder when someone asks whether a person is a permanent resident. The sections do show that a resident visa holder may later qualify for a permanent resident visa under RV2, and that resident visas and permanent resident visas are treated as different visa outcomes in the manual, but they do not state any equivalence rule for answering an organisation’s question about permanent resident status. The missing policy material is the section that expressly says whether a Resident Visa counts as permanent resident status, or any definition of “permanent resident” for this purpose.",
+      "citations": [
+        {
+          "section_code": "R5.65",
+          "title": "R5.65 Approved applications for residence class visas",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/31002.htm",
+          "effective_date": "2025-12-14"
+        },
+        {
+          "section_code": "R5.66",
+          "title": "R5.66 Travel conditions on resident visas",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/44894.htm",
+          "effective_date": "2025-04-01"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_85af79c191c62265",
+      "question": "Can a New Zealand Resident Visa holder travel overseas and return during the initial period of their resident visa?",
+      "interpreted_as": null,
+      "outcome": "answered",
+      "evidence_status": "sufficient",
+      "decision_boundary": "general_information",
+      "answer": "Yes. A resident visa may be granted with multiple entry travel conditions allowing travel outside New Zealand and return during the initial travel-condition period. For most resident visas, those multiple entry travel conditions are for two years from the applicant’s first day in New Zealand as a resident. The manual also says that if a resident visa holder fails to travel to New Zealand within the validity of their first entry travel condition, their multiple entry travel conditions never become valid. [R5.66]",
+      "citations": [
+        {
+          "section_code": "R5.66",
+          "title": "R5.66 Travel conditions on resident visas",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/44894.htm",
+          "effective_date": "2025-04-01"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_c5c9504539800d58",
+      "question": "What happens if the travel conditions on a Resident Visa expire while the visa holder is outside New Zealand?",
+      "interpreted_as": null,
+      "outcome": "answered",
+      "evidence_status": "sufficient",
+      "decision_boundary": "general_information",
+      "answer": "If a resident visa holder wishes to travel to New Zealand outside the validity of their multiple entry travel conditions, and they do not qualify for a permanent resident visa, they may apply for a variation of their travel conditions [R5.66]. If they failed to travel to New Zealand within the validity of their first entry travel condition, their multiple entry travel conditions never become valid [R5.66].",
+      "citations": [
+        {
+          "section_code": "R5.66",
+          "title": "R5.66 Travel conditions on resident visas",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/44894.htm",
+          "effective_date": "2025-04-01"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_41e57138edbfbc14",
+      "question": "After Resident Visa travel conditions expire, does the holder need a Permanent Resident Visa or new travel conditions before they can re-enter New Zealand?",
+      "interpreted_as": null,
+      "outcome": "answered",
+      "evidence_status": "sufficient",
+      "decision_boundary": "general_information",
+      "answer": "No. The supplied text says that if a resident visa holder wishes to travel to New Zealand outside the validity of their multiple entry travel conditions and they do not qualify for a permanent resident visa, they may apply for a variation of their travel conditions. It also says that people who fail to travel within the validity of their first travel condition must submit a further residence class visa application if they still wish to live in New Zealand. The sections do not say that a holder must have a permanent resident visa or new travel conditions before re-entering in every case; they only state the options when travel conditions have expired and the person wishes to travel again. [R5.66, R5.66.1]",
+      "citations": [
+        {
+          "section_code": "R5.66",
+          "title": "R5.66 Travel conditions on resident visas",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/44894.htm",
+          "effective_date": "2025-04-01"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_afe7fc43e9f7bec5",
+      "question": "If an adult child has a dependent-child residence application in progress, can starting paid work while waiting affect the application?",
+      "interpreted_as": null,
+      "outcome": "type_c",
+      "evidence_status": "sufficient",
+      "decision_boundary": "case_specific_application",
+      "answer": "The supplied sections do not say that starting paid work while waiting will remove an adult child from a residence application already in progress. They say a partner or dependent child included in a residence class visa application cannot be removed while the application is being processed unless a change in circumstances results in the child ceasing to be a dependent child [R5.115]. They also say that, for children aged 21 to 24, immigration officers may consider paid employment when deciding whether the child is totally or substantially reliant on the principal applicant and/or partner [R2.1.30], and that if a child is in paid employment and is working part time in accordance with certain visa conditions, that work will not be considered when determining dependence [R2.1.35]. So whether paid work affects the application depends on whether it changes the child’s dependent-child status under the published criteria.",
+      "citations": [
+        {
+          "section_code": "R5.115",
+          "title": "R5.115 Partners and dependent children who must be included in a residence class visa application",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/64732.htm",
+          "effective_date": "2017-05-08"
+        }
+      ],
+      "missing_information": [
+        "the adult child's age",
+        "whether the paid work is part time and in accordance with the relevant visa conditions",
+        "whether the work changes the child’s dependent-child status"
+      ],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_56b4b2b072f93a21",
+      "question": "Does earning employment income while a dependent-child application is being processed mean the applicant is no longer financially dependent on the parent?",
+      "interpreted_as": null,
+      "outcome": "type_c",
+      "evidence_status": "sufficient",
+      "decision_boundary": "case_specific_application",
+      "answer": "The provided sections do not say that earning employment income by itself ends a child’s financial dependence on a parent. They say that for a child aged 21 to 24, immigration officers must consider the whole application and take into account factors including whether the child is in paid employment, whether it is full time or part time, and whether the child has any other independent means of financial support. They also say that if a child is in paid employment and is working part time in accordance with certain visa conditions, that work will not be considered when determining whether the child is totally or substantially reliant on an adult. So the effect of employment income depends on the child’s age, the nature of the work, and the overall dependence assessment, rather than employment income automatically ending dependence. [R2.1] [R2.1]",
+      "citations": [
+        {
+          "section_code": "R2.1",
+          "title": "R2.1 Who may be included in an application",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46504.htm",
+          "effective_date": "2024-10-01"
+        }
+      ],
+      "missing_information": [
+        "the applicant’s age",
+        "whether the employment is full time or part time",
+        "whether the work is in accordance with the relevant visa conditions",
+        "whether the child has other independent means of financial support"
+      ],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_64c0c3379e58730e",
+      "question": "Can an adult who already has a university degree still qualify as a dependent child if the parent continues to provide financial support?",
+      "interpreted_as": null,
+      "outcome": "type_c",
+      "evidence_status": "sufficient",
+      "decision_boundary": "case_specific_application",
+      "answer": "An adult can only be included as a dependent child if they fit the definition in [R2.1.30]. For someone aged 21 to 24, the rule requires that they have no children of their own, are single, and are totally or substantially reliant on the principal applicant and/or the principal applicant's partner for financial support. The section also says immigration officers must consider the whole application, including whether the child is studying, whether they are in paid employment, whether they have other independent means of support, and whether they live with parents or another family member. So having a university degree does not by itself decide the issue under the provided text; the key question is whether the person is still totally or substantially reliant for financial support and meets the other listed requirements. I cannot decide the person's result without the missing personal facts about age, whether they have children of their own, whether they are single, and whether they are totally or substantially financially reliant on the parent or parent's partner.",
+      "citations": [
+        {
+          "section_code": "R2.1",
+          "title": "R2.1 Who may be included in an application",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46504.htm",
+          "effective_date": "2024-10-01"
+        }
+      ],
+      "missing_information": [
+        "the person's age",
+        "whether the person has any children of their own",
+        "whether the person is single",
+        "whether the person is totally or substantially reliant on the parent or parent's partner for financial support"
+      ],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_77e94a0c8c16ec99",
+      "question": "Does a recent overseas drug-supply conviction automatically prevent someone from getting a New Zealand Working Holiday Visa if they were not sentenced to prison?",
+      "interpreted_as": null,
+      "outcome": "answered",
+      "evidence_status": "sufficient",
+      "decision_boundary": "general_information",
+      "answer": "No. The provided manual sections do not say that a recent overseas drug-supply conviction automatically prevents a Working Holiday Visa. They say that a person must not be granted a visa or entry permission if they have specified convictions under section 15, including a conviction within the preceding 10 years for which they were sentenced to imprisonment for 12 months or more, or if they have been convicted of any offence involving prohibited drugs for residence class visas, or certain convictions for temporary entry class visas. But the sections provided do not contain a Working Holiday Visa-specific rule, and they do not say that an overseas drug-supply conviction with no prison sentence automatically bars the visa. [A5.20] [A5.25] [A5.45]",
+      "citations": [
+        {
+          "section_code": "A5.20",
+          "title": "A5.20 Who must not be granted a visa or entry permission",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/35057.htm",
+          "effective_date": "2023-09-25"
+        },
+        {
+          "section_code": "A5.25",
+          "title": "A5.25 Convictions, false information and other matters which may cause applicants not to meet character requirements for residence",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/35058.htm",
+          "effective_date": "2023-09-25"
+        },
+        {
+          "section_code": "A5.45",
+          "title": "A5.45 Convictions, charges and other matters which may cause applicants not to meet character requirements for temporary entry",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/43627.htm",
+          "effective_date": "2023-09-25"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_139daec2a4cbe690",
+      "question": "Can an overseas good-behaviour bond or similar non-custodial sentence affect whether an applicant meets New Zealand temporary-visa character requirements?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The provided sections do not contain the operative rule for whether an overseas good-behaviour bond or similar non-custodial sentence affects temporary-visa character requirements. The temporary-entry character section provided says a person will not be granted a temporary entry class visa if they have been convicted of certain offences, including any offence for which they have been imprisoned, and certain New Zealand offences punishable by imprisonment for three months or more, but it does not state how a non-custodial overseas bond or similar sentence is treated. The missing policy material is the specific manual rule that links overseas non-custodial sentences, such as good-behaviour bonds, to the temporary-entry character assessment.",
+      "citations": [
+        {
+          "section_code": "A5.45",
+          "title": "A5.45 Convictions, charges and other matters which may cause applicants not to meet character requirements for temporary entry",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/43627.htm",
+          "effective_date": "2023-09-25"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_5cccc9e88336019d",
+      "question": "Must a Working Holiday Visa applicant disclose an overseas conviction even if it did not result in imprisonment?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The provided sections do not contain the rule for Working Holiday Visa applicants about disclosure of overseas convictions. The temporary-entry character section says a person will not be granted a temporary entry class visa if they have been convicted at any time of certain offences, including any offence for which they have been imprisoned, and it also includes some other conviction categories, but it does not state the disclosure rule you asked about for a Working Holiday Visa applicant. The missing policy material is the specific Working Holiday Visa instruction on whether an overseas conviction must be disclosed even when it did not result in imprisonment.",
+      "citations": [
+        {
+          "section_code": "A5.45",
+          "title": "A5.45 Convictions, charges and other matters which may cause applicants not to meet character requirements for temporary entry",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/43627.htm",
+          "effective_date": "2023-09-25"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_b9c0792e1eafc5b7",
+      "question": "If my AEWV application is still pending, can I travel to New Zealand first under visa-waiver visitor status and wait for the work visa decision there?",
+      "interpreted_as": "If my AEWV accredited employer work visa application is still pending, can I travel to New Zealand first under visa-waiver visitor status and wait for the work visa decision there?",
+      "outcome": "type_b",
+      "evidence_status": "external_source_required",
+      "decision_boundary": "case_specific_application",
+      "answer": "The provided sections do not contain the rule about whether a person with a pending AEWV application may enter New Zealand as a visa-waiver visitor and remain there while the work visa is decided. The sections provided only cover medical waivers and post-study work visa instructions, not visa-waiver entry or the effect of a pending AEWV application on travel or stay. To answer this, an authoritative source outside this corpus is needed for the visa-waiver entry conditions and any rules about holding or waiting in New Zealand while an AEWV is pending.",
+      "citations": [],
+      "missing_information": [
+        "The published visa-waiver visitor entry rule and any rule about whether a pending AEWV application allows entry to New Zealand and waiting there for the decision"
+      ],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_653c6e64a24601ec",
+      "question": "If I enter New Zealand as a visitor while an AEWV is pending, can I begin the offered job before the AEWV has actually been granted?",
+      "interpreted_as": "If I enter New Zealand as a visitor while an AEWV accredited employer work visa is pending, can I begin the offered job before the AEWV accredited employer work visa has actually been granted?",
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "case_specific_application",
+      "answer": "The provided sections do not contain the rule about whether a person who enters New Zealand as a visitor while an AEWV application is pending may start the offered job before the AEWV is granted. The supplied text only covers some employer accreditation requirements and some visitor-visa rules for partners and dependent children of work visa holders, not the operative rule for starting work while an AEWV is pending. The missing policy material belongs in the Operational Manual.",
+      "citations": [],
+      "missing_information": [
+        "The Operational Manual rule on whether work may start before an AEWV is granted when the person is in New Zealand as a visitor"
+      ],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext2_ceb8c6bc70b227b0",
+      "question": "Could having a permanent New Zealand job offer affect whether I am considered a genuine visitor when entering on visa-waiver status before my work visa is decided?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "case_specific_application",
+      "answer": "The provided sections do not contain the rule about whether a permanent New Zealand job offer affects whether someone is considered a genuine visitor on visa-waiver status. The closest provided material says that, when deciding whether to grant a medical waiver, an immigration officer may consider the applicant’s potential contribution to New Zealand and the length of intended stay, including whether the person proposes to enter New Zealand permanently or temporarily [A4.70]. It also says that applying for a residence class visa while in New Zealand does not give a person the right to remain in New Zealand while the application is considered [R5.75]. But the supplied sections do not include the genuine visitor test or any rule linking a permanent job offer to that test.",
+      "citations": [
+        {
+          "section_code": "A4.70",
+          "title": "A4.70 Determination of whether a medical waiver should be granted (residence and temporary entry)",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/44864.htm",
+          "effective_date": "2025-03-17"
+        },
+        {
+          "section_code": "R5.75",
+          "title": "R5.75 Status of people applying for a residence class visa while in New Zealand",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/31004.htm",
+          "effective_date": "2010-11-29"
+        }
+      ],
+      "missing_information": [
+        "The manual section that sets out the genuine visitor test for visa-waiver entry",
+        "Any manual rule explaining whether a permanent New Zealand job offer is relevant to that test"
+      ],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    }
+  ]
+}

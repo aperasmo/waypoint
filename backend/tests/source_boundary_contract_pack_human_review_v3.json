@@ -1,0 +1,62 @@
+{
+  "schema": "waypoint-source-boundary-contract-pack-human-review-v3",
+  "status": "APPROVED_READY_FOR_THRESHOLD_FREEZE",
+  "review_date": "2026-08-24",
+  "source_artifacts": {
+    "production_runtime_sha256": "FF879300C09B195681E109E5B4F5D807C89216E986AE4AA9338B104FA99AAD0E",
+    "source_boundary_sha256": "2BFC518CFD892FE54AD9E46EAEE0037A905730DDA934E3EEAEB1EBAD42C1458F",
+    "classifier_design_v2_sha256": "2A7D44B8948D66091F5E4F37E5C382844C752452E31637AD2199CF0E9232C2F2",
+    "contract_test_pack_v2_sha256": "500B6D9E2B3FA7F36C6163CF421D2D2C676808B696335343EBD85A32A0B70367",
+    "human_review_v2_sha256": "99AA88D41EB769158A275356C558C77F72935A02BA8D49BA21E77BED54B321C6",
+    "contract_test_pack_v3_sha256": "C820489715EA3F54138023D680D04DFBFF5575A515B936FA8C2241E2EA5B219D"
+  },
+  "review_findings": {
+    "classifier_design_v2": "APPROVED_UNCHANGED",
+    "contract_test_pack_v3": "APPROVED",
+    "metadata_only_revision_verified": true,
+    "proposition_texts_preserved": "34/34",
+    "expected_outputs_preserved": "34/34",
+    "basis_text_preserved": "34/34",
+    "contrast_groups_preserved": "34/34",
+    "untouched_test_records_preserved": "32/32",
+    "scoring_contract_preserved": true,
+    "source_class_coverage_preserved": true,
+    "resolved_count": 28,
+    "unresolved_count": 6,
+    "remaining_blocking_findings": 0
+  },
+  "review_decision": {
+    "classifier_design_v2": "APPROVE",
+    "contract_test_pack_v3": "APPROVE",
+    "acceptance_threshold_freeze_authorised": true,
+    "classifier_model_prediction_authorised": false,
+    "classifier_experimental_implementation_authorised": false,
+    "classifier_runtime_implementation_authorised": false,
+    "candidate_v7_build_authorised": false,
+    "production_runtime_change_authorised": false,
+    "external_source_retrieval_authorised": false,
+    "fresh_external_v3_holdout_authorised": false
+  },
+  "threshold_freeze_requirements": [
+    "Thresholds must be frozen before any classifier model prediction is generated.",
+    "Thresholds must use the already frozen metrics from classifier design v2 and contract test pack v3.",
+    "The primary metric remains four-field exact-match accuracy.",
+    "Secondary gates must protect source-domain accuracy, source-class macro recall, unresolved recall, resolved recall, contrast-group consistency, and malformed/error rate.",
+    "Per-class recall must be reported even if not every class receives an independent hard threshold.",
+    "No threshold may be changed after the first model prediction without retiring that prediction set as development data.",
+    "Freezing thresholds does not itself authorise classifier implementation or candidate v7."
+  ],
+  "next_engineering_task": {
+    "name": "source_boundary_classifier_acceptance_thresholds_v1",
+    "authorised": true,
+    "model_prediction_authorised": false,
+    "runtime_implementation_authorised": false,
+    "purpose": "Freeze quantitative acceptance thresholds for the approved 34-case synthetic contract test pack before any classifier model call."
+  },
+  "immutability": {
+    "classifier_design_v2_remains_frozen": true,
+    "contract_test_pack_v3_remains_frozen": true,
+    "human_review_v3_remains_frozen_after_creation": true,
+    "do_not_overwrite_prior_artifacts": true
+  }
+}

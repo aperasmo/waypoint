@@ -1,0 +1,216 @@
+{
+  "schema": "waypoint-external-questions-blind-v1",
+  "status": "BLIND_PREDICTION_INPUT",
+  "source_gold_sha256": "11D21AF433C30F99665915F0536FFE30B4AE1E76972DB6F036BED38B2D5ECCB3",
+  "question_count": 51,
+  "allowed_case_fields": [
+    "case_id",
+    "question"
+  ],
+  "questions": [
+    {
+      "case_id": "ext_366f43473c7e3fc8",
+      "question": "My AEWV was granted at $27 an hour. If the median wage changes later, does my employer have to increase my pay?"
+    },
+    {
+      "case_id": "ext_dd41285472650fbe",
+      "question": "What is the current processing time for an AEWV application made from overseas?"
+    },
+    {
+      "case_id": "ext_6846d51ac221301c",
+      "question": "If my partner studies a one-year Level 8 postgraduate diploma, can I get a Partner of a Student Work Visa?"
+    },
+    {
+      "case_id": "ext_b2aea8ffbec127e4",
+      "question": "Can I work as an independent contractor while I am on a New Zealand student visa?"
+    },
+    {
+      "case_id": "ext_57cbb9878fbb2de0",
+      "question": "My AEWV is still valid for another three years but I have resigned from my job. What happens to my work rights now?"
+    },
+    {
+      "case_id": "ext_43f9e815dbdeced8",
+      "question": "Can a carpenter earning $30 an hour qualify for residence in New Zealand?"
+    },
+    {
+      "case_id": "ext_4b13f27d82be0f9d",
+      "question": "If I get a Business Analyst job in New Zealand, can I apply for a Straight to Residence Visa?"
+    },
+    {
+      "case_id": "ext_c589693ecb8f876d",
+      "question": "What wage requirement applies when counting work toward the Care Workforce Work to Residence pathway?"
+    },
+    {
+      "case_id": "ext_be5e3eccf10f02b3",
+      "question": "How much does a two-year AEWV extension cost?"
+    },
+    {
+      "case_id": "ext_cf65d6069f010111",
+      "question": "How long can a Partnership Resident Visa take to process after it has been lodged?"
+    },
+    {
+      "case_id": "ext_ab8d1185fdfd0481",
+      "question": "I have a PhD student visa for more than three years with unrestricted work rights. Am I treated like a work visa holder for publicly funded health care?"
+    },
+    {
+      "case_id": "ext_d0015c7f005815ba",
+      "question": "I am preparing to apply for residence through the Transport Sector Work to Residence pathway. What work requirements do I need to have completed?"
+    },
+    {
+      "case_id": "ext_66c81763e3cbd5cf",
+      "question": "We want to hire a migrant worker. Do we need employer accreditation and a Job Check before the worker applies?"
+    },
+    {
+      "case_id": "ext_1f86a563159a656f",
+      "question": "After I receive a job offer, does my employer start the AEWV process or do I apply first?"
+    },
+    {
+      "case_id": "ext_b2aadbfd8b1e0af8",
+      "question": "I already have a student visa but now have an AEWV job offer. Should I switch visas before travelling to New Zealand or after I arrive?"
+    },
+    {
+      "case_id": "ext_de5cd7d549b18ce4",
+      "question": "What should I explain about my home-country commitments and future plans in the genuine-intentions questions for a New Zealand student visa?"
+    },
+    {
+      "case_id": "ext_d631c689d1f8f185",
+      "question": "My AEWV has been under assessment for two weeks with no request for more information. Is that unusual?"
+    },
+    {
+      "case_id": "ext_f28af684e60b00e0",
+      "question": "We are a same-sex couple living together but we do not have a joint bank account or formal tenancy agreement. What evidence can show our partnership for a work visa?"
+    },
+    {
+      "case_id": "ext_85192ee7adceec0c",
+      "question": "My partner and I both have skilled jobs in New Zealand. How do we decide which of us should be the principal applicant for Straight to Residence?"
+    },
+    {
+      "case_id": "ext_a2fcff95d2712f1b",
+      "question": "Could a small spelling difference in my mother's name between my passport and birth certificate cause problems in an AEWV application?"
+    },
+    {
+      "case_id": "ext_bbc5fc283186d58c",
+      "question": "If I qualify for Straight to Residence before a wage threshold changes, which threshold applies if INZ decides my application after the change?"
+    },
+    {
+      "case_id": "ext_52b662d37ac33f16",
+      "question": "What evidence and steps are normally involved when applying for an AEWV after an accredited employer offers me a job?"
+    },
+    {
+      "case_id": "ext_71375d721d37bdde",
+      "question": "How long are partner-of-worker and dependent-child student visas taking when they are linked to an AEWV holder?"
+    },
+    {
+      "case_id": "ext_3e13395698c7ad8e",
+      "question": "If I am an ECE teacher on an AEWV, which wage threshold applies when I later apply for residence?"
+    },
+    {
+      "case_id": "ext_190a261820bbf833",
+      "question": "I have worked for two years as a bulldozer and excavator operator. Do I need a degree to claim points for residence?"
+    },
+    {
+      "case_id": "ext_15f33410a75c1f07",
+      "question": "If I am waiting for a Partner of a New Zealander Resident Visa, can the interim visa still let me work?"
+    },
+    {
+      "case_id": "ext_6e5eb25434cd9648",
+      "question": "Can a New Zealand student visa be declined if I failed to mention a previous visa refusal from another country?"
+    },
+    {
+      "case_id": "ext_0b69af212aa242f4",
+      "question": "How much is the visa fee for a partner of a New Zealand resident?"
+    },
+    {
+      "case_id": "ext_e48ca09340aedb62",
+      "question": "I am a Filipino working in the Middle East. If I apply for a New Zealand student visa from there, how should I show my ties and commitment to my home country?"
+    },
+    {
+      "case_id": "ext_f96a3c6f82258285",
+      "question": "My sister is a New Zealand citizen and will pay my tuition and accommodation. Do I still need substantial savings of my own for a student visa?"
+    },
+    {
+      "case_id": "ext_2d9fcf33ed1ea9fa",
+      "question": "Can I get an interim visa when my permitted stay ends even if the visa label itself has not yet expired?"
+    },
+    {
+      "case_id": "ext_57b837e2da0b6500",
+      "question": "From 24 August 2026, how do the new Skilled Work Experience and Trades and Technician SMC pathways work, and what are the Amber and Red lists for?"
+    },
+    {
+      "case_id": "ext_12a53eacea3d372f",
+      "question": "I am applying for an AEWV from the UK but was born in a higher-TB-risk country. Will I still need a chest x-ray after living in the UK for more than 20 years?"
+    },
+    {
+      "case_id": "ext_f7cf3bd43ac30a01",
+      "question": "If I have a PhD that gives me six SMC points, do I still need a skilled New Zealand job or job offer before I can apply from offshore?"
+    },
+    {
+      "case_id": "ext_19e15271f496e147",
+      "question": "What documents can INZ ask for to verify my work experience and qualifications during an AEWV application?"
+    },
+    {
+      "case_id": "ext_bb98eab620acdb57",
+      "question": "My student visa expires about a month after my master's course ends. What happens if my university has not issued my completion documents before the visa expires?"
+    },
+    {
+      "case_id": "ext_47cbae42957d3c81",
+      "question": "My New Zealand partner and I have a genuine relationship but have not yet been able to live together. What visa can let us start living together before applying for a partnership visa?"
+    },
+    {
+      "case_id": "ext_1cff9cca7e41968c",
+      "question": "If I apply for a Post Study Work Visa before my student visa expires, what work conditions will I have on an interim visa while I wait?"
+    },
+    {
+      "case_id": "ext_588ee3ee0b20790d",
+      "question": "My engineering degree is related to a Green List role but I am unsure whether my qualification meets the listed requirement. What qualification evidence does INZ use?"
+    },
+    {
+      "case_id": "ext_672add6bc0ed055c",
+      "question": "We have lived together for many years but have few joint bills and only one joint account. What evidence can prove our partnership for a New Zealand visa?"
+    },
+    {
+      "case_id": "ext_810467465e7ba90d",
+      "question": "If my partner studies in New Zealand and I come as their partner, what determines whether I can get a work visa rather than only a visitor visa?"
+    },
+    {
+      "case_id": "ext_3d3463007eacdfc4",
+      "question": "My Partner of a Worker Work Visa says I must be able to support myself. Do I need to carry personal proof of funds when I enter New Zealand?"
+    },
+    {
+      "case_id": "ext_f0c31e903b84f2b1",
+      "question": "Can I qualify for a Partner of a New Zealander Work Visa if our relationship is genuine but we are not yet living together?"
+    },
+    {
+      "case_id": "ext_e62b480152a4c960",
+      "question": "For the Philippines Working Holiday Visa, do I need to complete a medical examination or an English test before applying?"
+    },
+    {
+      "case_id": "ext_980dc41e1d8a98f6",
+      "question": "If I will live with my brother in New Zealand while studying, does that reduce how much maintenance money I need to show for my student visa?"
+    },
+    {
+      "case_id": "ext_5881dbf0c933056b",
+      "question": "I am on an interim visa after my student visa expired and I now have a skilled job. Can I apply for a work visa while I am on the interim visa?"
+    },
+    {
+      "case_id": "ext_1d7296bcc4a023cf",
+      "question": "My work visa will expire while my resident visa application is still being processed. Do I need to apply for another temporary visa to stay and work lawfully?"
+    },
+    {
+      "case_id": "ext_ec1a5838f6b62d00",
+      "question": "If the main applicant has a New Zealand work visa, are their partner and children automatically eligible for publicly funded health and dental care?"
+    },
+    {
+      "case_id": "ext_55631e1d29e44e26",
+      "question": "Can I first come to New Zealand on another temporary visa, build evidence that I am living with my student partner, and then apply for a partner visa?"
+    },
+    {
+      "case_id": "ext_ced2abc5a911ac6c",
+      "question": "For a New Zealand Working Holiday Visa, can a relative sponsor my stay or do I need to show my own funds?"
+    },
+    {
+      "case_id": "ext_1673e73aa67cff3d",
+      "question": "If my occupation is on the Amber List or Red List under the August 2026 SMC changes, which skilled residence pathway can I use?"
+    }
+  ]
+}

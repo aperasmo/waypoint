@@ -1,0 +1,204 @@
+{
+  "schema": "waypoint-source-boundary-classifier-acceptance-thresholds-v2",
+  "status": "FROZEN_BEFORE_CLASSIFIER_IMPLEMENTATION_AND_PREDICTION",
+  "frozen_on": "2026-08-25",
+  "source_artifacts": {
+    "production_runtime_sha256": "FF879300C09B195681E109E5B4F5D807C89216E986AE4AA9338B104FA99AAD0E",
+    "classifier_design_v3_sha256": "0EFBA11ECA5EE07A41BBB841817B93CB469BFA5B48BF42DF268B6A8F3257356B",
+    "independent_contract_pack_v5_sha256": "1B3CEA56504E3932C7DCA342DF99DC22523A4676B1C22714B9A122DDD566E67B",
+    "independent_pack_human_review_v5_sha256": "1F95EAD2A0B606F37621077B4F30E5A11D7B78344208762BE68EA9D276261C8C",
+    "prior_acceptance_thresholds_v1_sha256": "5E8AFBFFEE5880DEBF4FA6B0A6514E8C6702F5D9E74D620BA4C1575F49CAC03C"
+  },
+  "evaluation_population": {
+    "total_cases": 40,
+    "resolved_cases": 34,
+    "unresolved_cases": 6,
+    "source_classes": 12,
+    "contrast_groups": 12,
+    "source_class_counts": {
+      "operational_manual_instruction": 4,
+      "manual_instruction_transition": 3,
+      "legislation_or_regulation": 3,
+      "inz_live_service_information": 4,
+      "current_fee_or_charge_information": 3,
+      "inz_non_manual_procedure_or_interpretation": 3,
+      "foreign_issuing_authority_procedure": 3,
+      "external_agency_assessment_or_service": 3,
+      "external_entitlement_or_service_regime": 3,
+      "professional_or_assessor_guidance": 3,
+      "other_official_external_authority": 2,
+      "unresolved": 6
+    }
+  },
+  "prior_floor_policy": {
+    "source": "Frozen source-boundary classifier acceptance thresholds v1",
+    "percentage_floors": {
+      "four_field_exact_match": 88.2,
+      "resolution_status_accuracy": 94.1,
+      "source_domain_accuracy": 94.1,
+      "source_class_accuracy": 88.2,
+      "source_class_macro_recall": 85.0,
+      "unresolved_recall": 83.3,
+      "resolved_recall": 89.3,
+      "contrast_consistency": 81.8,
+      "per_resolved_class_recall_floor": 50.0
+    },
+    "rule": "No v2 percentage or safety floor may be weaker than its corresponding frozen v1 floor.",
+    "comparison_result": "PASS"
+  },
+  "hard_gates": {
+    "four_field_exact_match": {
+      "minimum_correct": 36,
+      "denominator": 40,
+      "minimum_percent": 90.0
+    },
+    "resolution_status_accuracy": {
+      "minimum_correct": 38,
+      "denominator": 40,
+      "minimum_percent": 95.0
+    },
+    "source_domain_accuracy": {
+      "minimum_correct": 38,
+      "denominator": 40,
+      "minimum_percent": 95.0
+    },
+    "source_class_accuracy": {
+      "minimum_correct": 36,
+      "denominator": 40,
+      "minimum_percent": 90.0
+    },
+    "source_class_macro_recall": {
+      "minimum_percent": 85.0,
+      "class_count": 12
+    },
+    "unresolved_recall": {
+      "minimum_correct": 6,
+      "denominator": 6,
+      "minimum_percent": 100.0
+    },
+    "resolved_recall": {
+      "minimum_correct": 31,
+      "denominator": 34,
+      "minimum_percent": 91.2
+    },
+    "contrast_consistency": {
+      "minimum_groups_correct": 10,
+      "denominator": 12,
+      "minimum_percent": 83.3
+    },
+    "malformed_or_error_count": {
+      "maximum_count": 0,
+      "denominator": 40
+    }
+  },
+  "per_resolved_source_class_recall_gates": {
+    "operational_manual_instruction": {
+      "minimum_correct": 2,
+      "denominator": 4,
+      "minimum_percent": 50.0
+    },
+    "manual_instruction_transition": {
+      "minimum_correct": 2,
+      "denominator": 3,
+      "minimum_percent": 66.7
+    },
+    "legislation_or_regulation": {
+      "minimum_correct": 2,
+      "denominator": 3,
+      "minimum_percent": 66.7
+    },
+    "inz_live_service_information": {
+      "minimum_correct": 2,
+      "denominator": 4,
+      "minimum_percent": 50.0
+    },
+    "current_fee_or_charge_information": {
+      "minimum_correct": 2,
+      "denominator": 3,
+      "minimum_percent": 66.7
+    },
+    "inz_non_manual_procedure_or_interpretation": {
+      "minimum_correct": 2,
+      "denominator": 3,
+      "minimum_percent": 66.7
+    },
+    "foreign_issuing_authority_procedure": {
+      "minimum_correct": 2,
+      "denominator": 3,
+      "minimum_percent": 66.7
+    },
+    "external_agency_assessment_or_service": {
+      "minimum_correct": 2,
+      "denominator": 3,
+      "minimum_percent": 66.7
+    },
+    "external_entitlement_or_service_regime": {
+      "minimum_correct": 2,
+      "denominator": 3,
+      "minimum_percent": 66.7
+    },
+    "professional_or_assessor_guidance": {
+      "minimum_correct": 2,
+      "denominator": 3,
+      "minimum_percent": 66.7
+    },
+    "other_official_external_authority": {
+      "minimum_correct": 1,
+      "denominator": 2,
+      "minimum_percent": 50.0
+    }
+  },
+  "all_gates_required": true,
+  "safety_tightening": {
+    "metric": "unresolved_recall",
+    "prior_floor": "5/6 = 83.3%",
+    "v2_floor": "6/6 = 100.0%",
+    "reason": "Frozen design v3 explicitly requires conservative unresolved behaviour to be preserved, and the diagnostic evidence showed 6/6 gold-unresolved cases correctly unresolved."
+  },
+  "metric_semantics": {
+    "source_class_accuracy": "Exact predicted source_class against gold source_class.",
+    "four_field_exact_match": "After deterministic derivation from predicted source_class, resolution_status, source_domain, source_class, and responsible_authority_type must all match gold.",
+    "resolution_status_accuracy": "Derived resolution_status equals gold.",
+    "source_domain_accuracy": "Derived source_domain equals gold.",
+    "source_class_macro_recall": "Unweighted mean of recall across all 12 source classes.",
+    "unresolved_recall": "Gold-unresolved cases predicted as source_class unresolved.",
+    "resolved_recall": "Gold-resolved cases with exact four-field result after deterministic derivation.",
+    "contrast_consistency": "A contrast group is correct only when every member has exact four-field correctness after deterministic derivation.",
+    "malformed_or_error_count": "Any malformed model output, validation failure, or execution error counts as an error. Zero are permitted.",
+    "per_resolved_source_class_recall": "Each resolved source class must independently meet its frozen minimum correct count."
+  },
+  "execution_policy": {
+    "one_model_call_per_case": true,
+    "automatic_retry": false,
+    "repair_call": false,
+    "fallback_model": false,
+    "manual_override": false,
+    "threshold_change_after_prediction": false,
+    "same_prediction_set_rescore_after_threshold_change": false,
+    "prediction_artifact_must_be_frozen_before_scoring": true
+  },
+  "acceptance_decision": {
+    "rule": "PASS only if every hard gate and every resolved-class recall gate passes.",
+    "partial_pass": false,
+    "manual_override": false
+  },
+  "authorisations": {
+    "acceptance_thresholds_v2_frozen": true,
+    "experimental_classifier_implementation_v2_construction_authorised": true,
+    "experimental_prompt_construction_authorised": true,
+    "classifier_model_run_authorised": false,
+    "blind_runner_v2_construction_authorised": false,
+    "scorer_v2_construction_authorised": false,
+    "prediction_authorisation_freeze_authorised": false,
+    "candidate_v7_build_authorised": false,
+    "production_runtime_change_authorised": false,
+    "external_source_retrieval_authorised": false,
+    "fresh_external_v3_holdout_authorised": false
+  },
+  "next_engineering_task": {
+    "name": "source_boundary_classifier_implementation_v2",
+    "authorised": true,
+    "model_calls": 0,
+    "purpose": "Implement the frozen design-v3 source-boundary classifier as an isolated experimental module. The implementation may construct its zero-shot prompt and strict output schema, but must not execute the model."
+  }
+}

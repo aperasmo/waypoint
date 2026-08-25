@@ -1,0 +1,126 @@
+{
+  "schema": "waypoint-source-boundary-classifier-independent-pack-human-review-v4",
+  "status": "REVISE_CONTRAST_METADATA_ONLY",
+  "reviewed_on": "2026-08-24",
+  "source_artifacts": {
+    "classifier_design_v3_sha256": "0EFBA11ECA5EE07A41BBB841817B93CB469BFA5B48BF42DF268B6A8F3257356B",
+    "independent_contract_pack_v4_sha256": "BC9515B3394E880C4FBEBD7C13F9A4FC43F7823EB484D30B3E008C3632C0304E"
+  },
+  "review_scope": {
+    "case_count": 40,
+    "source_classes": 12,
+    "contrast_groups": 12,
+    "independence_metadata_reviewed": true,
+    "expected_mapping_structure_reviewed": true,
+    "contrast_group_semantics_reviewed": true,
+    "model_calls": 0
+  },
+  "passed_checks": {
+    "test_count": true,
+    "resolved_unresolved_distribution": true,
+    "all_12_source_classes_present": true,
+    "observed_pack_not_read_by_construction_script": true,
+    "observed_predictions_not_read_by_construction_script": true,
+    "observed_score_not_read_by_construction_script": true,
+    "failure_analysis_not_read_by_construction_script": true,
+    "observed_case_id_family_not_used": true,
+    "all_contrast_groups_have_at_least_two_members": true
+  },
+  "blockers": [
+    {
+      "contrast_group": "generic_official_with_vs_without_context",
+      "members": [
+        {
+          "case_id": "iv4_038",
+          "source_class": "unresolved"
+        },
+        {
+          "case_id": "iv4_040",
+          "source_class": "unresolved"
+        }
+      ],
+      "distinct_source_classes": [
+        "unresolved"
+      ],
+      "issue": "Declared contrast group does not span at least two expected source classes."
+    },
+    {
+      "contrast_group": "immigration_status_rule_vs_external_entitlement",
+      "members": [
+        {
+          "case_id": "iv4_027",
+          "source_class": "external_entitlement_or_service_regime"
+        },
+        {
+          "case_id": "iv4_029",
+          "source_class": "external_entitlement_or_service_regime"
+        }
+      ],
+      "distinct_source_classes": [
+        "external_entitlement_or_service_regime"
+      ],
+      "issue": "Declared contrast group does not span at least two expected source classes."
+    }
+  ],
+  "blocker_count": 2,
+  "review_decision": {
+    "pack_v4": "REVISE_METADATA_ONLY",
+    "gold_label_changes_required": false,
+    "proposition_changes_required": false,
+    "trusted_context_changes_required": false,
+    "case_count_changes_required": false,
+    "source_class_distribution_changes_required": false,
+    "contrast_group_metadata_changes_required": true
+  },
+  "proposed_metadata_only_correction": {
+    "generic_official_with_vs_without_context": {
+      "remove_group_from_case": "iv4_040",
+      "add_group_to_case": "iv4_034",
+      "preserve_group_member": "iv4_038",
+      "resulting_expected_classes": [
+        "other_official_external_authority",
+        "unresolved"
+      ]
+    },
+    "immigration_status_rule_vs_external_entitlement": {
+      "remove_group_from_case": "iv4_029",
+      "add_group_to_case": "iv4_002",
+      "preserve_group_member": "iv4_027",
+      "resulting_expected_classes": [
+        "operational_manual_instruction",
+        "external_entitlement_or_service_regime"
+      ]
+    }
+  },
+  "immutability_requirements_for_v5": {
+    "all_40_case_ids_identical": true,
+    "all_40_propositions_identical": true,
+    "all_40_expected_outputs_identical": true,
+    "all_40_basis_values_identical": true,
+    "all_40_trusted_source_context_values_identical": true,
+    "source_class_counts_identical": true,
+    "resolved_unresolved_counts_identical": true,
+    "only_four_case_contrast_group_fields_may_change": [
+      "iv4_002",
+      "iv4_029",
+      "iv4_034",
+      "iv4_040"
+    ]
+  },
+  "authorisations": {
+    "metadata_only_pack_v5_construction_authorised": true,
+    "acceptance_threshold_freeze_authorised": false,
+    "classifier_implementation_v2_authorised": false,
+    "classifier_prompt_change_authorised": false,
+    "classifier_model_run_authorised": false,
+    "candidate_v7_build_authorised": false,
+    "production_runtime_change_authorised": false,
+    "fresh_external_v3_holdout_authorised": false
+  },
+  "next_engineering_task": {
+    "name": "source_boundary_classifier_independent_contract_pack_v5",
+    "authorised": true,
+    "model_calls": 0,
+    "purpose": "Create a metadata-only corrected pack v5 by changing only the four authorised contrast_group fields and preserving all case content and gold labels exactly."
+  }
+}

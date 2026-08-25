@@ -1,0 +1,57 @@
+{
+  "schema": "waypoint-answer-candidate-freeze-v2",
+  "status": "FROZEN_CANDIDATE_BEFORE_EXTERNAL_HOLDOUT_V2",
+  "candidate_name": "evidence_adequacy_v2",
+  "frozen_at_utc": "2026-08-21T00:32:54.833322+00:00",
+  "runtime_entrypoint": "app.api.routes.ask.ask",
+  "runtime_file": "app/api/routes/ask.py",
+  "runtime_ask_sha256": "FF879300C09B195681E109E5B4F5D807C89216E986AE4AA9338B104FA99AAD0E",
+  "development_evaluation": {
+    "dataset": "external-v1",
+    "status": "DEVELOPMENT_ONLY_NOT_UNTOUCHED_HOLDOUT",
+    "gold_sha256": "11D21AF433C30F99665915F0536FFE30B4AE1E76972DB6F036BED38B2D5ECCB3",
+    "blind_sha256": "33C6A0370C382130890681064B4C32C1B519EF9CF1FC52D7C3D6570C8A60FFCB",
+    "predictions_sha256": "0F1E84F74DC1B50C6217A1909A48A5FF922FA537029737E1E8CE3769488FD541",
+    "included_cases": 51,
+    "evidence_status_accuracy": {
+      "correct": 45,
+      "total": 51,
+      "percent": 88.2
+    },
+    "per_class": {
+      "sufficient": {
+        "correct": 8,
+        "total": 9,
+        "percent": 88.9
+      },
+      "corpus_gap": {
+        "correct": 32,
+        "total": 34,
+        "percent": 94.1
+      },
+      "external_source_required": {
+        "correct": 5,
+        "total": 8,
+        "percent": 62.5
+      }
+    },
+    "sufficient_citation_coverage": {
+      "any_expected_section": {
+        "correct": 9,
+        "total": 9,
+        "percent": 100.0
+      },
+      "all_expected_sections": {
+        "correct": 6,
+        "total": 9,
+        "percent": 66.7
+      }
+    }
+  },
+  "freeze_rules": [
+    "Do not modify the answer prompt, evidence-status contract, retrieval, ranking, reranking, chunking, embeddings, or section-specific behaviour before external holdout v2 is collected, adjudicated, frozen, and scored.",
+    "External-v1 is development data and must not be represented as untouched holdout evidence.",
+    "External holdout v2 must be collected independently after this freeze and must not be used for tuning before scoring.",
+    "If the frozen candidate is changed before holdout-v2 scoring, the candidate freeze is invalid and a new untouched holdout must be collected after the new candidate is frozen."
+  ]
+}

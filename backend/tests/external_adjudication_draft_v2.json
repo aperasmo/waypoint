@@ -1,0 +1,1068 @@
+{
+  "schema": "waypoint-external-adjudication-draft-v2",
+  "status": "DRAFT_FOR_HUMAN_REVIEW_DO_NOT_SCORE",
+  "packet_sha256": "2D4F12A75ECAA30378CD6E601814653C3CD42F6C893E486D1F59362DB8646F2A",
+  "raw_questions_sha256": "8EE5BDF10BFA2E4D940A07D97739F777310D58ADE316D775FF89E75CC164D893",
+  "candidate_freeze_sha256": "0600D79FFC375C7CC8FC358722EE51A98B0D979188F61FF8B4CBD7412A1CB03C",
+  "runtime_ask_sha256": "FF879300C09B195681E109E5B4F5D807C89216E986AE4AA9338B104FA99AAD0E",
+  "corpus_snapshot_sha256": "DF8C74B67AABC12C68C301655F8962ED4038D3897EFAC0EE3A95DC901EF977FC",
+  "question_count": 60,
+  "unique_source_count": 20,
+  "cluster_structure": "20 public source posts, 3 paraphrased questions per source",
+  "adjudication_rules": [
+    "Adjudication used the complete 125-section corpus snapshot, not retrieval candidates alone.",
+    "Retrieval top-10 results were treated only as navigation aids.",
+    "Social-media answers were not used as authoritative evidence.",
+    "sufficient requires all material policy needed for the question to be present in the frozen corpus.",
+    "corpus_gap means material Operational Manual policy required for the answer is absent from the frozen corpus.",
+    "external_source_required means the requested answer depends on authoritative information maintained outside this Operational Manual corpus.",
+    "expected_sections are gold labels only for sufficient cases.",
+    "partial_support_sections are audit aids only and must never be exposed to the blind predictor.",
+    "All 60 questions remain included at this draft stage; no question was excluded for ambiguity, breadth, or compositeness.",
+    "Because three questions were derived from each source post, final scoring should report both question-level accuracy and source-cluster macro accuracy.",
+    "Do not run the frozen answer candidate on holdout v2 until this adjudication draft has been human-reviewed and frozen."
+  ],
+  "evidence_status_counts": {
+    "external_source_required": 10,
+    "corpus_gap": 34,
+    "sufficient": 16
+  },
+  "benchmark_status_counts": {
+    "include": 60
+  },
+  "platform_counts": {
+    "Reddit": 60
+  },
+  "questions": [
+    {
+      "candidate_id": "ext2_023fa6cd6621a24a",
+      "platform": "Reddit",
+      "community": "r/MovingToNewZealand",
+      "category": "Partner of Student / Character",
+      "question": "For a spouse applying for a Partner of a Student Work Visa, which purpose should be selected when requesting a police clearance certificate from the issuing country?",
+      "source_url": "https://www.reddit.com/r/MovingToNewZealand/comments/1tdtqe4/partner_of_student_visa/",
+      "source_title": "Partner of student visa",
+      "source_date": "2026-05-15",
+      "evidence_status": "external_source_required",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "A5.10",
+        "A5.5"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The Operational Manual sets when police certificates are required and points applicants to country-specific obtaining instructions, but choosing a purpose/category on a foreign issuing authority's form depends on those external country-specific instructions."
+    },
+    {
+      "candidate_id": "ext2_b01b08c9e689cb55",
+      "platform": "Reddit",
+      "community": "r/MovingToNewZealand",
+      "category": "Partner of Student / Character",
+      "question": "If a foreign police-certificate application form offers several purpose categories, does the wording chosen on that form matter to Immigration New Zealand?",
+      "source_url": "https://www.reddit.com/r/MovingToNewZealand/comments/1tdtqe4/partner_of_student_visa/",
+      "source_title": "Partner of student visa",
+      "source_date": "2026-05-15",
+      "evidence_status": "external_source_required",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "A5.10",
+        "A5.5"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "Whether wording on a foreign police-certificate request form matters is determined by the issuing authority/country-specific certificate instructions outside this corpus; the manual only states general certificate requirements."
+    },
+    {
+      "candidate_id": "ext2_370bd814453c5733",
+      "platform": "Reddit",
+      "community": "r/MovingToNewZealand",
+      "category": "Partner of Student / Character",
+      "question": "Does a partner applying alongside a student need a different type of police certificate from the one normally used for immigration purposes?",
+      "source_url": "https://www.reddit.com/r/MovingToNewZealand/comments/1tdtqe4/partner_of_student_visa/",
+      "source_title": "Partner of student visa",
+      "source_date": "2026-05-15",
+      "evidence_status": "external_source_required",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "A5.5",
+        "A5.10"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The corpus contains general police-certificate rules, but whether a partner needs a particular certificate type is governed by country-specific obtaining instructions referenced outside the corpus."
+    },
+    {
+      "candidate_id": "ext2_8b2e20071365d73e",
+      "platform": "Reddit",
+      "community": "r/visas",
+      "category": "Partnership / Student",
+      "question": "If I first hold a Partner of a New Zealander Work Visa and later switch to a PhD student visa, does that interrupt or reset the partnership time relevant to a future residence application?",
+      "source_url": "https://www.reddit.com/r/visas/comments/1qxdpvh/new_zealand_partner_work_visastudent_visa/",
+      "source_title": "New Zealand: Partner Work Visa/Student Visa",
+      "source_date": "2026-02-06",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R2.1"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "R2.1 contains partnership-duration rules for a partner included in a residence application, but the operative Partnership Category instructions governing a future Partner of a New Zealander residence application are in F2 and are absent. The corpus therefore cannot establish whether changing temporary visa type affects the relevant partnership-duration calculation."
+    },
+    {
+      "candidate_id": "ext2_14db5e8fdd3c2a92",
+      "platform": "Reddit",
+      "community": "r/visas",
+      "category": "Partnership / Student",
+      "question": "Could having held a partnership-based work visa before applying for a student visa create a genuine-intentions issue because I may ultimately want to remain in New Zealand?",
+      "source_url": "https://www.reddit.com/r/visas/comments/1qxdpvh/new_zealand_partner_work_visastudent_visa/",
+      "source_title": "New Zealand: Partner Work Visa/Student Visa",
+      "source_date": "2026-02-06",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "U3.1"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "U3.1 requires student applicants to meet the bona fide requirements at E5, but the E5 genuine-intentions/bona-fide instructions are not in the corpus."
+    },
+    {
+      "candidate_id": "ext2_d807f50f0d30cbd0",
+      "platform": "Reddit",
+      "community": "r/visas",
+      "category": "Partnership / Student",
+      "question": "Can medical and police documents prepared for a partnership work visa be reused if I later apply for a New Zealand student visa?",
+      "source_url": "https://www.reddit.com/r/visas/comments/1qxdpvh/new_zealand_partner_work_visastudent_visa/",
+      "source_title": "New Zealand: Partner Work Visa/Student Visa",
+      "source_date": "2026-02-06",
+      "evidence_status": "sufficient",
+      "expected_sections": [
+        "A4.25",
+        "A5.10"
+      ],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "A4.25 contains the reuse rule for medical and chest-X-ray certificates across temporary visa applications, while A5.10 contains the reuse periods for police certificates including student and partner/dependant cases."
+    },
+    {
+      "candidate_id": "ext2_148b00724488db84",
+      "platform": "Reddit",
+      "community": "r/visas",
+      "category": "Partnership Evidence",
+      "question": "For a Partner of a Student Work Visa, can relationship-support letters from family or friends be typed rather than handwritten?",
+      "source_url": "https://www.reddit.com/r/visas/comments/1qui9df/partner_of_student_work_visa_nz/",
+      "source_title": "Partner of student work visa - NZ",
+      "source_date": "2026-02-03",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R2.1"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "R2.1 requires partnership evidence but points to F2.20.15 for the types of evidence; the partner-work-visa evidence instructions and any rule about typed versus handwritten support letters are absent."
+    },
+    {
+      "candidate_id": "ext2_84003cea05261d51",
+      "platform": "Reddit",
+      "community": "r/visas",
+      "category": "Partnership Evidence",
+      "question": "Is there a required or recommended number of letters from family, friends, community leaders, or professionals when proving a partnership?",
+      "source_url": "https://www.reddit.com/r/visas/comments/1qui9df/partner_of_student_work_visa_nz/",
+      "source_title": "Partner of student work visa - NZ",
+      "source_date": "2026-02-03",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R2.1"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The corpus requires evidence of a genuine and stable partnership but does not contain F2.20.15 or any rule specifying a required or recommended number of supporting letters."
+    },
+    {
+      "candidate_id": "ext2_ed95554266040d72",
+      "platform": "Reddit",
+      "community": "r/visas",
+      "category": "Partnership Evidence",
+      "question": "Can immediate family members such as parents or siblings provide supporting letters for a New Zealand partnership visa application?",
+      "source_url": "https://www.reddit.com/r/visas/comments/1qui9df/partner_of_student_work_visa_nz/",
+      "source_title": "Partner of student work visa - NZ",
+      "source_date": "2026-02-03",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R2.1"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The corpus does not contain the partnership-evidence instructions that would establish whether immediate family members may provide supporting letters."
+    },
+    {
+      "candidate_id": "ext2_682333d9b9c172f4",
+      "platform": "Reddit",
+      "community": "r/NZVisa",
+      "category": "Straight to Residence / Qualification",
+      "question": "For a Green List Straight to Residence role, can extensive relevant work experience make up for a bachelor's degree that is in a different field from the occupation?",
+      "source_url": "https://www.reddit.com/r/NZVisa/comments/1tbfji1/straight_to_residence_visa_query/",
+      "source_title": "Straight to Residence VISA query",
+      "source_date": "2026-05-12",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "SR4.5",
+        "SR4.10"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "Straight to Residence requires meeting the occupation-specific Tier 1 requirements in Appendix 13. Appendix 13 is absent, so the corpus cannot determine whether work experience can substitute for a differently related degree for the particular role."
+    },
+    {
+      "candidate_id": "ext2_d2f88ceae65b9b46",
+      "platform": "Reddit",
+      "community": "r/NZVisa",
+      "category": "Straight to Residence / Qualification",
+      "question": "If a Green List role requires qualification assessment, how do I know whether I need a standard IQA or a Skilled Shortage List IQA?",
+      "source_url": "https://www.reddit.com/r/NZVisa/comments/1tbfji1/straight_to_residence_visa_query/",
+      "source_title": "Straight to Residence VISA query",
+      "source_date": "2026-05-12",
+      "evidence_status": "external_source_required",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "SR4.5",
+        "SR3.25"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The corpus explains when an IQA may be needed and what an IQA does, but it does not define a Skilled Shortage List IQA or which NZQA assessment product to request; that is authoritative NZQA/application-service information outside this corpus."
+    },
+    {
+      "candidate_id": "ext2_67e067ccdae249ea",
+      "platform": "Reddit",
+      "community": "r/NZVisa",
+      "category": "Straight to Residence / Qualification",
+      "question": "For an offshore Straight to Residence applicant, what matters if the job is highly relevant to their experience but their formal degree title is not closely related?",
+      "source_url": "https://www.reddit.com/r/NZVisa/comments/1tbfji1/straight_to_residence_visa_query/",
+      "source_title": "Straight to Residence VISA query",
+      "source_date": "2026-05-12",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "SR4.5",
+        "SR4.10"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "Whether the applicant's formal qualification satisfies a Straight to Residence role depends on the occupation-specific requirements in Appendix 13, which is not in the corpus."
+    },
+    {
+      "candidate_id": "ext2_081012202ca2bd5a",
+      "platform": "Reddit",
+      "community": "r/MovingToNewZealand",
+      "category": "Partnership Residence / Travel",
+      "question": "If a Partner of a New Zealander Resident Visa is still being processed, can the applicant enter New Zealand on a visitor visa in the meantime?",
+      "source_url": "https://www.reddit.com/r/MovingToNewZealand/comments/1tt9khm/partner_of_a_new_zealander_residency_visa_timings/",
+      "source_title": "Partner of a New Zealander residency visa timings",
+      "source_date": "2026-05-31",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R5.75"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "R5.75 explains that a pending residence application does not itself create lawful status or a right to another visa, but the visitor-visa/visa-waiver entry rules needed to determine whether the applicant may enter while waiting are absent."
+    },
+    {
+      "candidate_id": "ext2_559a57944943aab5",
+      "platform": "Reddit",
+      "community": "r/MovingToNewZealand",
+      "category": "Partnership Residence / Travel",
+      "question": "Does entering New Zealand as a visitor while a partnership residence application is pending affect the residence application itself?",
+      "source_url": "https://www.reddit.com/r/MovingToNewZealand/comments/1tt9khm/partner_of_a_new_zealander_residency_visa_timings/",
+      "source_title": "Partner of a New Zealander residency visa timings",
+      "source_date": "2026-05-31",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R5.75"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The corpus separates residence-application status from temporary status but does not contain the operative rule on how entering as a visitor while an offshore partnership residence application is pending affects that application."
+    },
+    {
+      "candidate_id": "ext2_b4eaf7443c1ead5d",
+      "platform": "Reddit",
+      "community": "r/MovingToNewZealand",
+      "category": "Partnership Residence / Travel",
+      "question": "If a partnership residence visa is approved after the applicant has already entered New Zealand as a visitor, what happens to the temporary visa status?",
+      "source_url": "https://www.reddit.com/r/MovingToNewZealand/comments/1tt9khm/partner_of_a_new_zealander_residency_visa_timings/",
+      "source_title": "Partner of a New Zealander residency visa timings",
+      "source_date": "2026-05-31",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R5.65",
+        "R5.66"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "R5.65 establishes that approval normally results in a resident visa, but the rule governing what happens to an existing temporary visa when residence is granted in New Zealand is not present."
+    },
+    {
+      "candidate_id": "ext2_888971954ec7678a",
+      "platform": "Reddit",
+      "community": "r/MovingToNewZealand",
+      "category": "Partnership Work Visa",
+      "question": "Can about three months of living together be enough evidence for a New Zealand partnership work visa?",
+      "source_url": "https://www.reddit.com/r/MovingToNewZealand/comments/1t9opqk/partnership_work_visa_evidence/",
+      "source_title": "Partnership Work Visa - Evidence",
+      "source_date": "2026-05-11",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R2.1"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "R2.1 contains residence partnership rules, including a 12-month requirement for residence, but the partnership work-visa instructions governing how much cohabitation evidence is enough are absent."
+    },
+    {
+      "candidate_id": "ext2_4ff8da290ce9fb3e",
+      "platform": "Reddit",
+      "community": "r/MovingToNewZealand",
+      "category": "Partnership Work Visa",
+      "question": "If a couple lives rent-free with a parent, can a signed statement from that parent help prove that they are living together?",
+      "source_url": "https://www.reddit.com/r/MovingToNewZealand/comments/1t9opqk/partnership_work_visa_evidence/",
+      "source_title": "Partnership Work Visa - Evidence",
+      "source_date": "2026-05-11",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R2.1"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "R2.1 requires partnership evidence but the detailed evidence types referenced at F2.20.15 are absent, so the corpus cannot establish whether a parent's signed cohabitation statement is accepted for a partnership work visa."
+    },
+    {
+      "candidate_id": "ext2_f5282f30bc8783fd",
+      "platform": "Reddit",
+      "community": "r/MovingToNewZealand",
+      "category": "Partnership Work Visa",
+      "question": "Can strong joint evidence such as a bank account and utility bills compensate for a relatively short period of living together in a partnership work visa application?",
+      "source_url": "https://www.reddit.com/r/MovingToNewZealand/comments/1t9opqk/partnership_work_visa_evidence/",
+      "source_title": "Partnership Work Visa - Evidence",
+      "source_date": "2026-05-11",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R2.1"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The corpus does not contain the partnership work-visa evidence/assessment rules needed to determine how strong joint evidence is weighed against a short period of living together."
+    },
+    {
+      "candidate_id": "ext2_bd93bde6770d371d",
+      "platform": "Reddit",
+      "community": "r/visas",
+      "category": "Partner Work Visa / Study",
+      "question": "Can a holder of a Partner of a New Zealander Work Visa undertake an apprenticeship in New Zealand?",
+      "source_url": "https://www.reddit.com/r/visas/comments/1j7h0an/partner_of_a_new_zealander_work_visa/",
+      "source_title": "Partner of a New Zealander work visa",
+      "source_date": "2025-03-09",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "The corpus does not contain the general conditions of a Partner of a New Zealander Work Visa or the work-visa study rules needed to determine whether an apprenticeship is permitted."
+    },
+    {
+      "candidate_id": "ext2_97111216187d29b0",
+      "platform": "Reddit",
+      "community": "r/visas",
+      "category": "Partner Work Visa / Study",
+      "question": "For a partner work visa holder, is an apprenticeship treated as study, work, or study that is required for employment?",
+      "source_url": "https://www.reddit.com/r/visas/comments/1j7h0an/partner_of_a_new_zealander_work_visa/",
+      "source_title": "Partner of a New Zealander work visa",
+      "source_date": "2025-03-09",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "The corpus lacks the general partner-work-visa conditions and definitions needed to classify an apprenticeship as work, study, or study required for employment."
+    },
+    {
+      "candidate_id": "ext2_75fac29b9803b887",
+      "platform": "Reddit",
+      "community": "r/visas",
+      "category": "Partner Work Visa / Study",
+      "question": "If a work visa permits only limited study but also allows study required for a job, can a longer apprenticeship fit within that work-related study exception?",
+      "source_url": "https://www.reddit.com/r/visas/comments/1j7h0an/partner_of_a_new_zealander_work_visa/",
+      "source_title": "Partner of a New Zealander work visa",
+      "source_date": "2025-03-09",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "The work-visa study exception and its limits are outside the indexed sections; the available post-study and student-visa rules are not the operative partner-work-visa rule."
+    },
+    {
+      "candidate_id": "ext2_81b22969808fa4fb",
+      "platform": "Reddit",
+      "community": "r/phmigrate",
+      "category": "Working Holiday / Process",
+      "question": "After successfully submitting a New Zealand Working Holiday Visa application when places open, how soon should the applicant expect a confirmation email?",
+      "source_url": "https://www.reddit.com/r/phmigrate/comments/1rr6zdh/new_zealand_working_holiday_visa_2026/",
+      "source_title": "New Zealand Working Holiday Visa 2026",
+      "source_date": "2026-03-11",
+      "evidence_status": "external_source_required",
+      "expected_sections": [],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "Expected confirmation-email timing after a Working Holiday application is live operational/service information rather than a rule contained in this Operational Manual corpus."
+    },
+    {
+      "candidate_id": "ext2_298d0e015f4e8ec2",
+      "platform": "Reddit",
+      "community": "r/phmigrate",
+      "category": "Working Holiday / Process",
+      "question": "After securing a Working Holiday Visa place, should the applicant arrange the immigration medical immediately or wait for instructions from Immigration New Zealand?",
+      "source_url": "https://www.reddit.com/r/phmigrate/comments/1rr6zdh/new_zealand_working_holiday_visa_2026/",
+      "source_title": "New Zealand Working Holiday Visa 2026",
+      "source_date": "2026-03-11",
+      "evidence_status": "external_source_required",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "A4.25",
+        "A4.30"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The health instructions describe certificate requirements and panel physicians, but whether a Working Holiday applicant should book immediately or wait for application instructions is current application-process guidance outside this corpus."
+    },
+    {
+      "candidate_id": "ext2_1a4d4735dba2c2c1",
+      "platform": "Reddit",
+      "community": "r/phmigrate",
+      "category": "Working Holiday / Process",
+      "question": "For an initial immigration medical after a Working Holiday Visa application, is a referral from a doctor required before attending an approved clinic?",
+      "source_url": "https://www.reddit.com/r/phmigrate/comments/1rr6zdh/new_zealand_working_holiday_visa_2026/",
+      "source_title": "New Zealand Working Holiday Visa 2026",
+      "source_date": "2026-03-11",
+      "evidence_status": "external_source_required",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "A4.30"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "A4.30 requires approved panel physicians in relevant countries but does not state whether a doctor's referral is needed to attend a clinic; that appointment/referral process is maintained outside the Operational Manual."
+    },
+    {
+      "candidate_id": "ext2_75b41153a0296647",
+      "platform": "Reddit",
+      "community": "r/LegalAdviceNZ",
+      "category": "Partnership Evidence",
+      "question": "Can periods of living together during repeated overseas visits be added together when assessing how long a couple has lived together for a New Zealand partnership application?",
+      "source_url": "https://www.reddit.com/r/LegalAdviceNZ/comments/1hhqopl/",
+      "source_title": "Partner lives in the US, they can only live with me 50% of the time on normal visas",
+      "source_date": "2024-12-19",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R2.1"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "R2.1 states the residence duration requirement but the detailed definition of living together and how separated/intermittent periods are counted is in partnership instructions that are absent."
+    },
+    {
+      "candidate_id": "ext2_3bdbe7674b1f81bf",
+      "platform": "Reddit",
+      "community": "r/LegalAdviceNZ",
+      "category": "Partnership Evidence",
+      "question": "Is a joint bank account mandatory evidence for a New Zealand partnership visa, or can a couple prove the relationship in other ways?",
+      "source_url": "https://www.reddit.com/r/LegalAdviceNZ/comments/1hhqopl/",
+      "source_title": "Partner lives in the US, they can only live with me 50% of the time on normal visas",
+      "source_date": "2024-12-19",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R2.1"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "R2.1 requires evidence of a genuine and stable relationship but expressly refers to F2.20.15 for evidence types; that section is absent, so the corpus cannot establish whether a joint bank account is mandatory or merely one possible form of evidence."
+    },
+    {
+      "candidate_id": "ext2_76eb5cb67e246f86",
+      "platform": "Reddit",
+      "community": "r/LegalAdviceNZ",
+      "category": "Partnership Evidence",
+      "question": "Is joint ownership of property required to prove a genuine and stable partnership for a New Zealand visa?",
+      "source_url": "https://www.reddit.com/r/LegalAdviceNZ/comments/1hhqopl/",
+      "source_title": "Partner lives in the US, they can only live with me 50% of the time on normal visas",
+      "source_date": "2024-12-19",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R2.1"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The detailed partnership evidence types are absent, so the corpus cannot directly establish whether joint property ownership is required or optional."
+    },
+    {
+      "candidate_id": "ext2_ddc7067c6419a82a",
+      "platform": "Reddit",
+      "community": "r/newzealand",
+      "category": "Partner Work Visa / Employment",
+      "question": "If I hold a Partner of a New Zealander Work Visa, do I still need an employer to sponsor my employment?",
+      "source_url": "https://www.reddit.com/r/newzealand/comments/1kjv7a9/moving_to_new_zealand_to_be_with_my_kiwi_partner/",
+      "source_title": "Moving to New Zealand to be with my kiwi partner",
+      "source_date": "2025-05-11",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "The employment conditions of a Partner of a New Zealander Work Visa, including whether employer sponsorship is required, are not present in the corpus."
+    },
+    {
+      "candidate_id": "ext2_88bb7b72c7160f36",
+      "platform": "Reddit",
+      "community": "r/newzealand",
+      "category": "Partner Work Visa / Employment",
+      "question": "Does an employer need to be accredited before hiring someone who already holds an open partnership-based work visa?",
+      "source_url": "https://www.reddit.com/r/newzealand/comments/1kjv7a9/moving_to_new_zealand_to_be_with_my_kiwi_partner/",
+      "source_title": "Moving to New Zealand to be with my kiwi partner",
+      "source_date": "2025-05-11",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "WA2.1",
+        "WA2.10"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "WA2 describes employer accreditation in the Accredited Employer framework but does not contain the operative rule stating whether an employer hiring an open partnership-work-visa holder must be accredited."
+    },
+    {
+      "candidate_id": "ext2_7a8dac2d6b8342b6",
+      "platform": "Reddit",
+      "community": "r/newzealand",
+      "category": "Partner Work Visa / Employment",
+      "question": "Can a Partner of a New Zealander Work Visa holder work for different employers without obtaining a new employer-specific visa?",
+      "source_url": "https://www.reddit.com/r/newzealand/comments/1kjv7a9/moving_to_new_zealand_to_be_with_my_kiwi_partner/",
+      "source_title": "Moving to New Zealand to be with my kiwi partner",
+      "source_date": "2025-05-11",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "The corpus does not include the open-work conditions of a Partner of a New Zealander Work Visa or the rule governing changes between employers."
+    },
+    {
+      "candidate_id": "ext2_40d58c149c58bec6",
+      "platform": "Reddit",
+      "community": "u_Significant_Luck5043",
+      "category": "Dependent Child Residence",
+      "question": "Can a 24-year-old who is already working still qualify as a dependent child for New Zealand residence if a parent continues to provide substantial financial support?",
+      "source_url": "https://www.reddit.com/r/u_Significant_Luck5043/comments/1trysem/nz_dependent_child_visa/",
+      "source_title": "NZ Dependent Child Visa",
+      "source_date": "2026-05-30",
+      "evidence_status": "sufficient",
+      "expected_sections": [
+        "R2.1"
+      ],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "R2.1 directly defines dependency for ages 21 to 24 and requires officers to consider paid employment, other independent support, living arrangements/support and study when assessing substantial financial reliance."
+    },
+    {
+      "candidate_id": "ext2_25bac28c54e142ab",
+      "platform": "Reddit",
+      "community": "u_Significant_Luck5043",
+      "category": "Dependent Child Residence",
+      "question": "What evidence can show that an adult child remains financially dependent on a parent for a dependent-child residence application?",
+      "source_url": "https://www.reddit.com/r/u_Significant_Luck5043/comments/1trysem/nz_dependent_child_visa/",
+      "source_title": "NZ Dependent Child Visa",
+      "source_date": "2026-05-30",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R2.1",
+        "R5.5"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "R2.1 identifies the factors used to assess financial dependence and says evidence may be required, but it does not specify the actual documentary evidence that can demonstrate those factors."
+    },
+    {
+      "candidate_id": "ext2_2cfee41b7bc3f928",
+      "platform": "Reddit",
+      "community": "u_Significant_Luck5043",
+      "category": "Dependent Child Residence",
+      "question": "For an adult dependent-child residence application, how do being unmarried, having no children, earning a salary, and receiving regular parental support interact?",
+      "source_url": "https://www.reddit.com/r/u_Significant_Luck5043/comments/1trysem/nz_dependent_child_visa/",
+      "source_title": "NZ Dependent Child Visa",
+      "source_date": "2026-05-30",
+      "evidence_status": "sufficient",
+      "expected_sections": [
+        "R2.1"
+      ],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "R2.1 directly sets the age, single/no-children and financial-reliance rules and identifies paid employment and parental support as factors to assess for applicants aged 21 to 24."
+    },
+    {
+      "candidate_id": "ext2_a613efe4b0b7e501",
+      "platform": "Reddit",
+      "community": "r/studyAbroad",
+      "category": "Student Visa / Character / Bona Fide",
+      "question": "When applying for a New Zealand student visa, must I disclose a previous student-visa refusal from another country?",
+      "source_url": "https://www.reddit.com/r/studyAbroad/comments/1sp1exc/new_zealand_student_visa_guidance_needed_after/",
+      "source_title": "New Zealand Student Visa Guidance Needed After USA F-1 Refusal",
+      "source_date": "2026-04-18",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "U3.1",
+        "A5.45"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The corpus does not contain the current student-visa application disclosure questions or the bona fide instructions at E5. A5.45 addresses false or withheld information in prior New Zealand applications, not the disclosure requirement for a foreign refusal on the current application."
+    },
+    {
+      "candidate_id": "ext2_7d2e80a946efbc21",
+      "platform": "Reddit",
+      "community": "r/studyAbroad",
+      "category": "Student Visa / Character / Bona Fide",
+      "question": "Does a previous overseas student-visa refusal automatically prevent approval of a New Zealand student visa?",
+      "source_url": "https://www.reddit.com/r/studyAbroad/comments/1sp1exc/new_zealand_student_visa_guidance_needed_after/",
+      "source_title": "New Zealand Student Visa Guidance Needed After USA F-1 Refusal",
+      "source_date": "2026-04-18",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "A5.20",
+        "A5.45",
+        "U3.1"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The character sections do not list a foreign visa refusal itself as an automatic character bar, but the student-visa bona fide rules at E5 are absent, so the corpus cannot fully determine how such a refusal affects approval."
+    },
+    {
+      "candidate_id": "ext2_2898b389bde85a65",
+      "platform": "Reddit",
+      "community": "r/studyAbroad",
+      "category": "Student Visa / Character / Bona Fide",
+      "question": "If I choose a one-year diploma before progressing to a master's degree, can that study pathway affect how Immigration New Zealand assesses whether my study intentions are genuine?",
+      "source_url": "https://www.reddit.com/r/studyAbroad/comments/1sp1exc/new_zealand_student_visa_guidance_needed_after/",
+      "source_title": "New Zealand Student Visa Guidance Needed After USA F-1 Refusal",
+      "source_date": "2026-04-18",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "U3.1"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "U3.1 requires a student applicant to be bona fide under E5, but the E5 criteria needed to assess how a diploma-to-masters study pathway affects genuine intentions are not in the corpus."
+    },
+    {
+      "candidate_id": "ext2_90d50f9d92d085da",
+      "platform": "Reddit",
+      "community": "r/MovingToNewZealand",
+      "category": "Health / Medical Review",
+      "question": "What does Immigration New Zealand consider when a visa medical review involves a past mental-health history?",
+      "source_url": "https://www.reddit.com/r/MovingToNewZealand/comments/1uut6by/medical_review_on_visa/",
+      "source_title": "Medical review on visa",
+      "source_date": "2026-07-12",
+      "evidence_status": "external_source_required",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "A4.15",
+        "A4.30",
+        "A4.40"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The manual gives the general temporary health test and medical-review process, but A4.30 states medical assessors also use the Immigration New Zealand Guidelines for Medical Assessors and other medical guidance. Detailed treatment of a past mental-health history therefore depends on authoritative material outside this corpus."
+    },
+    {
+      "candidate_id": "ext2_cce51047e3ea8b52",
+      "platform": "Reddit",
+      "community": "r/MovingToNewZealand",
+      "category": "Health / Medical Review",
+      "question": "Can historic self-harm or mental-health treatment still affect a visa health assessment if the applicant has been stable for many years?",
+      "source_url": "https://www.reddit.com/r/MovingToNewZealand/comments/1uut6by/medical_review_on_visa/",
+      "source_title": "Medical review on visa",
+      "source_date": "2026-07-12",
+      "evidence_status": "external_source_required",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "A4.15",
+        "A4.30",
+        "A4.40"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The general health criteria are present, but determining how historic self-harm or long-term stability is medically assessed depends on the medical assessor's reports/guidelines referenced outside the corpus."
+    },
+    {
+      "candidate_id": "ext2_62a87ec1d951cc37",
+      "platform": "Reddit",
+      "community": "r/MovingToNewZealand",
+      "category": "Health / Medical Review",
+      "question": "When assessing health requirements, does it matter that counselling and treatment have been privately funded rather than relying on New Zealand public services?",
+      "source_url": "https://www.reddit.com/r/MovingToNewZealand/comments/1uut6by/medical_review_on_visa/",
+      "source_title": "Medical review on visa",
+      "source_date": "2026-07-12",
+      "evidence_status": "sufficient",
+      "expected_sections": [
+        "A4.10",
+        "A4.15"
+      ],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "Both residence and temporary-entry health instructions expressly state that ability to pay privately, access the private system, or hold insurance has no bearing on the significant-cost/demand assessment."
+    },
+    {
+      "candidate_id": "ext2_d8797e336a9cc692",
+      "platform": "Reddit",
+      "community": "r/newzealand",
+      "category": "Student Visa / Practical Experience",
+      "question": "For an international student, is an unpaid clinical placement required by the programme treated as practical experience or as employment for visa purposes?",
+      "source_url": "https://www.reddit.com/r/newzealand/comments/1kt6uth/",
+      "source_title": "Do I need to apply for VOC on my Student Visa when my program has Clinical Placement?",
+      "source_date": "2025-05-23",
+      "evidence_status": "sufficient",
+      "expected_sections": [
+        "U13.5"
+      ],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "U13.5 directly covers work undertaken to fulfil a practical-experience requirement of a New Zealand programme and states that student-visa conditions may be granted for that practical experience."
+    },
+    {
+      "candidate_id": "ext2_3f6de8c6859da28a",
+      "platform": "Reddit",
+      "community": "r/newzealand",
+      "category": "Student Visa / Practical Experience",
+      "question": "If a student visa only shows ordinary work-hour conditions, does a compulsory clinical placement need a variation of conditions before the student can undertake it?",
+      "source_url": "https://www.reddit.com/r/newzealand/comments/1kt6uth/",
+      "source_title": "Do I need to apply for VOC on my Student Visa when my program has Clinical Placement?",
+      "source_date": "2025-05-23",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "U13.5",
+        "U6.40",
+        "U13.15"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The corpus shows that practical experience can require specific work conditions, but it does not contain the operative variation-of-conditions rule establishing whether ordinary work-hour conditions already authorise a compulsory clinical placement."
+    },
+    {
+      "candidate_id": "ext2_cf68d61927964d2b",
+      "platform": "Reddit",
+      "community": "r/newzealand",
+      "category": "Student Visa / Practical Experience",
+      "question": "If a clinical placement is paid, does the time spent on that placement count toward the student's permitted work-hour limit?",
+      "source_url": "https://www.reddit.com/r/newzealand/comments/1kt6uth/",
+      "source_title": "Do I need to apply for VOC on my Student Visa when my program has Clinical Placement?",
+      "source_date": "2025-05-23",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "U13.5",
+        "U13.15"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The corpus contains ordinary student work-hour limits and practical-experience work conditions separately, but does not state whether paid compulsory-placement hours count toward the ordinary work-hour limit."
+    },
+    {
+      "candidate_id": "ext2_96f7bcc940fb7cf5",
+      "platform": "Reddit",
+      "community": "r/newzealand_travel",
+      "category": "Working Holiday / Health",
+      "question": "Can a New Zealand Working Holiday Visa be declined because the applicant has a chronic illness that is in remission but requires an expensive ongoing medicine?",
+      "source_url": "https://www.reddit.com/r/newzealand_travel/comments/1tiuye4/question_about_travellers_working_holiday_visa/",
+      "source_title": "Question about travellers (Working Holiday Visa) with a chronic illness",
+      "source_date": "2026-05-20",
+      "evidence_status": "sufficient",
+      "expected_sections": [
+        "A4.15",
+        "A4.65"
+      ],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "A4.15 sets the acceptable-standard-of-health test for temporary visas, including likely significant costs/demands and high-cost pharmaceuticals; A4.65 sets the limited categories eligible for temporary medical waivers and does not include Working Holiday applicants."
+    },
+    {
+      "candidate_id": "ext2_1e02544f011e036f",
+      "platform": "Reddit",
+      "community": "r/newzealand_travel",
+      "category": "Working Holiday / Health",
+      "question": "If a Working Holiday Visa applicant brings enough medication for the planned stay and does not expect to use New Zealand-funded treatment, how does that affect the health assessment?",
+      "source_url": "https://www.reddit.com/r/newzealand_travel/comments/1tiuye4/question_about_travellers_working_holiday_visa/",
+      "source_title": "Question about travellers (Working Holiday Visa) with a chronic illness",
+      "source_date": "2026-05-20",
+      "evidence_status": "sufficient",
+      "expected_sections": [
+        "A4.15"
+      ],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "A4.15 directly states that ability to pay for health services or pharmaceuticals, access to private health care, insurance, or private support has no bearing on the significant-cost/demand assessment."
+    },
+    {
+      "candidate_id": "ext2_8c067aa632151edd",
+      "platform": "Reddit",
+      "community": "r/newzealand_travel",
+      "category": "Working Holiday / Health",
+      "question": "Can a medical waiver be considered for a Working Holiday Visa applicant who does not meet the normal acceptable-standard-of-health requirement?",
+      "source_url": "https://www.reddit.com/r/newzealand_travel/comments/1tiuye4/question_about_travellers_working_holiday_visa/",
+      "source_title": "Question about travellers (Working Holiday Visa) with a chronic illness",
+      "source_date": "2026-05-20",
+      "evidence_status": "sufficient",
+      "expected_sections": [
+        "A4.65"
+      ],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "A4.65 exhaustively identifies the temporary-entry applicants who may be considered for a medical waiver; a Working Holiday applicant is not among those categories."
+    },
+    {
+      "candidate_id": "ext2_16470dc278eeee1f",
+      "platform": "Reddit",
+      "community": "r/universityofauckland",
+      "category": "Residence Status",
+      "question": "For New Zealand immigration status, what is the practical difference between a Resident Visa and a Permanent Resident Visa?",
+      "source_url": "https://www.reddit.com/r/universityofauckland/comments/1cz5nfp/",
+      "source_title": "How to define permanent residency on application form page?",
+      "source_date": "2024-05-23",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R5.65",
+        "R5.66"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The corpus distinguishes resident visas and permanent resident visas and describes resident-visa travel conditions, but the substantive Permanent Resident Visa requirements/effects at RV2 are absent, preventing a complete practical comparison."
+    },
+    {
+      "candidate_id": "ext2_6f3fabde7896acbe",
+      "platform": "Reddit",
+      "community": "r/universityofauckland",
+      "category": "Residence Status",
+      "question": "Does a New Zealand Resident Visa itself expire, or is it mainly the travel conditions that can expire?",
+      "source_url": "https://www.reddit.com/r/universityofauckland/comments/1cz5nfp/",
+      "source_title": "How to define permanent residency on application form page?",
+      "source_date": "2024-05-23",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R5.66"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "R5.66 establishes that resident-visa travel conditions have a defined currency, but the corpus does not directly contain the broader rule needed to state whether the underlying resident status/visa itself expires."
+    },
+    {
+      "candidate_id": "ext2_ac14beba20a48211",
+      "platform": "Reddit",
+      "community": "r/universityofauckland",
+      "category": "Residence Status",
+      "question": "When an organisation asks whether someone is a permanent resident, can a holder of a New Zealand Resident Visa be treated the same as a Permanent Resident Visa holder?",
+      "source_url": "https://www.reddit.com/r/universityofauckland/comments/1cz5nfp/",
+      "source_title": "How to define permanent residency on application form page?",
+      "source_date": "2024-05-23",
+      "evidence_status": "external_source_required",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R5.65",
+        "R5.66"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The Operational Manual distinguishes Resident and Permanent Resident Visas, but whether an external organisation treats a Resident Visa holder as a 'permanent resident' depends on that organisation's own authoritative definition or eligibility rules."
+    },
+    {
+      "candidate_id": "ext2_85af79c191c62265",
+      "platform": "Reddit",
+      "community": "r/newzealand",
+      "category": "Residence / Travel Conditions",
+      "question": "Can a New Zealand Resident Visa holder travel overseas and return during the initial period of their resident visa?",
+      "source_url": "https://www.reddit.com/r/newzealand/comments/1okmhuc/overseas_travel_on_a_resident_visa/",
+      "source_title": "Overseas travel on a resident visa",
+      "source_date": "2025-10-31",
+      "evidence_status": "sufficient",
+      "expected_sections": [
+        "R5.66"
+      ],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "R5.66 directly provides for resident visas to have multiple-entry travel conditions, ordinarily for a defined initial period, allowing overseas travel and return while those conditions are current."
+    },
+    {
+      "candidate_id": "ext2_c5c9504539800d58",
+      "platform": "Reddit",
+      "community": "r/newzealand",
+      "category": "Residence / Travel Conditions",
+      "question": "What happens if the travel conditions on a Resident Visa expire while the visa holder is outside New Zealand?",
+      "source_url": "https://www.reddit.com/r/newzealand/comments/1okmhuc/overseas_travel_on_a_resident_visa/",
+      "source_title": "Overseas travel on a resident visa",
+      "source_date": "2025-10-31",
+      "evidence_status": "sufficient",
+      "expected_sections": [
+        "R5.66"
+      ],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "R5.66 directly addresses travel outside the validity of multiple-entry travel conditions and states that a holder who does not qualify for a permanent resident visa may apply for a variation of travel conditions."
+    },
+    {
+      "candidate_id": "ext2_41e57138edbfbc14",
+      "platform": "Reddit",
+      "community": "r/newzealand",
+      "category": "Residence / Travel Conditions",
+      "question": "After Resident Visa travel conditions expire, does the holder need a Permanent Resident Visa or new travel conditions before they can re-enter New Zealand?",
+      "source_url": "https://www.reddit.com/r/newzealand/comments/1okmhuc/overseas_travel_on_a_resident_visa/",
+      "source_title": "Overseas travel on a resident visa",
+      "source_date": "2025-10-31",
+      "evidence_status": "sufficient",
+      "expected_sections": [
+        "R5.66"
+      ],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "R5.66 states that travel after multiple-entry conditions expire requires a further travel basis: if the holder does not qualify for a permanent resident visa they may apply for a variation of travel conditions."
+    },
+    {
+      "candidate_id": "ext2_afe7fc43e9f7bec5",
+      "platform": "Reddit",
+      "community": "r/phmigrate",
+      "category": "Dependent Child / Financial Dependence",
+      "question": "If an adult child has a dependent-child residence application in progress, can starting paid work while waiting affect the application?",
+      "source_url": "https://www.reddit.com/r/phmigrate/comments/1j1ou0k/new_zealand_dependent_child/",
+      "source_title": "new zealand, dependent child",
+      "source_date": "2025-03-02",
+      "evidence_status": "sufficient",
+      "expected_sections": [
+        "R2.1"
+      ],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "R2.1 expressly requires paid employment, including whether it is full- or part-time and its duration, to be considered when assessing financial dependence of a 21-to-24-year-old dependent child."
+    },
+    {
+      "candidate_id": "ext2_56b4b2b072f93a21",
+      "platform": "Reddit",
+      "community": "r/phmigrate",
+      "category": "Dependent Child / Financial Dependence",
+      "question": "Does earning employment income while a dependent-child application is being processed mean the applicant is no longer financially dependent on the parent?",
+      "source_url": "https://www.reddit.com/r/phmigrate/comments/1j1ou0k/new_zealand_dependent_child/",
+      "source_title": "new zealand, dependent child",
+      "source_date": "2025-03-02",
+      "evidence_status": "sufficient",
+      "expected_sections": [
+        "R2.1"
+      ],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "R2.1 makes paid employment one factor in a whole-of-application financial-dependence assessment rather than an automatic end to dependency, and specifies a limited part-time-work exception."
+    },
+    {
+      "candidate_id": "ext2_64c0c3379e58730e",
+      "platform": "Reddit",
+      "community": "r/phmigrate",
+      "category": "Dependent Child / Financial Dependence",
+      "question": "Can an adult who already has a university degree still qualify as a dependent child if the parent continues to provide financial support?",
+      "source_url": "https://www.reddit.com/r/phmigrate/comments/1j1ou0k/new_zealand_dependent_child/",
+      "source_title": "new zealand, dependent child",
+      "source_date": "2025-03-02",
+      "evidence_status": "sufficient",
+      "expected_sections": [
+        "R2.1"
+      ],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "R2.1 defines dependency by age, relationship status, children and financial reliance; having a university degree is not itself a listed disqualifier, while study and financial support are relevant factors."
+    },
+    {
+      "candidate_id": "ext2_77e94a0c8c16ec99",
+      "platform": "Reddit",
+      "community": "r/LegalAdviceNZ",
+      "category": "Working Holiday / Character",
+      "question": "Does a recent overseas drug-supply conviction automatically prevent someone from getting a New Zealand Working Holiday Visa if they were not sentenced to prison?",
+      "source_url": "https://www.reddit.com/r/LegalAdviceNZ/comments/1t61yvb/removed/",
+      "source_title": "Working Holiday Visa with recent overseas conviction",
+      "source_date": "2026-05-07",
+      "evidence_status": "sufficient",
+      "expected_sections": [
+        "A5.20",
+        "A5.45"
+      ],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "A5.20 and A5.45 set the automatic and temporary-entry character bars based on convictions and imprisonment. A foreign conviction with no imprisonment is not automatically captured by the imprisonment-based provisions solely because of the conviction described."
+    },
+    {
+      "candidate_id": "ext2_139daec2a4cbe690",
+      "platform": "Reddit",
+      "community": "r/LegalAdviceNZ",
+      "category": "Working Holiday / Character",
+      "question": "Can an overseas good-behaviour bond or similar non-custodial sentence affect whether an applicant meets New Zealand temporary-visa character requirements?",
+      "source_url": "https://www.reddit.com/r/LegalAdviceNZ/comments/1t61yvb/removed/",
+      "source_title": "Working Holiday Visa with recent overseas conviction",
+      "source_date": "2026-05-07",
+      "evidence_status": "sufficient",
+      "expected_sections": [
+        "A5.20",
+        "A5.45"
+      ],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "The character rules distinguish convictions and imprisonment-based thresholds; a non-custodial disposition requires assessment of the underlying conviction and facts rather than being treated as an automatic imprisonment bar."
+    },
+    {
+      "candidate_id": "ext2_5cccc9e88336019d",
+      "platform": "Reddit",
+      "community": "r/LegalAdviceNZ",
+      "category": "Working Holiday / Character",
+      "question": "Must a Working Holiday Visa applicant disclose an overseas conviction even if it did not result in imprisonment?",
+      "source_url": "https://www.reddit.com/r/LegalAdviceNZ/comments/1t61yvb/removed/",
+      "source_title": "Working Holiday Visa with recent overseas conviction",
+      "source_date": "2026-05-07",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "A5.20",
+        "A5.45"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The corpus contains character consequences for convictions and prior false/withheld information, but it does not contain the current Working Holiday application disclosure questions establishing whether every overseas conviction must be declared."
+    },
+    {
+      "candidate_id": "ext2_b9c0792e1eafc5b7",
+      "platform": "Reddit",
+      "community": "r/newzealand",
+      "category": "AEWV / Entry",
+      "question": "If my AEWV application is still pending, can I travel to New Zealand first under visa-waiver visitor status and wait for the work visa decision there?",
+      "source_url": "https://www.reddit.com/r/newzealand/comments/vjmnfq/accredited_employer_work_visa/",
+      "source_title": "Accredited Employer Work Visa",
+      "source_date": "2022-06-24",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "The corpus does not contain the general visitor/visa-waiver entry and bona fide rules or the AEWV applicant-side instructions needed to determine whether a person may enter as a visitor while an AEWV is pending."
+    },
+    {
+      "candidate_id": "ext2_653c6e64a24601ec",
+      "platform": "Reddit",
+      "community": "r/newzealand",
+      "category": "AEWV / Entry",
+      "question": "If I enter New Zealand as a visitor while an AEWV is pending, can I begin the offered job before the AEWV has actually been granted?",
+      "source_url": "https://www.reddit.com/r/newzealand/comments/vjmnfq/accredited_employer_work_visa/",
+      "source_title": "Accredited Employer Work Visa",
+      "source_date": "2022-06-24",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "The corpus lacks the general visitor work prohibition and applicant-side AEWV work conditions needed to determine whether the offered job can start before the AEWV is granted."
+    },
+    {
+      "candidate_id": "ext2_ceb8c6bc70b227b0",
+      "platform": "Reddit",
+      "community": "r/newzealand",
+      "category": "AEWV / Entry",
+      "question": "Could having a permanent New Zealand job offer affect whether I am considered a genuine visitor when entering on visa-waiver status before my work visa is decided?",
+      "source_url": "https://www.reddit.com/r/newzealand/comments/vjmnfq/accredited_employer_work_visa/",
+      "source_title": "Accredited Employer Work Visa",
+      "source_date": "2022-06-24",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "The genuine-visitor/bona-fide rules are not in the corpus; the operative visitor instructions needed to assess a permanent job offer against visitor intent are absent."
+    }
+  ]
+}

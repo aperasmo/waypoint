@@ -1,0 +1,147 @@
+{
+  "schema": "waypoint-source-boundary-classifier-failure-analysis-v2",
+  "status": "FROZEN_DIAGNOSTIC_READY_FOR_HUMAN_REVIEW",
+  "analysed_on": "2026-08-25",
+  "source_artifacts": {
+    "classifier_implementation_v2_sha256": "8193FCDDB48585EC8A8BA8BCC477D123011B50F2F38531BEB2D88836975FF949",
+    "classifier_design_v3_sha256": "0EFBA11ECA5EE07A41BBB841817B93CB469BFA5B48BF42DF268B6A8F3257356B",
+    "independent_contract_pack_v5_sha256": "1B3CEA56504E3932C7DCA342DF99DC22523A4676B1C22714B9A122DDD566E67B",
+    "prediction_v2_sha256": "7EE68C61443D73B298574A8EB2BBA4425A99D577F618B7565848F16FEA8C6EF1",
+    "score_v2_sha256": "A26CADECFE6B31D9010F1855A1AAC99D76AF622554DB750191DDA143195570E7",
+    "score_result_v2_sha256": "5ABF0596DBCC0AAB6EDCA3F81403FBC25C98142608D0DEF036D07D026A786F9C"
+  },
+  "acceptance_summary": {
+    "decision": "FAIL",
+    "hard_gates_passed": 8,
+    "hard_gates_failed": 1,
+    "failed_hard_gate": "unresolved_recall",
+    "four_field_exact": {
+      "correct": 38,
+      "total": 40,
+      "percent": 95.0
+    },
+    "unresolved_recall": {
+      "correct": 5,
+      "total": 6,
+      "percent": 83.3,
+      "required_correct": 6,
+      "required_percent": 100.0
+    },
+    "resolved_recall": {
+      "correct": 33,
+      "total": 34,
+      "percent": 97.1
+    },
+    "execution_errors": 0
+  },
+  "failure_count": 2,
+  "failures": [
+    {
+      "case_id": "iv4_026",
+      "severity": "CLASS_BOUNDARY_ERROR_NON_SAFETY_GATE",
+      "proposition": "Which verification service a public records agency provides to confirm the authenticity of a document already issued.",
+      "trusted_source_context": null,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "external_agency_assessment_or_service",
+        "responsible_authority_type": "external_government_agency"
+      },
+      "gold_basis": "The agency is providing a verification service rather than acting as the issuing authority for the requested document.",
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "foreign_issuing_authority_procedure",
+        "responsible_authority_type": "foreign_issuing_authority",
+        "basis": "The proposition is about a public records agency’s verification service for confirming authenticity of an already issued document, which is an official document-issuance/verification function owned by the issuing authority."
+      },
+      "mechanism": "FOREIGN_ISSUING_ROLE_SEMANTIC_OVERREACH",
+      "diagnosis": "The classifier treated a generic authenticity-verification service for an already-issued document as an issuing-authority procedure. The frozen gold boundary requires an actual issuing role for the relevant document/record; a generic agency verification service remains external_agency_assessment_or_service when the issuer role is not established.",
+      "design_signal": {
+        "foreign_issuing_boundary_requires_revision": true,
+        "specific_issue": "The prompt permits verification within the foreign-issuing class, but does not state strongly enough that the proposition itself must establish that the authority is acting as issuer of the relevant record.",
+        "generic_rule_candidate": "Verification alone is not sufficient for the foreign-issuing class. The proposition or trusted context must establish that the authority is the issuer of the relevant document or record and is acting in that issuing role."
+      }
+    },
+    {
+      "case_id": "iv4_036",
+      "severity": "UNRESOLVED_SAFETY_GATE_FAILURE",
+      "proposition": "Which official organisation controls an unspecified overseas clearance process.",
+      "trusted_source_context": null,
+      "gold": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved"
+      },
+      "gold_basis": "The proposition does not establish whether the process is issuing, assessment, professional, entitlement, or another official role.",
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "other_official_external_authority",
+        "responsible_authority_type": "other_official_authority",
+        "basis": "The proposition asks about control of an unspecified overseas clearance process by an official organisation, which is a generic external official operational owner and does not clearly fit a more specific source class."
+      },
+      "mechanism": "CONTEXT_GATE_NOT_DETERMINISTICALLY_ENFORCED",
+      "diagnosis": "The model selected the context-gated other_official_external_authority class even though no trusted source context was supplied. Design v3 explicitly requires publisher_family=other_official_authority and authority_role=other_official_operational_owner for that class. Implementation v2 relies on prompt compliance and does not independently enforce the gate after prediction.",
+      "design_signal": {
+        "context_gate_rule_itself_invalid": false,
+        "context_gate_rule_should_be_preserved": true,
+        "prompt_only_enforcement_insufficient": true,
+        "deterministic_enforcement_candidate": "For context-gated classes, validate required trusted context after model prediction. If required context is absent or does not match, resolve to unresolved under the frozen semantic contract rather than allowing the resolved class through.",
+        "classes_potentially_affected": [
+          "manual_instruction_transition",
+          "inz_non_manual_procedure_or_interpretation",
+          "other_official_external_authority"
+        ]
+      }
+    }
+  ],
+  "cross_failure_diagnosis": {
+    "primary_observed_failure": "CONTEXT_GATE_EXECUTION_ENFORCEMENT",
+    "secondary_observed_failure": "FOREIGN_ISSUING_ROLE_BOUNDARY",
+    "retrieval_related": false,
+    "execution_or_schema_error_related": false,
+    "threshold_problem_observed": false,
+    "gold_pack_defect_observed": false,
+    "resolved_class_collapse_observed": false,
+    "unresolved_over_abstention_observed": false,
+    "unresolved_under_abstention_observed": true,
+    "under_abstention_count": 1
+  },
+  "methodological_implications": {
+    "pack_v5_status_after_inspection": "DEVELOPMENT_DIAGNOSTIC_EVIDENCE",
+    "same_pack_may_be_used_for_debugging": true,
+    "same_pack_may_be_claimed_as_fresh_untouched_acceptance_again": false,
+    "same_prediction_set_may_be_rerun_for_acceptance": false,
+    "threshold_change_permitted": false,
+    "automatic_retry_permitted": false,
+    "manual_override_permitted": false,
+    "fresh_independent_acceptance_set_required_after_any_revision": true
+  },
+  "change_authorisation": {
+    "classifier_design_v4_construction_authorised": false,
+    "classifier_prompt_change_authorised": false,
+    "classifier_implementation_change_authorised": false,
+    "classifier_rerun_authorised": false,
+    "threshold_change_authorised": false,
+    "candidate_v7_build_authorised": false,
+    "production_runtime_change_authorised": false,
+    "external_retrieval_authorised": false,
+    "fresh_external_v3_holdout_authorised": false
+  },
+  "authorisations": {
+    "human_diagnostic_review_v2_authorised": true,
+    "diagnostic_review_may_consider_design_revision": true,
+    "diagnostic_review_may_consider_deterministic_context_gate": true,
+    "diagnostic_review_may_consider_foreign_issuing_boundary_revision": true,
+    "classifier_design_change_authorised": false,
+    "model_run_authorised": false
+  },
+  "next_engineering_task": {
+    "name": "source_boundary_classifier_human_diagnostic_review_v2",
+    "authorised": true,
+    "model_calls": 0,
+    "purpose": "Review the two frozen mechanisms and decide whether a generic design-v4 revision is justified before any code or prompt is changed."
+  }
+}

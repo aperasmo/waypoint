@@ -1,0 +1,245 @@
+{
+  "schema": "waypoint-source-boundary-classifier-design-v1",
+  "status": "FROZEN_DESIGN_ONLY_NO_RUNTIME_CHANGE",
+  "frozen_on": "2026-08-24",
+  "purpose": "Classify the authoritative source domain of one exact material proposition that has already been determined to be unsupported by the supplied Operational Manual evidence.",
+  "baseline": {
+    "production_candidate": "evidence_adequacy_v2",
+    "runtime_sha256": "FF879300C09B195681E109E5B4F5D807C89216E986AE4AA9338B104FA99AAD0E",
+    "source_boundary_sha256": "2BFC518CFD892FE54AD9E46EAEE0037A905730DDA934E3EEAEB1EBAD42C1458F",
+    "diagnosis_sha256": "7DCC8FA8E2B80C3146E63B8D64839411F353026671B11FBEC1F1C672DF943029"
+  },
+  "preconditions": [
+    "A separate upstream process has already determined that the retrieved Operational Manual evidence is insufficient for one material proposition.",
+    "The unsupported proposition is stated neutrally and does not contain a guessed answer.",
+    "The classifier is not asked whether the user's overall question is answerable."
+  ],
+  "classifier_input": {
+    "unsupported_proposition": {
+      "type": "string",
+      "required": true,
+      "description": "The exact material proposition whose authoritative owner must be resolved."
+    },
+    "trusted_source_context": {
+      "type": "object | null",
+      "required": false,
+      "description": "Optional trusted metadata about a source transition or official source identity. It must never contain gold labels, expected sections, benchmark IDs, or model answers.",
+      "allowed_uses": [
+        "Confirm that a proposition is from a certified immigration-instruction amendment that has not yet been incorporated/indexed.",
+        "Confirm an explicitly identified official source family when supplied by a separate trusted source registry."
+      ]
+    }
+  },
+  "classifier_output": {
+    "resolution_status": [
+      "resolved",
+      "unresolved"
+    ],
+    "source_domain": [
+      "certified_immigration_instructions",
+      "legislation_or_regulation",
+      "official_inz_non_manual",
+      "responsible_external_official_authority",
+      "unresolved"
+    ],
+    "source_class": [
+      "operational_manual_instruction",
+      "manual_instruction_transition",
+      "legislation_or_regulation",
+      "inz_live_service_information",
+      "current_fee_or_charge_information",
+      "inz_non_manual_procedure_or_interpretation",
+      "foreign_issuing_authority_procedure",
+      "external_agency_assessment_or_service",
+      "external_entitlement_or_service_regime",
+      "professional_or_assessor_guidance",
+      "other_official_external_authority",
+      "unresolved"
+    ],
+    "responsible_authority_type": [
+      "immigration_new_zealand",
+      "new_zealand_legislation",
+      "foreign_issuing_authority",
+      "new_zealand_external_agency",
+      "public_service_authority",
+      "professional_or_assessment_authority",
+      "other_official_authority",
+      "unresolved"
+    ],
+    "basis": "A concise explanation of why this proposition type belongs to the selected authoritative source class. It must not answer the proposition."
+  },
+  "source_class_contracts": [
+    {
+      "source_class": "operational_manual_instruction",
+      "source_domain": "certified_immigration_instructions",
+      "responsible_authority_type": "immigration_new_zealand",
+      "use_when": "The proposition is itself an immigration rule, visa criterion, visa condition, evidence requirement, immigration exception, immigration definition, immigration consequence, assessment rule, verification rule, or immigration decision criterion.",
+      "future_status_mapping_if_unsupported": "corpus_gap"
+    },
+    {
+      "source_class": "manual_instruction_transition",
+      "source_domain": "certified_immigration_instructions",
+      "responsible_authority_type": "immigration_new_zealand",
+      "use_when": "Trusted source metadata establishes that the proposition belongs to a certified immigration-instruction amendment that is pending incorporation or indexing.",
+      "prohibited_inference": "Do not infer this class from recency wording, future dates, or absence from retrieved Manual passages alone.",
+      "future_status_mapping_if_unsupported": "corpus_gap"
+    },
+    {
+      "source_class": "legislation_or_regulation",
+      "source_domain": "legislation_or_regulation",
+      "responsible_authority_type": "new_zealand_legislation",
+      "use_when": "The proposition concerns statutory power, a legal rule, a prescribed regulatory requirement, a visa waiver fixed by regulation, or another legal requirement whose authority is legislation or regulations rather than certified immigration instructions.",
+      "future_status_mapping_if_unsupported": "external_source_required"
+    },
+    {
+      "source_class": "inz_live_service_information",
+      "source_domain": "official_inz_non_manual",
+      "responsible_authority_type": "immigration_new_zealand",
+      "use_when": "The proposition asks for a current or time-varying INZ service value or operational state, such as a current processing timeframe, current application status, current place or ballot availability, current receiving location, or current channel availability.",
+      "future_status_mapping_if_unsupported": "external_source_required"
+    },
+    {
+      "source_class": "current_fee_or_charge_information",
+      "source_domain": "official_inz_non_manual",
+      "responsible_authority_type": "immigration_new_zealand",
+      "use_when": "The proposition asks for the current amount payable, including a fee, levy, location-dependent charge, citizenship-dependent charge, or current fee-waiver result.",
+      "future_status_mapping_if_unsupported": "external_source_required"
+    },
+    {
+      "source_class": "inz_non_manual_procedure_or_interpretation",
+      "source_domain": "official_inz_non_manual",
+      "responsible_authority_type": "immigration_new_zealand",
+      "use_when": "The proposition concerns an official INZ administrative procedure, staff handling process, form-specific procedure, or published interpretation that is maintained outside certified immigration instructions.",
+      "precedence_guardrail": "This class may clarify administration or interpretation but cannot override legislation or certified immigration instructions.",
+      "future_status_mapping_if_unsupported": "external_source_required"
+    },
+    {
+      "source_class": "foreign_issuing_authority_procedure",
+      "source_domain": "responsible_external_official_authority",
+      "responsible_authority_type": "foreign_issuing_authority",
+      "use_when": "The proposition concerns how a foreign authority issues or requires an application for a foreign official document, including the foreign procedure or form option.",
+      "future_status_mapping_if_unsupported": "external_source_required"
+    },
+    {
+      "source_class": "external_agency_assessment_or_service",
+      "source_domain": "responsible_external_official_authority",
+      "responsible_authority_type": "new_zealand_external_agency",
+      "use_when": "The proposition concerns another New Zealand agency's assessment, recognition service, registration process, or service type rather than an immigration instruction.",
+      "future_status_mapping_if_unsupported": "external_source_required"
+    },
+    {
+      "source_class": "external_entitlement_or_service_regime",
+      "source_domain": "responsible_external_official_authority",
+      "responsible_authority_type": "public_service_authority",
+      "use_when": "The proposition concerns eligibility for or entitlement to a public service, benefit, or separately administered public regime.",
+      "future_status_mapping_if_unsupported": "external_source_required"
+    },
+    {
+      "source_class": "professional_or_assessor_guidance",
+      "source_domain": "responsible_external_official_authority",
+      "responsible_authority_type": "professional_or_assessment_authority",
+      "use_when": "The proposition concerns clinical, assessor, professional, registration, or provider-specific guidance owned by the responsible professional or assessment authority.",
+      "future_status_mapping_if_unsupported": "external_source_required"
+    },
+    {
+      "source_class": "other_official_external_authority",
+      "source_domain": "responsible_external_official_authority",
+      "responsible_authority_type": "other_official_authority",
+      "use_when": "The proposition is clearly owned by an identifiable official authority outside the Operational Manual, but does not fit a more specific frozen source class.",
+      "future_status_mapping_if_unsupported": "external_source_required",
+      "guardrail": "This is not a catch-all for uncertainty. Use unresolved when authoritative ownership itself is unclear."
+    }
+  ],
+  "resolution_rules": [
+    "Classify the exact unsupported proposition, not the broad visa, occupation, nationality, or application topic.",
+    "Do not use absence from retrieved Manual passages as evidence that the authority is external.",
+    "Do not use the fact that a proposition concerns immigration as evidence that it belongs to the Operational Manual.",
+    "First determine whether the proposition is itself a certified immigration rule. If yes, use the certified immigration-instruction domain unless trusted metadata establishes a transition state.",
+    "Use legislation_or_regulation only when the proposition is legal or regulatory in nature, not merely because an immigration instruction ultimately derives authority from legislation.",
+    "Use live-service and current-fee classes because the requested proposition is a current operational value, not because the question contains particular keywords.",
+    "Use an external official-authority class only when the responsible authority owns the proposition itself.",
+    "If authoritative ownership cannot be resolved from the proposition and trusted source context, return unresolved. Do not guess."
+  ],
+  "consistency_invariants": [
+    "resolution_status=unresolved requires source_domain=unresolved, source_class=unresolved, and responsible_authority_type=unresolved.",
+    "resolution_status=resolved prohibits any unresolved field.",
+    "operational_manual_instruction and manual_instruction_transition require source_domain=certified_immigration_instructions.",
+    "legislation_or_regulation requires source_domain=legislation_or_regulation.",
+    "inz_live_service_information, current_fee_or_charge_information, and inz_non_manual_procedure_or_interpretation require source_domain=official_inz_non_manual.",
+    "External agency, entitlement, issuing-authority, professional, and other-official classes require source_domain=responsible_external_official_authority.",
+    "manual_instruction_transition requires trusted source context. It cannot be selected from proposition text alone."
+  ],
+  "classifier_must_not": [
+    "Answer the unsupported proposition.",
+    "Generate immigration advice.",
+    "Determine whether retrieved evidence is sufficient.",
+    "Determine decision_boundary.",
+    "Choose public evidence_status directly.",
+    "Read evaluation or gold files.",
+    "Use expected sections.",
+    "Use benchmark case IDs.",
+    "Use question-specific routing.",
+    "Use visa-category-to-source mappings.",
+    "Use section-code-specific routing.",
+    "Use nationality-specific routing.",
+    "Use occupation-specific routing.",
+    "Use unrestricted web search.",
+    "Silently default unresolved authority to corpus_gap.",
+    "Silently default unresolved authority to external_source_required."
+  ],
+  "future_deterministic_mapping": {
+    "note": "This mapping is frozen for design review only and is not implemented by this artifact.",
+    "mappings": [
+      {
+        "source_class": "operational_manual_instruction",
+        "evidence_status_if_support_already_insufficient": "corpus_gap"
+      },
+      {
+        "source_class": "manual_instruction_transition",
+        "evidence_status_if_support_already_insufficient": "corpus_gap"
+      },
+      {
+        "source_domain": "legislation_or_regulation",
+        "evidence_status_if_support_already_insufficient": "external_source_required"
+      },
+      {
+        "source_domain": "official_inz_non_manual",
+        "evidence_status_if_support_already_insufficient": "external_source_required"
+      },
+      {
+        "source_domain": "responsible_external_official_authority",
+        "evidence_status_if_support_already_insufficient": "external_source_required"
+      },
+      {
+        "source_domain": "unresolved",
+        "behaviour": "explicit classifier failure / unresolved authority; do not fabricate public evidence_status"
+      }
+    ]
+  },
+  "failure_handling": {
+    "malformed_output": "Fail explicitly. Do not substitute a source class.",
+    "unresolved_authority": "Return unresolved explicitly. Do not guess.",
+    "inconsistent_output": "Fail explicit validation. Do not coerce fields into consistency.",
+    "retry_policy_for_evaluation": "No automatic retry when measuring classifier behaviour."
+  },
+  "independent_review_plan": {
+    "next_required_artifact": "source_boundary_classifier_contract_test_pack_v1.json",
+    "purpose": "Review the frozen classifier contract using synthetic propositions derived from the frozen source architecture, not from retired external benchmark questions.",
+    "test_pack_requirements": [
+      "At least two propositions per resolved source class where meaningful.",
+      "Include ambiguous propositions that should resolve to unresolved.",
+      "Include contrast pairs that distinguish immigration rules from current service values and external agency procedures.",
+      "Do not copy or paraphrase retired external evaluation questions.",
+      "Do not include benchmark case IDs, expected sections, or gold evidence_status values."
+    ]
+  },
+  "authorisations": {
+    "classifier_design_frozen": true,
+    "independent_contract_test_pack_build_authorised": true,
+    "classifier_runtime_implementation_authorised": false,
+    "candidate_v7_build_authorised": false,
+    "production_runtime_change_authorised": false,
+    "external_source_retrieval_authorised": false,
+    "fresh_external_v3_holdout_authorised": false
+  }
+}

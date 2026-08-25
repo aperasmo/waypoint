@@ -1,0 +1,97 @@
+{
+  "schema": "waypoint-source-boundary-contract-pack-human-review-v1",
+  "status": "REVIEWED_REVISE_BEFORE_IMPLEMENTATION",
+  "review_date": "2026-08-24",
+  "source_artifacts": {
+    "production_runtime_sha256": "FF879300C09B195681E109E5B4F5D807C89216E986AE4AA9338B104FA99AAD0E",
+    "source_boundary_sha256": "2BFC518CFD892FE54AD9E46EAEE0037A905730DDA934E3EEAEB1EBAD42C1458F",
+    "classifier_design_v1_sha256": "9443153C67A690EC24177BE61AA28CAB5E4794A90A171E44F3FAB4216A05F69F",
+    "contract_test_pack_v1_sha256": "71B982E71D533E8B3714BA1CC466C1A7D5A0CFBD0723220B153F6E2BCE39CF3F"
+  },
+  "review_scope": {
+    "independence": true,
+    "coverage": true,
+    "source_class_discriminability": true,
+    "ambiguity": true,
+    "runtime_or_model_execution": false
+  },
+  "positive_findings": [
+    "The pack is independent of the retired external evaluation sets according to its frozen construction metadata.",
+    "All frozen source classes are represented, with 32 synthetic propositions, 29 resolved cases, 3 unresolved cases, and 9 contrast groups.",
+    "The unresolved outcome is meaningfully exercised and is not treated as a generic catch-all.",
+    "The transition cases correctly require trusted source context rather than inferring certified amendments from recency wording alone.",
+    "The pack contains useful contrasts between immigration rules, current service information, current charges, external procedures, entitlements, and legal authority."
+  ],
+  "blocking_findings": [
+    {
+      "issue_id": "HR1",
+      "severity": "blocking",
+      "area": "inz_non_manual_procedure_or_interpretation",
+      "affected_tests": [
+        "sb14",
+        "sb15"
+      ],
+      "finding": "The expected non-Manual classification is not safely derivable from proposition semantics alone. An INZ administrative or form-handling procedure could be stated in certified instructions or in a non-Manual source. The classifier contract itself says the non-Manual class applies when the material is maintained outside certified instructions.",
+      "required_revision": "Require trusted source context identifying an IAC, Advice to Staff, official form/guide, or other explicitly non-Manual INZ source for this class. Without that context, the classifier must return unresolved rather than infer source location from procedural wording."
+    },
+    {
+      "issue_id": "HR2",
+      "severity": "blocking",
+      "area": "external source-class overlap",
+      "affected_tests": [
+        "sb18",
+        "sb19",
+        "sb22",
+        "sb23"
+      ],
+      "finding": "external_agency_assessment_or_service and professional_or_assessor_guidance overlap in the frozen v1 wording. The former includes assessment, recognition and registration processes, while the latter also includes assessor, professional and registration guidance. A professional registration authority can therefore satisfy both contracts.",
+      "required_revision": "Add explicit mutually exclusive scope rules. Reserve professional_or_assessor_guidance for professional, clinical, registration, provider or assessor authorities. Reserve external_agency_assessment_or_service for non-professional government/statutory agency assessment or recognition services. Define precedence when an authority could otherwise fit both."
+    },
+    {
+      "issue_id": "HR3",
+      "severity": "blocking",
+      "area": "other_official_external_authority",
+      "affected_tests": [
+        "sb24",
+        "sb25"
+      ],
+      "finding": "The catch-all examples are not sufficiently exclusive. The licensing/credential proposition in sb24 can fit the more specific professional, registration or assessment classes. The generic regulator proposition in sb25 can also blur into a legal/regulatory requirement.",
+      "required_revision": "Replace these with clearly operational propositions owned by identifiable official authorities that do not fit foreign issuing, agency assessment, entitlement, professional/assessor or legislation classes. Keep the catch-all as a last-resort resolved class, not an ambiguity sink."
+    },
+    {
+      "issue_id": "HR4",
+      "severity": "required_before_model_evaluation",
+      "area": "scoring diagnostics",
+      "affected_tests": [],
+      "finding": "Four-field exact match is a valid strict case metric, but overall exact-match alone could hide systematic failure in a small source class or unresolved cases.",
+      "required_revision": "Before any classifier model is evaluated, freeze additional reporting for source-domain accuracy, source-class macro accuracy, per-class recall, unresolved recall, and contrast-group consistency. Do not change the expected labels after seeing model outputs."
+    }
+  ],
+  "review_decision": {
+    "contract_test_pack_v1": "REVISE",
+    "classifier_design_v1": "REVISE_FOR_DISAMBIGUATION",
+    "classifier_implementation_design_authorised": false,
+    "classifier_runtime_implementation_authorised": false,
+    "candidate_v7_build_authorised": false,
+    "production_runtime_change_authorised": false,
+    "fresh_external_v3_holdout_authorised": false
+  },
+  "next_engineering_task": {
+    "name": "source_boundary_classifier_design_v2",
+    "authorised": true,
+    "runtime_implementation_authorised": false,
+    "requirements": [
+      "Preserve the frozen top-level source domains and current Waypoint v1 public evidence-status mapping.",
+      "Add explicit source-class precedence and exclusions for external agency versus professional/assessor sources.",
+      "Require trusted source context for source-location-only claims such as INZ non-Manual procedure/interpretation.",
+      "Clarify the last-resort other-official class so it cannot absorb cases belonging to a more specific source class.",
+      "Keep unresolved as the mandatory result when ownership cannot be established without guessing.",
+      "After design-v2 is frozen, build a new independent contract test pack v2 before any classifier model call."
+    ]
+  },
+  "immutability": {
+    "classifier_design_v1_remains_frozen_history": true,
+    "contract_test_pack_v1_remains_frozen_history": true,
+    "do_not_overwrite_v1_artifacts": true
+  }
+}

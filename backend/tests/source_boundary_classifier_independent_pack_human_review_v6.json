@@ -1,0 +1,190 @@
+{
+  "schema": "waypoint-source-boundary-classifier-independent-pack-human-review-v6",
+  "status": "REJECTED_FRESHNESS_INDEPENDENCE_REBUILD_REQUIRED",
+  "reviewed_on": "2026-08-25",
+  "source_artifacts": {
+    "classifier_design_v4_sha256": "9563158E74CFBC0C7D25D2DC2BA8FC2036E0B32193BADDFBE464ECCB99329948",
+    "classifier_design_v4_human_review_sha256": "4456BEE89A249043510730BF5A01FCE05EF0A6C49EDF39FAD2EBBB55E17D9AD5",
+    "observed_pack_v5_sha256": "1B3CEA56504E3932C7DCA342DF99DC22523A4676B1C22714B9A122DDD566E67B",
+    "failure_analysis_v2_sha256": "DA353315AB3EB4CB409064BD850B42893F6D59590077BA4550152EC463294F06",
+    "pack_v6_sha256": "F1383D338CD64F6A7DB53C13934050CEBE87FAE4F41EE008C79A0EBB5199BCDE"
+  },
+  "review_decision": {
+    "overall": "REJECT",
+    "structural_contract": "PASS",
+    "source_class_distribution": "PASS",
+    "resolved_unresolved_distribution": "PASS",
+    "gold_label_review": "PASS",
+    "gold_pack_defect_observed": false,
+    "context_gate_coverage": "PASS",
+    "foreign_issuing_boundary_coverage": "PASS",
+    "contrast_semantics": "PASS",
+    "contrast_groups_valid": "15/15",
+    "freshness_independence": "FAIL",
+    "fresh_untouched_acceptance_claim_valid": false
+  },
+  "independence_failure": {
+    "decision": "FAIL",
+    "reason": "Pack v6 contains multiple propositions that are close semantic paraphrases of already-observed pack-v5 cases and contains new cases that directly instantiate the two failure mechanisms used to revise design v4. This conflicts with the approved requirement that the next acceptance pack be independent of pack-v5 case wording and failure-analysis literals.",
+    "derivative_pair_count_reviewed": 10,
+    "derivative_pairs": [
+      {
+        "old_case_id": "iv4_001",
+        "new_case_id": "v6_001",
+        "finding": "Same core employer-change/visa-condition proposition, rephrased.",
+        "old_source_class": "operational_manual_instruction",
+        "new_source_class": "operational_manual_instruction",
+        "token_jaccard": 0.333
+      },
+      {
+        "old_case_id": "iv4_008",
+        "new_case_id": "v6_009",
+        "finding": "Same statutory-power proposition about immigration officers requiring information, with only scenario detail added.",
+        "old_source_class": "legislation_or_regulation",
+        "new_source_class": "legislation_or_regulation",
+        "token_jaccard": 0.722
+      },
+      {
+        "old_case_id": "iv4_011",
+        "new_case_id": "v6_013",
+        "finding": "Same current INZ processing-timeframe proposition, rephrased.",
+        "old_source_class": "inz_live_service_information",
+        "new_source_class": "inz_live_service_information",
+        "token_jaccard": 0.455
+      },
+      {
+        "old_case_id": "iv4_021",
+        "new_case_id": "v6_025",
+        "finding": "Same foreign civil-registry replacement-record issuing pattern.",
+        "old_source_class": "foreign_issuing_authority_procedure",
+        "new_source_class": "foreign_issuing_authority_procedure",
+        "token_jaccard": 0.391
+      },
+      {
+        "old_case_id": "iv4_024",
+        "new_case_id": "v6_029",
+        "finding": "Same government qualifications-assessment service pattern.",
+        "old_source_class": "external_agency_assessment_or_service",
+        "new_source_class": "external_agency_assessment_or_service",
+        "token_jaccard": 0.286
+      },
+      {
+        "old_case_id": "iv4_027",
+        "new_case_id": "v6_034",
+        "finding": "Same immigration-status/public-health-entitlement boundary.",
+        "old_source_class": "external_entitlement_or_service_regime",
+        "new_source_class": "external_entitlement_or_service_regime",
+        "token_jaccard": 0.138
+      },
+      {
+        "old_case_id": "iv4_030",
+        "new_case_id": "v6_037",
+        "finding": "Same professional-registration competence-assessment pattern.",
+        "old_source_class": "professional_or_assessor_guidance",
+        "new_source_class": "professional_or_assessor_guidance",
+        "token_jaccard": 0.529
+      },
+      {
+        "old_case_id": "iv4_033",
+        "new_case_id": "v6_041",
+        "finding": "Same foreign border electronic traveller-declaration pattern.",
+        "old_source_class": "other_official_external_authority",
+        "new_source_class": "other_official_external_authority",
+        "token_jaccard": 0.522
+      },
+      {
+        "old_case_id": "iv4_034",
+        "new_case_id": "v6_042",
+        "finding": "Same overseas customs reporting-procedure pattern.",
+        "old_source_class": "other_official_external_authority",
+        "new_source_class": "other_official_external_authority",
+        "token_jaccard": 0.429
+      },
+      {
+        "old_case_id": "iv4_039",
+        "new_case_id": "v6_047",
+        "finding": "Same ambiguity between current immigration charge and historical/legal amount.",
+        "old_source_class": "unresolved",
+        "new_source_class": "unresolved",
+        "token_jaccard": 0.5
+      }
+    ],
+    "observed_failure_derived_pair_count": 2,
+    "observed_failure_derived_pairs": [
+      {
+        "observed_failure_case_id": "iv4_026",
+        "new_case_id": "v6_046",
+        "finding": "New unresolved case directly exercises the already-observed issuer-versus-independent-verification failure mechanism.",
+        "observed_failure_gold_class": "external_agency_assessment_or_service",
+        "new_gold_class": "unresolved",
+        "token_jaccard": 0.219
+      },
+      {
+        "observed_failure_case_id": "iv4_036",
+        "new_case_id": "v6_048",
+        "finding": "New unresolved case directly exercises the already-observed unspecified overseas official-owner/context-gate failure mechanism.",
+        "observed_failure_gold_class": "unresolved",
+        "new_gold_class": "unresolved",
+        "token_jaccard": 0.368
+      }
+    ],
+    "construction_provenance_claim_not_sufficient": true,
+    "explanation": "A construction script can truthfully report that it did not open the prior pack while still producing derivative cases. Human review must assess the resulting evaluation content, not only file-read provenance."
+  },
+  "methodological_disposition": {
+    "pack_v6_role": "DEVELOPMENT_DIAGNOSTIC_ONLY",
+    "pack_v6_may_be_used_for_debugging": true,
+    "pack_v6_may_be_used_for_fresh_acceptance": false,
+    "pack_v6_may_be_used_to_set_acceptance_thresholds": false,
+    "pack_v6_may_be_used_for_model_prediction_acceptance": false,
+    "thresholds_v2_remain_unchanged": true,
+    "design_v4_remains_unchanged": true,
+    "production_runtime_remains_unchanged": true
+  },
+  "replacement_pack_requirements": {
+    "name": "source_boundary_classifier_independent_contract_test_pack_v7",
+    "must_be_constructed_from": "classifier_design_v4",
+    "must_not_read_during_construction": [
+      "pack_v5",
+      "pack_v6",
+      "prior classifier predictions",
+      "prior classifier scores",
+      "failure analysis v2"
+    ],
+    "must_not_reuse": [
+      "old proposition wording",
+      "old scenario templates with superficial paraphrasing",
+      "the two observed failure-case scenarios as direct test-case templates"
+    ],
+    "may_test_same_abstract_design_boundaries": true,
+    "must_use_materially_different_scenarios": true,
+    "must_cover_all_12_source_classes": true,
+    "must_cover_all_three_context_gates": true,
+    "must_cover_foreign_issuing_vs_external_agency_boundary": true,
+    "must_include_conservative_unresolved_cases": true,
+    "human_review_must_compare_content_against_prior_packs_after_freeze": true,
+    "model_calls_during_construction": 0
+  },
+  "authorisations": {
+    "independent_pack_v7_construction_authorised": true,
+    "independent_pack_v7_human_review_required": true,
+    "acceptance_thresholds_v3_construction_authorised": false,
+    "classifier_prompt_v3_construction_authorised": false,
+    "classifier_implementation_v3_construction_authorised": false,
+    "blind_input_v3_construction_authorised": false,
+    "classifier_model_run_authorised": false,
+    "classifier_rerun_on_pack_v5_authorised": false,
+    "classifier_run_on_pack_v6_authorised": false,
+    "threshold_change_authorised": false,
+    "candidate_v7_build_authorised": false,
+    "production_runtime_change_authorised": false,
+    "external_retrieval_authorised": false,
+    "fresh_external_v3_holdout_authorised": false
+  },
+  "next_engineering_task": {
+    "name": "source_boundary_classifier_independent_contract_test_pack_v7",
+    "authorised": true,
+    "model_calls": 0,
+    "purpose": "Construct a genuinely new independent acceptance pack from design v4 using materially different scenarios, without reusing pack-v5/v6 wording or direct templates from the two observed failure cases."
+  }
+}

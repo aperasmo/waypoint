@@ -1,0 +1,182 @@
+{
+  "schema": "waypoint-answer-candidate-v4-design-contract",
+  "status": "FROZEN_DESIGN_ONLY_NO_RUNTIME_CHANGE",
+  "candidate_name": "factorised_evidence_adjudication_v4",
+  "frozen_on": "2026-08-22",
+  "baseline": {
+    "candidate": "evidence_adequacy_v2",
+    "runtime_ask_sha256": "FF879300C09B195681E109E5B4F5D807C89216E986AE4AA9338B104FA99AAD0E"
+  },
+  "development_basis": {
+    "frozen_taxonomy_sha256": "0AB84EB3A83F6B97A2CBBA603C6D530419E93A07DC6E8671183462E17DA5BCB9",
+    "taxonomy_failure_count": 28,
+    "primary_mechanism_counts": {
+      "authoritative_home_resolution_failure": 13,
+      "scope_entailment_overreach": 11,
+      "scope_entailment_underreach": 4
+    },
+    "retired_external_v1_v2_are_development_only": true
+  },
+  "design_goal": "Separate evidence-support assessment from authoritative-home assessment, then derive the public evidence_status through generic deterministic logic.",
+  "unchanged_system_components": [
+    "corpus",
+    "chunking",
+    "embeddings",
+    "PostgreSQL pgvector storage",
+    "full-text search",
+    "hybrid retrieval",
+    "reciprocal-rank fusion",
+    "retrieval top-k",
+    "citation source metadata",
+    "public AskRequest shape",
+    "public AskResponse shape",
+    "decision_boundary public semantics",
+    "disclaimer"
+  ],
+  "model_inputs": [
+    "user question",
+    "retrieved Operational Manual passages"
+  ],
+  "internal_model_contract": {
+    "evidence_support": {
+      "allowed_values": [
+        "direct",
+        "composed",
+        "closed_rule",
+        "partial",
+        "none"
+      ],
+      "definitions": {
+        "direct": "The retrieved evidence directly establishes every material proposition needed to answer the question within the applicable scope.",
+        "composed": "Every material proposition is established by a combination of retrieved passages with compatible scope, and no unsupported bridging assumption is required.",
+        "closed_rule": "An applicable closed or exhaustive rule establishes the answer by inclusion or exclusion, including a negative conclusion where the rule is genuinely exhaustive.",
+        "partial": "The retrieved evidence is relevant but at least one material proposition remains unsupported, or there is a material scope, category, stage, evidence-type, procedure, or exception gap.",
+        "none": "The retrieved evidence does not materially establish the proposition required to answer the question."
+      }
+    },
+    "authoritative_home": {
+      "allowed_values": [
+        "operational_manual",
+        "external_authority",
+        "not_applicable"
+      ],
+      "definitions": {
+        "operational_manual": "A material unsupported proposition is an immigration instruction, eligibility criterion, visa condition, evidence requirement, application consequence, operative procedure, exception, or definition whose authoritative home is the Operational Manual, including material explicitly delegated to another Manual section, appendix, or table that is absent from the indexed corpus.",
+        "external_authority": "A material unsupported proposition is authoritatively maintained outside the Operational Manual, such as live or changeable service information, a separate fee or charge schedule, an issuing authority's procedure, another agency's assessment or service, an external organisation's eligibility definition, or professional/assessor guidance that the Manual does not itself supply.",
+        "not_applicable": "No material proposition required for the answer remains unsupported by the retrieved Manual evidence."
+      }
+    },
+    "decision_boundary": {
+      "allowed_values": [
+        "general_information",
+        "case_specific_application",
+        "discretionary_judgement"
+      ],
+      "semantics": "Preserve candidate-v2 public semantics."
+    },
+    "answer": {
+      "type": "string",
+      "rule": "Must be consistent with evidence_support and may not state a stronger proposition than the retrieved evidence supports."
+    },
+    "cited_sections": {
+      "type": "list[str]",
+      "rule": "May cite only section codes present in the retrieved evidence supplied to the model."
+    },
+    "missing_information": {
+      "type": "list[str]",
+      "rule": "May contain only missing user facts needed to apply an otherwise established rule. It must not contain missing policy, sections, appendices, tables, external sources, service information, or authoritative guidance."
+    }
+  },
+  "generic_reasoning_invariants": [
+    "A result may be sufficient only when evidence_support is direct, composed, or closed_rule.",
+    "Partial relevance is never sufficient evidence for the unanswered material proposition.",
+    "A rule from a different visa category, pathway, application type, decision stage, person type, evidence type, or procedure may not be transferred unless the retrieved text expressly gives it broader scope.",
+    "A general rule may support a narrower case when the text's scope expressly includes that case and no material category-specific rule is missing.",
+    "A categorical conclusion may not be inferred merely because the retrieved passages do not mention an alternative.",
+    "A negative conclusion from absence is allowed only when an applicable rule is closed or exhaustive for the exact question being decided.",
+    "If the answer text acknowledges that a material proposition is not established by the supplied evidence, evidence_support must be partial or none.",
+    "authoritative_home is assessed only for material unsupported propositions. It is not a topic classifier.",
+    "The absence of a rule from retrieved passages does not by itself prove that the rule belongs outside the Operational Manual.",
+    "Explicit delegation by the Manual to another authority, service, guideline, schedule, or issuing body may support external_authority when the delegated material is needed to answer the question."
+  ],
+  "deterministic_public_mapping": {
+    "rules": [
+      {
+        "when": {
+          "evidence_support": [
+            "direct",
+            "composed",
+            "closed_rule"
+          ]
+        },
+        "evidence_status": "sufficient"
+      },
+      {
+        "when": {
+          "evidence_support": [
+            "partial",
+            "none"
+          ],
+          "authoritative_home": "external_authority"
+        },
+        "evidence_status": "external_source_required"
+      },
+      {
+        "when": {
+          "evidence_support": [
+            "partial",
+            "none"
+          ],
+          "authoritative_home": [
+            "operational_manual",
+            "not_applicable"
+          ]
+        },
+        "evidence_status": "corpus_gap"
+      }
+    ],
+    "note": "The mapping contains no immigration topic, question, section, benchmark, or expected-answer logic."
+  },
+  "public_api_contract": {
+    "request_shape_changed": false,
+    "response_shape_changed": false,
+    "fields": [
+      "question",
+      "interpreted_as",
+      "outcome",
+      "evidence_status",
+      "decision_boundary",
+      "answer",
+      "citations",
+      "missing_information",
+      "disclaimer"
+    ],
+    "internal_v4_fields_exposed_publicly": false
+  },
+  "anti_hardcoding_rules": [
+    "No benchmark case IDs in runtime code or prompts.",
+    "No exact or partial benchmark-question routing.",
+    "No expected-section mappings in runtime code or prompts.",
+    "No gold evidence-status mappings in runtime code or prompts.",
+    "No adjudication-note text imported into runtime code or prompts.",
+    "No section-code-specific evidence-status logic.",
+    "No visa-category-specific evidence-status lookup tables.",
+    "No topic-keyword rules that directly force an evidence status.",
+    "No runtime import or read of tests, gold, taxonomy, or evaluation artifacts.",
+    "No benchmark-specific few-shot examples.",
+    "Only generic semantic definitions and generic deterministic contract logic are allowed."
+  ],
+  "candidate_build_constraints": [
+    "Candidate v4 must be created outside app/ first and must not replace the frozen v2 runtime during development.",
+    "The initial candidate comparison may use retired external v1 and v2 only as development/diagnostic data.",
+    "A candidate-v4 development improvement cannot be described as fresh generalisation evidence.",
+    "If candidate v4 is selected for a fresh holdout, acceptance criteria must be frozen before the first fresh prediction run.",
+    "A fresh external holdout must be collected and adjudicated without seeing candidate-v4 outputs."
+  ],
+  "promotion_authority": {
+    "candidate_code_authorised": true,
+    "runtime_replacement_authorised": false,
+    "production_promotion_authorised": false,
+    "fresh_holdout_generalisation_claim_authorised": false
+  }
+}

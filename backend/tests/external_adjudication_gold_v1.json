@@ -1,0 +1,948 @@
+{
+  "schema": "waypoint-external-adjudication-gold-v1",
+  "status": "FROZEN_DO_NOT_TUNE_ON_THIS_SET",
+  "freeze_date": "2026-08-21",
+  "source_packet_sha256": "3C5E5FC0F083DD2642EE22720E1F72569896EED104FF332639244BEC334ABA4F",
+  "source_draft_sha256": "FE0EDEE7C978786EED93FCF05EE63E18D4E15709B99C6311D1816A62EB866311",
+  "raw_questions_sha256": "0FDBA41D2439241A7AEC1C4F8ADB14062889DA5ADD42E0BE8F9915C48745CF3E",
+  "question_count": 60,
+  "corpus_section_count": 125,
+  "evidence_scorable_count": 51,
+  "rank_scorable_count": 9,
+  "adjudication_rules": [
+    "Gold labels are benchmark data only; runtime and ranking code must never import this file.",
+    "Retrieval top-10 candidates were treated only as navigation aids, not as the source of truth.",
+    "Expected sections are assigned only when the frozen corpus contains enough policy material to answer the question.",
+    "Missing appendices or missing Operational Manual instruction families are corpus_gap, not guessed from outside knowledge.",
+    "Live processing times, current fee amounts, and public-health eligibility are external_source_required.",
+    "Broad, composite, temporally ambiguous, or mixed-evidence questions are excluded rather than forced into an artificial gold target.",
+    "No reranker or answer-model calls were used to create these labels."
+  ],
+  "freeze_rules": [
+    "This file is evaluation gold and must never be imported by runtime retrieval, ranking, reranking, or answer code.",
+    "Do not change the reranker prompt, retrieval weights, section boosts, or answer classifier in response to individual failures on this frozen set.",
+    "If this frozen set is used for tuning, it becomes a development set and a new untouched holdout is required."
+  ],
+  "evidence_status_counts": {
+    "corpus_gap": 34,
+    "external_source_required": 8,
+    "sufficient": 11,
+    "unlabelled_excluded": 7
+  },
+  "benchmark_status_counts": {
+    "include": 51,
+    "exclude_broad_multi_path": 2,
+    "exclude_ambiguous_term": 1,
+    "exclude_mixed_evidence": 2,
+    "exclude_temporal_ambiguity": 1,
+    "exclude_broad_open_ended": 2,
+    "exclude_composite_retrieval": 1
+  },
+  "questions": [
+    {
+      "candidate_id": "ext_366f43473c7e3fc8",
+      "platform": "Facebook",
+      "community": "AEWV New Zealand Accredited Employer Work Visa with Free Immigration Advice",
+      "category": "AEWV",
+      "question": "My AEWV was granted at $27 an hour. If the median wage changes later, does my employer have to increase my pay?",
+      "source_url": "https://www.facebook.com/groups/1185020528871696/posts/1711988229508254/",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "WA2.35"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The corpus has employer-accreditation obligations but not the AEWV holder's pay/visa-condition rule needed to answer whether pay must rise after a median-wage change."
+    },
+    {
+      "candidate_id": "ext_dd41285472650fbe",
+      "platform": "Facebook",
+      "community": "AEWV New Zealand Accredited Employer Work Visa with Free Immigration Advice",
+      "category": "AEWV",
+      "question": "What is the current processing time for an AEWV application made from overseas?",
+      "source_url": "https://www.facebook.com/groups/1185020528871696/posts/1643147203059024/",
+      "evidence_status": "external_source_required",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "WA2.35"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "Current processing times are live operational data, not a rule contained in the indexed Operational Manual."
+    },
+    {
+      "candidate_id": "ext_6846d51ac221301c",
+      "platform": "Facebook",
+      "community": "AEWV New Zealand Accredited Employer Work Visa with Free Immigration Advice",
+      "category": "Student/Partner",
+      "question": "If my partner studies a one-year Level 8 postgraduate diploma, can I get a Partner of a Student Work Visa?",
+      "source_url": "https://www.facebook.com/groups/1185020528871696/posts/1650465972327147/",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "V3.10"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "V3.10 covers visitor visas for partners/dependants, but the Partner of a Student Work Visa eligibility instructions are not in this corpus."
+    },
+    {
+      "candidate_id": "ext_b2aea8ffbec127e4",
+      "platform": "Facebook",
+      "community": "AEWV New Zealand Accredited Employer Work Visa with Free Immigration Advice",
+      "category": "Student",
+      "question": "Can I work as an independent contractor while I am on a New Zealand student visa?",
+      "source_url": "https://www.facebook.com/groups/1185020528871696/posts/1524893708217708/",
+      "evidence_status": "sufficient",
+      "expected_sections": [
+        "U13.1"
+      ],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "U13.1 expressly states that a student visa holder with work conditions is not permitted to work in self-employment."
+    },
+    {
+      "candidate_id": "ext_57cbb9878fbb2de0",
+      "platform": "Facebook",
+      "community": "AEWV New Zealand Accredited Employer Work Visa with Free Immigration Advice",
+      "category": "AEWV",
+      "question": "My AEWV is still valid for another three years but I have resigned from my job. What happens to my work rights now?",
+      "source_url": "https://www.facebook.com/groups/1185020528871696/posts/1612817059425372/",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "WA2.35"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "WA2.35 tells the employer when to notify INZ that AEWV employment ended, but the worker's resulting work rights/visa conditions are outside the indexed corpus."
+    },
+    {
+      "candidate_id": "ext_40460719f2a26430",
+      "platform": "Facebook",
+      "community": "AEWV New Zealand Accredited Employer Work Visa with Free Immigration Advice",
+      "category": "Residence",
+      "question": "Do I need to earn at the median wage for three years on an AEWV before I can apply for residence?",
+      "source_url": "https://www.facebook.com/groups/1185020528871696/posts/1713148019392275/",
+      "evidence_status": "sufficient",
+      "expected_sections": [
+        "SR3.10",
+        "SR3.15",
+        "SR5.5",
+        "SR6.5",
+        "SR7.5"
+      ],
+      "partial_support_sections": [],
+      "benchmark_status": "exclude_broad_multi_path",
+      "adjudication_note": "The corpus shows multiple residence pathways with different requirements, so there is no single universal three-year median-wage rule. The question is too broad for current single-section retrieval scoring."
+    },
+    {
+      "candidate_id": "ext_43f9e815dbdeced8",
+      "platform": "Facebook",
+      "community": "AEWV New Zealand Accredited Employer Work Visa with Free Immigration Advice",
+      "category": "Residence",
+      "question": "Can a carpenter earning $30 an hour qualify for residence in New Zealand?",
+      "source_url": "https://www.facebook.com/groups/1185020528871696/posts/1486606018713144/",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "SR3.20",
+        "SR4.10",
+        "SR5.10"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "A carpenter's pathway depends on occupation/list classification and applicable occupation requirements not present in the indexed appendices."
+    },
+    {
+      "candidate_id": "ext_4b13f27d82be0f9d",
+      "platform": "Facebook",
+      "community": "AEWV New Zealand Accredited Employer Work Visa with Free Immigration Advice",
+      "category": "Straight to Residence",
+      "question": "If I get a Business Analyst job in New Zealand, can I apply for a Straight to Residence Visa?",
+      "source_url": "https://www.facebook.com/groups/1185020528871696/posts/1647234015983676/",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "SR4.5",
+        "SR4.10"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "Straight to Residence requires a Tier 1 Green List occupation and its listed requirements. Appendix 13 is not indexed, so Business Analyst cannot be resolved from this corpus."
+    },
+    {
+      "candidate_id": "ext_c589693ecb8f876d",
+      "platform": "Facebook",
+      "community": "AEWV New Zealand Accredited Employer Work Visa with Free Immigration Advice",
+      "category": "Care Workforce",
+      "question": "What wage requirement applies when counting work toward the Care Workforce Work to Residence pathway?",
+      "source_url": "https://www.facebook.com/groups/1185020528871696/posts/1585427275497684/",
+      "evidence_status": "sufficient",
+      "expected_sections": [
+        "SR6.15",
+        "SR6.10"
+      ],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "SR6.15 states the wage rule for counting the 24-month Care Workforce period, with SR6.10 stating the current acceptable-employment wage requirement."
+    },
+    {
+      "candidate_id": "ext_be5e3eccf10f02b3",
+      "platform": "Facebook",
+      "community": "AEWV New Zealand Accredited Employer Work Visa with Free Immigration Advice",
+      "category": "AEWV",
+      "question": "How much does a two-year AEWV extension cost?",
+      "source_url": "https://www.facebook.com/groups/1185020528871696/posts/1683723585668052/",
+      "evidence_status": "external_source_required",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R2.60"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The corpus states that applicable fees must be paid but does not contain the current numeric AEWV fee schedule."
+    },
+    {
+      "candidate_id": "ext_cf65d6069f010111",
+      "platform": "Facebook",
+      "community": "Migrants In New Zealand - Support Group",
+      "category": "Partnership Residence",
+      "question": "How long can a Partnership Resident Visa take to process after it has been lodged?",
+      "source_url": "https://www.facebook.com/groups/4354549051294168/posts/9895180787230939/",
+      "evidence_status": "external_source_required",
+      "expected_sections": [],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "Current visa processing times are operational data outside the indexed manual."
+    },
+    {
+      "candidate_id": "ext_ab8d1185fdfd0481",
+      "platform": "Facebook",
+      "community": "Migrants In New Zealand - Support Group",
+      "category": "Student/Health",
+      "question": "I have a PhD student visa for more than three years with unrestricted work rights. Am I treated like a work visa holder for publicly funded health care?",
+      "source_url": "https://www.facebook.com/groups/4354549051294168/posts/23883002711355511/",
+      "evidence_status": "external_source_required",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "U3.45"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "Eligibility for publicly funded healthcare is determined outside this Operational Manual corpus."
+    },
+    {
+      "candidate_id": "ext_d0015c7f005815ba",
+      "platform": "Facebook",
+      "community": "Migrants In New Zealand - Support Group",
+      "category": "Transport Work to Residence",
+      "question": "I am preparing to apply for residence through the Transport Sector Work to Residence pathway. What work requirements do I need to have completed?",
+      "source_url": "https://www.facebook.com/groups/4354549051294168/posts/24255664220756023/",
+      "evidence_status": "sufficient",
+      "expected_sections": [
+        "SR7.5",
+        "SR7.15"
+      ],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "SR7.5 summarises Transport Work to Residence requirements and SR7.15 gives the required 24 months, timing, hours, visas, wage and occupation conditions."
+    },
+    {
+      "candidate_id": "ext_df272d4459dd5197",
+      "platform": "Facebook",
+      "community": "Migrants In New Zealand - Support Group",
+      "category": "Residence",
+      "question": "Can a PhD student apply for permanent residence in New Zealand?",
+      "source_url": "https://www.facebook.com/groups/4354549051294168/posts/7448690638546645/",
+      "evidence_status": null,
+      "expected_sections": [],
+      "partial_support_sections": [],
+      "benchmark_status": "exclude_ambiguous_term",
+      "adjudication_note": "'Permanent residence' is ambiguous here between obtaining a resident visa and qualifying for a Permanent Resident Visa; the question also does not identify a residence pathway."
+    },
+    {
+      "candidate_id": "ext_6a1f136941985c0e",
+      "platform": "Facebook",
+      "community": "Migrants In New Zealand - Support Group",
+      "category": "Partnership",
+      "question": "What documents do we need for a New Zealand partner visa, and what costs should we expect?",
+      "source_url": "https://www.facebook.com/groups/4354549051294168/posts/9883338948415123/",
+      "evidence_status": null,
+      "expected_sections": [],
+      "partial_support_sections": [],
+      "benchmark_status": "exclude_mixed_evidence",
+      "adjudication_note": "The question combines partnership-document requirements, whose governing partnership instructions are absent, with current visa costs, which require an external fee source."
+    },
+    {
+      "candidate_id": "ext_66c81763e3cbd5cf",
+      "platform": "Facebook",
+      "community": "Migrants In New Zealand - Support Group",
+      "category": "Employer Accreditation",
+      "question": "We want to hire a migrant worker. Do we need employer accreditation and a Job Check before the worker applies?",
+      "source_url": "https://www.facebook.com/groups/4354549051294168/posts/9958521637563520/",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "WA2.1",
+        "WA2.5"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "Employer accreditation is covered, but the Job Check and AEWV applicant sequence requires WA3/work-visa instructions not present in the corpus."
+    },
+    {
+      "candidate_id": "ext_1f86a563159a656f",
+      "platform": "Reddit",
+      "community": "r/MovingToNewZealand",
+      "category": "AEWV",
+      "question": "After I receive a job offer, does my employer start the AEWV process or do I apply first?",
+      "source_url": "https://www.reddit.com/r/MovingToNewZealand/comments/1vm7q7i/accredited_employer_work_visa_aewv_applied_by/",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "WA2.1",
+        "WA2.5"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The corpus covers employer accreditation but not the complete employer Job Check versus worker AEWV application sequence."
+    },
+    {
+      "candidate_id": "ext_b2aadbfd8b1e0af8",
+      "platform": "Reddit",
+      "community": "r/LegalAdviceNZ",
+      "category": "Student to AEWV",
+      "question": "I already have a student visa but now have an AEWV job offer. Should I switch visas before travelling to New Zealand or after I arrive?",
+      "source_url": "https://www.reddit.com/r/LegalAdviceNZ/comments/1lj2pc9/visa_changing_student_to_aewv/",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "U6.25"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The question requires AEWV application/entry/change-of-status rules not present in the indexed corpus."
+    },
+    {
+      "candidate_id": "ext_de5cd7d549b18ce4",
+      "platform": "Reddit",
+      "community": "r/visas",
+      "category": "Student",
+      "question": "What should I explain about my home-country commitments and future plans in the genuine-intentions questions for a New Zealand student visa?",
+      "source_url": "https://www.reddit.com/r/visas/comments/1mzbm5s/new_zealand_student_visa_help/",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "U3.1"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "U3.1 requires bona fide status via E5, but E5's genuine-intentions criteria are not indexed."
+    },
+    {
+      "candidate_id": "ext_500a6921bab92be8",
+      "platform": "Reddit",
+      "community": "r/studyAbroad",
+      "category": "Student",
+      "question": "How early before my course starts should I lodge a New Zealand student visa, and when should I organise tuition, medicals and police certificates?",
+      "source_url": "https://www.reddit.com/r/studyAbroad/comments/1tjhsyw/what_i_should_know_regarding_student_visa/",
+      "evidence_status": null,
+      "expected_sections": [],
+      "partial_support_sections": [],
+      "benchmark_status": "exclude_mixed_evidence",
+      "adjudication_note": "This combines current application timing advice with tuition, medical and police-document rules. A single evidence-status/gold target would be methodologically misleading."
+    },
+    {
+      "candidate_id": "ext_d631c689d1f8f185",
+      "platform": "Reddit",
+      "community": "r/phmigrate",
+      "category": "AEWV",
+      "question": "My AEWV has been under assessment for two weeks with no request for more information. Is that unusual?",
+      "source_url": "https://www.reddit.com/r/phmigrate/comments/1la779a/aewv_new_zealand/",
+      "evidence_status": "external_source_required",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "WA2.35"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "Whether two weeks is unusual depends on live processing-time data rather than a manual rule."
+    },
+    {
+      "candidate_id": "ext_f28af684e60b00e0",
+      "platform": "Reddit",
+      "community": "r/phmigrate",
+      "category": "Partnership",
+      "question": "We are a same-sex couple living together but we do not have a joint bank account or formal tenancy agreement. What evidence can show our partnership for a work visa?",
+      "source_url": "https://www.reddit.com/r/phmigrate/comments/17u2jfr/partner_of_a_worker_work_visa_for_same_sex_couples/",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R2.1"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The corpus references partnership evidence but the operative partnership evidence instructions (for example F2) are not indexed, and the question concerns a work visa."
+    },
+    {
+      "candidate_id": "ext_85192ee7adceec0c",
+      "platform": "Reddit",
+      "community": "r/phmigrate",
+      "category": "Straight to Residence",
+      "question": "My partner and I both have skilled jobs in New Zealand. How do we decide which of us should be the principal applicant for Straight to Residence?",
+      "source_url": "https://www.reddit.com/r/phmigrate/comments/1nvjvz5/residency_visa_nz_application/",
+      "evidence_status": "sufficient",
+      "expected_sections": [
+        "SR4.5",
+        "R2.1"
+      ],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "SR4.5 identifies what the principal applicant must meet for Straight to Residence; R2.1 defines the principal applicant and who may be included."
+    },
+    {
+      "candidate_id": "ext_14bed4baa206a683",
+      "platform": "Reddit",
+      "community": "r/phmigrate",
+      "category": "SMC",
+      "question": "With the Skilled Migrant Category changes, what matters most if my occupation needs professional registration and I am applying from offshore?",
+      "source_url": "https://www.reddit.com/r/phmigrate/comments/1um15t2/im_a_filipino_new_zealand_licensed_immigration/",
+      "evidence_status": null,
+      "expected_sections": [],
+      "partial_support_sections": [],
+      "benchmark_status": "exclude_temporal_ambiguity",
+      "adjudication_note": "The phrase 'with the Skilled Migrant Category changes' is temporally ambiguous on 21 August 2026 because separate changes were due to take effect on 24 August."
+    },
+    {
+      "candidate_id": "ext_a2fcff95d2712f1b",
+      "platform": "Reddit",
+      "community": "r/NZVisa",
+      "category": "AEWV",
+      "question": "Could a small spelling difference in my mother's name between my passport and birth certificate cause problems in an AEWV application?",
+      "source_url": "https://www.reddit.com/r/NZVisa/comments/1s4qsbp/accredited_employer_work_visa_query/",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "The indexed corpus does not contain the AEWV applicant identity/document-discrepancy rules needed to determine the significance of a name spelling difference."
+    },
+    {
+      "candidate_id": "ext_97a5a0703651ba0f",
+      "platform": "Reddit",
+      "community": "r/MovingToNewZealand",
+      "category": "Student",
+      "question": "If I come to New Zealand only to complete a bachelor's degree and then leave, what visa-related issues should I plan for before studying?",
+      "source_url": "https://www.reddit.com/r/MovingToNewZealand/comments/1vm9w02/moving_to_nz_just_for_studies/",
+      "evidence_status": null,
+      "expected_sections": [],
+      "partial_support_sections": [],
+      "benchmark_status": "exclude_broad_open_ended",
+      "adjudication_note": "This asks for a general planning checklist rather than a single policy rule, making a retrieval gold section arbitrary."
+    },
+    {
+      "candidate_id": "ext_bbc5fc283186d58c",
+      "platform": "Reddit",
+      "community": "r/immigration",
+      "category": "Straight to Residence",
+      "question": "If I qualify for Straight to Residence before a wage threshold changes, which threshold applies if INZ decides my application after the change?",
+      "source_url": "https://www.reddit.com/r/immigration/comments/1m9y1a5/new_zealand_straight_to_residency_visa_query/",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "SR4.10"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The corpus contains current Straight to Residence employment thresholds but not the complete transitional rule that determines which threshold governs across an instruction change."
+    },
+    {
+      "candidate_id": "ext_52b662d37ac33f16",
+      "platform": "Reddit",
+      "community": "r/immigration",
+      "category": "AEWV",
+      "question": "What evidence and steps are normally involved when applying for an AEWV after an accredited employer offers me a job?",
+      "source_url": "https://www.reddit.com/r/immigration/comments/1oxzegd/any_new_zealand_aewv_success_stories_here_eager/",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "WA2.1",
+        "WA2.10"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "Employer accreditation material is indexed, but the worker-side AEWV evidential and application instructions are not."
+    },
+    {
+      "candidate_id": "ext_adf144a39aa0d3ee",
+      "platform": "Reddit",
+      "community": "r/phmigrate",
+      "category": "Migration Pathway",
+      "question": "If my current occupation is not on the Green List, what New Zealand work or residence pathways might still be available?",
+      "source_url": "https://www.reddit.com/r/phmigrate/comments/1dqockt/need_advice_work_options_to_new_zealand/",
+      "evidence_status": null,
+      "expected_sections": [],
+      "partial_support_sections": [],
+      "benchmark_status": "exclude_broad_multi_path",
+      "adjudication_note": "The question asks for an open-ended survey of work and residence pathways. A single retrieval target would not be defensible."
+    },
+    {
+      "candidate_id": "ext_ebcc9a29f3b6b998",
+      "platform": "Reddit",
+      "community": "r/MovingToNewZealand",
+      "category": "Migration Pathway",
+      "question": "I want to move to New Zealand to live and work but I do not have a visa yet. What visa pathways should I look at first?",
+      "source_url": "https://www.reddit.com/r/MovingToNewZealand/comments/1vtue4c/people_who_have_moved_to_new_zealand_from_us_how/",
+      "evidence_status": null,
+      "expected_sections": [],
+      "partial_support_sections": [],
+      "benchmark_status": "exclude_broad_open_ended",
+      "adjudication_note": "The question is an open-ended immigration pathway discovery request rather than a focused manual-rule question."
+    },
+    {
+      "candidate_id": "ext_71375d721d37bdde",
+      "platform": "Facebook",
+      "community": "AEWV New Zealand Accredited Employer Work Visa with Free Immigration Advice",
+      "category": "Partner/Dependent",
+      "question": "How long are partner-of-worker and dependent-child student visas taking when they are linked to an AEWV holder?",
+      "source_url": "https://www.facebook.com/groups/1185020528871696/posts/1654254251948319/",
+      "evidence_status": "external_source_required",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "V3.10"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The visa relationship rules are partly indexed, but the question asks for current processing times."
+    },
+    {
+      "candidate_id": "ext_3e13395698c7ad8e",
+      "platform": "Facebook",
+      "community": "AEWV New Zealand Accredited Employer Work Visa with Free Immigration Advice",
+      "category": "Residence/Green List",
+      "question": "If I am an ECE teacher on an AEWV, which wage threshold applies when I later apply for residence?",
+      "source_url": "https://www.facebook.com/groups/1185020528871696/posts/1668744133832664/",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "SR4.10",
+        "SR5.10"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The applicable Green List occupation-specific wage requirement depends on Appendix 13, which is not indexed."
+    },
+    {
+      "candidate_id": "ext_190a261820bbf833",
+      "platform": "Facebook",
+      "community": "AEWV New Zealand Accredited Employer Work Visa with Free Immigration Advice",
+      "category": "SMC",
+      "question": "I have worked for two years as a bulldozer and excavator operator. Do I need a degree to claim points for residence?",
+      "source_url": "https://www.facebook.com/groups/1185020528871696/posts/1691403384900072/",
+      "evidence_status": "sufficient",
+      "expected_sections": [
+        "SR3.15",
+        "SR3.20",
+        "SR3.25",
+        "SR3.35"
+      ],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "The SMC corpus shows that points can come from income, qualification or registration plus New Zealand skilled work experience; SR3.20 also explains when work experience may substitute for a qualification for skilled employment."
+    },
+    {
+      "candidate_id": "ext_15f33410a75c1f07",
+      "platform": "Facebook",
+      "community": "Migrants In New Zealand - Support Group",
+      "category": "Interim Visa/Partnership",
+      "question": "If I am waiting for a Partner of a New Zealander Resident Visa, can the interim visa still let me work?",
+      "source_url": "https://www.facebook.com/groups/4354549051294168/posts/23997701303218984/",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R5.75"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "R5.75 confirms a residence application does not itself confer lawful status, but the interim-visa work-condition rules needed to answer the question are not indexed."
+    },
+    {
+      "candidate_id": "ext_6e5eb25434cd9648",
+      "platform": "Facebook",
+      "community": "Migrants NZ - Immigration Help",
+      "category": "Student/Character",
+      "question": "Can a New Zealand student visa be declined if I failed to mention a previous visa refusal from another country?",
+      "source_url": "https://www.facebook.com/groups/immigrationsupport/posts/1110734904452930/",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "A5.45"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "A5.45 addresses false/misleading information in prior New Zealand immigration interactions, but the corpus lacks the complete current-application disclosure/bona-fide rules needed for an omitted foreign visa refusal."
+    },
+    {
+      "candidate_id": "ext_0b69af212aa242f4",
+      "platform": "Facebook",
+      "community": "AEWV New Zealand Accredited Employer Work Visa with Free Immigration Advice",
+      "category": "Partnership",
+      "question": "How much is the visa fee for a partner of a New Zealand resident?",
+      "source_url": "https://www.facebook.com/groups/1185020528871696/posts/1656540505053027/",
+      "evidence_status": "external_source_required",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R2.60"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "R2.60 explains fee mechanics but not the current numeric partner-visa fee."
+    },
+    {
+      "candidate_id": "ext_e48ca09340aedb62",
+      "platform": "Reddit",
+      "community": "r/phmigrate",
+      "category": "Student/Genuine Intentions",
+      "question": "I am a Filipino working in the Middle East. If I apply for a New Zealand student visa from there, how should I show my ties and commitment to my home country?",
+      "source_url": "https://www.reddit.com/r/phmigrate/comments/1setwmj/new_zealand_student_visa_application/",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "U3.1"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "U3.1 points to the bona fide rules at E5, but E5 is not indexed; the requested home-country ties analysis therefore cannot be grounded from this corpus."
+    },
+    {
+      "candidate_id": "ext_f96a3c6f82258285",
+      "platform": "Reddit",
+      "community": "r/phmigrate",
+      "category": "Student/Funds",
+      "question": "My sister is a New Zealand citizen and will pay my tuition and accommodation. Do I still need substantial savings of my own for a student visa?",
+      "source_url": "https://www.reddit.com/r/phmigrate/comments/1s46ywv/new_zealand_student_visa_funds/",
+      "evidence_status": "sufficient",
+      "expected_sections": [
+        "U3.20"
+      ],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "U3.20 expressly permits sponsorship/financial undertakings by qualifying relatives or friends and sets the maintenance-funds framework."
+    },
+    {
+      "candidate_id": "ext_2d9fcf33ed1ea9fa",
+      "platform": "Reddit",
+      "community": "r/phmigrate",
+      "category": "Interim Visa",
+      "question": "Can I get an interim visa when my permitted stay ends even if the visa label itself has not yet expired?",
+      "source_url": "https://www.reddit.com/r/phmigrate/comments/1vt141a/interim_visa_nz/",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "U6.25"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The generic interim-visa trigger and status rules needed to distinguish visa expiry from permitted-stay expiry are not in the indexed corpus."
+    },
+    {
+      "candidate_id": "ext_57b837e2da0b6500",
+      "platform": "Reddit",
+      "community": "r/phmigrate",
+      "category": "SMC 2026",
+      "question": "From 24 August 2026, how do the new Skilled Work Experience and Trades and Technician SMC pathways work, and what are the Amber and Red lists for?",
+      "source_url": "https://www.reddit.com/r/phmigrate/comments/1um15t2/im_a_filipino_new_zealand_licensed_immigration/",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "SR3.10",
+        "SR3.20",
+        "SR3.35"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The question expressly asks about 24 August 2026 SMC pathways and Amber/Red lists that are not present in the indexed current SMC sections."
+    },
+    {
+      "candidate_id": "ext_12a53eacea3d372f",
+      "platform": "Reddit",
+      "community": "r/NZVisa",
+      "category": "AEWV/Health",
+      "question": "I am applying for an AEWV from the UK but was born in a higher-TB-risk country. Will I still need a chest x-ray after living in the UK for more than 20 years?",
+      "source_url": "https://www.reddit.com/r/NZVisa/comments/1tuo4yo/applying_for_aewv_nz_from_uk/",
+      "evidence_status": "sufficient",
+      "expected_sections": [
+        "A4.25"
+      ],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "A4.25 defines TB-risk factors by passport and time spent in higher-risk countries in the five years before application, allowing the rule to be explained while noting any missing passport fact."
+    },
+    {
+      "candidate_id": "ext_f7cf3bd43ac30a01",
+      "platform": "Reddit",
+      "community": "r/immigration",
+      "category": "SMC",
+      "question": "If I have a PhD that gives me six SMC points, do I still need a skilled New Zealand job or job offer before I can apply from offshore?",
+      "source_url": "https://www.reddit.com/r/immigration/comments/1dalneq/new_zealand_skilled_migrant_residency_with_phd/",
+      "evidence_status": "sufficient",
+      "expected_sections": [
+        "SR3.10",
+        "SR3.20"
+      ],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "SR3.10 and SR3.20 expressly require current skilled employment or an offer of employment in New Zealand even where the applicant can obtain six points from a doctoral qualification."
+    },
+    {
+      "candidate_id": "ext_19e15271f496e147",
+      "platform": "Reddit",
+      "community": "r/MovingToNewZealand",
+      "category": "AEWV/Evidence",
+      "question": "What documents can INZ ask for to verify my work experience and qualifications during an AEWV application?",
+      "source_url": "https://www.reddit.com/r/MovingToNewZealand/comments/1uvl6o0/finalising_aewv/",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "WA2.10",
+        "WA2.35"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "WA2 contains employer-side checks, but the AEWV applicant's qualification/work-experience evidential requirements are not indexed."
+    },
+    {
+      "candidate_id": "ext_46612c86074abdea",
+      "platform": "Reddit",
+      "community": "r/MovingToNewZealand",
+      "category": "Straight to Residence/Documents",
+      "question": "When moving from an AEWV to Straight to Residence, can I reuse a recent medical and do I need a New Zealand police certificate?",
+      "source_url": "https://www.reddit.com/r/MovingToNewZealand/comments/1tqtwk6/aewv_to_str_what_documents_can_i_reuse/",
+      "evidence_status": "sufficient",
+      "expected_sections": [
+        "A4.20",
+        "A5.5",
+        "A5.10"
+      ],
+      "partial_support_sections": [],
+      "benchmark_status": "exclude_composite_retrieval",
+      "adjudication_note": "The corpus contains the residence medical reuse rules and police-certificate rules. Because the question contains two independent retrieval targets, current any-match Recall@k would score it misleadingly."
+    },
+    {
+      "candidate_id": "ext_bb98eab620acdb57",
+      "platform": "Reddit",
+      "community": "r/AUT",
+      "category": "Student/Post-study",
+      "question": "My student visa expires about a month after my master's course ends. What happens if my university has not issued my completion documents before the visa expires?",
+      "source_url": "https://www.reddit.com/r/AUT/comments/1p8wisx/new_zealand_immigration/",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "WD2",
+        "WD3.1",
+        "U6.30"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The corpus explains PSWV completion evidence and application timing, but not the complete lawful-status/interim options if the student visa expires before the required completion evidence is available."
+    },
+    {
+      "candidate_id": "ext_47cbae42957d3c81",
+      "platform": "Reddit",
+      "community": "r/MovingToNewZealand",
+      "category": "Partnership",
+      "question": "My New Zealand partner and I have a genuine relationship but have not yet been able to live together. What visa can let us start living together before applying for a partnership visa?",
+      "source_url": "https://www.reddit.com/r/MovingToNewZealand/comments/1s99bbb/proving_partnership/",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R2.1"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The temporary partnership visa pathway and living-together requirements needed to answer this are not indexed."
+    },
+    {
+      "candidate_id": "ext_1cff9cca7e41968c",
+      "platform": "Reddit",
+      "community": "r/LegalAdviceNZ",
+      "category": "PSWV/Interim Visa",
+      "question": "If I apply for a Post Study Work Visa before my student visa expires, what work conditions will I have on an interim visa while I wait?",
+      "source_url": "https://www.reddit.com/r/LegalAdviceNZ/comments/1ptfvyi/post_study_work_visa/",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "WD3.1"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "PSWV eligibility is indexed, but the interim visa conditions while a PSWV application is pending are not."
+    },
+    {
+      "candidate_id": "ext_588ee3ee0b20790d",
+      "platform": "Reddit",
+      "community": "r/phmigrate",
+      "category": "Green List",
+      "question": "My engineering degree is related to a Green List role but I am unsure whether my qualification meets the listed requirement. What qualification evidence does INZ use?",
+      "source_url": "https://www.reddit.com/r/phmigrate/comments/1lcrebc/new_zealand_green_list_requirement_what_to_choose/",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "SR4.5",
+        "SR5.5"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The corpus describes general qualification/IQA evidence, but deciding whether the degree meets a specific Green List role requires the occupation requirements in Appendix 13, which is not indexed."
+    },
+    {
+      "candidate_id": "ext_672add6bc0ed055c",
+      "platform": "Reddit",
+      "community": "r/MovingToNewZealand",
+      "category": "Partnership/Evidence",
+      "question": "We have lived together for many years but have few joint bills and only one joint account. What evidence can prove our partnership for a New Zealand visa?",
+      "source_url": "https://www.reddit.com/r/MovingToNewZealand/comments/1t2iq6g/seeking_experience_view_on_how_partner_visa/",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R2.1"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "R2.1 refers to partnership evidence but the operative partnership evidence instructions are absent."
+    },
+    {
+      "candidate_id": "ext_810467465e7ba90d",
+      "platform": "Reddit",
+      "community": "r/phmigrate",
+      "category": "Partner of Student",
+      "question": "If my partner studies in New Zealand and I come as their partner, what determines whether I can get a work visa rather than only a visitor visa?",
+      "source_url": "https://www.reddit.com/r/phmigrate/comments/1tum087/migrating_to_nz_and_pivoting_careers_ofws_from_dxb/",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "V3.10"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "V3.10 covers partner visitor visas, but the partner-of-student work-visa eligibility instructions needed to distinguish work versus visitor status are not indexed."
+    },
+    {
+      "candidate_id": "ext_3d3463007eacdfc4",
+      "platform": "Reddit",
+      "community": "r/phmigrate",
+      "category": "Partner of Worker/Entry",
+      "question": "My Partner of a Worker Work Visa says I must be able to support myself. Do I need to carry personal proof of funds when I enter New Zealand?",
+      "source_url": "https://www.reddit.com/r/phmigrate/comments/1sqj79k/finally_visa_approve_next_docs_to_prepare_for_io/",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "The indexed corpus does not contain the Partner of a Worker Work Visa entry-funds/arrival evidence rules needed to answer what must be carried at the border."
+    },
+    {
+      "candidate_id": "ext_f0c31e903b84f2b1",
+      "platform": "Reddit",
+      "community": "r/phmigrate",
+      "category": "Partnership",
+      "question": "Can I qualify for a Partner of a New Zealander Work Visa if our relationship is genuine but we are not yet living together?",
+      "source_url": "https://www.reddit.com/r/phmigrate/comments/1rhqjfx/partner_of_a_new_zealander_visa/",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R2.1"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The relevant temporary partnership work-visa criteria, including living-together requirements, are not indexed."
+    },
+    {
+      "candidate_id": "ext_e62b480152a4c960",
+      "platform": "Reddit",
+      "community": "r/phmigrate",
+      "category": "Working Holiday",
+      "question": "For the Philippines Working Holiday Visa, do I need to complete a medical examination or an English test before applying?",
+      "source_url": "https://www.reddit.com/r/phmigrate/comments/1umx5jz/nz_working_holiday_visa/",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "A4.25"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "A4.25 gives generic temporary-entry medical rules but the Philippines Working Holiday Scheme's scheme-specific requirements, including any English requirement, are not indexed."
+    },
+    {
+      "candidate_id": "ext_980dc41e1d8a98f6",
+      "platform": "ENZ Forum",
+      "community": "enz.org New Zealand Immigration Forum",
+      "category": "Student/Funds",
+      "question": "If I will live with my brother in New Zealand while studying, does that reduce how much maintenance money I need to show for my student visa?",
+      "source_url": "https://www.enz.org/forum/showthread.php?t=55878",
+      "evidence_status": "sufficient",
+      "expected_sections": [
+        "U3.20"
+      ],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "U3.20 specifies maintenance amounts, permits sponsorship/financial undertakings, and states that required maintenance funds are reduced by prepaid living expenses. It does not treat merely living with a relative as a separate automatic reduction."
+    },
+    {
+      "candidate_id": "ext_5881dbf0c933056b",
+      "platform": "ENZ Forum",
+      "community": "enz.org New Zealand Immigration Forum",
+      "category": "Interim Visa/Change of Status",
+      "question": "I am on an interim visa after my student visa expired and I now have a skilled job. Can I apply for a work visa while I am on the interim visa?",
+      "source_url": "https://www.enz.org/forum/showthread.php?t=50146",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "U6.25"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The corpus lacks the generic interim-visa rules governing whether a person on an interim visa may lodge and be granted a different work visa."
+    },
+    {
+      "candidate_id": "ext_1d7296bcc4a023cf",
+      "platform": "ENZ Forum",
+      "community": "enz.org New Zealand Immigration Forum",
+      "category": "Residence/Interim Visa",
+      "question": "My work visa will expire while my resident visa application is still being processed. Do I need to apply for another temporary visa to stay and work lawfully?",
+      "source_url": "https://www.enz.org/forum/showthread.php?t=57678",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "R5.75"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "R5.75 establishes that a pending residence application does not itself make the person's stay lawful, but the temporary/interim visa rules required to determine the correct way to preserve work rights are absent."
+    },
+    {
+      "candidate_id": "ext_ec1a5838f6b62d00",
+      "platform": "ENZ Forum",
+      "community": "enz.org New Zealand Immigration Forum",
+      "category": "Family/Health",
+      "question": "If the main applicant has a New Zealand work visa, are their partner and children automatically eligible for publicly funded health and dental care?",
+      "source_url": "https://www.enz.org/forum/showthread.php?t=45360",
+      "evidence_status": "external_source_required",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "V3.10"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "Publicly funded health and dental eligibility is determined by health-service eligibility rules outside this Operational Manual corpus."
+    },
+    {
+      "candidate_id": "ext_55631e1d29e44e26",
+      "platform": "ENZ Forum",
+      "community": "enz.org New Zealand Immigration Forum",
+      "category": "Partner of Student",
+      "question": "Can I first come to New Zealand on another temporary visa, build evidence that I am living with my student partner, and then apply for a partner visa?",
+      "source_url": "https://www.enz.org/forum/showthread.php?p=550995",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "V3.10"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The corpus does not contain the temporary partnership visa rules needed to determine whether this sequence of visas/living together is permitted and sufficient."
+    },
+    {
+      "candidate_id": "ext_ced2abc5a911ac6c",
+      "platform": "Reddit",
+      "community": "r/phmigrate",
+      "category": "Working Holiday/Funds",
+      "question": "For a New Zealand Working Holiday Visa, can a relative sponsor my stay or do I need to show my own funds?",
+      "source_url": "https://www.reddit.com/r/phmigrate/comments/1rgqd22/new_zealand_working_holiday_visa/",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [],
+      "benchmark_status": "include",
+      "adjudication_note": "Working Holiday Scheme-specific maintenance/sponsorship rules are not indexed."
+    },
+    {
+      "candidate_id": "ext_1673e73aa67cff3d",
+      "platform": "Reddit",
+      "community": "r/phmigrate",
+      "category": "SMC 2026",
+      "question": "If my occupation is on the Amber List or Red List under the August 2026 SMC changes, which skilled residence pathway can I use?",
+      "source_url": "https://www.reddit.com/r/phmigrate/comments/1rl8vf7/further_details_released_for_skilled_migrant/",
+      "evidence_status": "corpus_gap",
+      "expected_sections": [],
+      "partial_support_sections": [
+        "SR3.10",
+        "SR3.20"
+      ],
+      "benchmark_status": "include",
+      "adjudication_note": "The August 2026 Amber/Red list rules and new SMC pathways are not present in the indexed corpus."
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "schema": "waypoint-source-boundary-classifier-score-result-v2",
+  "status": "FROZEN_FIRST_UNTOUCHED_ACCEPTANCE_FAIL",
+  "frozen_on": "2026-08-25",
+  "score_sha256": "A26CADECFE6B31D9010F1855A1AAC99D76AF622554DB750191DDA143195570E7",
+  "acceptance_decision": "FAIL",
+  "source_artifacts": {
+    "score_v2_sha256": "A26CADECFE6B31D9010F1855A1AAC99D76AF622554DB750191DDA143195570E7",
+    "prediction_v2_sha256": "7EE68C61443D73B298574A8EB2BBA4425A99D577F618B7565848F16FEA8C6EF1",
+    "prediction_result_v2_sha256": "875137554FBE33BAB97A95FF6E032149862A6BF4A522EABB1FD21A6B59F5623D",
+    "acceptance_thresholds_v2_sha256": "1BDD2ED8950D6E3E612C66DCD5384BD5E0CAC784E39A70C3CE09EAD5C310D277",
+    "independent_contract_pack_v5_sha256": "1B3CEA56504E3932C7DCA342DF99DC22523A4676B1C22714B9A122DDD566E67B"
+  },
+  "frozen_metrics": {
+    "four_field_exact_match": {
+      "correct": 38,
+      "total": 40,
+      "percent": 95.0,
+      "gate": "PASS"
+    },
+    "resolution_status_accuracy": {
+      "correct": 39,
+      "total": 40,
+      "percent": 97.5,
+      "gate": "PASS"
+    },
+    "source_domain_accuracy": {
+      "correct": 39,
+      "total": 40,
+      "percent": 97.5,
+      "gate": "PASS"
+    },
+    "source_class_accuracy": {
+      "correct": 38,
+      "total": 40,
+      "percent": 95.0,
+      "gate": "PASS"
+    },
+    "source_class_macro_recall": {
+      "percent": 95.8,
+      "gate": "PASS"
+    },
+    "unresolved_recall": {
+      "correct": 5,
+      "total": 6,
+      "percent": 83.3,
+      "required_correct": 6,
+      "required_percent": 100.0,
+      "gate": "FAIL"
+    },
+    "resolved_recall": {
+      "correct": 33,
+      "total": 34,
+      "percent": 97.1,
+      "gate": "PASS"
+    },
+    "contrast_consistency": {
+      "correct": 11,
+      "total": 12,
+      "percent": 91.7,
+      "gate": "PASS"
+    },
+    "malformed_or_error_count": {
+      "count": 0,
+      "total": 40,
+      "gate": "PASS"
+    }
+  },
+  "frozen_failure_surface": {
+    "failed_hard_gates": [
+      "unresolved_recall"
+    ],
+    "passed_hard_gate_count": 8,
+    "failed_hard_gate_count": 1,
+    "all_resolved_class_floor_gates_passed": true,
+    "four_field_failure_cases": [
+      "iv4_026",
+      "iv4_036"
+    ],
+    "unresolved_failure_cases": [
+      "iv4_036"
+    ],
+    "failed_contrast_groups": [
+      "foreign_issuing_vs_external_agency_service"
+    ]
+  },
+  "methodology": {
+    "first_untouched_run": true,
+    "predictions_frozen_before_scoring": true,
+    "thresholds_frozen_before_prediction": true,
+    "score_frozen_before_failure_analysis": true,
+    "manual_override": false,
+    "rerun_after_failure_authorised": false,
+    "threshold_change_after_failure_authorised": false
+  },
+  "authorisations": {
+    "failure_analysis_v2_construction_authorised": true,
+    "human_diagnostic_review_v2_authorised": true,
+    "classifier_rerun_authorised": false,
+    "threshold_change_authorised": false,
+    "classifier_prompt_change_authorised": false,
+    "classifier_implementation_change_authorised": false,
+    "candidate_v7_build_authorised": false,
+    "production_runtime_change_authorised": false,
+    "fresh_external_v3_holdout_authorised": false
+  },
+  "next_engineering_task": {
+    "name": "source_boundary_classifier_failure_analysis_v2",
+    "authorised": true,
+    "model_calls": 0,
+    "purpose": "Diagnose the two frozen four-field failures, with primary attention to the single unresolved-safety failure, before authorising any classifier design change."
+  }
+}

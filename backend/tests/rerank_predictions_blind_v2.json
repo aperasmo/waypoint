@@ -1,0 +1,360 @@
+{
+  "schema": "waypoint-rerank-predictions-v1",
+  "blind_input_sha256": "BD0BCBB68DB4401B83EF4FEA546B62EAA4C59ABDAE20F3BBBD62F7E158FFA18E",
+  "model": "gpt-5.4-mini",
+  "reasoning_effort": "none",
+  "max_completion_tokens": 800,
+  "retriever_top_k": 5,
+  "predictions": [
+    {
+      "case_id": "q_f36e191999cba8ad",
+      "question": "can I do uber eats while on a student visa",
+      "production_top1_section": "U13.1",
+      "retrieved_sections": [
+        "U13.1",
+        "U13.15",
+        "U6.15",
+        "V3.10",
+        "U6.40"
+      ],
+      "chosen_index": 1,
+      "chosen_section": "U13.1"
+    },
+    {
+      "case_id": "q_581d749754c8891c",
+      "question": "can I work 40 hours during uni holidays on my student visa",
+      "production_top1_section": "U13.15",
+      "retrieved_sections": [
+        "U13.15",
+        "V3.10",
+        "U13.15",
+        "U6.40",
+        "U7.20"
+      ],
+      "chosen_index": 3,
+      "chosen_section": "U13.15"
+    },
+    {
+      "case_id": "q_bd4104f96476dc4f",
+      "question": "im doing a masters by research can I work full time all year",
+      "production_top1_section": "U13.15",
+      "retrieved_sections": [
+        "U13.15",
+        "U7.20",
+        "U13.15",
+        "V3.10",
+        "U6.1"
+      ],
+      "chosen_index": 3,
+      "chosen_section": "U13.15"
+    },
+    {
+      "case_id": "q_689ad148b42e2ae2",
+      "question": "my internship is compulsory for my degree does it count as work",
+      "production_top1_section": "V3.10",
+      "retrieved_sections": [
+        "V3.10",
+        "U13.5",
+        "U13.15",
+        "WD3.1",
+        "U6.15"
+      ],
+      "chosen_index": 2,
+      "chosen_section": "U13.5"
+    },
+    {
+      "case_id": "q_a03fba405c3dce83",
+      "question": "my parents transferred 20k into my account yesterday is that okay for student visa",
+      "production_top1_section": "U6.40",
+      "retrieved_sections": [
+        "U6.40",
+        "U3.20",
+        "U6.30",
+        "U3.20",
+        "V3.10"
+      ],
+      "chosen_index": 2,
+      "chosen_section": "U3.20"
+    },
+    {
+      "case_id": "q_56f89a59cc523084",
+      "question": "how much is the show money for a student visa",
+      "production_top1_section": "U6.30",
+      "retrieved_sections": [
+        "U6.30",
+        "U6.40",
+        "U3.20",
+        "U4.10",
+        "U6.15"
+      ],
+      "chosen_index": 4,
+      "chosen_section": "U4.10"
+    },
+    {
+      "case_id": "q_5bc8e8ae7e62c41b",
+      "question": "can I switch from IT to nursing without getting a new student visa",
+      "production_top1_section": "U3.40",
+      "retrieved_sections": [
+        "U3.40",
+        "U6.15",
+        "U3.1",
+        "U13.15",
+        "U2.1"
+      ],
+      "chosen_index": 1,
+      "chosen_section": "U3.40"
+    },
+    {
+      "case_id": "q_938c50691e4bb0b4",
+      "question": "do phd students need medical insurance for their student visa",
+      "production_top1_section": "U3.45",
+      "retrieved_sections": [
+        "U3.45",
+        "A4.15",
+        "U3.20",
+        "A4.15",
+        "R5.96"
+      ],
+      "chosen_index": 1,
+      "chosen_section": "U3.45"
+    },
+    {
+      "case_id": "q_5a5d1f9728fcffe2",
+      "question": "can I wait for AIP before paying my tuition fees",
+      "production_top1_section": "U3.10",
+      "retrieved_sections": [
+        "U3.10",
+        "U4.10",
+        "U3.45",
+        "R2.60",
+        "SR2.10"
+      ],
+      "chosen_index": 1,
+      "chosen_section": "U3.10"
+    },
+    {
+      "case_id": "q_687be35812bbe347",
+      "question": "im doing a phd in nz will my 8 year old have to pay international school fees",
+      "production_top1_section": "U8.25",
+      "retrieved_sections": [
+        "U8.25",
+        "U3.10",
+        "U3.20",
+        "U3.45",
+        "U6.30"
+      ],
+      "chosen_index": 1,
+      "chosen_section": "U8.25"
+    },
+    {
+      "case_id": "q_0de6585ccdc8a475",
+      "question": "I finished my degree 4 months ago can I still apply for PSWV",
+      "production_top1_section": "U6.15",
+      "retrieved_sections": [
+        "U6.15",
+        "WD3.1",
+        "WD3.1",
+        "WD3.5",
+        "WD3.5"
+      ],
+      "chosen_index": 3,
+      "chosen_section": "WD3.1"
+    },
+    {
+      "case_id": "q_a78927cc67502ce3",
+      "question": "can I get another post study work visa if I go back to school and study something else",
+      "production_top1_section": "WD3.1",
+      "retrieved_sections": [
+        "WD3.1",
+        "WD3.5",
+        "WD3.1",
+        "WD3.5",
+        "U6.15"
+      ],
+      "chosen_index": 3,
+      "chosen_section": "WD3.1"
+    },
+    {
+      "case_id": "q_2a58424e7c14a240",
+      "question": "can I start my own business on a post study work visa",
+      "production_top1_section": "WD3.5",
+      "retrieved_sections": [
+        "WD3.5",
+        "WD3.1",
+        "WD3.1",
+        "WD3.5",
+        "WD2"
+      ],
+      "chosen_index": 1,
+      "chosen_section": "WD3.5"
+    },
+    {
+      "case_id": "q_ceb89c22724bf684",
+      "question": "how long can a post study work visa be granted for",
+      "production_top1_section": "WD3.5",
+      "retrieved_sections": [
+        "WD3.5",
+        "WD3.1",
+        "WD3.1",
+        "WD3.5",
+        "U6.15"
+      ],
+      "chosen_index": 1,
+      "chosen_section": "WD3.5"
+    },
+    {
+      "case_id": "q_83214c25062f676c",
+      "question": "my PSWV is from a level 6 diploma can I work as a barista",
+      "production_top1_section": "WD3.1",
+      "retrieved_sections": [
+        "WD3.1",
+        "WD3.5",
+        "WD3.5",
+        "WD3.1",
+        "U6.15"
+      ],
+      "chosen_index": 3,
+      "chosen_section": "WD3.5"
+    },
+    {
+      "case_id": "q_07fda1ba28c1bccc",
+      "question": "im only coming to nz for 8 months do I still need a medical or chest xray",
+      "production_top1_section": "A4.25",
+      "retrieved_sections": [
+        "A4.25",
+        "A4.25",
+        "A4.25",
+        "A4.20",
+        "A4.25"
+      ],
+      "chosen_index": 2,
+      "chosen_section": "A4.25"
+    },
+    {
+      "case_id": "q_8ba95b0fb18e7335",
+      "question": "my police clearance is 7 months old can I still use it for my visa",
+      "production_top1_section": "A5.10",
+      "retrieved_sections": [
+        "A5.10",
+        "A5.10",
+        "A5.5",
+        "A5.5",
+        "A5.35"
+      ],
+      "chosen_index": 1,
+      "chosen_section": "A5.10"
+    },
+    {
+      "case_id": "q_c9d7b590ed2d4435",
+      "question": "I already have 6 points for SMC but I don't have a job offer can I apply for residency",
+      "production_top1_section": "SR1.1",
+      "retrieved_sections": [
+        "SR1.1",
+        "SR3.35",
+        "SR3.15",
+        "SR3.5",
+        "SR3.10"
+      ],
+      "chosen_index": 4,
+      "chosen_section": "SR3.5"
+    },
+    {
+      "case_id": "q_56bea38efa40fd9a",
+      "question": "do I need a medical for my visa",
+      "production_top1_section": "A4.25",
+      "retrieved_sections": [
+        "A4.25",
+        "A4.20",
+        "A4.15",
+        "A4.65",
+        "A4.60"
+      ],
+      "chosen_index": 1,
+      "chosen_section": "A4.25"
+    },
+    {
+      "case_id": "q_aab4ec67740d9886",
+      "question": "do I need a police clearance",
+      "production_top1_section": "A5.10",
+      "retrieved_sections": [
+        "A5.10",
+        "A5.5",
+        "A5.5",
+        "A5.10",
+        "A5.45"
+      ],
+      "chosen_index": 2,
+      "chosen_section": "A5.5"
+    },
+    {
+      "case_id": "q_6830b297de1f11ce",
+      "question": "is 15000 enough show money for my student visa",
+      "production_top1_section": "U3.20",
+      "retrieved_sections": [
+        "U3.20",
+        "U6.40",
+        "U6.15",
+        "U6.30",
+        "U3.20"
+      ],
+      "chosen_index": 1,
+      "chosen_section": "U3.20"
+    },
+    {
+      "case_id": "q_8aa5b38e0ed5cc48",
+      "question": "can I work full time on my student visa",
+      "production_top1_section": "U13.15",
+      "retrieved_sections": [
+        "U13.15",
+        "V3.10",
+        "U13.15",
+        "V3.10",
+        "WD3.5"
+      ],
+      "chosen_index": 1,
+      "chosen_section": "U13.15"
+    },
+    {
+      "case_id": "q_f39da9e04ddcfe53",
+      "question": "I finished my course can I get a PSWV",
+      "production_top1_section": "WD3.1",
+      "retrieved_sections": [
+        "WD3.1",
+        "U6.15",
+        "WD3.5",
+        "WD3.1",
+        "WD3.5"
+      ],
+      "chosen_index": 4,
+      "chosen_section": "WD3.1"
+    },
+    {
+      "case_id": "q_ec5bb1288ca4f383",
+      "question": "can I change my course without changing my visa",
+      "production_top1_section": "U3.40",
+      "retrieved_sections": [
+        "U3.40",
+        "U6.15",
+        "WD3.1",
+        "U7.20",
+        "U3.1"
+      ],
+      "chosen_index": 1,
+      "chosen_section": "U3.40"
+    },
+    {
+      "case_id": "q_ebc86225e2628f24",
+      "question": "I have 6 points can I apply for residence",
+      "production_top1_section": "SR3.15",
+      "retrieved_sections": [
+        "SR3.15",
+        "SR3.5",
+        "SR1.1",
+        "SR3.10",
+        "SR3.25"
+      ],
+      "chosen_index": 2,
+      "chosen_section": "SR3.5"
+    }
+  ]
+}

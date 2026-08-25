@@ -1,0 +1,393 @@
+{
+  "schema": "waypoint-source-boundary-classifier-predictions-v1",
+  "status": "FIRST_UNTOUCHED_SYNTHETIC_CONTRACT_RUN",
+  "source_artifacts": {
+    "classifier_sha256": "BC77C28033F74E3092C8428DE623293D266FBDEE7FFC237EE79C8AB6F79DE9F3",
+    "runner_sha256": "CE2709C654E576B56520AAD7CA9DB90A88E80CF775C3B8AC7A3864669F610FEF",
+    "contract_test_pack_sha256": "C820489715EA3F54138023D680D04DFBFF5575A515B936FA8C2241E2EA5B219D",
+    "acceptance_thresholds_sha256": "5E8AFBFFEE5880DEBF4FA6B0A6514E8C6702F5D9E74D620BA4C1575F49CAC03C",
+    "run_authorisation_sha256": "475DB1C7461626566F90C7F7F5BF3DDE8D8429709B1126B931FE0119AD54808E"
+  },
+  "model_configuration": {
+    "model": "gpt-5.4-mini",
+    "reasoning_effort": "none",
+    "max_completion_tokens": 800,
+    "temperature": 0,
+    "response_format": "json_object",
+    "automatic_retry": false,
+    "repair_call": false,
+    "fallback_model": false
+  },
+  "counts": {
+    "case_count": 34,
+    "model_call_attempts": 34,
+    "completed_predictions": 32,
+    "errors": 2
+  },
+  "predictions": [
+    {
+      "test_id": "sbv2_01",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "certified_immigration_instructions",
+        "source_class": "operational_manual_instruction",
+        "responsible_authority_type": "immigration_new_zealand",
+        "basis": "The proposition is an immigration condition/permission question about what work a temporary visa holder may do, which is the kind of rule ordinarily owned by Immigration New Zealand operational instructions rather than legislation or an external authority."
+      }
+    },
+    {
+      "test_id": "sbv2_02",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "certified_immigration_instructions",
+        "source_class": "operational_manual_instruction",
+        "responsible_authority_type": "immigration_new_zealand",
+        "basis": "The proposition is an immigration evidential requirement about what document an applicant must provide, which falls within certified immigration instruction content rather than legislation or an external authority."
+      }
+    },
+    {
+      "test_id": "sbv2_03",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved",
+        "basis": "No trusted source context establishes whether this is owned by a certified immigration instruction, legislation/regulation, or another official authority. Without that ownership signal, the source domain cannot be classified without guessing."
+      }
+    },
+    {
+      "test_id": "sbv2_04",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "certified_immigration_instructions",
+        "source_class": "operational_manual_instruction",
+        "responsible_authority_type": "immigration_new_zealand",
+        "basis": "The proposition is an immigration decision criterion/health requirement governing visa grant, which falls within certified immigration instructions rather than legislation or an external authority."
+      }
+    },
+    {
+      "test_id": "sbv2_05",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "certified_immigration_instructions",
+        "source_class": "manual_instruction_transition",
+        "responsible_authority_type": "immigration_new_zealand",
+        "basis": "Trusted context explicitly identifies a certified immigration instruction amendment that is not yet incorporated into the local indexed Manual, which fits the manual_instruction_transition source class."
+      }
+    },
+    {
+      "test_id": "sbv2_06",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "certified_immigration_instructions",
+        "source_class": "manual_instruction_transition",
+        "responsible_authority_type": "immigration_new_zealand",
+        "basis": "Trusted context explicitly identifies a certified amendment from the immigration instruction owner with a stale local index, which fits a certified instruction transition rather than ordinary Manual content."
+      }
+    },
+    {
+      "test_id": "sbv2_07",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "legislation_or_regulation",
+        "source_class": "legislation_or_regulation",
+        "responsible_authority_type": "new_zealand_legislation",
+        "basis": "The proposition is about statutory legal authority conferred by legislation on a Minister, so its authoritative source domain is legislation or regulation rather than operational immigration instructions."
+      }
+    },
+    {
+      "test_id": "sbv2_08",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "legislation_or_regulation",
+        "source_class": "legislation_or_regulation",
+        "responsible_authority_type": "new_zealand_legislation",
+        "basis": "The proposition is about whether a requirement is prescribed directly by immigration regulations, which is a statutory/regulatory source question rather than a Manual instruction or live INZ service matter."
+      }
+    },
+    {
+      "test_id": "sbv2_09",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "legislation_or_regulation",
+        "source_class": "legislation_or_regulation",
+        "responsible_authority_type": "new_zealand_legislation",
+        "basis": "The proposition is about statutory authority for imposing an immigration levy, which is a legal rule prescribed by legislation or regulation rather than an operational manual instruction or live INZ service value."
+      }
+    },
+    {
+      "test_id": "sbv2_10",
+      "status": "error",
+      "error_type": "ClassifierContractError",
+      "error": "Classifier model output violates the frozen schema."
+    },
+    {
+      "test_id": "sbv2_11",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved",
+        "basis": "No trusted source context identifies the authoritative owner of the current application-channel acceptance state. This is a time-varying operational service matter, but without explicit INZ live-service context it cannot be classified without guessing."
+      }
+    },
+    {
+      "test_id": "sbv2_12",
+      "status": "error",
+      "error_type": "ClassifierContractError",
+      "error": "Classifier model output violates the frozen schema."
+    },
+    {
+      "test_id": "sbv2_13",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved",
+        "basis": "No trusted source context identifies the current payable fee/charge owner or a live INZ fee schedule value for this location-specific application amount, so authoritative source ownership cannot be established without guessing."
+      }
+    },
+    {
+      "test_id": "sbv2_14",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved",
+        "basis": "No trusted source context identifies the authoritative owner of this current levy amount. Without explicit live-service or fee/charge source context, the proposition cannot be assigned to a specific source domain without guessing."
+      }
+    },
+    {
+      "test_id": "sbv2_15",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "official_inz_non_manual",
+        "source_class": "inz_non_manual_procedure_or_interpretation",
+        "responsible_authority_type": "immigration_new_zealand",
+        "basis": "The trusted source context explicitly identifies an INZ non-Manual publication family (INZ IAC), so the proposition is owned by official INZ non-Manual procedure/interpretation rather than the Operational Manual."
+      }
+    },
+    {
+      "test_id": "sbv2_16",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "official_inz_non_manual",
+        "source_class": "inz_non_manual_procedure_or_interpretation",
+        "responsible_authority_type": "immigration_new_zealand",
+        "basis": "Trusted source context explicitly identifies an INZ non-Manual publication family (Advice to Staff) owned by Immigration New Zealand, so the proposition is classified as official INZ non-Manual procedure/interpretation rather than Manual instruction."
+      }
+    },
+    {
+      "test_id": "sbv2_17",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "foreign_issuing_authority_procedure",
+        "responsible_authority_type": "foreign_issuing_authority",
+        "basis": "The proposition concerns how a foreign police authority structures its own clearance request form and what option it requires applicants to select on that form. That is a procedure owned by the foreign issuing authority, not an INZ immigration instruction or New Zealand legislation."
+      }
+    },
+    {
+      "test_id": "sbv2_18",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "foreign_issuing_authority_procedure",
+        "responsible_authority_type": "foreign_issuing_authority",
+        "basis": "The proposition concerns the procedure a foreign official authority uses to request or issue its own certificate and the identity material it requires for that process, which fits foreign_issuing_authority_procedure."
+      }
+    },
+    {
+      "test_id": "sbv2_19",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "external_agency_assessment_or_service",
+        "responsible_authority_type": "new_zealand_external_agency",
+        "basis": "The trusted source context identifies a non-professional New Zealand statutory agency as the responsible owner of a qualification-recognition or overseas credential assessment service, which fits an external agency assessment/service rather than INZ instructions or legislation."
+      }
+    },
+    {
+      "test_id": "sbv2_20",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "external_agency_assessment_or_service",
+        "responsible_authority_type": "new_zealand_external_agency",
+        "basis": "The proposition concerns a non-professional New Zealand government agency’s assessment process for an overseas credential in its own recognition service, which falls under an external agency assessment or service rather than INZ instructions or legislation."
+      }
+    },
+    {
+      "test_id": "sbv2_21",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "external_entitlement_or_service_regime",
+        "responsible_authority_type": "public_service_authority",
+        "basis": "The proposition concerns eligibility for a separately administered public health service regime, which is owned by the public service authority rather than Immigration New Zealand or the Operational Manual."
+      }
+    },
+    {
+      "test_id": "sbv2_22",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved",
+        "basis": "No trusted source context identifies the responsible official owner for this proposition, and it cannot be safely assigned to a specific external entitlement regime without guessing."
+      }
+    },
+    {
+      "test_id": "sbv2_23",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "professional_or_assessor_guidance",
+        "responsible_authority_type": "professional_or_assessment_authority",
+        "basis": "The proposition concerns evidence required by a professional registration authority in its own assessment remit, which is owned by a professional/assessor authority rather than INZ instructions or legislation."
+      }
+    },
+    {
+      "test_id": "sbv2_24",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "professional_or_assessor_guidance",
+        "responsible_authority_type": "professional_or_assessment_authority",
+        "basis": "The proposition is owned by a clinical assessor in a clinical assessment remit, which places it in professional/assessor guidance rather than INZ instructions or legislation."
+      }
+    },
+    {
+      "test_id": "sbv2_25",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "professional_or_assessor_guidance",
+        "responsible_authority_type": "professional_or_assessment_authority",
+        "basis": "Trusted source context explicitly identifies a professional assessment authority and a professional assessment service/publication family. The proposition concerns how that authority evaluates practitioners against its own competency framework, which falls within professional or assessor guidance rather than INZ instructions or legislation."
+      }
+    },
+    {
+      "test_id": "sbv2_26",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "foreign_issuing_authority_procedure",
+        "responsible_authority_type": "foreign_issuing_authority",
+        "basis": "The proposition concerns how a foreign customs authority requires travellers to submit its own customs declaration, which is a foreign issuing authority procedure. Trusted context identifies an official external operational owner, so this is not an INZ manual or legislation classification."
+      }
+    },
+    {
+      "test_id": "sbv2_27",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "other_official_external_authority",
+        "responsible_authority_type": "other_official_authority",
+        "basis": "The proposition is owned by a foreign transport authority’s operational process, and the trusted context identifies another official operational owner. It is not a foreign document-issuing procedure, professional/clinical remit, or public entitlement/service regime, so the best fit is other_official_external_authority."
+      }
+    },
+    {
+      "test_id": "sbv2_28",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved",
+        "basis": "No trusted source context establishes whether the change is certified immigration instructions, legislation/regulation, or another official source domain; authoritative ownership cannot be determined without guessing."
+      }
+    },
+    {
+      "test_id": "sbv2_29",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved",
+        "basis": "No trusted source metadata identifies an official owner or publication family for the internal processing step, so it cannot be classified as certified instructions or a non-Manual INZ procedure without guessing."
+      }
+    },
+    {
+      "test_id": "sbv2_30",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved",
+        "basis": "Authoritative ownership cannot be established from the provided context. The proposition refers to an unnamed foreign authority and does not identify a trusted source family or official owner, so no source-domain classification can be made without guessing."
+      }
+    },
+    {
+      "test_id": "sbv2_31",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved",
+        "basis": "The proposition does not establish the responsible authority type. Without trusted source context showing whether the owner is a professional/registration authority or a non-professional government agency, authoritative ownership cannot be determined without guessing."
+      }
+    },
+    {
+      "test_id": "sbv2_32",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved",
+        "basis": "No trusted source context identifies an authoritative owner, publication family, or official rule source for the proposition, so the source boundary cannot be established without guessing."
+      }
+    },
+    {
+      "test_id": "sbv2_33",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved",
+        "basis": "The proposition does not identify a specific authoritative owner or decision context for the medical-information requirement, and no trusted source context establishes whether it belongs to immigration instructions, a public-service entitlement regime, or a clinical/professional assessor."
+      }
+    },
+    {
+      "test_id": "sbv2_34",
+      "status": "prediction",
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "certified_immigration_instructions",
+        "source_class": "operational_manual_instruction",
+        "responsible_authority_type": "immigration_new_zealand",
+        "basis": "The proposition is about whether an applicant must meet a visa criterion, which is an immigration rule/assessment criterion owned by Immigration New Zealand instructions rather than legislation or an external authority."
+      }
+    }
+  ]
+}

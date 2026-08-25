@@ -1,0 +1,1343 @@
+{
+  "schema": "waypoint-external-predictions-dev-v1-candidate-v3",
+  "status": "DEVELOPMENT_PREDICTIONS_NOT_UNTOUCHED_HOLDOUT",
+  "candidate_name": "evidence_adequacy_v3",
+  "source_blind_sha256": "33C6A0370C382130890681064B4C32C1B519EF9CF1FC52D7C3D6570C8A60FFCB",
+  "historical_candidate_v2_predictions_sha256": "0F1E84F74DC1B50C6217A1909A48A5FF922FA537029737E1E8CE3769488FD541",
+  "runtime_ask_sha256": "F1F17F3C714C956239E4A16BAE48EB8CFFAA2BB7D7BE809EB182F7D936B008EB",
+  "prediction_count": 51,
+  "production_entrypoint": "app.api.routes.ask.ask",
+  "predictions": [
+    {
+      "case_id": "ext_366f43473c7e3fc8",
+      "question": "My AEWV was granted at $27 an hour. If the median wage changes later, does my employer have to increase my pay?",
+      "interpreted_as": "My AEWV accredited employer work visa was granted at $27 an hour. If the median wage changes later, does my employer have to increase my pay?",
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do not contain a rule saying whether an AEWV employer must increase pay if the median wage changes after the visa is granted. The only wage-related material provided is a table of median wage rates for Green List Tier 2 occupations and a rule about proposed remuneration being twice the median wage for employer accreditation steps, which does not answer your AEWV pay-change question. A specific AEWV rule about ongoing pay obligations after grant is missing from the provided manual sections.",
+      "citations": [
+        {
+          "section_code": "WA2.10",
+          "title": "WA2.10 Requirements for all employers",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77102.htm",
+          "effective_date": "2025-09-29"
+        },
+        {
+          "section_code": "SR5.15",
+          "title": "SR5.15 Requirements for 24 months of work in New Zealand in a Tier 2 Green List role",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77823.htm",
+          "effective_date": "2026-03-09"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_dd41285472650fbe",
+      "question": "What is the current processing time for an AEWV application made from overseas?",
+      "interpreted_as": "What is the current processing time for an AEWV accredited employer work visa application made from overseas?",
+      "outcome": "type_b",
+      "evidence_status": "external_source_required",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do not state the current processing time for an AEWV application made from overseas. The only processing-related material provided is about employer accreditation and verification, not AEWV application processing times. The current processing time would need to be checked in the authoritative source that maintains live processing-time information, such as Immigration New Zealand’s current processing-time information.",
+      "citations": [
+        {
+          "section_code": "WA2.35",
+          "title": "WA2.35 Processing and verification requirements",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77112.htm",
+          "effective_date": "2025-12-08"
+        },
+        {
+          "section_code": "WA2.1",
+          "title": "WA2.1 Overview",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77100.htm",
+          "effective_date": "2025-12-08"
+        },
+        {
+          "section_code": "WA2.45",
+          "title": "WA2.45 Currency and approval specifications of employer accreditation",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77114.htm",
+          "effective_date": "2025-09-29"
+        },
+        {
+          "section_code": "WA2.10",
+          "title": "WA2.10 Requirements for all employers",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77102.htm",
+          "effective_date": "2025-09-29"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_6846d51ac221301c",
+      "question": "If my partner studies a one-year Level 8 postgraduate diploma, can I get a Partner of a Student Work Visa?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do not contain the rule for a Partner of a Student Work Visa. They only say that partners of student or work visa holders may be granted visitor visas under V3.10, and they give post-study work visa rules under WD3.1. Nothing provided states whether a partner can get a Partner of a Student Work Visa when the student is studying a one-year Level 8 postgraduate diploma. The missing material is the specific Partner of a Student Work Visa instruction, including any qualification-level or study-duration requirements.",
+      "citations": [
+        {
+          "section_code": "V3.10",
+          "title": "V3.10 Partners and dependent children of student or work visa holders",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46189.htm",
+          "effective_date": "2026-03-09"
+        },
+        {
+          "section_code": "WD3.1",
+          "title": "WD3.1 Determining a Post-Study work visa",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/71685.htm",
+          "effective_date": "2024-11-18"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_b2aea8ffbec127e4",
+      "question": "Can I work as an independent contractor while I am on a New Zealand student visa?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied student-visa work-condition rules say a student visa holder with work conditions is not permitted to work in self-employment, and they describe when a student visa may be granted with work conditions for employment or practical experience. However, the provided sections do not specifically state whether working as an independent contractor is treated as permitted or prohibited under these student visa conditions. That missing operative rule is needed to answer your question.",
+      "citations": [
+        {
+          "section_code": "U13.1",
+          "title": "U13.1 Work conditions for all students",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/47536.htm",
+          "effective_date": "2013-12-02"
+        },
+        {
+          "section_code": "U13.5",
+          "title": "U13.5 Work conditions for practical experience requirements",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/47538.htm",
+          "effective_date": "2013-12-02"
+        },
+        {
+          "section_code": "U13.15",
+          "title": "U13.15 Work conditions for students enrolled at a tertiary institution or private training establishment",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/47535.htm",
+          "effective_date": "2025-11-03"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_57cbb9878fbb2de0",
+      "question": "My AEWV is still valid for another three years but I have resigned from my job. What happens to my work rights now?",
+      "interpreted_as": "My AEWV accredited employer work visa is still valid for another three years but I have resigned from my job. What happens to my work rights now?",
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do not contain the rule that says what happens to an Accredited Employer Work Visa holder’s work rights when they resign from their job while the visa is still valid. The closest supplied material says employers must advise INZ within 10 working days if a regular AEWV holder’s employment ends more than a month before the visa expires, but it does not state the visa holder’s work-rights consequence after resignation. A manual section on AEWV holder visa conditions or post-employment work rights is missing.",
+      "citations": [
+        {
+          "section_code": "WA2.35",
+          "title": "WA2.35 Processing and verification requirements",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77112.htm",
+          "effective_date": "2025-12-08"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_43f9e815dbdeced8",
+      "question": "Can a carpenter earning $30 an hour qualify for residence in New Zealand?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do not provide a rule that lets me say whether a carpenter earning $30 an hour can qualify for residence. The only residence pathways shown here are specific to highly paid work, transport sector work, or care workforce work, and none of the provided sections gives a carpenter-specific residence rule. The missing policy material would need to be the relevant residence category or occupation-specific instruction for carpenters.",
+      "citations": [
+        {
+          "section_code": "SR4.15",
+          "title": "SR4.15 Skilled Residence: Highly Paid requirements for 24 months of work in New Zealand (revoked 01/07/2023)",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77818.htm",
+          "effective_date": "2023-02-27"
+        },
+        {
+          "section_code": "SR7.15",
+          "title": "SR7.15 Skilled Residence: Transport Sector Work to Residence requirements for 24 months of work in New Zealand",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/79670.htm",
+          "effective_date": "2026-04-20"
+        },
+        {
+          "section_code": "SR6.15",
+          "title": "SR6.15 Requirements for 24 months of work in New Zealand in a Care Workforce sector role",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/78792.htm",
+          "effective_date": "2025-04-08"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_4b13f27d82be0f9d",
+      "question": "If I get a Business Analyst job in New Zealand, can I apply for a Straight to Residence Visa?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do not provide the Green List Straight to Residence occupation list or any rule showing that a Business Analyst role is included. The only Straight to Residence material provided is the objective statement in [SR4.1], which says the sub-category is for specified high skilled or hard to fill and high national importance roles in New Zealand. That is not enough to tell whether Business Analyst is one of the specified roles.",
+      "citations": [
+        {
+          "section_code": "SR4.1",
+          "title": "SR4.1 Objective",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77814.htm",
+          "effective_date": "2023-10-09"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_c589693ecb8f876d",
+      "question": "What wage requirement applies when counting work toward the Care Workforce Work to Residence pathway?",
+      "interpreted_as": null,
+      "outcome": "answered",
+      "evidence_status": "sufficient",
+      "decision_boundary": "general_information",
+      "answer": "The work must be paid at or above the wage rate specified at SR6.15(k), or the equivalent salary, for the relevant period. The instructions also say that the 24-month period starts counting when remuneration is at or above that wage rate, and it stops being counted if pay drops below that rate or the equivalent salary. The wage rates shown are $28.25 from 1 July 2022 onwards, and $27.00 from 29 September 2021 to 30 June 2022. [SR6.15]",
+      "citations": [
+        {
+          "section_code": "SR6.15",
+          "title": "SR6.15 Requirements for 24 months of work in New Zealand in a Care Workforce sector role",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/78792.htm",
+          "effective_date": "2025-04-08"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_be5e3eccf10f02b3",
+      "question": "How much does a two-year AEWV extension cost?",
+      "interpreted_as": "How much does a two-year AEWV accredited employer work visa extension cost?",
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do not include any rule about the fee for a two-year AEWV extension. They cover employer accreditation duration, verification, and related employer requirements, but not the cost of an AEWV extension. The missing material is the fee rule for the AEWV extension itself.",
+      "citations": [
+        {
+          "section_code": "WA2.45",
+          "title": "WA2.45 Currency and approval specifications of employer accreditation",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77114.htm",
+          "effective_date": "2025-09-29"
+        },
+        {
+          "section_code": "WA2.1",
+          "title": "WA2.1 Overview",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77100.htm",
+          "effective_date": "2025-12-08"
+        },
+        {
+          "section_code": "WA2.50",
+          "title": "WA2.50 Verification activities after accreditation has been granted",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77115.htm",
+          "effective_date": "2022-05-23"
+        },
+        {
+          "section_code": "WA2.10",
+          "title": "WA2.10 Requirements for all employers",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77102.htm",
+          "effective_date": "2025-09-29"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_cf65d6069f010111",
+      "question": "How long can a Partnership Resident Visa take to process after it has been lodged?",
+      "interpreted_as": null,
+      "outcome": "type_b",
+      "evidence_status": "external_source_required",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do not state how long a Partnership Resident Visa can take to process after lodgement. They cover who may be included in a residence class visa application, when a partner may be granted a residence class visa, and what happens if a partnership is not yet 12 months or is not considered genuine and stable, but they do not provide processing-time information. That kind of current processing-time information is maintained outside the provided Operational Manual corpus, so you would need an authoritative Immigration New Zealand source that publishes processing times.",
+      "citations": [
+        {
+          "section_code": "R2.1",
+          "title": "R2.1 Who may be included in an application",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46504.htm",
+          "effective_date": "2024-10-01"
+        },
+        {
+          "section_code": "R5.65",
+          "title": "R5.65 Approved applications for residence class visas",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/31002.htm",
+          "effective_date": "2025-12-14"
+        },
+        {
+          "section_code": "R5.115",
+          "title": "R5.115 Partners and dependent children who must be included in a residence class visa application",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/64732.htm",
+          "effective_date": "2017-05-08"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_ab8d1185fdfd0481",
+      "question": "I have a PhD student visa for more than three years with unrestricted work rights. Am I treated like a work visa holder for publicly funded health care?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do not contain the rule that says whether a PhD student visa holder with unrestricted work rights is treated like a work visa holder for publicly funded health care. The closest supplied material is about health standards for temporary entry class visa applicants and says that the ability to pay, private health access, and health insurance do not affect that health-services assessment, but it does not provide the specific public-health-care treatment rule you are asking about. That missing rule belongs in the Operational Manual, but it is not included here.",
+      "citations": [
+        {
+          "section_code": "A4.15",
+          "title": "A4.15 Acceptable standard of health (applicants for temporary entry class visas)",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/44856.htm",
+          "effective_date": "2025-03-17"
+        },
+        {
+          "section_code": "U3.45",
+          "title": "U3.45 Insurance requirements for fee-paying foreign students",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/44908.htm",
+          "effective_date": "2022-07-31"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_d0015c7f005815ba",
+      "question": "I am preparing to apply for residence through the Transport Sector Work to Residence pathway. What work requirements do I need to have completed?",
+      "interpreted_as": null,
+      "outcome": "answered",
+      "evidence_status": "sufficient",
+      "decision_boundary": "general_information",
+      "answer": "For the Transport Sector: Work to Residence pathway, the work requirements in the supplied text are that the principal applicant must:\n- meet acceptable employment requirements in an occupation specified under SR7.10(a)(i); and\n- have completed 24 months in an occupation specified under SR7.15(b).\n\nThe evidence section also says that, to show acceptable work in New Zealand, the applicant can provide an employment agreement and job description for previous and current employment, plus a summary of earnings from Inland Revenue confirming at least 24 months’ work. It also says an immigration officer may consider evidence from previous work visa applications to determine whether the applicant has a total of 24 months of acceptable work in New Zealand or meets the requirements in SR7.15(b). [SR7.5] [SR7.15]",
+      "citations": [
+        {
+          "section_code": "SR7.5",
+          "title": "SR7.5 Transport Sector: Work to Residence Summary of requirements",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/79666.htm",
+          "effective_date": "2024-02-28"
+        },
+        {
+          "section_code": "SR7.15",
+          "title": "SR7.15 Skilled Residence: Transport Sector Work to Residence requirements for 24 months of work in New Zealand",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/79670.htm",
+          "effective_date": "2026-04-20"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_66c81763e3cbd5cf",
+      "question": "We want to hire a migrant worker. Do we need employer accreditation and a Job Check before the worker applies?",
+      "interpreted_as": null,
+      "outcome": "answered",
+      "evidence_status": "sufficient",
+      "decision_boundary": "general_information",
+      "answer": "Yes. The supplied sections say that an employer accreditation application must be made using the approved online form, and they also refer to Job Check application fees and to a job token for a person to apply for an Accredited Employer work visa. The sections do not provide a separate rule saying when a Job Check must be completed before the worker applies, so I can only confirm from the supplied text that employer accreditation is part of the employer-side process and that Job Check is a separate application type mentioned in these instructions. [WA2.5] [WA2.10] [WA2.10.14]",
+      "citations": [
+        {
+          "section_code": "WA2.5",
+          "title": "WA2.5 Applying for employer accreditation",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77101.htm",
+          "effective_date": "2022-05-23"
+        },
+        {
+          "section_code": "WA2.10",
+          "title": "WA2.10 Requirements for all employers",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77102.htm",
+          "effective_date": "2025-09-29"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_1f86a563159a656f",
+      "question": "After I receive a job offer, does my employer start the AEWV process or do I apply first?",
+      "interpreted_as": "After I receive a job offer, does my employer start the AEWV accredited employer work visa process or do I apply first?",
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections explain how an employer applies for employer accreditation, including that an accreditation application must be made using the approved online form and accompanied by evidence and the relevant fee [WA2.5]. They also say employers must meet accreditation requirements [WA2.1] and that an automated system may grant accreditation [WA2.1.5]. However, the provided text does not include the rule that answers your specific process question about whether the employer starts the AEWV process after a job offer or whether you apply first. That sequencing rule is missing from the supplied manual sections.",
+      "citations": [
+        {
+          "section_code": "WA2.5",
+          "title": "WA2.5 Applying for employer accreditation",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77101.htm",
+          "effective_date": "2022-05-23"
+        },
+        {
+          "section_code": "WA2.1",
+          "title": "WA2.1 Overview",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77100.htm",
+          "effective_date": "2025-12-08"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_b2aadbfd8b1e0af8",
+      "question": "I already have a student visa but now have an AEWV job offer. Should I switch visas before travelling to New Zealand or after I arrive?",
+      "interpreted_as": "I already have a student visa but now have an AEWV accredited employer work visa job offer. Should I switch visas before travelling to New Zealand or after I arrive?",
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "case_specific_application",
+      "answer": "The supplied sections do not contain a rule about whether someone who already has a student visa and also has an AEWV job offer should switch visas before travelling to New Zealand or after arrival. The only arrival-timing rule provided is that some people who are visa-waiver nationals and want to study full-time for more than three months may enter as visitors and apply for a student visa after arrival, and that people already in New Zealand may apply for a visitor visa with a variation of conditions for part-time study. Nothing provided says how to handle a student visa holder with an AEWV job offer.",
+      "citations": [
+        {
+          "section_code": "U6.1",
+          "title": "U6.1 Programmes of study lasting longer than 3 months",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/42647.htm",
+          "effective_date": "2013-12-02"
+        },
+        {
+          "section_code": "U7.20",
+          "title": "U7.20 Part-time study",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/34262.htm",
+          "effective_date": "2023-10-09"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_de5cd7d549b18ce4",
+      "question": "What should I explain about my home-country commitments and future plans in the genuine-intentions questions for a New Zealand student visa?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The provided sections do not include the genuine-intentions questions or any rule about what you should explain about home-country commitments and future plans for a New Zealand student visa. The supplied material only covers student visa objectives, general student visa requirements, and sufficient-funds rules. A missing Operational Manual section on the bona fide/genuine-intentions questions is needed to answer this.",
+      "citations": [
+        {
+          "section_code": "U3.1",
+          "title": "U3.1 Summary",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/44905.htm",
+          "effective_date": "2022-09-07"
+        },
+        {
+          "section_code": "U3.20",
+          "title": "U3.20 Sufficient funds for maintenance while in New Zealand",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/43653.htm",
+          "effective_date": "2022-09-26"
+        },
+        {
+          "section_code": "U1",
+          "title": "U1 Objectives",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/34221.htm",
+          "effective_date": "2010-11-29"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_d631c689d1f8f185",
+      "question": "My AEWV has been under assessment for two weeks with no request for more information. Is that unusual?",
+      "interpreted_as": "My AEWV accredited employer work visa has been under assessment for two weeks with no request for more information. Is that unusual?",
+      "outcome": "type_b",
+      "evidence_status": "external_source_required",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do not say whether two weeks with no request for more information is unusual for an AEWV application. They only say that INZ may request additional information or conduct verification activities in some employer-accreditation contexts, and that verification activities may occur during the accreditation period. A question about whether a two-week wait is unusual is a processing-time/status question, which is maintained outside the provided manual sections. You would need current INZ processing-time or case-status information from the relevant INZ service or published processing information.",
+      "citations": [
+        {
+          "section_code": "WA2.35",
+          "title": "WA2.35 Processing and verification requirements",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77112.htm",
+          "effective_date": "2025-12-08"
+        },
+        {
+          "section_code": "WA2.50",
+          "title": "WA2.50 Verification activities after accreditation has been granted",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77115.htm",
+          "effective_date": "2022-05-23"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_f28af684e60b00e0",
+      "question": "We are a same-sex couple living together but we do not have a joint bank account or formal tenancy agreement. What evidence can show our partnership for a work visa?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do not provide the evidence list for proving a partnership for a work visa. They do say that, for residence class visa applications, a principal applicant must provide evidence of the relationship and evidence that the partnership is genuine and stable, and that the types of evidence are set out in F2.20.15. They also say a partner must be living together in a genuine and stable partnership and have been living together for 12 months or more, but the actual evidence examples are not included in the provided text. So the missing material is the manual section that sets out the types of evidence required for partnership evidence.",
+      "citations": [
+        {
+          "section_code": "R2.1",
+          "title": "R2.1 Who may be included in an application",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46504.htm",
+          "effective_date": "2024-10-01"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_85192ee7adceec0c",
+      "question": "My partner and I both have skilled jobs in New Zealand. How do we decide which of us should be the principal applicant for Straight to Residence?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do not include the Straight to Residence rule for choosing which partner should be the principal applicant. They do show that, if a principal applicant relies on a partner’s attributes, the partner’s skilled employment in New Zealand will not qualify for points if the partnership is not genuine and stable [R2.1], and they describe the objective of Straight to Residence as granting residence to people with skills for specified roles [SR4.1]. But the actual rule for deciding which of two partners should be the principal applicant is missing from the provided manual sections.",
+      "citations": [
+        {
+          "section_code": "R2.1",
+          "title": "R2.1 Who may be included in an application",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46504.htm",
+          "effective_date": "2024-10-01"
+        },
+        {
+          "section_code": "SR4.1",
+          "title": "SR4.1 Objective",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77814.htm",
+          "effective_date": "2023-10-09"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_a2fcff95d2712f1b",
+      "question": "Could a small spelling difference in my mother's name between my passport and birth certificate cause problems in an AEWV application?",
+      "interpreted_as": "Could a small spelling difference in my mother's name between my passport and birth certificate cause problems in an AEWV accredited employer work visa application?",
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do not contain any rule about name mismatches or spelling differences between a passport and a birth certificate in an AEWV application. They only cover employer accreditation and related employer verification requirements, not applicant identity-document matching rules. So I can’t answer from the provided manual sections whether a small spelling difference in your mother’s name could cause problems.",
+      "citations": [
+        {
+          "section_code": "WA2.35",
+          "title": "WA2.35 Processing and verification requirements",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77112.htm",
+          "effective_date": "2025-12-08"
+        },
+        {
+          "section_code": "WA2.10",
+          "title": "WA2.10 Requirements for all employers",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77102.htm",
+          "effective_date": "2025-09-29"
+        },
+        {
+          "section_code": "WA2.20",
+          "title": "WA2.20 Requirements for employers using triangular employment arrangements",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77106.htm",
+          "effective_date": "2025-01-27"
+        },
+        {
+          "section_code": "WA2.1",
+          "title": "WA2.1 Overview",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77100.htm",
+          "effective_date": "2025-12-08"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_bbc5fc283186d58c",
+      "question": "If I qualify for Straight to Residence before a wage threshold changes, which threshold applies if INZ decides my application after the change?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections say that a principal applicant may be considered to meet the income thresholds for skilled employment and points if they meet the income thresholds that were the basis for them being invited to apply for residence [SR3.10]. However, the sections provided do not state what happens if INZ decides the application after a wage threshold changes, or which threshold applies in that timing scenario. That timing rule is missing from the supplied manual sections.",
+      "citations": [
+        {
+          "section_code": "SR3.10",
+          "title": "SR3.10 Summary of requirements",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77812.htm",
+          "effective_date": "2026-03-09"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_52b662d37ac33f16",
+      "question": "What evidence and steps are normally involved when applying for an AEWV after an accredited employer offers me a job?",
+      "interpreted_as": "What evidence and steps are normally involved when applying for an AEWV accredited employer work visa after an accredited employer offers me a job?",
+      "outcome": "answered",
+      "evidence_status": "sufficient",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections support the following general steps and evidence for an employer accreditation application connected to an AEWV process:\n\n- The employer must use the approved online form on the INZ website, have an NZBN unless they are a foreign diplomatic or consular mission, pay the relevant fee, and provide appropriate evidence showing they meet the employer accreditation instructions when requested by the form [WA2.5].\n- INZ may assess whether the employer meets accreditation requirements, and may verify information by conducting interviews or site visits, request evidence and additional information not specified in the instructions, and use information from employers, triangular-employment parties, employees, members of the public, and other agencies [WA2.35].\n- INZ may also conduct verification activities after accreditation is granted, including site visits and requests for documentation or evidence [WA2.50].\n- The employer accreditation application must satisfy the generic employer requirements, including being a genuinely operating business or organisation, completing settlement support activities, being compliant with specified immigration, employment and business standards, and taking reasonable steps to ensure an applicant meets qualification and skill requirements [WA2.10].\n- For the genuinely operating business requirement, the section lists examples of evidence that may include financial statements, start-up capital or funding evidence, cash-flow statements or revenue forecasts, contracts for work, GST returns, income tax returns, PAYE returns, bank statements, stock lists/orders, and lease agreements [WA2.10.1].\n\nThe supplied text does not provide the full AEWV application evidence list or the AEWV application steps themselves; it mainly gives the employer accreditation side of the process after a job offer context.",
+      "citations": [
+        {
+          "section_code": "WA2.5",
+          "title": "WA2.5 Applying for employer accreditation",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77101.htm",
+          "effective_date": "2022-05-23"
+        },
+        {
+          "section_code": "WA2.35",
+          "title": "WA2.35 Processing and verification requirements",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77112.htm",
+          "effective_date": "2025-12-08"
+        },
+        {
+          "section_code": "WA2.50",
+          "title": "WA2.50 Verification activities after accreditation has been granted",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77115.htm",
+          "effective_date": "2022-05-23"
+        },
+        {
+          "section_code": "WA2.10",
+          "title": "WA2.10 Requirements for all employers",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77102.htm",
+          "effective_date": "2025-09-29"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_71375d721d37bdde",
+      "question": "How long are partner-of-worker and dependent-child student visas taking when they are linked to an AEWV holder?",
+      "interpreted_as": "How long are partner-of-worker and dependent-child student visas taking when they are linked to an AEWV accredited employer work visa holder?",
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do not provide the processing time for partner-of-worker or dependent-child student visas linked to an AEWV holder. They do provide the eligibility rules for partners and dependent children of Accredited Employer work visa holders under V3.10.1 and V3.10.10, but not any timeframe for how long those visas are taking. A processing-time rule or current service-time information is missing from the provided manual sections.",
+      "citations": [
+        {
+          "section_code": "V3.10",
+          "title": "V3.10 Partners and dependent children of student or work visa holders",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46189.htm",
+          "effective_date": "2026-03-09"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_3e13395698c7ad8e",
+      "question": "If I am an ECE teacher on an AEWV, which wage threshold applies when I later apply for residence?",
+      "interpreted_as": "If I am an ECE teacher on an AEWV accredited employer work visa, which wage threshold applies when I later apply for residence?",
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do not contain the residence rule for an ECE teacher on an AEWV. The only residence wage threshold shown here is for the Care Workforce: Work to Residence visa, which requires the principal applicant to be paid at or above $28.25 per hour or the equivalent salary, and to meet the other listed requirements. The AEWV employer section also mentions a remuneration test of twice the median wage for employer accreditation purposes, but that is not a residence threshold. The missing material is the specific residence instruction that applies to ECE teachers on an AEWV.",
+      "citations": [
+        {
+          "section_code": "SR6.5",
+          "title": "SR6.5 Summary of requirements",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/78790.htm",
+          "effective_date": "2024-04-07"
+        },
+        {
+          "section_code": "WA2.10",
+          "title": "WA2.10 Requirements for all employers",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77102.htm",
+          "effective_date": "2025-09-29"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_190a261820bbf833",
+      "question": "I have worked for two years as a bulldozer and excavator operator. Do I need a degree to claim points for residence?",
+      "interpreted_as": null,
+      "outcome": "answered",
+      "evidence_status": "sufficient",
+      "decision_boundary": "general_information",
+      "answer": "No. For points for skilled work experience in New Zealand, the supplied rule says the principal applicant may qualify for 3 points for 36 months, 2 points for 24 months, or 1 point for 12 months of skilled work experience in New Zealand, and it separately says that when claiming points for qualification, a degree is one way to claim qualification points. It does not say that a degree is required to claim points for skilled work experience in New Zealand. The supplied sections also say skilled work experience must be full-time, paid at least the relevant wage threshold, and meet the other listed conditions. [SR3.35] [SR3.25] [SR3.15]",
+      "citations": [
+        {
+          "section_code": "SR3.35",
+          "title": "SR3.35 Skilled work experience in New Zealand",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/80476.htm",
+          "effective_date": "2026-03-09"
+        },
+        {
+          "section_code": "SR3.25",
+          "title": "SR3.25 Skill categories",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/80474.htm",
+          "effective_date": "2026-03-09"
+        },
+        {
+          "section_code": "SR3.15",
+          "title": "SR3.15 Points Summary",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77813.htm",
+          "effective_date": "2026-03-09"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_15f33410a75c1f07",
+      "question": "If I am waiting for a Partner of a New Zealander Resident Visa, can the interim visa still let me work?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do not include the rule for a Partner of a New Zealander Resident Visa or any instruction about whether an interim visa for that application can include work rights. The only interim-visa rule provided is for certain student visa applicants in U6.25, which does not answer your question. The missing material appears to be the specific Operational Manual rule for interim visas in the Partner of a New Zealander Resident Visa context.",
+      "citations": [
+        {
+          "section_code": "U6.25",
+          "title": "U6.25 Further temporary visas",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/41782.htm",
+          "effective_date": null
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_6e5eb25434cd9648",
+      "question": "Can a New Zealand student visa be declined if I failed to mention a previous visa refusal from another country?",
+      "interpreted_as": null,
+      "outcome": "answered",
+      "evidence_status": "sufficient",
+      "decision_boundary": "general_information",
+      "answer": "Yes. The supplied temporary-entry character instructions say a person will not be granted a temporary entry class visa if, in a prior application for a New Zealand visa or entry permission, they made any statement or provided any information, evidence, or submission that was false or misleading, or withheld material information that may have affected the decision on the application [A5.45]. If a previous visa refusal from another country was something you should have disclosed in that prior New Zealand application and it was withheld, these instructions provide a basis for decline under the false/misleading or withheld-information rule [A5.45].",
+      "citations": [
+        {
+          "section_code": "A5.45",
+          "title": "A5.45 Convictions, charges and other matters which may cause applicants not to meet character requirements for temporary entry",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/43627.htm",
+          "effective_date": "2023-09-25"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_0b69af212aa242f4",
+      "question": "How much is the visa fee for a partner of a New Zealand resident?",
+      "interpreted_as": null,
+      "outcome": "type_b",
+      "evidence_status": "external_source_required",
+      "decision_boundary": "general_information",
+      "answer": "The provided sections do not state the visa fee amount for a partner of a New Zealand resident. The fee information in [R2.60] says the fee payable is the fee specified for that type of application, but the actual amount for this visa type is not given in the supplied text. It also notes that fee information can be found on the INZ website at www.immigration.govt.nz/fees, so the amount is maintained in an external source rather than in the provided manual sections.",
+      "citations": [
+        {
+          "section_code": "R2.60",
+          "title": "R2.60 Payment of the fee and immigration levy",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/30975.htm",
+          "effective_date": "2021-06-24"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_e48ca09340aedb62",
+      "question": "I am a Filipino working in the Middle East. If I apply for a New Zealand student visa from there, how should I show my ties and commitment to my home country?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do not contain any rule about showing ties to, or commitment to, your home country when applying for a New Zealand student visa from overseas. The provided student-visa material only covers maintenance funds, sponsorship, financial undertakings, dependent children, and post-study work visa requirements. A manual section on home-country ties/commitment evidence for offshore student visa applications is missing from the supplied corpus.",
+      "citations": [
+        {
+          "section_code": "U3.20",
+          "title": "U3.20 Sufficient funds for maintenance while in New Zealand",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/43653.htm",
+          "effective_date": "2022-09-26"
+        },
+        {
+          "section_code": "U8.25",
+          "title": "U8.25 Dependent children of holders of student visas",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/42649.htm",
+          "effective_date": "2019-05-13"
+        },
+        {
+          "section_code": "WD2",
+          "title": "WD2 Lodging an application under Post-Study work visa instructions",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/71683.htm",
+          "effective_date": "2025-12-16"
+        },
+        {
+          "section_code": "WD3.1",
+          "title": "WD3.1 Determining a Post-Study work visa",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/71685.htm",
+          "effective_date": "2024-11-18"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_f96a3c6f82258285",
+      "question": "My sister is a New Zealand citizen and will pay my tuition and accommodation. Do I still need substantial savings of my own for a student visa?",
+      "interpreted_as": null,
+      "outcome": "type_c",
+      "evidence_status": "sufficient",
+      "decision_boundary": "case_specific_application",
+      "answer": "Not necessarily. The manual says a student visa applicant must provide evidence of sufficient funds to maintain themselves, and that evidence may include funds held by or on behalf of the student, a sponsorship form, a financial undertaking, or a full scholarship. It also says a sponsor can be a relative or friend, and a third party can provide a financial undertaking before arrival. So your sister’s paying tuition and accommodation could be relevant, but the supplied text does not say that this automatically removes the need for any funds of your own. Whether you still need your own funds depends on whether the evidence provided satisfies the maintenance requirement for your stay and on the form of support used. [U3.20] [U3.20.5] [U3.20.10] [U3.20.20] [U3.10]",
+      "citations": [
+        {
+          "section_code": "U3.20",
+          "title": "U3.20 Sufficient funds for maintenance while in New Zealand",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/43653.htm",
+          "effective_date": "2022-09-26"
+        },
+        {
+          "section_code": "U3.10",
+          "title": "U3.10 Tuition fees",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/45656.htm",
+          "effective_date": "2022-12-10"
+        }
+      ],
+      "missing_information": [
+        "your programme length",
+        "whether your sister’s support is being provided as sponsorship, a financial undertaking, or another form of evidence",
+        "whether any prepaid living expenses are already covered"
+      ],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_2d9fcf33ed1ea9fa",
+      "question": "Can I get an interim visa when my permitted stay ends even if the visa label itself has not yet expired?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do not provide a general rule about an interim visa being granted when a visa holder’s permitted stay ends while the visa label itself is still current. The only interim-period rule provided is for a student visa applicant who was not required to provide health and character evidence before arriving in New Zealand, but now must do so and cannot do so while their existing visa is current; in that situation, officers with Schedule 3 delegations and above may grant a temporary visa for up to 3 months if the applicant is in New Zealand and holds another type of temporary entry class visa [U6.25].",
+      "citations": [
+        {
+          "section_code": "U6.25",
+          "title": "U6.25 Further temporary visas",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/41782.htm",
+          "effective_date": null
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_57b837e2da0b6500",
+      "question": "From 24 August 2026, how do the new Skilled Work Experience and Trades and Technician SMC pathways work, and what are the Amber and Red lists for?",
+      "interpreted_as": "From 24 August 2026, how do the new Skilled Work Experience and Trades and Technician Skilled Migrant Category pathways work, and what are the Amber and Red lists for?",
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do not contain the operative instructions for the new Skilled Work Experience pathway or the Trades and Technician SMC pathway from 24 August 2026, and they also do not explain what the Amber and Red lists are for in that context. The provided material only covers Green List: Work to Residence requirements in SR5, Transport Sector Work to Residence requirements in SR7, and a general overview in SR1.1. To answer your question, the missing material would need to be the specific Skilled Migrant Category instructions for those new pathways and the instructions that define the Amber and Red lists.",
+      "citations": [
+        {
+          "section_code": "SR1.1",
+          "title": "SR1.1 Overview",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77803.htm",
+          "effective_date": "2023-10-09"
+        },
+        {
+          "section_code": "SR5.1",
+          "title": "SR5.1 Objective",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77819.htm",
+          "effective_date": "2023-10-09"
+        },
+        {
+          "section_code": "SR5.15",
+          "title": "SR5.15 Requirements for 24 months of work in New Zealand in a Tier 2 Green List role",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77823.htm",
+          "effective_date": "2026-03-09"
+        },
+        {
+          "section_code": "SR7.15",
+          "title": "SR7.15 Skilled Residence: Transport Sector Work to Residence requirements for 24 months of work in New Zealand",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/79670.htm",
+          "effective_date": "2026-04-20"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_12a53eacea3d372f",
+      "question": "I am applying for an AEWV from the UK but was born in a higher-TB-risk country. Will I still need a chest x-ray after living in the UK for more than 20 years?",
+      "interpreted_as": "I am applying for an AEWV accredited employer work visa from the UK but was born in a higher-TB-risk country. Will I still need a chest x-ray after living in the UK for more than 20 years?",
+      "outcome": "type_c",
+      "evidence_status": "sufficient",
+      "decision_boundary": "case_specific_application",
+      "answer": "The supplied text says that applicants for temporary entry class visas who are considered to have risk factors for TB must undergo TB screening, and that a person has TB risk factors if they hold a passport issued by a country not listed in A4.25.10 or, in the five years before application, they have spent a combined total of three or more months in one or more countries not listed in A4.25.10 [A4.25]. It also says that applicants required to undergo TB screening must provide a completed Chest X-ray Certificate and associated radiologist report [A4.25].\n\nFor your situation, the text does not give a rule that living in the UK for more than 20 years removes TB risk factors. In fact, the UK is listed in A4.25.10 as a low TB incidence country, but whether you still need a chest x-ray depends on the full TB-risk rule and your personal facts, including your passport country and where you have spent time in the five years before application [A4.25].\n\nSo I can explain the rule, but I cannot determine from the supplied text alone whether you will still need the chest x-ray.",
+      "citations": [
+        {
+          "section_code": "A4.25",
+          "title": "A4.25 Medical and Chest X-ray Certificates: temporary entry class visa applications",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46507.htm",
+          "effective_date": null
+        }
+      ],
+      "missing_information": [
+        "Your passport-issuing country",
+        "Which countries you have spent time in during the five years before application",
+        "How long you have spent in any non-listed countries in that five-year period"
+      ],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_f7cf3bd43ac30a01",
+      "question": "If I have a PhD that gives me six SMC points, do I still need a skilled New Zealand job or job offer before I can apply from offshore?",
+      "interpreted_as": "If I have a PhD that gives me six Skilled Migrant Category points, do I still need a skilled New Zealand job or job offer before I can apply from offshore?",
+      "outcome": "answered",
+      "evidence_status": "sufficient",
+      "decision_boundary": "general_information",
+      "answer": "No. The supplied rules say the principal applicant must qualify for the 6 points from one skill category, or from a combination of one skill category and skilled work experience in New Zealand. A Doctoral degree is listed as 6 points under the qualification skill category, so the points can come from the qualification category alone. The separate skilled employment rule says the principal applicant must meet the skilled employment requirements, including current employment or an offer of employment in New Zealand with an accredited employer, but the supplied text does not say that a skilled New Zealand job or job offer is required before applying from offshore just because the applicant has 6 points from a PhD. [SR3.10] [SR3.15] [SR3.20] [SR3.25]",
+      "citations": [
+        {
+          "section_code": "SR3.10",
+          "title": "SR3.10 Summary of requirements",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77812.htm",
+          "effective_date": "2026-03-09"
+        },
+        {
+          "section_code": "SR3.15",
+          "title": "SR3.15 Points Summary",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77813.htm",
+          "effective_date": "2026-03-09"
+        },
+        {
+          "section_code": "SR3.20",
+          "title": "SR3.20 Skilled employment",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/79840.htm",
+          "effective_date": "2026-03-09"
+        },
+        {
+          "section_code": "SR3.25",
+          "title": "SR3.25 Skill categories",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/80474.htm",
+          "effective_date": "2026-03-09"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_19e15271f496e147",
+      "question": "What documents can INZ ask for to verify my work experience and qualifications during an AEWV application?",
+      "interpreted_as": "What documents can INZ ask for to verify my work experience and qualifications during an AEWV accredited employer work visa application?",
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do not state what documents INZ can ask for to verify a worker’s work experience and qualifications during an AEWV application. They only say that, in employer accreditation verification, INZ may request evidence and additional information not specified in the instructions, and may request documentation or evidence during verification activities. A section specifically listing the documents for verifying work experience and qualifications in an AEWV application is missing from the provided material.",
+      "citations": [
+        {
+          "section_code": "WA2.35",
+          "title": "WA2.35 Processing and verification requirements",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77112.htm",
+          "effective_date": "2025-12-08"
+        },
+        {
+          "section_code": "WA2.50",
+          "title": "WA2.50 Verification activities after accreditation has been granted",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77115.htm",
+          "effective_date": "2022-05-23"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_bb98eab620acdb57",
+      "question": "My student visa expires about a month after my master's course ends. What happens if my university has not issued my completion documents before the visa expires?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do not contain a rule about what happens if a university has not issued completion documents before a student visa expires. The only related rule provided is that students who have completed their studies and want to remain after their current visa expires to attend graduation ceremonies must apply for either a visitor or a work visa, and immigration officers must be satisfied that they have completed their qualification [U6.15]. The manual section needed here would be the specific policy on student visa expiry where completion documents are still pending, or any rule allowing time to remain while those documents are awaited.",
+      "citations": [
+        {
+          "section_code": "U6.15",
+          "title": "U6.15 Graduation",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/34251.htm",
+          "effective_date": "2010-11-29"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_47cbae42957d3c81",
+      "question": "My New Zealand partner and I have a genuine relationship but have not yet been able to live together. What visa can let us start living together before applying for a partnership visa?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do not provide the manual rule that answers which visa lets a couple start living together before applying for a partnership visa. The only partnership-related material here says that if a couple are living together in a partnership that is genuine and stable but the duration is less than the 12 months required, the partner’s residence application may be deferred so the qualifying period can be met, and the partner may be granted a work visa for that period once an application has been made [R2.1]. But the sections provided do not include the operative rule for the visa you are asking about, or any rule saying whether a visitor visa or another visa can be used for that purpose.",
+      "citations": [
+        {
+          "section_code": "R2.1",
+          "title": "R2.1 Who may be included in an application",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46504.htm",
+          "effective_date": "2024-10-01"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_1cff9cca7e41968c",
+      "question": "If I apply for a Post Study Work Visa before my student visa expires, what work conditions will I have on an interim visa while I wait?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do not include any rule about the work conditions on an interim visa while a Post-Study Work Visa application is pending. The provided material only sets work conditions for student visas and conditions for granted Post-Study Work Visas. To answer your question, the missing manual material would need to be the interim visa work-condition rule for this application type.",
+      "citations": [
+        {
+          "section_code": "WD3.5",
+          "title": "WD3.5 Currency and conditions of Post-study work visas",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/71752.htm",
+          "effective_date": "2026-04-20"
+        },
+        {
+          "section_code": "WD3.1",
+          "title": "WD3.1 Determining a Post-Study work visa",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/71685.htm",
+          "effective_date": "2024-11-18"
+        },
+        {
+          "section_code": "U13.15",
+          "title": "U13.15 Work conditions for students enrolled at a tertiary institution or private training establishment",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/47535.htm",
+          "effective_date": "2025-11-03"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_588ee3ee0b20790d",
+      "question": "My engineering degree is related to a Green List role but I am unsure whether my qualification meets the listed requirement. What qualification evidence does INZ use?",
+      "interpreted_as": null,
+      "outcome": "answered",
+      "evidence_status": "sufficient",
+      "decision_boundary": "general_information",
+      "answer": "For Green List evidential requirements, INZ says the applicant can provide the qualification itself, and if the Green List requirement is for a New Zealand qualification and the qualification is from outside New Zealand, an International Qualification Assessment (IQA) from NZQA. The IQA note says it assesses an overseas qualification by stating the learning outcomes of the closest New Zealand equivalent qualification, the NZQF level and qualification type of that equivalent, and any verification undertaken by NZQA. For points-based qualification evidence, the applicant must provide the qualification certificate, and if the qualification is from outside New Zealand, either an IQA from NZQA or the qualification must be on the List of Qualifications Exempt from Assessment. [SR4.5] [SR3.25]",
+      "citations": [
+        {
+          "section_code": "SR4.5",
+          "title": "SR4.5 Summary of requirements",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77816.htm",
+          "effective_date": "2024-02-28"
+        },
+        {
+          "section_code": "SR3.25",
+          "title": "SR3.25 Skill categories",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/80474.htm",
+          "effective_date": "2026-03-09"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_672add6bc0ed055c",
+      "question": "We have lived together for many years but have few joint bills and only one joint account. What evidence can prove our partnership for a New Zealand visa?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do not contain the operative evidence rule for proving a partnership for the visa question you asked. The only partnership-related section provided says that immigration officers assess whether a couple are living together in a partnership that is genuine and stable, and it refers to a separate section for evidence of relationship with partner, but that evidence section is not provided here [R2.1]. Because of that missing manual material, I cannot say from the supplied text what evidence can prove your partnership. The only evidence examples shown in the provided sections are for other topics, such as residence confirmation documents and student funding, not partnership evidence [R7.15] [U3.20].",
+      "citations": [
+        {
+          "section_code": "R2.1",
+          "title": "R2.1 Who may be included in an application",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46504.htm",
+          "effective_date": "2024-10-01"
+        },
+        {
+          "section_code": "R7.15",
+          "title": "R7.15 Evidence",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/31017.htm",
+          "effective_date": "2010-11-29"
+        },
+        {
+          "section_code": "U3.20",
+          "title": "U3.20 Sufficient funds for maintenance while in New Zealand",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/43653.htm",
+          "effective_date": "2022-09-26"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_810467465e7ba90d",
+      "question": "If my partner studies in New Zealand and I come as their partner, what determines whether I can get a work visa rather than only a visitor visa?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do not contain the rule that determines when a partner of a student visa holder can get a work visa rather than only a visitor visa. The only partner rules provided are for partners of student or work visa holders generally, and they say such partners may be granted visitor visas if that type of visa is appropriate to their needs for the currency of the partner's visa [V3.10]. The sections then give detailed visitor-visa rules for partners of certain work visa holders, but not the missing partner-of-student work-visa eligibility rule you asked about. The missing material appears to be the operative policy for partners of student visa holders, including any conditions for a work visa versus a visitor visa.",
+      "citations": [
+        {
+          "section_code": "V3.10",
+          "title": "V3.10 Partners and dependent children of student or work visa holders",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46189.htm",
+          "effective_date": "2026-03-09"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_3d3463007eacdfc4",
+      "question": "My Partner of a Worker Work Visa says I must be able to support myself. Do I need to carry personal proof of funds when I enter New Zealand?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do say that applicants must provide evidence of sufficient funds for maintenance while in New Zealand, and they list examples of acceptable evidence such as a scholarship notice, sponsorship form, financial undertaking form, or funds held by or on behalf of the student [U3.20]. They also say that for student visas, evidence may be sighted after approval in principle in one case [U3.20.25].\n\nHowever, the provided text does not include any rule for Partner of a Worker Work Visa holders, and it does not state whether a person entering New Zealand on that visa must carry personal proof of funds at the border. The missing material is the visa-specific maintenance/evidence rule for Partner of a Worker Work Visa entrants.",
+      "citations": [
+        {
+          "section_code": "U3.20",
+          "title": "U3.20 Sufficient funds for maintenance while in New Zealand",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/43653.htm",
+          "effective_date": "2022-09-26"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_f0c31e903b84f2b1",
+      "question": "Can I qualify for a Partner of a New Zealander Work Visa if our relationship is genuine but we are not yet living together?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do not provide the Partner of a New Zealander Work Visa rule itself, so I can’t answer from this corpus whether living together is required for that visa. The only partner-related material provided is about partners in residence applications and partners/dependent children of student or work visa holders, which is not the same visa category. A missing Partner of a New Zealander Work Visa policy section is needed.",
+      "citations": [
+        {
+          "section_code": "R2.1",
+          "title": "R2.1 Who may be included in an application",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46504.htm",
+          "effective_date": "2024-10-01"
+        },
+        {
+          "section_code": "V3.10",
+          "title": "V3.10 Partners and dependent children of student or work visa holders",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46189.htm",
+          "effective_date": "2026-03-09"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_e62b480152a4c960",
+      "question": "For the Philippines Working Holiday Visa, do I need to complete a medical examination or an English test before applying?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do not include any Philippines Working Holiday Visa rule about whether an English test is required before applying. They also do not provide a Philippines Working Holiday Visa-specific application rule that says whether a medical examination is required before applying. The health sections provided explain when medical certificates or chest X-ray certificates are required for some visa applicants generally, but they do not supply the Philippines Working Holiday Visa instruction itself.",
+      "citations": [
+        {
+          "section_code": "A4.5",
+          "title": "A4.5 Overview of health instructions",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/44860.htm",
+          "effective_date": "2025-12-08"
+        },
+        {
+          "section_code": "A4.30",
+          "title": "A4.30 Completion of medical certificates",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/44859.htm",
+          "effective_date": "2021-10-05"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_980dc41e1d8a98f6",
+      "question": "If I will live with my brother in New Zealand while studying, does that reduce how much maintenance money I need to show for my student visa?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections say student visa applicants must show sufficient funds to maintain themselves, and they give the required amounts for certain study durations and categories. They also say funds may be shown through a sponsor, a financial undertaking, or funds held by or on behalf of the student, and that officers may consider the student’s ability to access funds while in New Zealand. However, the supplied text does not include any rule saying that living with a brother reduces the amount of maintenance money required. A rule about whether accommodation with a relative changes the maintenance amount is missing from the provided manual sections.",
+      "citations": [
+        {
+          "section_code": "U3.20",
+          "title": "U3.20 Sufficient funds for maintenance while in New Zealand",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/43653.htm",
+          "effective_date": "2022-09-26"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_5881dbf0c933056b",
+      "question": "I am on an interim visa after my student visa expired and I now have a skilled job. Can I apply for a work visa while I am on the interim visa?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "case_specific_application",
+      "answer": "The supplied sections do not provide a rule saying whether a person on an interim visa may apply for a work visa because their student visa expired and they now have a skilled job. The only interim-visa rule provided says officers may grant a temporary visa for an interim period of up to 3 months in a specific student-visa health/character situation, and it does not state the general ability to apply for a work visa while on an interim visa. A separate section says students who have completed their studies and wish to remain after their current visa expires to attend graduation ceremonies must apply for either a visitor or a work visa, but that is a different situation and does not answer your question about an interim visa after expiry.",
+      "citations": [
+        {
+          "section_code": "U6.25",
+          "title": "U6.25 Further temporary visas",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/41782.htm",
+          "effective_date": null
+        },
+        {
+          "section_code": "U6.15",
+          "title": "U6.15 Graduation",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/34251.htm",
+          "effective_date": "2010-11-29"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_1d7296bcc4a023cf",
+      "question": "My work visa will expire while my resident visa application is still being processed. Do I need to apply for another temporary visa to stay and work lawfully?",
+      "interpreted_as": null,
+      "outcome": "answered",
+      "evidence_status": "sufficient",
+      "decision_boundary": "general_information",
+      "answer": "No. The supplied rule says that applying for a residence class visa while in New Zealand does not give a person the right to remain in New Zealand while the application is considered, and it does not give the right to apply for or be granted any other visa while the application is considered [R5.75]. The only supplied section that discusses a further temporary visa for someone who has applied for a residence class visa is limited to a student visa holder, and it says immigration officers may grant a further student visa for 3 months if the final residence decision is unlikely before the current student visa expires and the mandatory requirements are met [U6.25].",
+      "citations": [
+        {
+          "section_code": "R5.75",
+          "title": "R5.75 Status of people applying for a residence class visa while in New Zealand",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/31004.htm",
+          "effective_date": "2010-11-29"
+        },
+        {
+          "section_code": "U6.25",
+          "title": "U6.25 Further temporary visas",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/41782.htm",
+          "effective_date": null
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_ec1a5838f6b62d00",
+      "question": "If the main applicant has a New Zealand work visa, are their partner and children automatically eligible for publicly funded health and dental care?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do not contain a rule saying whether the partner and children of a person with a New Zealand work visa are automatically eligible for publicly funded health and dental care. The closest supplied material only says that some temporary-entry applicants must not be likely to impose significant costs or demands on New Zealand's health services, and it lists factors that do not affect that assessment. It also mentions publicly funded maternity health services for some pregnant student-visa applicants, but nothing here states automatic eligibility for health or dental care for partners or children of work-visa holders. A missing Operational Manual rule on health-service entitlement for partners and children of work-visa holders would be needed.",
+      "citations": [
+        {
+          "section_code": "A4.15",
+          "title": "A4.15 Acceptable standard of health (applicants for temporary entry class visas)",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/44856.htm",
+          "effective_date": "2025-03-17"
+        },
+        {
+          "section_code": "U3.20",
+          "title": "U3.20 Sufficient funds for maintenance while in New Zealand",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/43653.htm",
+          "effective_date": "2022-09-26"
+        },
+        {
+          "section_code": "A4.65",
+          "title": "A4.65 Medical waivers (applicants for temporary entry class visas)",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/44863.htm",
+          "effective_date": "2025-09-29"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_55631e1d29e44e26",
+      "question": "Can I first come to New Zealand on another temporary visa, build evidence that I am living with my student partner, and then apply for a partner visa?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "case_specific_application",
+      "answer": "The supplied sections do not provide a rule that lets someone come to New Zealand on another temporary visa, build evidence of living with a student partner, and then apply for a partner visa. The closest supplied material is about further temporary visas for student visa applicants or holders ([U6.25]) and about residence-class partnership applications and evidence of relationship ([R2.1]), but it does not include the operative partner-visa rule for this situation or any rule saying that time spent in New Zealand on another temporary visa can be used to build the required partnership evidence before applying.\n\nSo the missing material is the specific Operational Manual policy for the partner visa pathway you mean, including any rule about whether prior cohabitation on another temporary visa counts toward the partnership requirement and what evidence is required.",
+      "citations": [
+        {
+          "section_code": "U6.25",
+          "title": "U6.25 Further temporary visas",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/41782.htm",
+          "effective_date": null
+        },
+        {
+          "section_code": "R2.1",
+          "title": "R2.1 Who may be included in an application",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/46504.htm",
+          "effective_date": "2024-10-01"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_ced2abc5a911ac6c",
+      "question": "For a New Zealand Working Holiday Visa, can a relative sponsor my stay or do I need to show my own funds?",
+      "interpreted_as": null,
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The provided sections do not include the Working Holiday Visa maintenance rule. They only give maintenance and sponsorship rules for student visas and a post-study work visa. From the supplied text, sponsorship by a relative is mentioned for some student-visa maintenance situations, but there is no supplied rule saying whether a relative can sponsor a Working Holiday Visa applicant or whether own funds are required for that visa.",
+      "citations": [
+        {
+          "section_code": "U3.20",
+          "title": "U3.20 Sufficient funds for maintenance while in New Zealand",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/43653.htm",
+          "effective_date": "2022-09-26"
+        },
+        {
+          "section_code": "WD2",
+          "title": "WD2 Lodging an application under Post-Study work visa instructions",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/71683.htm",
+          "effective_date": "2025-12-16"
+        },
+        {
+          "section_code": "U8.25",
+          "title": "U8.25 Dependent children of holders of student visas",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/42649.htm",
+          "effective_date": "2019-05-13"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    },
+    {
+      "case_id": "ext_1673e73aa67cff3d",
+      "question": "If my occupation is on the Amber List or Red List under the August 2026 SMC changes, which skilled residence pathway can I use?",
+      "interpreted_as": "If my occupation is on the Amber List or Red List under the August 2026 Skilled Migrant Category changes, which skilled residence pathway can I use?",
+      "outcome": "type_a",
+      "evidence_status": "corpus_gap",
+      "decision_boundary": "general_information",
+      "answer": "The supplied sections do not include any rule about the August 2026 SMC changes, or about what pathway applies to occupations on an Amber List or Red List. The only skilled residence pathways shown are Skilled Migrant Category, Green List: Straight to Residence, Green List: Work to Residence, Care Workforce: Work to Residence, and Transport Sector Work to Residence. The Green List: Work to Residence objective says it applies to people who have worked in New Zealand for at least 24 months in a Tier 2 Green List occupation, but the supplied text does not connect Amber List or Red List occupations to any pathway.",
+      "citations": [
+        {
+          "section_code": "SR1.1",
+          "title": "SR1.1 Overview",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77803.htm",
+          "effective_date": "2023-10-09"
+        },
+        {
+          "section_code": "SR5.1",
+          "title": "SR5.1 Objective",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77819.htm",
+          "effective_date": "2023-10-09"
+        },
+        {
+          "section_code": "SR3.1",
+          "title": "SR3.1 Objective",
+          "source_url": "https://www.immigration.govt.nz/opsmanual/77810.htm",
+          "effective_date": "2023-10-09"
+        }
+      ],
+      "missing_information": [],
+      "disclaimer": "This is general information from the publicly available INZ Operational Manual. It is not immigration advice. For advice on your situation, consult a licensed immigration adviser (iaa.govt.nz) or contact Immigration New Zealand."
+    }
+  ]
+}

@@ -1,0 +1,1034 @@
+{
+  "schema": "waypoint-source-boundary-classifier-failure-analysis-v1",
+  "status": "DIAGNOSTIC_COMPLETE_NO_CHANGES_AUTHORISED",
+  "analysed_on": "2026-08-24",
+  "source_artifacts": {
+    "contract_test_pack_v3_sha256": "C820489715EA3F54138023D680D04DFBFF5575A515B936FA8C2241E2EA5B219D",
+    "prediction_sha256": "F9E753BE55B5A06FC09C002962BE82A921097D1F94843B63D7E58123661D9DF4",
+    "score_sha256": "EFBA19915945F2A929ABD261653070C979FA301B1A48C1742812EC9FD3DE54EA",
+    "score_result_v1_sha256": "CFEEC8CAD5009FACA2FA6AAA10FC7E88DCA490DCC0AD11AA3CFF4E40334ECE17"
+  },
+  "frozen_acceptance_result": {
+    "decision": "FAIL",
+    "four_field_exact_match": "26/34",
+    "unresolved_recall": "6/6",
+    "resolved_recall": "21/28",
+    "error_count": "2/34",
+    "failed_contrast_groups": "4/11"
+  },
+  "failure_counts": {
+    "total_four_field_failures": 8,
+    "execution_or_validation_errors": 2,
+    "non_error_classification_failures": 6,
+    "gold_resolved_failures": 8,
+    "gold_unresolved_failures": 0
+  },
+  "failure_mechanism_counts": {
+    "execution_or_validation_error": 2,
+    "over_abstention_resolved_to_unresolved": 5,
+    "wrong_source_class_within_correct_domain": 1
+  },
+  "changed_field_counts_non_error_failures": {
+    "resolution_status": 5,
+    "responsible_authority_type": 6,
+    "source_class": 6,
+    "source_domain": 5
+  },
+  "gold_source_class_failure_counts": {
+    "current_fee_or_charge_information": 2,
+    "external_entitlement_or_service_regime": 1,
+    "inz_live_service_information": 3,
+    "operational_manual_instruction": 1,
+    "other_official_external_authority": 1
+  },
+  "predicted_source_class_failure_counts": {
+    "foreign_issuing_authority_procedure": 1,
+    "unresolved": 5
+  },
+  "mechanism_summary": {
+    "over_abstention_resolved_to_unresolved": 5,
+    "under_abstention_unresolved_to_resolved": 0,
+    "wrong_source_domain": 0,
+    "wrong_source_class_within_correct_domain": 1,
+    "authority_type_only_mismatch": 0,
+    "multi_field_resolved_classification_mismatch": 0,
+    "execution_or_validation_error": 2
+  },
+  "focus_classes": {
+    "current_fee_or_charge_information": {
+      "frozen_recall": "0/2",
+      "failure_cases": [
+        {
+          "test_id": "sbv2_13",
+          "failure_type": "over_abstention_resolved_to_unresolved",
+          "unsupported_proposition": "The amount an applicant would currently pay to submit a visa application from a specified location.",
+          "trusted_source_context": null,
+          "contrast_group": "fee_legal_basis_vs_current_amount",
+          "gold": {
+            "resolution_status": "resolved",
+            "source_domain": "official_inz_non_manual",
+            "source_class": "current_fee_or_charge_information",
+            "responsible_authority_type": "immigration_new_zealand"
+          },
+          "prediction": {
+            "resolution_status": "unresolved",
+            "source_domain": "unresolved",
+            "source_class": "unresolved",
+            "responsible_authority_type": "unresolved"
+          },
+          "changed_fields": [
+            "resolution_status",
+            "source_domain",
+            "source_class",
+            "responsible_authority_type"
+          ],
+          "model_basis": "No trusted source context identifies the current payable fee/charge owner or a live INZ fee schedule value for this location-specific application amount, so authoritative source ownership cannot be established without guessing.",
+          "gold_basis": "The proposition asks for the current payable amount."
+        },
+        {
+          "test_id": "sbv2_14",
+          "failure_type": "over_abstention_resolved_to_unresolved",
+          "unsupported_proposition": "The current levy amount included in an immigration application charge.",
+          "trusted_source_context": null,
+          "contrast_group": null,
+          "gold": {
+            "resolution_status": "resolved",
+            "source_domain": "official_inz_non_manual",
+            "source_class": "current_fee_or_charge_information",
+            "responsible_authority_type": "immigration_new_zealand"
+          },
+          "prediction": {
+            "resolution_status": "unresolved",
+            "source_domain": "unresolved",
+            "source_class": "unresolved",
+            "responsible_authority_type": "unresolved"
+          },
+          "changed_fields": [
+            "resolution_status",
+            "source_domain",
+            "source_class",
+            "responsible_authority_type"
+          ],
+          "model_basis": "No trusted source context identifies the authoritative owner of this current levy amount. Without explicit live-service or fee/charge source context, the proposition cannot be assigned to a specific source domain without guessing.",
+          "gold_basis": "The proposition concerns a current charge value."
+        }
+      ]
+    },
+    "inz_live_service_information": {
+      "frozen_recall": "0/3",
+      "failure_cases": [
+        {
+          "test_id": "sbv2_10",
+          "failure_type": "execution_or_validation_error",
+          "unsupported_proposition": "The current processing timeframe displayed by Immigration New Zealand for a visa service.",
+          "trusted_source_context": null,
+          "contrast_group": "manual_rule_vs_live_service",
+          "gold": {
+            "resolution_status": "resolved",
+            "source_domain": "official_inz_non_manual",
+            "source_class": "inz_live_service_information",
+            "responsible_authority_type": "immigration_new_zealand"
+          },
+          "gold_basis": "The proposition is a current, time-varying INZ service value.",
+          "error_type": "ClassifierContractError",
+          "error": "Classifier model output violates the frozen schema."
+        },
+        {
+          "test_id": "sbv2_11",
+          "failure_type": "over_abstention_resolved_to_unresolved",
+          "unsupported_proposition": "Whether a particular Immigration New Zealand application channel is accepting submissions at the present time.",
+          "trusted_source_context": null,
+          "contrast_group": null,
+          "gold": {
+            "resolution_status": "resolved",
+            "source_domain": "official_inz_non_manual",
+            "source_class": "inz_live_service_information",
+            "responsible_authority_type": "immigration_new_zealand"
+          },
+          "prediction": {
+            "resolution_status": "unresolved",
+            "source_domain": "unresolved",
+            "source_class": "unresolved",
+            "responsible_authority_type": "unresolved"
+          },
+          "changed_fields": [
+            "resolution_status",
+            "source_domain",
+            "source_class",
+            "responsible_authority_type"
+          ],
+          "model_basis": "No trusted source context identifies the authoritative owner of the current application-channel acceptance state. This is a time-varying operational service matter, but without explicit INZ live-service context it cannot be classified without guessing.",
+          "gold_basis": "The proposition is current operational channel availability."
+        },
+        {
+          "test_id": "sbv2_12",
+          "failure_type": "execution_or_validation_error",
+          "unsupported_proposition": "Whether places are currently available in a capped Immigration New Zealand application service.",
+          "trusted_source_context": null,
+          "contrast_group": null,
+          "gold": {
+            "resolution_status": "resolved",
+            "source_domain": "official_inz_non_manual",
+            "source_class": "inz_live_service_information",
+            "responsible_authority_type": "immigration_new_zealand"
+          },
+          "gold_basis": "The proposition is a current operational availability state.",
+          "error_type": "ClassifierContractError",
+          "error": "Classifier model output violates the frozen schema."
+        }
+      ]
+    }
+  },
+  "error_cases": [
+    {
+      "test_id": "sbv2_10",
+      "failure_type": "execution_or_validation_error",
+      "unsupported_proposition": "The current processing timeframe displayed by Immigration New Zealand for a visa service.",
+      "trusted_source_context": null,
+      "contrast_group": "manual_rule_vs_live_service",
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "official_inz_non_manual",
+        "source_class": "inz_live_service_information",
+        "responsible_authority_type": "immigration_new_zealand"
+      },
+      "gold_basis": "The proposition is a current, time-varying INZ service value.",
+      "error_type": "ClassifierContractError",
+      "error": "Classifier model output violates the frozen schema."
+    },
+    {
+      "test_id": "sbv2_12",
+      "failure_type": "execution_or_validation_error",
+      "unsupported_proposition": "Whether places are currently available in a capped Immigration New Zealand application service.",
+      "trusted_source_context": null,
+      "contrast_group": null,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "official_inz_non_manual",
+        "source_class": "inz_live_service_information",
+        "responsible_authority_type": "immigration_new_zealand"
+      },
+      "gold_basis": "The proposition is a current operational availability state.",
+      "error_type": "ClassifierContractError",
+      "error": "Classifier model output violates the frozen schema."
+    }
+  ],
+  "non_error_failures": [
+    {
+      "test_id": "sbv2_03",
+      "failure_type": "over_abstention_resolved_to_unresolved",
+      "unsupported_proposition": "Whether an immigration exception removes a person from an otherwise applicable visa criterion.",
+      "trusted_source_context": null,
+      "contrast_group": "manual_rule_vs_nonmanual_procedure",
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "certified_immigration_instructions",
+        "source_class": "operational_manual_instruction",
+        "responsible_authority_type": "immigration_new_zealand"
+      },
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved"
+      },
+      "changed_fields": [
+        "resolution_status",
+        "source_domain",
+        "source_class",
+        "responsible_authority_type"
+      ],
+      "model_basis": "No trusted source context establishes whether this is owned by a certified immigration instruction, legislation/regulation, or another official authority. Without that ownership signal, the source domain cannot be classified without guessing.",
+      "gold_basis": "The proposition is an immigration exception rule."
+    },
+    {
+      "test_id": "sbv2_11",
+      "failure_type": "over_abstention_resolved_to_unresolved",
+      "unsupported_proposition": "Whether a particular Immigration New Zealand application channel is accepting submissions at the present time.",
+      "trusted_source_context": null,
+      "contrast_group": null,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "official_inz_non_manual",
+        "source_class": "inz_live_service_information",
+        "responsible_authority_type": "immigration_new_zealand"
+      },
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved"
+      },
+      "changed_fields": [
+        "resolution_status",
+        "source_domain",
+        "source_class",
+        "responsible_authority_type"
+      ],
+      "model_basis": "No trusted source context identifies the authoritative owner of the current application-channel acceptance state. This is a time-varying operational service matter, but without explicit INZ live-service context it cannot be classified without guessing.",
+      "gold_basis": "The proposition is current operational channel availability."
+    },
+    {
+      "test_id": "sbv2_13",
+      "failure_type": "over_abstention_resolved_to_unresolved",
+      "unsupported_proposition": "The amount an applicant would currently pay to submit a visa application from a specified location.",
+      "trusted_source_context": null,
+      "contrast_group": "fee_legal_basis_vs_current_amount",
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "official_inz_non_manual",
+        "source_class": "current_fee_or_charge_information",
+        "responsible_authority_type": "immigration_new_zealand"
+      },
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved"
+      },
+      "changed_fields": [
+        "resolution_status",
+        "source_domain",
+        "source_class",
+        "responsible_authority_type"
+      ],
+      "model_basis": "No trusted source context identifies the current payable fee/charge owner or a live INZ fee schedule value for this location-specific application amount, so authoritative source ownership cannot be established without guessing.",
+      "gold_basis": "The proposition asks for the current payable amount."
+    },
+    {
+      "test_id": "sbv2_14",
+      "failure_type": "over_abstention_resolved_to_unresolved",
+      "unsupported_proposition": "The current levy amount included in an immigration application charge.",
+      "trusted_source_context": null,
+      "contrast_group": null,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "official_inz_non_manual",
+        "source_class": "current_fee_or_charge_information",
+        "responsible_authority_type": "immigration_new_zealand"
+      },
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved"
+      },
+      "changed_fields": [
+        "resolution_status",
+        "source_domain",
+        "source_class",
+        "responsible_authority_type"
+      ],
+      "model_basis": "No trusted source context identifies the authoritative owner of this current levy amount. Without explicit live-service or fee/charge source context, the proposition cannot be assigned to a specific source domain without guessing.",
+      "gold_basis": "The proposition concerns a current charge value."
+    },
+    {
+      "test_id": "sbv2_22",
+      "failure_type": "over_abstention_resolved_to_unresolved",
+      "unsupported_proposition": "Whether a person is eligible for a separately administered public benefit because of their current status.",
+      "trusted_source_context": null,
+      "contrast_group": null,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "external_entitlement_or_service_regime",
+        "responsible_authority_type": "public_service_authority"
+      },
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved"
+      },
+      "changed_fields": [
+        "resolution_status",
+        "source_domain",
+        "source_class",
+        "responsible_authority_type"
+      ],
+      "model_basis": "No trusted source context identifies the responsible official owner for this proposition, and it cannot be safely assigned to a specific external entitlement regime without guessing.",
+      "gold_basis": "The responsible public-service authority owns the entitlement proposition."
+    },
+    {
+      "test_id": "sbv2_26",
+      "failure_type": "wrong_source_class_within_correct_domain",
+      "unsupported_proposition": "Which electronic declaration channel a foreign customs authority requires travellers to use for its own customs reporting process.",
+      "trusted_source_context": {
+        "publisher_family": "other_official_authority",
+        "publication_family": "other_official_service",
+        "authority_role": "other_official_operational_owner",
+        "certification_status": "not_applicable",
+        "incorporation_status": "not_applicable"
+      },
+      "contrast_group": "other_official_context_required",
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "other_official_external_authority",
+        "responsible_authority_type": "other_official_authority"
+      },
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "foreign_issuing_authority_procedure",
+        "responsible_authority_type": "foreign_issuing_authority"
+      },
+      "changed_fields": [
+        "source_class",
+        "responsible_authority_type"
+      ],
+      "model_basis": "The proposition concerns how a foreign customs authority requires travellers to submit its own customs declaration, which is a foreign issuing authority procedure. Trusted context identifies an official external operational owner, so this is not an INZ manual or legislation classification.",
+      "gold_basis": "Trusted context identifies an official foreign operational owner. The proposition is not a document-issuing procedure, professional assessment, agency recognition service, public entitlement, or legislation proposition."
+    }
+  ],
+  "all_failures": [
+    {
+      "test_id": "sbv2_03",
+      "failure_type": "over_abstention_resolved_to_unresolved",
+      "unsupported_proposition": "Whether an immigration exception removes a person from an otherwise applicable visa criterion.",
+      "trusted_source_context": null,
+      "contrast_group": "manual_rule_vs_nonmanual_procedure",
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "certified_immigration_instructions",
+        "source_class": "operational_manual_instruction",
+        "responsible_authority_type": "immigration_new_zealand"
+      },
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved"
+      },
+      "changed_fields": [
+        "resolution_status",
+        "source_domain",
+        "source_class",
+        "responsible_authority_type"
+      ],
+      "model_basis": "No trusted source context establishes whether this is owned by a certified immigration instruction, legislation/regulation, or another official authority. Without that ownership signal, the source domain cannot be classified without guessing.",
+      "gold_basis": "The proposition is an immigration exception rule."
+    },
+    {
+      "test_id": "sbv2_10",
+      "failure_type": "execution_or_validation_error",
+      "unsupported_proposition": "The current processing timeframe displayed by Immigration New Zealand for a visa service.",
+      "trusted_source_context": null,
+      "contrast_group": "manual_rule_vs_live_service",
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "official_inz_non_manual",
+        "source_class": "inz_live_service_information",
+        "responsible_authority_type": "immigration_new_zealand"
+      },
+      "gold_basis": "The proposition is a current, time-varying INZ service value.",
+      "error_type": "ClassifierContractError",
+      "error": "Classifier model output violates the frozen schema."
+    },
+    {
+      "test_id": "sbv2_11",
+      "failure_type": "over_abstention_resolved_to_unresolved",
+      "unsupported_proposition": "Whether a particular Immigration New Zealand application channel is accepting submissions at the present time.",
+      "trusted_source_context": null,
+      "contrast_group": null,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "official_inz_non_manual",
+        "source_class": "inz_live_service_information",
+        "responsible_authority_type": "immigration_new_zealand"
+      },
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved"
+      },
+      "changed_fields": [
+        "resolution_status",
+        "source_domain",
+        "source_class",
+        "responsible_authority_type"
+      ],
+      "model_basis": "No trusted source context identifies the authoritative owner of the current application-channel acceptance state. This is a time-varying operational service matter, but without explicit INZ live-service context it cannot be classified without guessing.",
+      "gold_basis": "The proposition is current operational channel availability."
+    },
+    {
+      "test_id": "sbv2_12",
+      "failure_type": "execution_or_validation_error",
+      "unsupported_proposition": "Whether places are currently available in a capped Immigration New Zealand application service.",
+      "trusted_source_context": null,
+      "contrast_group": null,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "official_inz_non_manual",
+        "source_class": "inz_live_service_information",
+        "responsible_authority_type": "immigration_new_zealand"
+      },
+      "gold_basis": "The proposition is a current operational availability state.",
+      "error_type": "ClassifierContractError",
+      "error": "Classifier model output violates the frozen schema."
+    },
+    {
+      "test_id": "sbv2_13",
+      "failure_type": "over_abstention_resolved_to_unresolved",
+      "unsupported_proposition": "The amount an applicant would currently pay to submit a visa application from a specified location.",
+      "trusted_source_context": null,
+      "contrast_group": "fee_legal_basis_vs_current_amount",
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "official_inz_non_manual",
+        "source_class": "current_fee_or_charge_information",
+        "responsible_authority_type": "immigration_new_zealand"
+      },
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved"
+      },
+      "changed_fields": [
+        "resolution_status",
+        "source_domain",
+        "source_class",
+        "responsible_authority_type"
+      ],
+      "model_basis": "No trusted source context identifies the current payable fee/charge owner or a live INZ fee schedule value for this location-specific application amount, so authoritative source ownership cannot be established without guessing.",
+      "gold_basis": "The proposition asks for the current payable amount."
+    },
+    {
+      "test_id": "sbv2_14",
+      "failure_type": "over_abstention_resolved_to_unresolved",
+      "unsupported_proposition": "The current levy amount included in an immigration application charge.",
+      "trusted_source_context": null,
+      "contrast_group": null,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "official_inz_non_manual",
+        "source_class": "current_fee_or_charge_information",
+        "responsible_authority_type": "immigration_new_zealand"
+      },
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved"
+      },
+      "changed_fields": [
+        "resolution_status",
+        "source_domain",
+        "source_class",
+        "responsible_authority_type"
+      ],
+      "model_basis": "No trusted source context identifies the authoritative owner of this current levy amount. Without explicit live-service or fee/charge source context, the proposition cannot be assigned to a specific source domain without guessing.",
+      "gold_basis": "The proposition concerns a current charge value."
+    },
+    {
+      "test_id": "sbv2_22",
+      "failure_type": "over_abstention_resolved_to_unresolved",
+      "unsupported_proposition": "Whether a person is eligible for a separately administered public benefit because of their current status.",
+      "trusted_source_context": null,
+      "contrast_group": null,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "external_entitlement_or_service_regime",
+        "responsible_authority_type": "public_service_authority"
+      },
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved"
+      },
+      "changed_fields": [
+        "resolution_status",
+        "source_domain",
+        "source_class",
+        "responsible_authority_type"
+      ],
+      "model_basis": "No trusted source context identifies the responsible official owner for this proposition, and it cannot be safely assigned to a specific external entitlement regime without guessing.",
+      "gold_basis": "The responsible public-service authority owns the entitlement proposition."
+    },
+    {
+      "test_id": "sbv2_26",
+      "failure_type": "wrong_source_class_within_correct_domain",
+      "unsupported_proposition": "Which electronic declaration channel a foreign customs authority requires travellers to use for its own customs reporting process.",
+      "trusted_source_context": {
+        "publisher_family": "other_official_authority",
+        "publication_family": "other_official_service",
+        "authority_role": "other_official_operational_owner",
+        "certification_status": "not_applicable",
+        "incorporation_status": "not_applicable"
+      },
+      "contrast_group": "other_official_context_required",
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "other_official_external_authority",
+        "responsible_authority_type": "other_official_authority"
+      },
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "foreign_issuing_authority_procedure",
+        "responsible_authority_type": "foreign_issuing_authority"
+      },
+      "changed_fields": [
+        "source_class",
+        "responsible_authority_type"
+      ],
+      "model_basis": "The proposition concerns how a foreign customs authority requires travellers to submit its own customs declaration, which is a foreign issuing authority procedure. Trusted context identifies an official external operational owner, so this is not an INZ manual or legislation classification.",
+      "gold_basis": "Trusted context identifies an official foreign operational owner. The proposition is not a document-issuing procedure, professional assessment, agency recognition service, public entitlement, or legislation proposition."
+    }
+  ],
+  "failed_contrast_groups": [
+    {
+      "contrast_group": "manual_rule_vs_live_service",
+      "members": [
+        "sbv2_01",
+        "sbv2_10"
+      ],
+      "failed_members": [
+        "sbv2_10"
+      ],
+      "member_details": [
+        {
+          "test_id": "sbv2_01",
+          "four_field_correct": true,
+          "gold_resolution_status": "resolved",
+          "gold_source_domain": "certified_immigration_instructions",
+          "gold_source_class": "operational_manual_instruction",
+          "prediction_status": "prediction",
+          "predicted_resolution_status": "resolved",
+          "predicted_source_domain": "certified_immigration_instructions",
+          "predicted_source_class": "operational_manual_instruction"
+        },
+        {
+          "test_id": "sbv2_10",
+          "four_field_correct": false,
+          "gold_resolution_status": "resolved",
+          "gold_source_domain": "official_inz_non_manual",
+          "gold_source_class": "inz_live_service_information",
+          "prediction_status": "error",
+          "error_type": "ClassifierContractError",
+          "error": "Classifier model output violates the frozen schema."
+        }
+      ]
+    },
+    {
+      "contrast_group": "manual_rule_vs_nonmanual_procedure",
+      "members": [
+        "sbv2_03",
+        "sbv2_16"
+      ],
+      "failed_members": [
+        "sbv2_03"
+      ],
+      "member_details": [
+        {
+          "test_id": "sbv2_03",
+          "four_field_correct": false,
+          "gold_resolution_status": "resolved",
+          "gold_source_domain": "certified_immigration_instructions",
+          "gold_source_class": "operational_manual_instruction",
+          "prediction_status": "prediction",
+          "predicted_resolution_status": "unresolved",
+          "predicted_source_domain": "unresolved",
+          "predicted_source_class": "unresolved"
+        },
+        {
+          "test_id": "sbv2_16",
+          "four_field_correct": true,
+          "gold_resolution_status": "resolved",
+          "gold_source_domain": "official_inz_non_manual",
+          "gold_source_class": "inz_non_manual_procedure_or_interpretation",
+          "prediction_status": "prediction",
+          "predicted_resolution_status": "resolved",
+          "predicted_source_domain": "official_inz_non_manual",
+          "predicted_source_class": "inz_non_manual_procedure_or_interpretation"
+        }
+      ]
+    },
+    {
+      "contrast_group": "fee_legal_basis_vs_current_amount",
+      "members": [
+        "sbv2_09",
+        "sbv2_13"
+      ],
+      "failed_members": [
+        "sbv2_13"
+      ],
+      "member_details": [
+        {
+          "test_id": "sbv2_09",
+          "four_field_correct": true,
+          "gold_resolution_status": "resolved",
+          "gold_source_domain": "legislation_or_regulation",
+          "gold_source_class": "legislation_or_regulation",
+          "prediction_status": "prediction",
+          "predicted_resolution_status": "resolved",
+          "predicted_source_domain": "legislation_or_regulation",
+          "predicted_source_class": "legislation_or_regulation"
+        },
+        {
+          "test_id": "sbv2_13",
+          "four_field_correct": false,
+          "gold_resolution_status": "resolved",
+          "gold_source_domain": "official_inz_non_manual",
+          "gold_source_class": "current_fee_or_charge_information",
+          "prediction_status": "prediction",
+          "predicted_resolution_status": "unresolved",
+          "predicted_source_domain": "unresolved",
+          "predicted_source_class": "unresolved"
+        }
+      ]
+    },
+    {
+      "contrast_group": "other_official_context_required",
+      "members": [
+        "sbv2_26",
+        "sbv2_30"
+      ],
+      "failed_members": [
+        "sbv2_26"
+      ],
+      "member_details": [
+        {
+          "test_id": "sbv2_26",
+          "four_field_correct": false,
+          "gold_resolution_status": "resolved",
+          "gold_source_domain": "responsible_external_official_authority",
+          "gold_source_class": "other_official_external_authority",
+          "prediction_status": "prediction",
+          "predicted_resolution_status": "resolved",
+          "predicted_source_domain": "responsible_external_official_authority",
+          "predicted_source_class": "foreign_issuing_authority_procedure"
+        },
+        {
+          "test_id": "sbv2_30",
+          "four_field_correct": true,
+          "gold_resolution_status": "unresolved",
+          "gold_source_domain": "unresolved",
+          "gold_source_class": "unresolved",
+          "prediction_status": "prediction",
+          "predicted_resolution_status": "unresolved",
+          "predicted_source_domain": "unresolved",
+          "predicted_source_class": "unresolved"
+        }
+      ]
+    }
+  ],
+  "confusion_matrices": {
+    "resolution_status": {
+      "__error__": {
+        "__error__": 0,
+        "resolved": 0,
+        "unresolved": 0
+      },
+      "resolved": {
+        "__error__": 2,
+        "resolved": 21,
+        "unresolved": 5
+      },
+      "unresolved": {
+        "__error__": 0,
+        "resolved": 0,
+        "unresolved": 6
+      }
+    },
+    "source_domain": {
+      "__error__": {
+        "__error__": 0,
+        "certified_immigration_instructions": 0,
+        "legislation_or_regulation": 0,
+        "official_inz_non_manual": 0,
+        "responsible_external_official_authority": 0,
+        "unresolved": 0
+      },
+      "certified_immigration_instructions": {
+        "__error__": 0,
+        "certified_immigration_instructions": 6,
+        "legislation_or_regulation": 0,
+        "official_inz_non_manual": 0,
+        "responsible_external_official_authority": 0,
+        "unresolved": 1
+      },
+      "legislation_or_regulation": {
+        "__error__": 0,
+        "certified_immigration_instructions": 0,
+        "legislation_or_regulation": 3,
+        "official_inz_non_manual": 0,
+        "responsible_external_official_authority": 0,
+        "unresolved": 0
+      },
+      "official_inz_non_manual": {
+        "__error__": 2,
+        "certified_immigration_instructions": 0,
+        "legislation_or_regulation": 0,
+        "official_inz_non_manual": 2,
+        "responsible_external_official_authority": 0,
+        "unresolved": 3
+      },
+      "responsible_external_official_authority": {
+        "__error__": 0,
+        "certified_immigration_instructions": 0,
+        "legislation_or_regulation": 0,
+        "official_inz_non_manual": 0,
+        "responsible_external_official_authority": 10,
+        "unresolved": 1
+      },
+      "unresolved": {
+        "__error__": 0,
+        "certified_immigration_instructions": 0,
+        "legislation_or_regulation": 0,
+        "official_inz_non_manual": 0,
+        "responsible_external_official_authority": 0,
+        "unresolved": 6
+      }
+    },
+    "source_class": {
+      "__error__": {
+        "__error__": 0,
+        "current_fee_or_charge_information": 0,
+        "external_agency_assessment_or_service": 0,
+        "external_entitlement_or_service_regime": 0,
+        "foreign_issuing_authority_procedure": 0,
+        "inz_live_service_information": 0,
+        "inz_non_manual_procedure_or_interpretation": 0,
+        "legislation_or_regulation": 0,
+        "manual_instruction_transition": 0,
+        "operational_manual_instruction": 0,
+        "other_official_external_authority": 0,
+        "professional_or_assessor_guidance": 0,
+        "unresolved": 0
+      },
+      "current_fee_or_charge_information": {
+        "__error__": 0,
+        "current_fee_or_charge_information": 0,
+        "external_agency_assessment_or_service": 0,
+        "external_entitlement_or_service_regime": 0,
+        "foreign_issuing_authority_procedure": 0,
+        "inz_live_service_information": 0,
+        "inz_non_manual_procedure_or_interpretation": 0,
+        "legislation_or_regulation": 0,
+        "manual_instruction_transition": 0,
+        "operational_manual_instruction": 0,
+        "other_official_external_authority": 0,
+        "professional_or_assessor_guidance": 0,
+        "unresolved": 2
+      },
+      "external_agency_assessment_or_service": {
+        "__error__": 0,
+        "current_fee_or_charge_information": 0,
+        "external_agency_assessment_or_service": 2,
+        "external_entitlement_or_service_regime": 0,
+        "foreign_issuing_authority_procedure": 0,
+        "inz_live_service_information": 0,
+        "inz_non_manual_procedure_or_interpretation": 0,
+        "legislation_or_regulation": 0,
+        "manual_instruction_transition": 0,
+        "operational_manual_instruction": 0,
+        "other_official_external_authority": 0,
+        "professional_or_assessor_guidance": 0,
+        "unresolved": 0
+      },
+      "external_entitlement_or_service_regime": {
+        "__error__": 0,
+        "current_fee_or_charge_information": 0,
+        "external_agency_assessment_or_service": 0,
+        "external_entitlement_or_service_regime": 1,
+        "foreign_issuing_authority_procedure": 0,
+        "inz_live_service_information": 0,
+        "inz_non_manual_procedure_or_interpretation": 0,
+        "legislation_or_regulation": 0,
+        "manual_instruction_transition": 0,
+        "operational_manual_instruction": 0,
+        "other_official_external_authority": 0,
+        "professional_or_assessor_guidance": 0,
+        "unresolved": 1
+      },
+      "foreign_issuing_authority_procedure": {
+        "__error__": 0,
+        "current_fee_or_charge_information": 0,
+        "external_agency_assessment_or_service": 0,
+        "external_entitlement_or_service_regime": 0,
+        "foreign_issuing_authority_procedure": 2,
+        "inz_live_service_information": 0,
+        "inz_non_manual_procedure_or_interpretation": 0,
+        "legislation_or_regulation": 0,
+        "manual_instruction_transition": 0,
+        "operational_manual_instruction": 0,
+        "other_official_external_authority": 0,
+        "professional_or_assessor_guidance": 0,
+        "unresolved": 0
+      },
+      "inz_live_service_information": {
+        "__error__": 2,
+        "current_fee_or_charge_information": 0,
+        "external_agency_assessment_or_service": 0,
+        "external_entitlement_or_service_regime": 0,
+        "foreign_issuing_authority_procedure": 0,
+        "inz_live_service_information": 0,
+        "inz_non_manual_procedure_or_interpretation": 0,
+        "legislation_or_regulation": 0,
+        "manual_instruction_transition": 0,
+        "operational_manual_instruction": 0,
+        "other_official_external_authority": 0,
+        "professional_or_assessor_guidance": 0,
+        "unresolved": 1
+      },
+      "inz_non_manual_procedure_or_interpretation": {
+        "__error__": 0,
+        "current_fee_or_charge_information": 0,
+        "external_agency_assessment_or_service": 0,
+        "external_entitlement_or_service_regime": 0,
+        "foreign_issuing_authority_procedure": 0,
+        "inz_live_service_information": 0,
+        "inz_non_manual_procedure_or_interpretation": 2,
+        "legislation_or_regulation": 0,
+        "manual_instruction_transition": 0,
+        "operational_manual_instruction": 0,
+        "other_official_external_authority": 0,
+        "professional_or_assessor_guidance": 0,
+        "unresolved": 0
+      },
+      "legislation_or_regulation": {
+        "__error__": 0,
+        "current_fee_or_charge_information": 0,
+        "external_agency_assessment_or_service": 0,
+        "external_entitlement_or_service_regime": 0,
+        "foreign_issuing_authority_procedure": 0,
+        "inz_live_service_information": 0,
+        "inz_non_manual_procedure_or_interpretation": 0,
+        "legislation_or_regulation": 3,
+        "manual_instruction_transition": 0,
+        "operational_manual_instruction": 0,
+        "other_official_external_authority": 0,
+        "professional_or_assessor_guidance": 0,
+        "unresolved": 0
+      },
+      "manual_instruction_transition": {
+        "__error__": 0,
+        "current_fee_or_charge_information": 0,
+        "external_agency_assessment_or_service": 0,
+        "external_entitlement_or_service_regime": 0,
+        "foreign_issuing_authority_procedure": 0,
+        "inz_live_service_information": 0,
+        "inz_non_manual_procedure_or_interpretation": 0,
+        "legislation_or_regulation": 0,
+        "manual_instruction_transition": 2,
+        "operational_manual_instruction": 0,
+        "other_official_external_authority": 0,
+        "professional_or_assessor_guidance": 0,
+        "unresolved": 0
+      },
+      "operational_manual_instruction": {
+        "__error__": 0,
+        "current_fee_or_charge_information": 0,
+        "external_agency_assessment_or_service": 0,
+        "external_entitlement_or_service_regime": 0,
+        "foreign_issuing_authority_procedure": 0,
+        "inz_live_service_information": 0,
+        "inz_non_manual_procedure_or_interpretation": 0,
+        "legislation_or_regulation": 0,
+        "manual_instruction_transition": 0,
+        "operational_manual_instruction": 4,
+        "other_official_external_authority": 0,
+        "professional_or_assessor_guidance": 0,
+        "unresolved": 1
+      },
+      "other_official_external_authority": {
+        "__error__": 0,
+        "current_fee_or_charge_information": 0,
+        "external_agency_assessment_or_service": 0,
+        "external_entitlement_or_service_regime": 0,
+        "foreign_issuing_authority_procedure": 1,
+        "inz_live_service_information": 0,
+        "inz_non_manual_procedure_or_interpretation": 0,
+        "legislation_or_regulation": 0,
+        "manual_instruction_transition": 0,
+        "operational_manual_instruction": 0,
+        "other_official_external_authority": 1,
+        "professional_or_assessor_guidance": 0,
+        "unresolved": 0
+      },
+      "professional_or_assessor_guidance": {
+        "__error__": 0,
+        "current_fee_or_charge_information": 0,
+        "external_agency_assessment_or_service": 0,
+        "external_entitlement_or_service_regime": 0,
+        "foreign_issuing_authority_procedure": 0,
+        "inz_live_service_information": 0,
+        "inz_non_manual_procedure_or_interpretation": 0,
+        "legislation_or_regulation": 0,
+        "manual_instruction_transition": 0,
+        "operational_manual_instruction": 0,
+        "other_official_external_authority": 0,
+        "professional_or_assessor_guidance": 3,
+        "unresolved": 0
+      },
+      "unresolved": {
+        "__error__": 0,
+        "current_fee_or_charge_information": 0,
+        "external_agency_assessment_or_service": 0,
+        "external_entitlement_or_service_regime": 0,
+        "foreign_issuing_authority_procedure": 0,
+        "inz_live_service_information": 0,
+        "inz_non_manual_procedure_or_interpretation": 0,
+        "legislation_or_regulation": 0,
+        "manual_instruction_transition": 0,
+        "operational_manual_instruction": 0,
+        "other_official_external_authority": 0,
+        "professional_or_assessor_guidance": 0,
+        "unresolved": 6
+      }
+    }
+  },
+  "diagnostic_findings": [
+    {
+      "finding": "The classifier shows resolved-case underreach through over-abstention.",
+      "evidence": "5 non-error failure(s) map a gold-resolved proposition to unresolved."
+    },
+    {
+      "finding": "Live INZ service information and current fee/charge classification are confirmed weak classes in this run.",
+      "evidence": "The frozen acceptance result records 0/3 recall for inz_live_service_information and 0/2 for current_fee_or_charge_information."
+    },
+    {
+      "finding": "Execution/validation robustness is independently a hard-gate failure.",
+      "evidence": "2 of 34 first-run cases ended in error and no retry/repair was permitted."
+    },
+    {
+      "finding": "The classifier did not consistently preserve all frozen paired distinctions.",
+      "evidence": "4 of 11 contrast groups failed full four-field consistency."
+    },
+    {
+      "finding": "The observed asymmetry is toward resolved-case underreach, not unsafe resolution of frozen unresolved cases.",
+      "evidence": "8/8 total four-field failures occur on gold-resolved cases while unresolved recall is 6/6."
+    }
+  ],
+  "methodological_status": {
+    "development_evidence_only": true,
+    "same_pack_may_be_used_for_diagnosis": true,
+    "same_pack_may_be_used_for_regression_testing": true,
+    "same_pack_must_not_be_described_as_untouched_after_tuning": true,
+    "no_threshold_change": true,
+    "no_classifier_change": true,
+    "no_model_calls": true
+  },
+  "authorisations": {
+    "human_diagnostic_review_authorised": true,
+    "failure_taxonomy_freeze_authorised": false,
+    "classifier_prompt_change_authorised": false,
+    "classifier_logic_change_authorised": false,
+    "classifier_rerun_authorised": false,
+    "new_acceptance_pack_build_authorised": false,
+    "candidate_v7_build_authorised": false,
+    "production_runtime_change_authorised": false,
+    "fresh_external_v3_holdout_authorised": false
+  },
+  "next_step": {
+    "name": "human_review_failure_analysis_v1",
+    "authorised": true,
+    "purpose": "Review the exact failed cases and determine the minimum evidence-supported diagnosis before authorising any revised classifier design."
+  }
+}

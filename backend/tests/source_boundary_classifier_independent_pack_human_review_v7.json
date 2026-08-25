@@ -1,0 +1,130 @@
+{
+  "schema": "waypoint-source-boundary-classifier-independent-pack-human-review-v7",
+  "status": "REJECTED_FRESHNESS_PROTOCOL_REQUIRED",
+  "reviewed_on": "2026-08-25",
+  "source_artifacts": {
+    "classifier_design_v4_sha256": "9563158E74CFBC0C7D25D2DC2BA8FC2036E0B32193BADDFBE464ECCB99329948",
+    "classifier_design_v4_human_review_sha256": "4456BEE89A249043510730BF5A01FCE05EF0A6C49EDF39FAD2EBBB55E17D9AD5",
+    "observed_pack_v5_sha256": "1B3CEA56504E3932C7DCA342DF99DC22523A4676B1C22714B9A122DDD566E67B",
+    "rejected_pack_v6_sha256": "F1383D338CD64F6A7DB53C13934050CEBE87FAE4F41EE008C79A0EBB5199BCDE",
+    "pack_v6_human_review_sha256": "5A0B8C5E6C6C231710B50CE5A2D6A9648CECB18F2E8F07AACDF028BF0B4670C4",
+    "pack_v7_sha256": "EBD048AABBF30F2DCEAFCA8BBE69607B8ABFE2F906434BF8B333111950725F24"
+  },
+  "review_decision": {
+    "overall": "REJECT",
+    "structural_contract": "PASS",
+    "source_class_distribution": "PASS",
+    "resolved_unresolved_distribution": "PASS",
+    "gold_label_review": "PASS",
+    "gold_pack_defect_observed": false,
+    "design_v4_coverage": "PASS",
+    "contrast_semantics": "PASS",
+    "contrast_groups_valid": "14/14",
+    "freshness_independence": "FAIL",
+    "fresh_untouched_acceptance_claim_valid": false
+  },
+  "independence_failure": {
+    "decision": "FAIL",
+    "reason": "Although pack v7 uses new case IDs and several new domains, multiple cases still reuse concrete scenario templates from already observed pack-v6 cases with substituted entities or documents. Under the project's strict independence standard, that is insufficient for a fresh untouched acceptance claim.",
+    "reviewed_derivative_pair_count": 5,
+    "reviewed_derivative_pairs": [
+      {
+        "prior_case_id": "v6_025",
+        "new_case_id": "v7_025",
+        "finding": "Same concrete template: an authority explicitly identified as issuer of an official certificate provides a replacement certificate; only the certificate type changed.",
+        "prior_source_class": "foreign_issuing_authority_procedure",
+        "new_source_class": "foreign_issuing_authority_procedure",
+        "token_jaccard": 0.458
+      },
+      {
+        "prior_case_id": "v6_027",
+        "new_case_id": "v7_026",
+        "finding": "Same concrete template: the authority that issued an identity/travel document prescribes replacement after loss or damage.",
+        "prior_source_class": "foreign_issuing_authority_procedure",
+        "new_source_class": "foreign_issuing_authority_procedure",
+        "token_jaccard": 0.545
+      },
+      {
+        "prior_case_id": "v6_030",
+        "new_case_id": "v7_030",
+        "finding": "Near-direct reuse of a government identity-agency matching/verification service against official records.",
+        "prior_source_class": "external_agency_assessment_or_service",
+        "new_source_class": "external_agency_assessment_or_service",
+        "token_jaccard": 0.323
+      },
+      {
+        "prior_case_id": "v6_037",
+        "new_case_id": "v7_037",
+        "finding": "Same concrete professional-registration template: evidence required from an overseas-trained practitioner for registration.",
+        "prior_source_class": "professional_or_assessor_guidance",
+        "new_source_class": "professional_or_assessor_guidance",
+        "token_jaccard": 0.55
+      },
+      {
+        "prior_case_id": "v6_045",
+        "new_case_id": "v7_050",
+        "finding": "Same unresolved future-change template: an announced/circulated immigration change may or may not yet be an authoritative certified amendment because trusted certification context is absent.",
+        "prior_source_class": "unresolved",
+        "new_source_class": "unresolved",
+        "token_jaccard": 0.212
+      }
+    ],
+    "same_abstract_boundary_testing_is_allowed": true,
+    "same_concrete_scenario_template_with_noun_substitution_is_allowed": false
+  },
+  "methodological_diagnosis": {
+    "problem": "AD_HOC_PACK_CONSTRUCTION_AFTER_PRIOR_CASE_INSPECTION",
+    "design_v4_problem": false,
+    "threshold_problem": false,
+    "gold_label_problem": false,
+    "classifier_problem_inferred_from_pack_v7": false,
+    "reason_to_stop_immediate_pack_rebuilds": "Repeated hand-authored replacement packs are being reviewed after construction and are reproducing observed scenario templates. Continuing directly to another pack would become evaluation-set trial-and-error."
+  },
+  "methodological_disposition": {
+    "pack_v7_role": "DEVELOPMENT_DIAGNOSTIC_ONLY",
+    "pack_v7_may_be_used_for_debugging": true,
+    "pack_v7_may_be_used_for_fresh_acceptance": false,
+    "pack_v7_may_be_used_to_set_acceptance_thresholds": false,
+    "pack_v7_may_be_used_for_model_prediction_acceptance": false,
+    "design_v4_remains_frozen": true,
+    "acceptance_thresholds_v2_remain_frozen": true,
+    "production_runtime_remains_unchanged": true
+  },
+  "independent_pack_construction_protocol_requirements": {
+    "protocol_name": "source_boundary_classifier_independent_pack_construction_protocol_v1",
+    "must_be_frozen_before_next_pack": true,
+    "must_predefine_scenario_family_generation_rules": true,
+    "must_predefine_exclusion_rules_for_observed_scenario_templates": true,
+    "must_predefine_case_count_and_class_balance": true,
+    "must_predefine_context_gate_coverage": true,
+    "must_predefine_contrast_construction_rules": true,
+    "must_predefine_independence_review_method": true,
+    "must_predefine_rejection_criteria_before_next_pack_exists": true,
+    "must_not_contain_future_gold_case_wording": true,
+    "must_not_construct_next_pack_during_protocol_freeze": true,
+    "must_not_authorise_model_prediction": true
+  },
+  "authorisations": {
+    "independent_pack_construction_protocol_v1_authorised": true,
+    "replacement_pack_v8_construction_authorised": false,
+    "acceptance_thresholds_v3_construction_authorised": false,
+    "classifier_prompt_v3_construction_authorised": false,
+    "classifier_implementation_v3_construction_authorised": false,
+    "blind_input_v3_construction_authorised": false,
+    "classifier_model_run_authorised": false,
+    "classifier_rerun_on_pack_v5_authorised": false,
+    "classifier_run_on_pack_v6_authorised": false,
+    "classifier_run_on_pack_v7_authorised": false,
+    "threshold_change_authorised": false,
+    "candidate_v7_build_authorised": false,
+    "production_runtime_change_authorised": false,
+    "external_retrieval_authorised": false,
+    "fresh_external_v3_holdout_authorised": false
+  },
+  "next_engineering_task": {
+    "name": "source_boundary_classifier_independent_pack_construction_protocol_v1",
+    "authorised": true,
+    "model_calls": 0,
+    "purpose": "Pre-register how the next independent acceptance pack will be generated and rejected or approved before any future pack content exists, preventing further ad-hoc evaluation-set trial-and-error."
+  }
+}

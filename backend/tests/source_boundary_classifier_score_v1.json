@@ -1,0 +1,1202 @@
+{
+  "schema": "waypoint-source-boundary-classifier-score-v1",
+  "status": "ACCEPTANCE_FAIL",
+  "source_artifacts": {
+    "prediction_sha256": "F9E753BE55B5A06FC09C002962BE82A921097D1F94843B63D7E58123661D9DF4",
+    "contract_test_pack_sha256": "C820489715EA3F54138023D680D04DFBFF5575A515B936FA8C2241E2EA5B219D",
+    "acceptance_thresholds_sha256": "5E8AFBFFEE5880DEBF4FA6B0A6514E8C6702F5D9E74D620BA4C1575F49CAC03C",
+    "classifier_sha256": "BC77C28033F74E3092C8428DE623293D266FBDEE7FFC237EE79C8AB6F79DE9F3",
+    "runner_sha256": "CE2709C654E576B56520AAD7CA9DB90A88E80CF775C3B8AC7A3864669F610FEF"
+  },
+  "counts": {
+    "case_count": 34,
+    "prediction_errors": 2,
+    "contrast_group_count": 11,
+    "source_class_count": 12
+  },
+  "metrics": {
+    "four_field_exact_match_accuracy": {
+      "correct": 26,
+      "total": 34,
+      "percent": 76.5
+    },
+    "resolution_status_accuracy": {
+      "correct": 27,
+      "total": 34,
+      "percent": 79.4
+    },
+    "source_domain_accuracy": {
+      "correct": 27,
+      "total": 34,
+      "percent": 79.4
+    },
+    "source_class_accuracy": {
+      "correct": 26,
+      "total": 34,
+      "percent": 76.5
+    },
+    "source_class_macro_recall": {
+      "percent": 73.3,
+      "class_count": 12
+    },
+    "per_source_class_recall": {
+      "current_fee_or_charge_information": {
+        "correct": 0,
+        "support": 2,
+        "recall_percent": 0.0
+      },
+      "external_agency_assessment_or_service": {
+        "correct": 2,
+        "support": 2,
+        "recall_percent": 100.0
+      },
+      "external_entitlement_or_service_regime": {
+        "correct": 1,
+        "support": 2,
+        "recall_percent": 50.0
+      },
+      "foreign_issuing_authority_procedure": {
+        "correct": 2,
+        "support": 2,
+        "recall_percent": 100.0
+      },
+      "inz_live_service_information": {
+        "correct": 0,
+        "support": 3,
+        "recall_percent": 0.0
+      },
+      "inz_non_manual_procedure_or_interpretation": {
+        "correct": 2,
+        "support": 2,
+        "recall_percent": 100.0
+      },
+      "legislation_or_regulation": {
+        "correct": 3,
+        "support": 3,
+        "recall_percent": 100.0
+      },
+      "manual_instruction_transition": {
+        "correct": 2,
+        "support": 2,
+        "recall_percent": 100.0
+      },
+      "operational_manual_instruction": {
+        "correct": 4,
+        "support": 5,
+        "recall_percent": 80.0
+      },
+      "other_official_external_authority": {
+        "correct": 1,
+        "support": 2,
+        "recall_percent": 50.0
+      },
+      "professional_or_assessor_guidance": {
+        "correct": 3,
+        "support": 3,
+        "recall_percent": 100.0
+      },
+      "unresolved": {
+        "correct": 6,
+        "support": 6,
+        "recall_percent": 100.0
+      }
+    },
+    "unresolved_recall": {
+      "correct": 6,
+      "total": 6,
+      "percent": 100.0
+    },
+    "resolved_recall": {
+      "correct": 21,
+      "total": 28,
+      "percent": 75.0
+    },
+    "contrast_group_full_consistency_rate": {
+      "correct_groups": 7,
+      "total_groups": 11,
+      "percent": 63.6
+    },
+    "malformed_or_error_rate": {
+      "error_count": 2,
+      "total": 34,
+      "percent": 5.9
+    }
+  },
+  "confusions": {
+    "resolution_status_confusion": {
+      "__error__": {
+        "__error__": 0,
+        "resolved": 0,
+        "unresolved": 0
+      },
+      "resolved": {
+        "__error__": 2,
+        "resolved": 21,
+        "unresolved": 5
+      },
+      "unresolved": {
+        "__error__": 0,
+        "resolved": 0,
+        "unresolved": 6
+      }
+    },
+    "source_domain_confusion": {
+      "__error__": {
+        "__error__": 0,
+        "certified_immigration_instructions": 0,
+        "legislation_or_regulation": 0,
+        "official_inz_non_manual": 0,
+        "responsible_external_official_authority": 0,
+        "unresolved": 0
+      },
+      "certified_immigration_instructions": {
+        "__error__": 0,
+        "certified_immigration_instructions": 6,
+        "legislation_or_regulation": 0,
+        "official_inz_non_manual": 0,
+        "responsible_external_official_authority": 0,
+        "unresolved": 1
+      },
+      "legislation_or_regulation": {
+        "__error__": 0,
+        "certified_immigration_instructions": 0,
+        "legislation_or_regulation": 3,
+        "official_inz_non_manual": 0,
+        "responsible_external_official_authority": 0,
+        "unresolved": 0
+      },
+      "official_inz_non_manual": {
+        "__error__": 2,
+        "certified_immigration_instructions": 0,
+        "legislation_or_regulation": 0,
+        "official_inz_non_manual": 2,
+        "responsible_external_official_authority": 0,
+        "unresolved": 3
+      },
+      "responsible_external_official_authority": {
+        "__error__": 0,
+        "certified_immigration_instructions": 0,
+        "legislation_or_regulation": 0,
+        "official_inz_non_manual": 0,
+        "responsible_external_official_authority": 10,
+        "unresolved": 1
+      },
+      "unresolved": {
+        "__error__": 0,
+        "certified_immigration_instructions": 0,
+        "legislation_or_regulation": 0,
+        "official_inz_non_manual": 0,
+        "responsible_external_official_authority": 0,
+        "unresolved": 6
+      }
+    },
+    "source_class_confusion": {
+      "__error__": {
+        "__error__": 0,
+        "current_fee_or_charge_information": 0,
+        "external_agency_assessment_or_service": 0,
+        "external_entitlement_or_service_regime": 0,
+        "foreign_issuing_authority_procedure": 0,
+        "inz_live_service_information": 0,
+        "inz_non_manual_procedure_or_interpretation": 0,
+        "legislation_or_regulation": 0,
+        "manual_instruction_transition": 0,
+        "operational_manual_instruction": 0,
+        "other_official_external_authority": 0,
+        "professional_or_assessor_guidance": 0,
+        "unresolved": 0
+      },
+      "current_fee_or_charge_information": {
+        "__error__": 0,
+        "current_fee_or_charge_information": 0,
+        "external_agency_assessment_or_service": 0,
+        "external_entitlement_or_service_regime": 0,
+        "foreign_issuing_authority_procedure": 0,
+        "inz_live_service_information": 0,
+        "inz_non_manual_procedure_or_interpretation": 0,
+        "legislation_or_regulation": 0,
+        "manual_instruction_transition": 0,
+        "operational_manual_instruction": 0,
+        "other_official_external_authority": 0,
+        "professional_or_assessor_guidance": 0,
+        "unresolved": 2
+      },
+      "external_agency_assessment_or_service": {
+        "__error__": 0,
+        "current_fee_or_charge_information": 0,
+        "external_agency_assessment_or_service": 2,
+        "external_entitlement_or_service_regime": 0,
+        "foreign_issuing_authority_procedure": 0,
+        "inz_live_service_information": 0,
+        "inz_non_manual_procedure_or_interpretation": 0,
+        "legislation_or_regulation": 0,
+        "manual_instruction_transition": 0,
+        "operational_manual_instruction": 0,
+        "other_official_external_authority": 0,
+        "professional_or_assessor_guidance": 0,
+        "unresolved": 0
+      },
+      "external_entitlement_or_service_regime": {
+        "__error__": 0,
+        "current_fee_or_charge_information": 0,
+        "external_agency_assessment_or_service": 0,
+        "external_entitlement_or_service_regime": 1,
+        "foreign_issuing_authority_procedure": 0,
+        "inz_live_service_information": 0,
+        "inz_non_manual_procedure_or_interpretation": 0,
+        "legislation_or_regulation": 0,
+        "manual_instruction_transition": 0,
+        "operational_manual_instruction": 0,
+        "other_official_external_authority": 0,
+        "professional_or_assessor_guidance": 0,
+        "unresolved": 1
+      },
+      "foreign_issuing_authority_procedure": {
+        "__error__": 0,
+        "current_fee_or_charge_information": 0,
+        "external_agency_assessment_or_service": 0,
+        "external_entitlement_or_service_regime": 0,
+        "foreign_issuing_authority_procedure": 2,
+        "inz_live_service_information": 0,
+        "inz_non_manual_procedure_or_interpretation": 0,
+        "legislation_or_regulation": 0,
+        "manual_instruction_transition": 0,
+        "operational_manual_instruction": 0,
+        "other_official_external_authority": 0,
+        "professional_or_assessor_guidance": 0,
+        "unresolved": 0
+      },
+      "inz_live_service_information": {
+        "__error__": 2,
+        "current_fee_or_charge_information": 0,
+        "external_agency_assessment_or_service": 0,
+        "external_entitlement_or_service_regime": 0,
+        "foreign_issuing_authority_procedure": 0,
+        "inz_live_service_information": 0,
+        "inz_non_manual_procedure_or_interpretation": 0,
+        "legislation_or_regulation": 0,
+        "manual_instruction_transition": 0,
+        "operational_manual_instruction": 0,
+        "other_official_external_authority": 0,
+        "professional_or_assessor_guidance": 0,
+        "unresolved": 1
+      },
+      "inz_non_manual_procedure_or_interpretation": {
+        "__error__": 0,
+        "current_fee_or_charge_information": 0,
+        "external_agency_assessment_or_service": 0,
+        "external_entitlement_or_service_regime": 0,
+        "foreign_issuing_authority_procedure": 0,
+        "inz_live_service_information": 0,
+        "inz_non_manual_procedure_or_interpretation": 2,
+        "legislation_or_regulation": 0,
+        "manual_instruction_transition": 0,
+        "operational_manual_instruction": 0,
+        "other_official_external_authority": 0,
+        "professional_or_assessor_guidance": 0,
+        "unresolved": 0
+      },
+      "legislation_or_regulation": {
+        "__error__": 0,
+        "current_fee_or_charge_information": 0,
+        "external_agency_assessment_or_service": 0,
+        "external_entitlement_or_service_regime": 0,
+        "foreign_issuing_authority_procedure": 0,
+        "inz_live_service_information": 0,
+        "inz_non_manual_procedure_or_interpretation": 0,
+        "legislation_or_regulation": 3,
+        "manual_instruction_transition": 0,
+        "operational_manual_instruction": 0,
+        "other_official_external_authority": 0,
+        "professional_or_assessor_guidance": 0,
+        "unresolved": 0
+      },
+      "manual_instruction_transition": {
+        "__error__": 0,
+        "current_fee_or_charge_information": 0,
+        "external_agency_assessment_or_service": 0,
+        "external_entitlement_or_service_regime": 0,
+        "foreign_issuing_authority_procedure": 0,
+        "inz_live_service_information": 0,
+        "inz_non_manual_procedure_or_interpretation": 0,
+        "legislation_or_regulation": 0,
+        "manual_instruction_transition": 2,
+        "operational_manual_instruction": 0,
+        "other_official_external_authority": 0,
+        "professional_or_assessor_guidance": 0,
+        "unresolved": 0
+      },
+      "operational_manual_instruction": {
+        "__error__": 0,
+        "current_fee_or_charge_information": 0,
+        "external_agency_assessment_or_service": 0,
+        "external_entitlement_or_service_regime": 0,
+        "foreign_issuing_authority_procedure": 0,
+        "inz_live_service_information": 0,
+        "inz_non_manual_procedure_or_interpretation": 0,
+        "legislation_or_regulation": 0,
+        "manual_instruction_transition": 0,
+        "operational_manual_instruction": 4,
+        "other_official_external_authority": 0,
+        "professional_or_assessor_guidance": 0,
+        "unresolved": 1
+      },
+      "other_official_external_authority": {
+        "__error__": 0,
+        "current_fee_or_charge_information": 0,
+        "external_agency_assessment_or_service": 0,
+        "external_entitlement_or_service_regime": 0,
+        "foreign_issuing_authority_procedure": 1,
+        "inz_live_service_information": 0,
+        "inz_non_manual_procedure_or_interpretation": 0,
+        "legislation_or_regulation": 0,
+        "manual_instruction_transition": 0,
+        "operational_manual_instruction": 0,
+        "other_official_external_authority": 1,
+        "professional_or_assessor_guidance": 0,
+        "unresolved": 0
+      },
+      "professional_or_assessor_guidance": {
+        "__error__": 0,
+        "current_fee_or_charge_information": 0,
+        "external_agency_assessment_or_service": 0,
+        "external_entitlement_or_service_regime": 0,
+        "foreign_issuing_authority_procedure": 0,
+        "inz_live_service_information": 0,
+        "inz_non_manual_procedure_or_interpretation": 0,
+        "legislation_or_regulation": 0,
+        "manual_instruction_transition": 0,
+        "operational_manual_instruction": 0,
+        "other_official_external_authority": 0,
+        "professional_or_assessor_guidance": 3,
+        "unresolved": 0
+      },
+      "unresolved": {
+        "__error__": 0,
+        "current_fee_or_charge_information": 0,
+        "external_agency_assessment_or_service": 0,
+        "external_entitlement_or_service_regime": 0,
+        "foreign_issuing_authority_procedure": 0,
+        "inz_live_service_information": 0,
+        "inz_non_manual_procedure_or_interpretation": 0,
+        "legislation_or_regulation": 0,
+        "manual_instruction_transition": 0,
+        "operational_manual_instruction": 0,
+        "other_official_external_authority": 0,
+        "professional_or_assessor_guidance": 0,
+        "unresolved": 6
+      }
+    }
+  },
+  "acceptance": {
+    "overall_pass": false,
+    "all_hard_gates_pass": false,
+    "per_class_floor_passed": false,
+    "hard_gates": {
+      "four_field_exact_match_accuracy": {
+        "passed": false,
+        "comparison": "26/34 < 30/34"
+      },
+      "resolution_status_accuracy": {
+        "passed": false,
+        "comparison": "27/34 < 32/34"
+      },
+      "source_domain_accuracy": {
+        "passed": false,
+        "comparison": "27/34 < 32/34"
+      },
+      "source_class_accuracy": {
+        "passed": false,
+        "comparison": "26/34 < 30/34"
+      },
+      "source_class_macro_recall": {
+        "passed": false,
+        "comparison": "73.3% < 85.0%"
+      },
+      "unresolved_recall": {
+        "passed": true,
+        "comparison": "6/6 >= 5/6"
+      },
+      "resolved_recall": {
+        "passed": false,
+        "comparison": "21/28 < 25/28"
+      },
+      "contrast_group_full_consistency_rate": {
+        "passed": false,
+        "comparison": "7/11 < 9/11"
+      },
+      "malformed_or_error_rate": {
+        "passed": false,
+        "comparison": "2/34 > 0/34"
+      }
+    },
+    "per_class_floor_percent": 50.0,
+    "per_class_floor_failures": [
+      {
+        "source_class": "current_fee_or_charge_information",
+        "recall_percent": 0.0,
+        "minimum_percent": 50.0,
+        "correct": 0,
+        "support": 2
+      },
+      {
+        "source_class": "inz_live_service_information",
+        "recall_percent": 0.0,
+        "minimum_percent": 50.0,
+        "correct": 0,
+        "support": 3
+      }
+    ],
+    "failed_contrast_groups": [
+      {
+        "contrast_group": "manual_rule_vs_live_service",
+        "members": [
+          "sbv2_01",
+          "sbv2_10"
+        ],
+        "failed_members": [
+          "sbv2_10"
+        ]
+      },
+      {
+        "contrast_group": "manual_rule_vs_nonmanual_procedure",
+        "members": [
+          "sbv2_03",
+          "sbv2_16"
+        ],
+        "failed_members": [
+          "sbv2_03"
+        ]
+      },
+      {
+        "contrast_group": "fee_legal_basis_vs_current_amount",
+        "members": [
+          "sbv2_09",
+          "sbv2_13"
+        ],
+        "failed_members": [
+          "sbv2_13"
+        ]
+      },
+      {
+        "contrast_group": "other_official_context_required",
+        "members": [
+          "sbv2_26",
+          "sbv2_30"
+        ],
+        "failed_members": [
+          "sbv2_26"
+        ]
+      }
+    ],
+    "automatic_retry": false,
+    "manual_override": false
+  },
+  "case_results": [
+    {
+      "test_id": "sbv2_01",
+      "prediction_status": "prediction",
+      "four_field_correct": true,
+      "resolution_status_correct": true,
+      "source_domain_correct": true,
+      "source_class_correct": true,
+      "responsible_authority_type_correct": true,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "certified_immigration_instructions",
+        "source_class": "operational_manual_instruction",
+        "responsible_authority_type": "immigration_new_zealand"
+      },
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "certified_immigration_instructions",
+        "source_class": "operational_manual_instruction",
+        "responsible_authority_type": "immigration_new_zealand"
+      }
+    },
+    {
+      "test_id": "sbv2_02",
+      "prediction_status": "prediction",
+      "four_field_correct": true,
+      "resolution_status_correct": true,
+      "source_domain_correct": true,
+      "source_class_correct": true,
+      "responsible_authority_type_correct": true,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "certified_immigration_instructions",
+        "source_class": "operational_manual_instruction",
+        "responsible_authority_type": "immigration_new_zealand"
+      },
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "certified_immigration_instructions",
+        "source_class": "operational_manual_instruction",
+        "responsible_authority_type": "immigration_new_zealand"
+      }
+    },
+    {
+      "test_id": "sbv2_03",
+      "prediction_status": "prediction",
+      "four_field_correct": false,
+      "resolution_status_correct": false,
+      "source_domain_correct": false,
+      "source_class_correct": false,
+      "responsible_authority_type_correct": false,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "certified_immigration_instructions",
+        "source_class": "operational_manual_instruction",
+        "responsible_authority_type": "immigration_new_zealand"
+      },
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved"
+      }
+    },
+    {
+      "test_id": "sbv2_04",
+      "prediction_status": "prediction",
+      "four_field_correct": true,
+      "resolution_status_correct": true,
+      "source_domain_correct": true,
+      "source_class_correct": true,
+      "responsible_authority_type_correct": true,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "certified_immigration_instructions",
+        "source_class": "operational_manual_instruction",
+        "responsible_authority_type": "immigration_new_zealand"
+      },
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "certified_immigration_instructions",
+        "source_class": "operational_manual_instruction",
+        "responsible_authority_type": "immigration_new_zealand"
+      }
+    },
+    {
+      "test_id": "sbv2_05",
+      "prediction_status": "prediction",
+      "four_field_correct": true,
+      "resolution_status_correct": true,
+      "source_domain_correct": true,
+      "source_class_correct": true,
+      "responsible_authority_type_correct": true,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "certified_immigration_instructions",
+        "source_class": "manual_instruction_transition",
+        "responsible_authority_type": "immigration_new_zealand"
+      },
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "certified_immigration_instructions",
+        "source_class": "manual_instruction_transition",
+        "responsible_authority_type": "immigration_new_zealand"
+      }
+    },
+    {
+      "test_id": "sbv2_06",
+      "prediction_status": "prediction",
+      "four_field_correct": true,
+      "resolution_status_correct": true,
+      "source_domain_correct": true,
+      "source_class_correct": true,
+      "responsible_authority_type_correct": true,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "certified_immigration_instructions",
+        "source_class": "manual_instruction_transition",
+        "responsible_authority_type": "immigration_new_zealand"
+      },
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "certified_immigration_instructions",
+        "source_class": "manual_instruction_transition",
+        "responsible_authority_type": "immigration_new_zealand"
+      }
+    },
+    {
+      "test_id": "sbv2_07",
+      "prediction_status": "prediction",
+      "four_field_correct": true,
+      "resolution_status_correct": true,
+      "source_domain_correct": true,
+      "source_class_correct": true,
+      "responsible_authority_type_correct": true,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "legislation_or_regulation",
+        "source_class": "legislation_or_regulation",
+        "responsible_authority_type": "new_zealand_legislation"
+      },
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "legislation_or_regulation",
+        "source_class": "legislation_or_regulation",
+        "responsible_authority_type": "new_zealand_legislation"
+      }
+    },
+    {
+      "test_id": "sbv2_08",
+      "prediction_status": "prediction",
+      "four_field_correct": true,
+      "resolution_status_correct": true,
+      "source_domain_correct": true,
+      "source_class_correct": true,
+      "responsible_authority_type_correct": true,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "legislation_or_regulation",
+        "source_class": "legislation_or_regulation",
+        "responsible_authority_type": "new_zealand_legislation"
+      },
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "legislation_or_regulation",
+        "source_class": "legislation_or_regulation",
+        "responsible_authority_type": "new_zealand_legislation"
+      }
+    },
+    {
+      "test_id": "sbv2_09",
+      "prediction_status": "prediction",
+      "four_field_correct": true,
+      "resolution_status_correct": true,
+      "source_domain_correct": true,
+      "source_class_correct": true,
+      "responsible_authority_type_correct": true,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "legislation_or_regulation",
+        "source_class": "legislation_or_regulation",
+        "responsible_authority_type": "new_zealand_legislation"
+      },
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "legislation_or_regulation",
+        "source_class": "legislation_or_regulation",
+        "responsible_authority_type": "new_zealand_legislation"
+      }
+    },
+    {
+      "test_id": "sbv2_10",
+      "prediction_status": "error",
+      "four_field_correct": false,
+      "resolution_status_correct": false,
+      "source_domain_correct": false,
+      "source_class_correct": false,
+      "responsible_authority_type_correct": false,
+      "error_type": "ClassifierContractError",
+      "error": "Classifier model output violates the frozen schema."
+    },
+    {
+      "test_id": "sbv2_11",
+      "prediction_status": "prediction",
+      "four_field_correct": false,
+      "resolution_status_correct": false,
+      "source_domain_correct": false,
+      "source_class_correct": false,
+      "responsible_authority_type_correct": false,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "official_inz_non_manual",
+        "source_class": "inz_live_service_information",
+        "responsible_authority_type": "immigration_new_zealand"
+      },
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved"
+      }
+    },
+    {
+      "test_id": "sbv2_12",
+      "prediction_status": "error",
+      "four_field_correct": false,
+      "resolution_status_correct": false,
+      "source_domain_correct": false,
+      "source_class_correct": false,
+      "responsible_authority_type_correct": false,
+      "error_type": "ClassifierContractError",
+      "error": "Classifier model output violates the frozen schema."
+    },
+    {
+      "test_id": "sbv2_13",
+      "prediction_status": "prediction",
+      "four_field_correct": false,
+      "resolution_status_correct": false,
+      "source_domain_correct": false,
+      "source_class_correct": false,
+      "responsible_authority_type_correct": false,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "official_inz_non_manual",
+        "source_class": "current_fee_or_charge_information",
+        "responsible_authority_type": "immigration_new_zealand"
+      },
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved"
+      }
+    },
+    {
+      "test_id": "sbv2_14",
+      "prediction_status": "prediction",
+      "four_field_correct": false,
+      "resolution_status_correct": false,
+      "source_domain_correct": false,
+      "source_class_correct": false,
+      "responsible_authority_type_correct": false,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "official_inz_non_manual",
+        "source_class": "current_fee_or_charge_information",
+        "responsible_authority_type": "immigration_new_zealand"
+      },
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved"
+      }
+    },
+    {
+      "test_id": "sbv2_15",
+      "prediction_status": "prediction",
+      "four_field_correct": true,
+      "resolution_status_correct": true,
+      "source_domain_correct": true,
+      "source_class_correct": true,
+      "responsible_authority_type_correct": true,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "official_inz_non_manual",
+        "source_class": "inz_non_manual_procedure_or_interpretation",
+        "responsible_authority_type": "immigration_new_zealand"
+      },
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "official_inz_non_manual",
+        "source_class": "inz_non_manual_procedure_or_interpretation",
+        "responsible_authority_type": "immigration_new_zealand"
+      }
+    },
+    {
+      "test_id": "sbv2_16",
+      "prediction_status": "prediction",
+      "four_field_correct": true,
+      "resolution_status_correct": true,
+      "source_domain_correct": true,
+      "source_class_correct": true,
+      "responsible_authority_type_correct": true,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "official_inz_non_manual",
+        "source_class": "inz_non_manual_procedure_or_interpretation",
+        "responsible_authority_type": "immigration_new_zealand"
+      },
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "official_inz_non_manual",
+        "source_class": "inz_non_manual_procedure_or_interpretation",
+        "responsible_authority_type": "immigration_new_zealand"
+      }
+    },
+    {
+      "test_id": "sbv2_17",
+      "prediction_status": "prediction",
+      "four_field_correct": true,
+      "resolution_status_correct": true,
+      "source_domain_correct": true,
+      "source_class_correct": true,
+      "responsible_authority_type_correct": true,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "foreign_issuing_authority_procedure",
+        "responsible_authority_type": "foreign_issuing_authority"
+      },
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "foreign_issuing_authority_procedure",
+        "responsible_authority_type": "foreign_issuing_authority"
+      }
+    },
+    {
+      "test_id": "sbv2_18",
+      "prediction_status": "prediction",
+      "four_field_correct": true,
+      "resolution_status_correct": true,
+      "source_domain_correct": true,
+      "source_class_correct": true,
+      "responsible_authority_type_correct": true,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "foreign_issuing_authority_procedure",
+        "responsible_authority_type": "foreign_issuing_authority"
+      },
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "foreign_issuing_authority_procedure",
+        "responsible_authority_type": "foreign_issuing_authority"
+      }
+    },
+    {
+      "test_id": "sbv2_19",
+      "prediction_status": "prediction",
+      "four_field_correct": true,
+      "resolution_status_correct": true,
+      "source_domain_correct": true,
+      "source_class_correct": true,
+      "responsible_authority_type_correct": true,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "external_agency_assessment_or_service",
+        "responsible_authority_type": "new_zealand_external_agency"
+      },
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "external_agency_assessment_or_service",
+        "responsible_authority_type": "new_zealand_external_agency"
+      }
+    },
+    {
+      "test_id": "sbv2_20",
+      "prediction_status": "prediction",
+      "four_field_correct": true,
+      "resolution_status_correct": true,
+      "source_domain_correct": true,
+      "source_class_correct": true,
+      "responsible_authority_type_correct": true,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "external_agency_assessment_or_service",
+        "responsible_authority_type": "new_zealand_external_agency"
+      },
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "external_agency_assessment_or_service",
+        "responsible_authority_type": "new_zealand_external_agency"
+      }
+    },
+    {
+      "test_id": "sbv2_21",
+      "prediction_status": "prediction",
+      "four_field_correct": true,
+      "resolution_status_correct": true,
+      "source_domain_correct": true,
+      "source_class_correct": true,
+      "responsible_authority_type_correct": true,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "external_entitlement_or_service_regime",
+        "responsible_authority_type": "public_service_authority"
+      },
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "external_entitlement_or_service_regime",
+        "responsible_authority_type": "public_service_authority"
+      }
+    },
+    {
+      "test_id": "sbv2_22",
+      "prediction_status": "prediction",
+      "four_field_correct": false,
+      "resolution_status_correct": false,
+      "source_domain_correct": false,
+      "source_class_correct": false,
+      "responsible_authority_type_correct": false,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "external_entitlement_or_service_regime",
+        "responsible_authority_type": "public_service_authority"
+      },
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved"
+      }
+    },
+    {
+      "test_id": "sbv2_23",
+      "prediction_status": "prediction",
+      "four_field_correct": true,
+      "resolution_status_correct": true,
+      "source_domain_correct": true,
+      "source_class_correct": true,
+      "responsible_authority_type_correct": true,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "professional_or_assessor_guidance",
+        "responsible_authority_type": "professional_or_assessment_authority"
+      },
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "professional_or_assessor_guidance",
+        "responsible_authority_type": "professional_or_assessment_authority"
+      }
+    },
+    {
+      "test_id": "sbv2_24",
+      "prediction_status": "prediction",
+      "four_field_correct": true,
+      "resolution_status_correct": true,
+      "source_domain_correct": true,
+      "source_class_correct": true,
+      "responsible_authority_type_correct": true,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "professional_or_assessor_guidance",
+        "responsible_authority_type": "professional_or_assessment_authority"
+      },
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "professional_or_assessor_guidance",
+        "responsible_authority_type": "professional_or_assessment_authority"
+      }
+    },
+    {
+      "test_id": "sbv2_25",
+      "prediction_status": "prediction",
+      "four_field_correct": true,
+      "resolution_status_correct": true,
+      "source_domain_correct": true,
+      "source_class_correct": true,
+      "responsible_authority_type_correct": true,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "professional_or_assessor_guidance",
+        "responsible_authority_type": "professional_or_assessment_authority"
+      },
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "professional_or_assessor_guidance",
+        "responsible_authority_type": "professional_or_assessment_authority"
+      }
+    },
+    {
+      "test_id": "sbv2_26",
+      "prediction_status": "prediction",
+      "four_field_correct": false,
+      "resolution_status_correct": true,
+      "source_domain_correct": true,
+      "source_class_correct": false,
+      "responsible_authority_type_correct": false,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "other_official_external_authority",
+        "responsible_authority_type": "other_official_authority"
+      },
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "foreign_issuing_authority_procedure",
+        "responsible_authority_type": "foreign_issuing_authority"
+      }
+    },
+    {
+      "test_id": "sbv2_27",
+      "prediction_status": "prediction",
+      "four_field_correct": true,
+      "resolution_status_correct": true,
+      "source_domain_correct": true,
+      "source_class_correct": true,
+      "responsible_authority_type_correct": true,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "other_official_external_authority",
+        "responsible_authority_type": "other_official_authority"
+      },
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "responsible_external_official_authority",
+        "source_class": "other_official_external_authority",
+        "responsible_authority_type": "other_official_authority"
+      }
+    },
+    {
+      "test_id": "sbv2_28",
+      "prediction_status": "prediction",
+      "four_field_correct": true,
+      "resolution_status_correct": true,
+      "source_domain_correct": true,
+      "source_class_correct": true,
+      "responsible_authority_type_correct": true,
+      "gold": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved"
+      },
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved"
+      }
+    },
+    {
+      "test_id": "sbv2_29",
+      "prediction_status": "prediction",
+      "four_field_correct": true,
+      "resolution_status_correct": true,
+      "source_domain_correct": true,
+      "source_class_correct": true,
+      "responsible_authority_type_correct": true,
+      "gold": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved"
+      },
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved"
+      }
+    },
+    {
+      "test_id": "sbv2_30",
+      "prediction_status": "prediction",
+      "four_field_correct": true,
+      "resolution_status_correct": true,
+      "source_domain_correct": true,
+      "source_class_correct": true,
+      "responsible_authority_type_correct": true,
+      "gold": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved"
+      },
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved"
+      }
+    },
+    {
+      "test_id": "sbv2_31",
+      "prediction_status": "prediction",
+      "four_field_correct": true,
+      "resolution_status_correct": true,
+      "source_domain_correct": true,
+      "source_class_correct": true,
+      "responsible_authority_type_correct": true,
+      "gold": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved"
+      },
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved"
+      }
+    },
+    {
+      "test_id": "sbv2_32",
+      "prediction_status": "prediction",
+      "four_field_correct": true,
+      "resolution_status_correct": true,
+      "source_domain_correct": true,
+      "source_class_correct": true,
+      "responsible_authority_type_correct": true,
+      "gold": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved"
+      },
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved"
+      }
+    },
+    {
+      "test_id": "sbv2_33",
+      "prediction_status": "prediction",
+      "four_field_correct": true,
+      "resolution_status_correct": true,
+      "source_domain_correct": true,
+      "source_class_correct": true,
+      "responsible_authority_type_correct": true,
+      "gold": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved"
+      },
+      "prediction": {
+        "resolution_status": "unresolved",
+        "source_domain": "unresolved",
+        "source_class": "unresolved",
+        "responsible_authority_type": "unresolved"
+      }
+    },
+    {
+      "test_id": "sbv2_34",
+      "prediction_status": "prediction",
+      "four_field_correct": true,
+      "resolution_status_correct": true,
+      "source_domain_correct": true,
+      "source_class_correct": true,
+      "responsible_authority_type_correct": true,
+      "gold": {
+        "resolution_status": "resolved",
+        "source_domain": "certified_immigration_instructions",
+        "source_class": "operational_manual_instruction",
+        "responsible_authority_type": "immigration_new_zealand"
+      },
+      "prediction": {
+        "resolution_status": "resolved",
+        "source_domain": "certified_immigration_instructions",
+        "source_class": "operational_manual_instruction",
+        "responsible_authority_type": "immigration_new_zealand"
+      }
+    }
+  ],
+  "interpretation": {
+    "scope": "Synthetic architecture-contract evaluation only.",
+    "passing_does_not_establish": [
+      "real-world answer-layer generalisation",
+      "production safety",
+      "runtime integration approval",
+      "candidate-v7 approval"
+    ],
+    "next_step_if_pass": "Freeze and review the experimental classifier result before any answer-layer candidate design.",
+    "next_step_if_fail": "Treat this prediction set as development evidence. Do not lower thresholds or rescore a revised classifier against the same pack as an untouched acceptance run."
+  }
+}

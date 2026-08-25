@@ -1,0 +1,75 @@
+{
+  "schema": "waypoint-source-boundary-classifier-run-authorisation-v2",
+  "status": "AUTHORISE_ONE_FIRST_UNTOUCHED_INDEPENDENT_RUN",
+  "authorised_on": "2026-08-25",
+  "source_artifacts": {
+    "production_runtime_sha256": "FF879300C09B195681E109E5B4F5D807C89216E986AE4AA9338B104FA99AAD0E",
+    "classifier_implementation_v2_sha256": "8193FCDDB48585EC8A8BA8BCC477D123011B50F2F38531BEB2D88836975FF949",
+    "classifier_prompt_sha256": "4A5C725B528FF09F7EEC3B306FD44F1ABDA99C6EC5EE5DFBB2E451F4ECA350C2",
+    "blind_runner_v2_sha256": "4279E0B771DFCB69202D99722292F45A90BE8FDF454C67B834D52A01E8F46A58",
+    "scorer_v2_sha256": "0871AA74522CDF14EE58F7C0A8D3101C080FCE7B1BB531A17A3267FD934737E4",
+    "leakage_guard_v2_sha256": "BFFB174554ADA901A56D119481100BB7480A0E8B32E96CA2A2961D4BC501E3D8",
+    "blind_input_v2_sha256": "22D3A1C184F95D65D9571191A1FFF01AD251050C554BA6D96F15FBABBFDF9D6B",
+    "independent_contract_pack_v5_sha256": "1B3CEA56504E3932C7DCA342DF99DC22523A4676B1C22714B9A122DDD566E67B",
+    "acceptance_thresholds_v2_sha256": "1BDD2ED8950D6E3E612C66DCD5384BD5E0CAC784E39A70C3CE09EAD5C310D277",
+    "implementation_review_v2_sha256": "222C11F1CEEDE217CB9F34B7771E837BCB2E92065C7D1C4FB42CC0F18A85FA1A",
+    "execution_bundle_review_v2_sha256": "9563301C445837BC11035E1EF9B361263C0DE839A1B3B1985E17FF82558B5986"
+  },
+  "execution_contract": {
+    "model": "gpt-5.4-mini",
+    "reasoning_effort": "none",
+    "max_completion_tokens": 800,
+    "temperature": 0.0,
+    "case_count": 40,
+    "one_model_call_per_case": true,
+    "sequential": true,
+    "automatic_retry": false,
+    "repair_call": false,
+    "fallback_model": false,
+    "single_first_run_only": true
+  },
+  "freshness_checks": {
+    "predictions_v2_absent": true,
+    "prediction_result_v2_absent": true,
+    "score_v2_absent": true,
+    "score_result_v2_absent": true,
+    "api_key_configured": true,
+    "api_key_persisted_in_artifact": false
+  },
+  "blindness_contract": {
+    "runner_reads_gold_pack": false,
+    "runner_reads_threshold_file": false,
+    "case_id_passed_to_model": false,
+    "model_receives": [
+      "unsupported_proposition",
+      "trusted_source_context"
+    ]
+  },
+  "methodology": {
+    "first_run_claim": "FIRST_UNTOUCHED_INDEPENDENT_ACCEPTANCE_RUN",
+    "thresholds_frozen_before_prediction": true,
+    "independent_pack_frozen_before_prediction": true,
+    "classifier_frozen_before_prediction": true,
+    "runner_frozen_before_prediction": true,
+    "no_manual_override": true,
+    "no_retry": true,
+    "prediction_must_be_frozen_before_scoring": true
+  },
+  "authorisations": {
+    "classifier_model_prediction_authorised": true,
+    "first_untouched_independent_run_authorised": true,
+    "prediction_result_freeze_authorised_after_run": true,
+    "scoring_authorised": false,
+    "repeat_run_authorised": false,
+    "threshold_change_authorised": false,
+    "candidate_v7_build_authorised": false,
+    "production_runtime_change_authorised": false,
+    "fresh_external_v3_holdout_authorised": false
+  },
+  "next_engineering_task": {
+    "name": "first_untouched_source_boundary_classifier_run_v2",
+    "authorised": true,
+    "command": "uv run python -m scripts.run_source_boundary_classifier_blind_v2",
+    "purpose": "Execute exactly one sequential 40-case blind model run against the frozen independent acceptance input."
+  }
+}

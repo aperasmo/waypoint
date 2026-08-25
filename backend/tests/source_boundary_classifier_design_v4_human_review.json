@@ -1,0 +1,109 @@
+{
+  "schema": "waypoint-source-boundary-classifier-design-v4-human-review",
+  "status": "APPROVED_FRESH_INDEPENDENT_PACK_CONSTRUCTION_ONLY",
+  "reviewed_on": "2026-08-25",
+  "source_artifacts": {
+    "production_runtime_sha256": "FF879300C09B195681E109E5B4F5D807C89216E986AE4AA9338B104FA99AAD0E",
+    "classifier_design_v4_sha256": "9563158E74CFBC0C7D25D2DC2BA8FC2036E0B32193BADDFBE464ECCB99329948",
+    "classifier_design_v3_sha256": "0EFBA11ECA5EE07A41BBB841817B93CB469BFA5B48BF42DF268B6A8F3257356B",
+    "acceptance_thresholds_v2_sha256": "1BDD2ED8950D6E3E612C66DCD5384BD5E0CAC784E39A70C3CE09EAD5C310D277",
+    "human_diagnostic_review_v2_sha256": "B981E258FEB7EFB26B2901386522366B230C82465D81A459DC91B1162E503392"
+  },
+  "review_decision": {
+    "overall": "PASS",
+    "revision_scope": "PASS",
+    "taxonomy_preservation": "PASS",
+    "threshold_preservation": "PASS",
+    "one_call_architecture": "PASS",
+    "deterministic_context_gate_semantics": "PASS",
+    "foreign_issuing_verification_boundary": "PASS",
+    "unresolved_safety": "PASS",
+    "output_contract": "PASS",
+    "benchmark_isolation": "PASS",
+    "acceptance_methodology": "PASS"
+  },
+  "verified_revision_scope": {
+    "source_classes": 12,
+    "taxonomy_changed": false,
+    "thresholds_changed": false,
+    "model_changed": false,
+    "required_revisions": [
+      "DETERMINISTIC_CONTEXT_GATE_ENFORCEMENT",
+      "FOREIGN_ISSUING_VERIFICATION_BOUNDARY"
+    ],
+    "additional_design_revisions_detected": false
+  },
+  "deterministic_gate_review": {
+    "decision": "PASS",
+    "gated_classes": [
+      "inz_non_manual_procedure_or_interpretation",
+      "manual_instruction_transition",
+      "other_official_external_authority"
+    ],
+    "universal_context_gate": false,
+    "gate_failure_final_class": "unresolved",
+    "second_model_call": false,
+    "semantic_fallback": false,
+    "promotion_from_unresolved": false,
+    "resolved_class_remapping": false,
+    "proposed_source_class_audited": true,
+    "unit_testable_without_model_call": true
+  },
+  "foreign_issuing_review": {
+    "decision": "PASS",
+    "issuer_relationship_required": true,
+    "verification_alone_sufficient": false,
+    "foreign_authority_status_alone_sufficient": false,
+    "generic_document_wording_alone_sufficient": false,
+    "external_agency_service_boundary_preserved": true,
+    "unresolved_available_when_role_ambiguous": true
+  },
+  "methodological_review": {
+    "pack_v5_status": "DEVELOPMENT_DIAGNOSTIC_ONLY",
+    "pack_v5_reusable_as_fresh_acceptance": false,
+    "same_prediction_set_reusable_for_acceptance": false,
+    "fresh_independent_acceptance_pack_required": true,
+    "fresh_pack_must_not_copy_old_case_literals": true,
+    "fresh_pack_must_be_constructed_after_this_review": true,
+    "implementation_must_not_be_constructed_before_fresh_pack_review": true,
+    "thresholds_must_be_frozen_before_new_predictions": true
+  },
+  "fresh_pack_construction_constraints": {
+    "design_source": "classifier_design_v4",
+    "must_be_independent_of": [
+      "pack_v5 case wording",
+      "pack_v5 case IDs",
+      "pack_v5 predictions",
+      "pack_v5 score",
+      "pack_v5 failure-analysis literals"
+    ],
+    "must_cover_all_12_source_classes": true,
+    "must_include_resolved_and_unresolved_cases": true,
+    "must_test_all_three_context_gates": true,
+    "must_test_foreign_issuing_vs_external_agency_boundary": true,
+    "must_test_semantic_non_gated_resolution_without_context": true,
+    "must_test_unresolved_ambiguity": true,
+    "must_be_frozen_before_classifier_v3_implementation": true,
+    "model_calls_during_construction": 0
+  },
+  "authorisations": {
+    "fresh_independent_acceptance_pack_v6_construction_authorised": true,
+    "fresh_pack_human_review_required_after_construction": true,
+    "acceptance_thresholds_v3_construction_authorised": false,
+    "classifier_prompt_v3_construction_authorised": false,
+    "classifier_implementation_v3_construction_authorised": false,
+    "classifier_model_run_authorised": false,
+    "classifier_rerun_on_pack_v5_authorised": false,
+    "threshold_change_authorised": false,
+    "candidate_v7_build_authorised": false,
+    "production_runtime_change_authorised": false,
+    "external_retrieval_authorised": false,
+    "fresh_external_v3_holdout_authorised": false
+  },
+  "next_engineering_task": {
+    "name": "source_boundary_classifier_independent_contract_test_pack_v6",
+    "authorised": true,
+    "model_calls": 0,
+    "purpose": "Construct a new independent acceptance pack from frozen design v4, without copying pack-v5 case literals or observed failure wording, before any prompt or implementation v3 is constructed."
+  }
+}
