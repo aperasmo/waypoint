@@ -70,5 +70,14 @@
     "detected_via": "content_hash",
     "source_url": "https://www.immigration.govt.nz/opsmanual/44893.htm",
     "checked_at": "2026-08-16 15:59:51"
+  },
+  {
+    "section_code": "A4.25",
+    "title": "A4.25 Medical and Chest X-ray Certificates: temporary entry class visa applications",
+    "old_effective_date": null,
+    "new_effective_date": "8/12/2025",
+    "detected_via": "date",
+    "source_url": "https://www.immigration.govt.nz/opsmanual/46507.htm",
+    "checked_at": "2026-08-26 21:55:02"
   }
 ]

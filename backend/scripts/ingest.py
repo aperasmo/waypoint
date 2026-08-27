@@ -50,6 +50,16 @@ def needs_work(
         return True, "missing embedding"
     return False, "unchanged"
 
+def metadata_changed(
+    existing: Section,
+    incoming: SourceChunk,
+) -> bool:
+    """Return True when section metadata changed without requiring re-embedding."""
+    return (
+        existing.title != incoming.title
+        or existing.source_url != incoming.source_url
+        or existing.effective_date != incoming.effective_date
+    )
 
 async def ingest(force: bool = False, dry_run: bool = False) -> None:
     settings = get_settings()
@@ -71,18 +81,42 @@ async def ingest(force: bool = False, dry_run: bool = False) -> None:
             await session.refresh(section, ["chunks"])
 
         pending: dict[str, list[SourceChunk]] = {}
+        metadata_updates: dict[str, SourceChunk] = {}
         reasons: dict[str, str] = {}
 
         for code, chunks in grouped.items():
-            work, reason = needs_work(existing.get(code), chunks, embedder.model_name, force)
-            reasons[code] = reason
+            section = existing.get(code)
+
+            work, reason = needs_work(
+                section,
+                chunks,
+                embedder.model_name,
+                force,
+            )
+
             if work:
                 pending[code] = chunks
+                reasons[code] = reason
+            elif section is not None and metadata_changed(section, chunks[0]):
+                metadata_updates[code] = chunks[0]
+                reasons[code] = "metadata changed"
+            else:
+                reasons[code] = reason
 
         print(f"Sections in corpus:  {len(grouped)}")
         print(f"Chunks in corpus:    {len(source_chunks)}")
         print(f"Sections to embed:   {len(pending)}")
         print(f"Chunks to embed:     {sum(len(v) for v in pending.values())}")
+        print(f"Metadata updates:    {len(metadata_updates)}")
+        if pending:
+            print("\nSections requiring embedding:")
+            for code in pending:
+                print(f"  {code}: {reasons[code]}")
+
+        if metadata_updates:
+            print("\nMetadata-only updates:")
+            for code in metadata_updates:
+                print(f"  {code}")        
         if report.files_missing:
             print(f"Missing files:       {report.files_missing}")
         if report.files_skipped_empty:
@@ -92,16 +126,30 @@ async def ingest(force: bool = False, dry_run: bool = False) -> None:
             print("\nDry run, nothing written.")
             return
 
-        if not pending:
+        if not pending and not metadata_updates:
             print("\nNothing to do.")
             return
 
-        flat = [c for chunks in pending.values() for c in chunks]
-        vectors = await embedder.embed_chunks(flat)
-
+        # Only call the embedding API when section content actually changed.
+        # Metadata-only updates should not incur embedding cost.
+        flat: list[SourceChunk] = []
         by_code: dict[str, list[list[float]]] = defaultdict(list)
-        for chunk, vector in zip(flat, vectors, strict=True):
-            by_code[chunk.section_code].append(vector)
+
+        if pending:
+            flat = [c for chunks in pending.values() for c in chunks]
+            vectors = await embedder.embed_chunks(flat)
+
+            for chunk, vector in zip(flat, vectors, strict=True):
+                by_code[chunk.section_code].append(vector)
+
+        # Metadata changes such as an effective date, title, or source URL do not
+        # require replacing chunks or generating new embeddings.
+        for code, head in metadata_updates.items():
+            section = existing[code]
+            section.title = head.title
+            section.source_url = head.source_url
+            section.effective_date = head.effective_date
+            section.content_hash = head.content_hash
 
         for code, chunks in pending.items():
             head = chunks[0]
@@ -142,7 +190,12 @@ async def ingest(force: bool = False, dry_run: bool = False) -> None:
                 )
 
         await session.commit()
-        print(f"\nCommitted {len(pending)} sections, {len(flat)} chunks.")
+
+        print(
+            f"\nCommitted {len(pending)} embedded sections, "
+            f"{len(flat)} chunks; "
+            f"updated metadata for {len(metadata_updates)} sections."
+        )       
 
 
 def main() -> None:

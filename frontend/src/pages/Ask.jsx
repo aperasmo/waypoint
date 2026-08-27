@@ -43,6 +43,7 @@ function Ask() {
       const data = await askWaypoint(submittedQuestion)
 
       setResponse(data)
+      setQuestion("")
     } catch (requestError) {
       /**
        * Keep technical details available to developers while presenting a

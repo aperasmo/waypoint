@@ -43,7 +43,8 @@ from bs4 import BeautifulSoup, NavigableString, Tag
 USER_AGENT = "WaypointManualCollector/0.1 (personal research project; contact: allanperasmo@gmail.com)"
 DEFAULT_DELAY_SECONDS = 2.0
 MAX_RETRIES = 3
-EFFECTIVE_DATE_RE = re.compile(r"Effective\s+(\d{2}/\d{2}/\d{4})")
+# INZ dates may use one- or two-digit days/months, e.g. 8/12/2025.
+EFFECTIVE_DATE_RE = re.compile(r"Effective\s+(\d{1,2}/\d{1,2}/\d{4})")
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parent

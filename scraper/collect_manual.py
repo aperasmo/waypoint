@@ -62,7 +62,8 @@ DEFAULT_DELAY_SECONDS = 2.0
 MAX_RETRIES = 3
 PAGE_ID_RE = re.compile(r"/opsmanual/(\d+)\.htm$")
 SECTION_CODE_RE = re.compile(r"^([A-Z]{1,3}\d+(?:\.\d+)*)\s+(.*)$")
-EFFECTIVE_DATE_RE = re.compile(r"Effective\s+(\d{2}/\d{2}/\d{4})")
+# INZ dates may use one- or two-digit days/months, e.g. 8/12/2025.
+EFFECTIVE_DATE_RE = re.compile(r"Effective\s+(\d{1,2}/\d{1,2}/\d{4})")
 
 
 def _positive_int(value: object, default: int = 1) -> int:

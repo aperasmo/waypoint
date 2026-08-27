@@ -2,24 +2,8 @@ import { ExternalLink, FileText } from "lucide-react"
 
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
+import { formatEffectiveDate } from "@/lib/utils"
 
-function formatEffectiveDate(value) {
-  if (!value) {
-    return null
-  }
-
-  const date = new Date(`${value}T00:00:00`)
-
-  if (Number.isNaN(date.getTime())) {
-    return value
-  }
-
-  return new Intl.DateTimeFormat("en-NZ", {
-    day: "numeric",
-    month: "short",
-    year: "numeric",
-  }).format(date)
-}
 
 function CitationList({ citations = [] }) {
   if (citations.length === 0) {

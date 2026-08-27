@@ -26,24 +26,34 @@ class Settings(BaseSettings):
     # Required. No default, so a missing value fails at startup, not mid-request.
     database_url: str
 
-    # Corpus lives outside backend/ because the scraper and the API both read it.
+        # Corpus lives outside backend/ because the scraper and the API both read it.
     corpus_dir: Path = REPO_ROOT / "data"
     manifest_filename: str = "manifest.json"
     acronyms_filename: str = "acronyms.json"
+    categories_filename: str = "categories.json"
 
+    # Model configuration used when generating answers from retrieved evidence.
     answer_model: str = "gpt-5.4-mini"
     answer_max_tokens: int = 800
-    # 'none' assumes the task is reading provided text rather than reasoning
-    # about policy. Worth re-testing against the eval set: classifying Type
-    # A/B/C is a judgment call and may want more deliberation than answering.
+
+    # "none" keeps the answer stage focused on the retrieved policy evidence.
+    # This can be re-evaluated later against the retrieval/answer evaluation set.
     answer_reasoning_effort: str = "none"
 
     @property
     def manifest_path(self) -> Path:
+        """Return the path to the corpus manifest."""
         return self.corpus_dir / self.manifest_filename
+
     @property
     def acronyms_path(self) -> Path:
+        """Return the path to the acronym lookup file."""
         return self.corpus_dir / self.acronyms_filename
+
+    @property
+    def categories_path(self) -> Path:
+        """Return the path to the human-facing browse taxonomy."""
+        return self.corpus_dir / self.categories_filename
 
 @lru_cache
 def get_settings() -> Settings:

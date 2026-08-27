@@ -23,6 +23,10 @@ from app.ingestion.embedder import OpenAIEmbedder
 from app.retrieval.acronyms import expand_acronyms
 from app.retrieval.retriever import Result, retrieve
 
+import json
+import re
+from typing import Literal
+
 router = APIRouter(prefix="/ask", tags=["ask"])
 
 DISCLAIMER = (
@@ -199,6 +203,21 @@ itself is fully present.
 case-specific.
 - Treat facts clearly stated or necessarily presupposed by ordinary wording as \
 already supplied.
+
+CRITICAL HANDLING OF ALREADY-SUPPLIED FACTS
+
+Facts explicitly stated by the user, including negative facts, are already \
+supplied for the current question. \
+- Never ask the user to confirm, clarify, or provide the same fact again. \
+- Never repeat an already-supplied fact in missing_information. \
+- Do not treat an explicitly failed policy branch as unresolved. \
+- If the governing policy contains alternative branches, consider only the \
+  remaining unresolved branches supported by the supplied Manual sections. \
+- Do not infer that the overall requirement fails merely because one branch \
+  fails, unless the supplied Manual text establishes that conclusion. \
+- Do not introduce immigration rules or conclusions from these instructions. \
+  The final answer must still be derived only from the supplied Manual sections. \
+
 - If decision_boundary is general_information, missing_information MUST be [].
 - If decision_boundary is case_specific_application, missing_information must \
 contain only USER FACTS that could materially change the applicable published \
@@ -296,6 +315,40 @@ def _format_context(results: list[Result]) -> str:
         parts.append(f"{header}\n{r.text}")
     return "\n\n---\n\n".join(parts)
 
+def _clean_inline_citations(
+    answer: str,
+    allowed_codes: set[str],
+) -> str:
+    """Keep only retrieved section codes in inline answer citations."""
+
+    def replace(match: re.Match[str]) -> str:
+        values = [
+            part.strip()
+            for part in match.group(1).split(",")
+        ]
+
+        valid = [
+            value
+            for value in values
+            if value in allowed_codes
+        ]
+
+        if not valid:
+            return ""
+
+        return f"[{', '.join(dict.fromkeys(valid))}]"
+
+    cleaned = re.sub(
+        r"\[([A-Z]{1,3}\d+(?:\.\d+)+(?:\s*,\s*[A-Z]{1,3}\d+(?:\.\d+)*)*)\]",
+        replace,
+        answer,
+    )
+
+    # Removing an invalid inline citation can leave whitespace before
+    # punctuation. Normalise that without rewriting the model's answer.
+    cleaned = re.sub(r"\s+([,.;:!?])", r"\1", cleaned)
+
+    return cleaned.strip()
 
 def _derive_outcome(
     evidence_status: EvidenceStatus,
@@ -311,25 +364,75 @@ def _derive_outcome(
     return "answered"
 
 
+def _looks_like_policy_gap(value: str) -> bool:
+    """Reject policy gaps or policy self-assessments from missing_information."""
+    text = value.casefold()
+
+    policy_markers = (
+        "operational manual",
+        "manual rule",
+        "policy rule",
+        "policy section",
+        "appendix ",
+        "external source",
+        "authoritative source",
+        "indexed corpus",
+        "corpus",
+    )
+
+    if any(marker in text for marker in policy_markers):
+        return True
+
+    # Section references such as SR3.20, WD3.5, U13.15, A4.25.
+    if re.search(r"\b[A-Z]{1,3}\d+(?:\.\d+)+\b", value):
+        return True
+
+    # The user should provide facts, not assess themselves against policy.
+    policy_assessment_patterns = (
+        r"\bwhether you meet\b",
+        r"\bwhether you satisfy\b",
+        r"\bwhether you qualify\b",
+        r"\bwhether you comply\b",
+        r"\bdo you meet\b",
+        r"\bdo you satisfy\b",
+        r"\bdo you qualify\b",
+        r"\bmeet the .* requirements\b",
+        r"\bsatisfy the .* requirements\b",
+    )
+
+    return any(
+        re.search(pattern, text)
+        for pattern in policy_assessment_patterns
+    )
+
 def _clean_missing_information(
     items: list[str],
     decision_boundary: DecisionBoundary,
 ) -> list[str]:
-    """Remove blank/duplicate items and suppress them for general answers."""
+    """Keep only distinct user facts that may affect a case-specific answer."""
     if decision_boundary == "general_information":
         return []
 
     cleaned: list[str] = []
     seen: set[str] = set()
+
     for item in items:
         value = item.strip().strip("-• ")
         if not value:
             continue
+
+        # Policy gaps belong in the answer/evidence status, not in the list of
+        # facts the user could provide about their own circumstances.
+        if _looks_like_policy_gap(value):
+            continue
+
         key = value.casefold()
         if key in seen:
             continue
+
         seen.add(key)
         cleaned.append(value)
+
     return cleaned
 
 
@@ -403,6 +506,8 @@ async def ask(
     # names a code that was not in its context, it invented one, and the
     # citation is dropped rather than shown to the user as if it were real.
     retrieved_by_code = {r.section_code: r for r in results}
+    allowed_codes = set(retrieved_by_code)
+    answer = _clean_inline_citations(model_answer.answer.strip(), allowed_codes)
     cited = [
         code
         for code in model_answer.cited_sections
@@ -425,7 +530,7 @@ async def ask(
         outcome=outcome,
         evidence_status=model_answer.evidence_status,
         decision_boundary=model_answer.decision_boundary,
-        answer=model_answer.answer.strip(),
+        answer=answer,
         citations=citations,
         missing_information=missing_information,
         disclaimer=DISCLAIMER,

@@ -75,12 +75,12 @@ function AppShell() {
         </div>
       </div>
 
-      <main className="mx-auto w-full max-w-6xl px-4 py-8 pb-28 sm:px-6 sm:py-10 md:pb-12 lg:px-8 lg:py-14">
+      <main className="mx-auto w-full max-w-6xl px-4 pb-28 pt-8 sm:px-6 md:pb-10 lg:px-8">
         <Outlet />
       </main>
 
       <nav
-        className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-3 border-t bg-white/95 pb-[env(safe-area-inset-bottom)] shadow-[0_-4px_20px_rgba(0,0,0,0.06)] backdrop-blur md:hidden"
+        className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-3 border-t bg-white/95 pb-[env(safe-area-inset-bottom)] shadow-[0_-4px_20px_rgba(0,0,0,0.06)] backdrop-blur md:hidden pb-[env(safe-area-inset-bottom)]"
         aria-label="Primary navigation"
       >
         {navigation.map((item) => {

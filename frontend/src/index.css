@@ -41,8 +41,6 @@
     --color-background: var(--background);
     --color-waypoint-navy: var(--waypoint-navy);
     --color-waypoint-navy-light: var(--waypoint-navy-light);
-    --color-waypoint-teal: var(--waypoint-teal);
-    --color-waypoint-teal-soft: var(--waypoint-teal-soft);
     --color-waypoint-gold: var(--waypoint-gold);
     --color-waypoint-gold-soft: var(--waypoint-gold-soft);
     --color-waypoint-success: var(--waypoint-success);
@@ -88,7 +86,7 @@
     --popover: #ffffff;
     --popover-foreground: #132333;
 
-    --primary: #087f7c;
+    --primary: #0878c0;
     --primary-foreground: #ffffff;
 
     --secondary: #eef3f2;
@@ -104,9 +102,9 @@
 
     --border: #dce2e2;
     --input: #d4dddd;
-    --ring: #0b918b;
+    --ring: #0878c0;
 
-    --chart-1: #087f7c;
+    --chart-1: #0878c0;
     --chart-2: #1769aa;
     --chart-3: #d99a18;
     --chart-4: #4f785e;
@@ -116,32 +114,12 @@
 
     --sidebar: #ffffff;
     --sidebar-foreground: #132333;
-    --sidebar-primary: #087f7c;
+    --sidebar-primary: #0878c0;
     --sidebar-primary-foreground: #ffffff;
     --sidebar-accent: #e6f3f1;
     --sidebar-accent-foreground: #075e5d;
     --sidebar-border: #dce2e2;
     --sidebar-ring: #0b918b;
-
-    /* Waypoint brand */
-    --waypoint-navy: #08263b;
-    --waypoint-navy-light: #10364d;
-
-    --waypoint-teal: #087f7c;
-    --waypoint-teal-soft: #e3f4f1;
-
-    --waypoint-gold: #d99a18;
-    --waypoint-gold-soft: #fff2c9;
-
-    /* Evidence states */
-    --waypoint-success: #287854;
-    --waypoint-success-soft: #e9f5ee;
-
-    --waypoint-warning: #a56312;
-    --waypoint-warning-soft: #fff2df;
-
-    --waypoint-info: #236ca3;
-    --waypoint-info-soft: #e9f2f9;    
 
     /* Waypoint brand */
     --waypoint-navy: #002858;
