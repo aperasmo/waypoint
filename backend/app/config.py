@@ -18,6 +18,7 @@ class Settings(BaseSettings):
 
     app_name: str = "Waypoint"
     environment: str = "development"
+    cors_origin: str = "http://localhost:5174"
     openai_api_key: str
     embedding_model: str = "text-embedding-3-small"
     embedding_dim: int = 1536

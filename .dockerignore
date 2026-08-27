@@ -1,0 +1,39 @@
+# Version control and repository metadata
+.git
+.github
+.gitignore
+
+# Secrets and local environment configuration
+.env
+.env.*
+**/.env
+**/.env.*
+
+# Python local environments and generated caches
+backend/.venv
+backend/.uv-cache
+**/__pycache__
+**/*.py[cod]
+**/.pytest_cache
+**/.ruff_cache
+
+# Backend development, evaluation, and experimental material
+backend/tests
+backend/_candidates
+backend/_experiments
+
+# Frontend generated dependencies and build output
+frontend/node_modules
+frontend/dist
+
+# Repository areas not required by runtime container builds
+docs
+mockups
+scraper
+
+# Local/editor/OS artefacts
+*.log
+.DS_Store
+Thumbs.db
+.vscode
+.idea

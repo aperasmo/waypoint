@@ -5,11 +5,10 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api.routes import browse
+from app.api.routes import ask, browse
 from app.config import get_settings
 from app.db.session import dispose_engine
 
-from app.api.routes import ask, browse
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -36,10 +35,10 @@ app = FastAPI(
 # since a wildcard plus credentials is a standing invitation.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5174"],
+    allow_origins=[settings.cors_origin],
     allow_credentials=False,
     allow_methods=["GET", "POST"],
-    allow_headers=["*"],
+    allow_headers=["Content-Type"],
 )
 
 app.include_router(browse.router)
