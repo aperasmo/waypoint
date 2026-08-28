@@ -5,7 +5,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api.routes import ask, browse
+from app.api.routes import ask, browse, feedback
 from app.config import get_settings
 from app.db.session import dispose_engine
 
@@ -43,6 +43,7 @@ app.add_middleware(
 
 app.include_router(browse.router)
 app.include_router(ask.router)
+app.include_router(feedback.router)
 
 @app.get("/health")
 async def health() -> dict[str, str]:

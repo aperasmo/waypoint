@@ -2,6 +2,7 @@ import { ShieldCheck } from "lucide-react"
 
 import CitationList from "@/components/CitationList"
 import EvidenceStatus from "@/components/EvidenceStatus"
+import FeedbackReport from "@/components/FeedbackReport"
 import MissingInformation from "@/components/MissingInformation"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import {
@@ -102,6 +103,18 @@ function AnswerPanel({
             </AlertDescription>
           </Alert>
         )}
+
+        {/*
+          Anonymous review feedback on this specific response. Sends a
+          snapshot of the answer/evidence status/citations already on
+          screen, not the (by-then-cleared) question textarea.
+        */}
+        <FeedbackReport
+          question={question}
+          answer={answer}
+          evidenceStatus={evidenceStatus}
+          citedSections={citations.map((citation) => citation.section_code)}
+        />
       </CardContent>
     </Card>
   )

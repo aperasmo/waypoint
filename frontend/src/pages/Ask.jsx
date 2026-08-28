@@ -13,6 +13,11 @@ function Ask() {
   // Stores the most recent successful response returned by POST /ask.
   const [response, setResponse] = useState(null)
 
+  // Bumped on every new response so AnswerPanel (and the feedback form
+  // nested inside it) remounts instead of carrying over state from the
+  // previous answer.
+  const [responseId, setResponseId] = useState(0)
+
   // Tracks whether an /ask request is currently in progress.
   const [isLoading, setIsLoading] = useState(false)
 
@@ -43,6 +48,7 @@ function Ask() {
       const data = await askWaypoint(submittedQuestion)
 
       setResponse(data)
+      setResponseId((id) => id + 1)
       setQuestion("")
     } catch (requestError) {
       /**
@@ -88,6 +94,7 @@ function Ask() {
 
       {!isLoading && response && (
         <AnswerPanel
+          key={responseId}
           question={response.question}
           interpretedAs={response.interpreted_as}
           answer={response.answer}

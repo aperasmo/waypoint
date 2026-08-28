@@ -20,7 +20,7 @@ from sqlalchemy import (
     UniqueConstraint,
     func,
 )
-from sqlalchemy.dialects.postgresql import TSVECTOR
+from sqlalchemy.dialects.postgresql import JSONB, TSVECTOR
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 
 import sqlalchemy as sa
@@ -118,3 +118,41 @@ class Chunk(Base):
     embedding_dim: Mapped[int | None] = mapped_column(Integer, nullable=True)
 
     section: Mapped[Section] = relationship(back_populates="chunks")
+
+
+class Feedback(Base):
+    """Anonymous coverage feedback reported against one /ask response.
+
+    Review data only: read by a human deciding what to expand in the corpus,
+    never by ingestion or retrieval. Nothing here can feed back into answers.
+    """
+
+    __tablename__ = "feedback"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+
+    question: Mapped[str] = mapped_column(Text)
+    feedback_type: Mapped[str] = mapped_column(String(32))
+    comment: Mapped[str | None] = mapped_column(Text, nullable=True)
+
+    # Snapshot of the /ask response the user was looking at, so review does
+    # not depend on re-running retrieval against a corpus that may have
+    # changed since the report was made.
+    evidence_status: Mapped[str | None] = mapped_column(String(32), nullable=True)
+    answer: Mapped[str | None] = mapped_column(Text, nullable=True)
+
+    # Section codes only, e.g. ["U13.15", "U6.40"]. Not a foreign key: the
+    # cited section may later be edited, renamed, or removed by ingestion,
+    # and the report should still reflect what the user actually saw.
+    cited_sections: Mapped[list[str]] = mapped_column(
+        JSONB, default=list, server_default="[]"
+    )
+
+    # Always "new" at creation; POST /feedback never accepts a client-supplied
+    # status. Later workflow values (reviewed/planned/resolved/ignored) are
+    # applied by manual review, not by this endpoint.
+    status: Mapped[str] = mapped_column(String(20), default="new", server_default="new")
+
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now()
+    )
