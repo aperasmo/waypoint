@@ -1,10 +1,11 @@
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
-import { askWaypoint } from "@/api/ask"
+import { askWaypoint, BusyError } from "@/api/ask"
 import AnswerPanel from "@/components/AnswerPanel"
 import AnswerSkeleton from "@/components/AnswerSkeleton"
 import AskError from "@/components/AskError"
 import QuestionForm from "@/components/QuestionForm"
+import RetryStatus from "@/components/RetryStatus"
 
 function Ask() {
   // Stores the text currently being edited in the question field.
@@ -18,18 +19,38 @@ function Ask() {
   // previous answer.
   const [responseId, setResponseId] = useState(0)
 
-  // Tracks whether an /ask request is currently in progress.
+  // Tracks whether an /ask request (including any retries) is in progress.
   const [isLoading, setIsLoading] = useState(false)
 
   // Stores a user-facing error message. Null means no error is active.
   const [error, setError] = useState(null)
 
+  // User-facing "busy, retrying" status shown while askWaypoint retries
+  // after a transient capacity error. Null means no retry is in progress.
+  const [retryStatus, setRetryStatus] = useState(null)
+
+  // Aborts the in-flight request/backoff on unmount; also guards against
+  // setting state after that point, since askWaypoint's retry loop can
+  // still be mid-wait when the user navigates away.
+  const mountedRef = useRef(true)
+  const abortControllerRef = useRef(null)
+
+  useEffect(() => {
+    mountedRef.current = true
+
+    return () => {
+      mountedRef.current = false
+      abortControllerRef.current?.abort()
+    }
+  }, [])
+
   /**
    * Submits the current question to the Waypoint backend.
    *
    * The request lifecycle is:
-   * clear previous state -> show loading -> request /ask ->
-   * store success or error -> stop loading.
+   * clear previous state -> show loading -> request /ask (retrying
+   * internally if the backend is temporarily busy) -> store success or
+   * error -> stop loading.
    */
   async function handleSubmit() {
     const submittedQuestion = question.trim()
@@ -40,29 +61,68 @@ function Ask() {
       return
     }
 
+    // isLoading already disables QuestionForm's submit button for the full
+    // duration of a request-and-retry sequence, but this stops a second
+    // submission (and a second OpenAI call) if handleSubmit is ever invoked
+    // again while one is still in flight.
+    if (isLoading) {
+      return
+    }
+
+    const controller = new AbortController()
+    abortControllerRef.current = controller
+
     setIsLoading(true)
     setError(null)
     setResponse(null)
+    setRetryStatus(null)
 
     try {
-      const data = await askWaypoint(submittedQuestion)
+      const data = await askWaypoint(submittedQuestion, {
+        signal: controller.signal,
+
+        onRetry: (attempt) => {
+          if (!mountedRef.current) {
+            return
+          }
+
+          setRetryStatus(
+            attempt === 1
+              ? "Waypoint is busy right now. Your question will be retried shortly."
+              : "Waypoint is still busy. Retrying your question...",
+          )
+        },
+      })
+
+      if (!mountedRef.current) {
+        return
+      }
 
       setResponse(data)
       setResponseId((id) => id + 1)
       setQuestion("")
     } catch (requestError) {
+      if (requestError.name === "AbortError" || !mountedRef.current) {
+        return
+      }
+
       /**
        * Keep technical details available to developers while presenting a
-       * stable, useful message to the user.
+       * stable, useful message to the user. BusyError's message is already
+       * user-safe (set by askWaypoint), so it is shown as-is.
        */
       console.error("Waypoint /ask request failed:", requestError)
 
       setError(
-        "Waypoint could not reach the policy service. Please try again.",
+        requestError instanceof BusyError
+          ? requestError.message
+          : "Waypoint could not reach the policy service. Please try again.",
       )
     } finally {
-      // finally executes whether the request succeeds or fails.
-      setIsLoading(false)
+      if (mountedRef.current) {
+        setIsLoading(false)
+        setRetryStatus(null)
+      }
     }
   }
 
@@ -89,6 +149,8 @@ function Ask() {
       />
 
       <AskError message={error} />
+
+      <RetryStatus message={retryStatus} />
 
       {isLoading && <AnswerSkeleton />}
 

@@ -14,12 +14,16 @@ export const API_BASE_URL =
  * responses such as 404 from genuine server failures such as 500.
  */
 export class ApiError extends Error {
-  constructor(message, status, statusText) {
+  constructor(message, status, statusText, retryAfter = null) {
     super(message)
 
     this.name = "ApiError"
     this.status = status
     this.statusText = statusText
+
+    // Raw Retry-After header value (seconds or an HTTP-date), if the server
+    // sent one. Callers that retry decide how to parse and bound it.
+    this.retryAfter = retryAfter
   }
 }
 
@@ -43,6 +47,7 @@ export async function fetchJson(path, options = {}) {
       `Waypoint API request failed: ${response.status} ${response.statusText}`,
       response.status,
       response.statusText,
+      response.headers.get("Retry-After"),
     )
   }
 
