@@ -23,20 +23,53 @@ import {
 import { Skeleton } from "@/components/ui/skeleton"
 import { formatEffectiveDate } from "@/lib/utils"
 
-function formatManualText(text) {
+function beautifyManualText(text) {
   if (!text) return ""
 
-  return text
-    // INZ source extraction can place inline section references on their own lines.
-    .replace(
-      /\s*\n\s*([A-Z]{1,3}\d+(?:\.\d+)*)\s*\n\s*/g,
-      " $1 ",
-    )
-    // Remove spaces introduced before punctuation after joining references.
-    .replace(/\s+([),.;:])/g, "$1")
-    .replace(/\(\s+/g, "(")
-}
+  const lines = text
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter(Boolean)
 
+  const paragraphs = []
+  let current = []
+
+  const flush = () => {
+    if (current.length === 0) return
+
+    const paragraph = current
+      .join(" ")
+      // Remove spaces introduced before punctuation.
+      .replace(/\s+([),.;:!?])/g, "$1")
+      .replace(/\(\s+/g, "(")
+      .trim()
+
+    if (paragraph) {
+      paragraphs.push(paragraph)
+    }
+
+    current = []
+  }
+
+  for (const line of lines) {
+    current.push(line)
+
+    // A colon normally introduces a list or explanatory block.
+    if (line.endsWith(":")) {
+      flush()
+      continue
+    }
+
+    // Finish a paragraph when the extracted text reaches a full sentence.
+    if (line === "." || /[.!?]$/.test(line)) {
+      flush()
+    }
+  }
+
+  flush()
+
+  return paragraphs.join("\n\n")
+}
 
 /**
  * Loads and displays one complete indexed Operational Manual section.
@@ -203,7 +236,7 @@ function BrowseSectionDetail({
               dangerouslySetInnerHTML here.
             */}
             <div className="whitespace-pre-wrap text-[0.95rem] leading-7 text-foreground/90">
-              {section.text}
+              {beautifyManualText(section.text)}
             </div>
           </div>
 
