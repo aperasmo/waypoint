@@ -23,6 +23,21 @@ import {
 import { Skeleton } from "@/components/ui/skeleton"
 import { formatEffectiveDate } from "@/lib/utils"
 
+function formatManualText(text) {
+  if (!text) return ""
+
+  return text
+    // INZ source extraction can place inline section references on their own lines.
+    .replace(
+      /\s*\n\s*([A-Z]{1,3}\d+(?:\.\d+)*)\s*\n\s*/g,
+      " $1 ",
+    )
+    // Remove spaces introduced before punctuation after joining references.
+    .replace(/\s+([),.;:])/g, "$1")
+    .replace(/\(\s+/g, "(")
+}
+
+
 /**
  * Loads and displays one complete indexed Operational Manual section.
  *
