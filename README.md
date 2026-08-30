@@ -51,9 +51,9 @@ The retrieved sections are then provided to the answer model. The model is instr
 
 When the evidence is incomplete, Waypoint distinguishes between:
 
-- **Sufficient** — the retrieved manual sections contain the policy needed to explain the question.
-- **Corpus gap** — relevant Operational Manual material is missing from the current corpus.
-- **External source required** — the answer depends on information maintained outside the Operational Manual.
+- **Sufficient** - the retrieved manual sections contain the policy needed to explain the question.
+- **Corpus gap** - relevant Operational Manual material is missing from the current corpus.
+- **External source required** - the answer depends on information maintained outside the Operational Manual.
 
 ## Technology
 
@@ -174,11 +174,11 @@ See [`docs/EVALUATION.md`](docs/EVALUATION.md) for more information.
 
 ## Documentation
 
-- [`ARCHITECTURE.md`](docs/ARCHITECTURE.md) — how the main parts work together
-- [`DATA_PIPELINE.md`](docs/DATA_PIPELINE.md) — how Operational Manual content is updated
-- [`EVALUATION.md`](docs/EVALUATION.md) — how retrieval and answers are checked
-- [`SECURITY.md`](docs/SECURITY.md) — practical security decisions
-- [`SOURCE_AND_LIMITATIONS.md`](docs/SOURCE_AND_LIMITATIONS.md) — source boundaries, attribution and limitations
+- [`ARCHITECTURE.md`](docs/ARCHITECTURE.md) - how the main parts work together
+- [`DATA_PIPELINE.md`](docs/DATA_PIPELINE.md) - how Operational Manual content is updated
+- [`EVALUATION.md`](docs/EVALUATION.md) - how retrieval and answers are checked
+- [`SECURITY.md`](docs/SECURITY.md) - practical security decisions
+- [`SOURCE_AND_LIMITATIONS.md`](docs/SOURCE_AND_LIMITATIONS.md) - source boundaries, attribution and limitations
 
 Deployment instructions remain in:
 

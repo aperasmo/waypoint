@@ -43,7 +43,7 @@ EFFECTIVE_LINE = re.compile(r"^effective\s+\d{2}/\d{2}/\d{4}$", re.IGNORECASE)
 
 
 def parse_front_matter(md_text: str) -> tuple[dict[str, object], str]:
-    """Read the simple front matter format produced by the Waypoint scraper."""
+    """Read the front matter format used by the Waypoint corpus."""
     if not md_text.startswith("---"):
         return {}, md_text
 
