@@ -25,7 +25,7 @@ desktop.ini
 .idea/
 .vscode/
 
-# Local INZ source provenance and corpus migration workspace
+# Local INZ source provenance and corpus migration workspace.
 data/source_archive/
 data/staging/
 data/staging_pre_fidelity_fix_*/
