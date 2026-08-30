@@ -1,1142 +1,1131 @@
 {
   "manual_toc_url": "https://www.immigration.govt.nz/opsmanual/toc.htm",
-  "collected_date": "2026-08-10",
+  "source": "manually_archived_mhtml",
   "pages": [
-    {
-      "section_code": "SR1.1",
-      "title": "SR1.1 Overview",
-      "file": "residence\\SR1.1.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77803.htm",
-      "effective_date": "09/10/2023",
-      "content_hash": "451862297e876466"
-    },
-    {
-      "section_code": "SR3.1",
-      "title": "SR3.1 Objective",
-      "file": "residence\\SR3.1.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77810.htm",
-      "effective_date": "09/10/2023",
-      "content_hash": "27a949e82b84fcd4"
-    },
-    {
-      "section_code": "SR3.10",
-      "title": "SR3.10 Summary of requirements",
-      "file": "residence\\SR3.10.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77812.htm",
-      "effective_date": "09/03/2026",
-      "content_hash": "f86b6fda8fb8224e"
-    },
-    {
-      "section_code": "SR3.15",
-      "title": "SR3.15 Points Summary",
-      "file": "residence\\SR3.15.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77813.htm",
-      "effective_date": "09/03/2026",
-      "content_hash": "3956eecaac5859d0"
-    },
-    {
-      "section_code": "SR3.20",
-      "title": "SR3.20 Skilled employment",
-      "file": "residence\\SR3.20.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/79840.htm",
-      "effective_date": "09/03/2026",
-      "content_hash": "51dcbd7de5d10b36"
-    },
-    {
-      "section_code": "SR2.10",
-      "title": "SR2.10 English Language Requirements",
-      "file": "residence\\SR2.10.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77808.htm",
-      "effective_date": "26/06/2024",
-      "content_hash": "0d21c77d761b0017"
-    },
-    {
-      "section_code": "WD1",
-      "title": "WD1 Objective",
-      "file": "residence\\WD1.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/71682.htm",
-      "effective_date": "26/11/2018",
-      "content_hash": "536eeeadee90092e"
-    },
-    {
-      "section_code": "WD2",
-      "title": "WD2 Lodging an application under Post-Study work visa instructions",
-      "file": "residence\\WD2.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/71683.htm",
-      "effective_date": "16/12/2025",
-      "content_hash": "257d7ebf01945632"
-    },
-    {
-      "section_code": "WD3",
-      "title": "WD3 Requirements for Post-Study work visa",
-      "file": "residence\\WD3.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/71684.htm",
-      "effective_date": null,
-      "content_hash": "9f6b8a7e73edcdba"
-    },
-    {
-      "section_code": "WD3.1",
-      "title": "WD3.1 Determining a Post-Study work visa",
-      "file": "residence\\WD3.1.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/71685.htm",
-      "effective_date": "18/11/2024",
-      "content_hash": "02dfc2dcd5f44453"
-    },
-    {
-      "section_code": "WD3.5",
-      "title": "WD3.5 Currency and conditions of Post-study work visas",
-      "file": "residence\\WD3.5.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/71752.htm",
-      "effective_date": "20/04/2026",
-      "content_hash": "50c6177d2746de28"
-    },
-    {
-      "section_code": "SR1",
-      "title": "SR1 Skilled Residence Visas",
-      "file": "residence\\SR1.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77754.htm",
-      "effective_date": null,
-      "content_hash": "8063d3c3abfd034e"
-    },
-    {
-      "section_code": "SR2",
-      "title": "SR2 General Requirements",
-      "file": "residence\\SR2.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77805.htm",
-      "effective_date": null,
-      "content_hash": "681bf9cd2240f201"
-    },
-    {
-      "section_code": "SR2.1",
-      "title": "SR2.1 Assessment of employment",
-      "file": "residence\\SR2.1.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77806.htm",
-      "effective_date": "09/10/2023",
-      "content_hash": "64859cb7c86d264e"
-    },
-    {
-      "section_code": "SR2.5",
-      "title": "SR2.5 Calculating remuneration",
-      "file": "residence\\SR2.5.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77807.htm",
-      "effective_date": "09/10/2023",
-      "content_hash": "beae95ed3191dab9"
-    },
-    {
-      "section_code": "SR3",
-      "title": "SR3 Skilled Migrant Category",
-      "file": "residence\\SR3.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77809.htm",
-      "effective_date": null,
-      "content_hash": "e95bfd4ea23c7d34"
-    },
-    {
-      "section_code": "SR3.5",
-      "title": "SR3.5 Applying for a Skilled Migrant Category Visa",
-      "file": "residence\\SR3.5.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77811.htm",
-      "effective_date": "09/10/2023",
-      "content_hash": "d643ec1140d0430c"
-    },
-    {
-      "section_code": "SR3.25",
-      "title": "SR3.25 Skill categories",
-      "file": "residence\\SR3.25.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/80474.htm",
-      "effective_date": "09/03/2026",
-      "content_hash": "5068d4f6022b5c93"
-    },
-    {
-      "section_code": "SR3.30",
-      "title": "SR3.30 Points for New Zealand registration, licensing, or certification",
-      "file": "residence\\SR3.30.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/80475.htm",
-      "effective_date": "09/10/2023",
-      "content_hash": "eaa2bde171426e41"
-    },
-    {
-      "section_code": "SR3.35",
-      "title": "SR3.35 Skilled work experience in New Zealand",
-      "file": "residence\\SR3.35.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/80476.htm",
-      "effective_date": "09/03/2026",
-      "content_hash": "79592b6655bf19f5"
-    },
-    {
-      "section_code": "SR4",
-      "title": "SR4 Green List: Straight to Residence",
-      "file": "residence\\SR4.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77815.htm",
-      "effective_date": null,
-      "content_hash": "a33f17a64456bb63"
-    },
-    {
-      "section_code": "SR4.1",
-      "title": "SR4.1 Objective",
-      "file": "residence\\SR4.1.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77814.htm",
-      "effective_date": "09/10/2023",
-      "content_hash": "c9141a30d9000b8c"
-    },
-    {
-      "section_code": "SR4.5",
-      "title": "SR4.5 Summary of requirements",
-      "file": "residence\\SR4.5.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77816.htm",
-      "effective_date": "28/02/2024",
-      "content_hash": "5da9cdde63cc3626"
-    },
-    {
-      "section_code": "SR4.10",
-      "title": "SR4.10 Acceptable employment in a Tier 1 Green List role",
-      "file": "residence\\SR4.10.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77817.htm",
-      "effective_date": "09/03/2026",
-      "content_hash": "f110e6b7cbd452a5"
-    },
-    {
-      "section_code": "SR4.15",
-      "title": "SR4.15 Skilled Residence: Highly Paid requirements for 24 months of work in New Zealand (revoked 01/07/2023)",
-      "file": "residence\\SR4.15.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77818.htm",
-      "effective_date": "27/02/2023",
-      "content_hash": "74aebde3ff5036cc"
-    },
-    {
-      "section_code": "SR5",
-      "title": "SR5 Green List: Work to Residence",
-      "file": "residence\\SR5.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77821.htm",
-      "effective_date": null,
-      "content_hash": "cf23ee7a3f43173d"
-    },
-    {
-      "section_code": "SR5.1",
-      "title": "SR5.1 Objective",
-      "file": "residence\\SR5.1.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77819.htm",
-      "effective_date": "09/10/2023",
-      "content_hash": "93f3e5d90b3fc973"
-    },
-    {
-      "section_code": "SR5.5",
-      "title": "SR5.5 Summary of requirements",
-      "file": "residence\\SR5.5.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77820.htm",
-      "effective_date": "28/02/2024",
-      "content_hash": "8c26072cf57be43b"
-    },
-    {
-      "section_code": "SR5.10",
-      "title": "SR5.10 Acceptable employment in a Tier 2 Green List role",
-      "file": "residence\\SR5.10.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77822.htm",
-      "effective_date": "09/03/2026",
-      "content_hash": "9946e9b5a363c5a6"
-    },
-    {
-      "section_code": "SR5.15",
-      "title": "SR5.15 Requirements for 24 months of work in New Zealand in a Tier 2 Green List role",
-      "file": "residence\\SR5.15.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77823.htm",
-      "effective_date": "09/03/2026",
-      "content_hash": "c32df83bad09b13e"
-    },
-    {
-      "section_code": "SR5.20",
-      "title": "SR5.20 Work in New Zealand earning at least twice the median wage",
-      "file": "residence\\SR5.20.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/80485.htm",
-      "effective_date": "09/03/2026",
-      "content_hash": "f42dba45b462a21e"
-    },
-    {
-      "section_code": "SR6",
-      "title": "SR6 Care Workforce: Work to Residence",
-      "file": "residence\\SR6.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/78788.htm",
-      "effective_date": null,
-      "content_hash": "05eddfeb03134f5b"
-    },
-    {
-      "section_code": "SR6.1",
-      "title": "SR6.1 Care Workforce: Work to Residence objective",
-      "file": "residence\\SR6.1.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/78789.htm",
-      "effective_date": "09/10/2023",
-      "content_hash": "e6f652598864f687"
-    },
-    {
-      "section_code": "SR6.5",
-      "title": "SR6.5 Summary of requirements",
-      "file": "residence\\SR6.5.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/78790.htm",
-      "effective_date": "07/04/2024",
-      "content_hash": "9110ebb69f9e0961"
-    },
-    {
-      "section_code": "SR6.10",
-      "title": "SR6.10 Acceptable employment in a Care Workforce sector role",
-      "file": "residence\\SR6.10.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/78791.htm",
-      "effective_date": "26/06/2024",
-      "content_hash": "9829dcffd2e06f64"
-    },
-    {
-      "section_code": "SR6.15",
-      "title": "SR6.15 Requirements for 24 months of work in New Zealand in a Care Workforce sector role",
-      "file": "residence\\SR6.15.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/78792.htm",
-      "effective_date": "08/04/2025",
-      "content_hash": "40556d757addc661"
-    },
-    {
-      "section_code": "SR7",
-      "title": "SR7 Transport Sector: Work to Residence",
-      "file": "residence\\SR7.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/79664.htm",
-      "effective_date": null,
-      "content_hash": "1f723d747ac34fd9"
-    },
-    {
-      "section_code": "SR7.1",
-      "title": "SR7.1 Transport Sector: Work to Residence objective",
-      "file": "residence\\SR7.1.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/79665.htm",
-      "effective_date": "20/04/2026",
-      "content_hash": "c40cfb899d830f45"
-    },
-    {
-      "section_code": "SR7.5",
-      "title": "SR7.5 Transport Sector: Work to Residence Summary of requirements",
-      "file": "residence\\SR7.5.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/79666.htm",
-      "effective_date": "28/02/2024",
-      "content_hash": "b89c843c72931ee1"
-    },
-    {
-      "section_code": "SR7.10",
-      "title": "SR7.10 Acceptable employment in a Transport Sector role",
-      "file": "residence\\SR7.10.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/87143.htm",
-      "effective_date": "20/04/2026",
-      "content_hash": "3a94e83c535929e5"
-    },
-    {
-      "section_code": "SR7.15",
-      "title": "SR7.15 Skilled Residence: Transport Sector Work to Residence requirements for 24 months of work in New Zealand",
-      "file": "residence\\SR7.15.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/79670.htm",
-      "effective_date": "20/04/2026",
-      "content_hash": "f55be817b3d3c3d0"
-    },
-    {
-      "section_code": "U1",
-      "title": "U1 Objectives",
-      "file": "student-visa\\U1.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/34221.htm",
-      "effective_date": "29/11/2010",
-      "content_hash": "b206b8c8e867cf19"
-    },
-    {
-      "section_code": "U2",
-      "title": "U2 The need to apply for a student visa",
-      "file": "student-visa\\U2.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/34222.htm",
-      "effective_date": null,
-      "content_hash": "684a50ca4dcd9100"
-    },
-    {
-      "section_code": "U2.1",
-      "title": "U2.1 Persons requiring a student visa",
-      "file": "student-visa\\U2.1.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/34223.htm",
-      "effective_date": "02/12/2013",
-      "content_hash": "d38a92db2d6ba746"
-    },
-    {
-      "section_code": "U3",
-      "title": "U3 Student visa requirements",
-      "file": "student-visa\\U3.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/34225.htm",
-      "effective_date": null,
-      "content_hash": "1caae239473e5fa4"
-    },
-    {
-      "section_code": "U3.1",
-      "title": "U3.1 Summary",
-      "file": "student-visa\\U3.1.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/44905.htm",
-      "effective_date": "07/09/2022",
-      "content_hash": "031f04247be49319"
-    },
-    {
-      "section_code": "U3.5",
-      "title": "U3.5 Offer of a place",
-      "file": "student-visa\\U3.5.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/44909.htm",
-      "effective_date": "21/11/2016",
-      "content_hash": "26bf6f3a28c0b722"
-    },
-    {
-      "section_code": "U3.7",
-      "title": "U3.7 Confirmation of enrolment",
-      "file": "student-visa\\U3.7.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/42767.htm",
-      "effective_date": "02/12/2013",
-      "content_hash": "6cf87bfc18fe9258"
-    },
-    {
-      "section_code": "U3.10",
-      "title": "U3.10 Tuition fees",
-      "file": "student-visa\\U3.10.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/45656.htm",
-      "effective_date": "10/12/2022",
-      "content_hash": "4ed8375874266989"
-    },
-    {
-      "section_code": "U3.20",
-      "title": "U3.20 Sufficient funds for maintenance while in New Zealand",
-      "file": "student-visa\\U3.20.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/43653.htm",
-      "effective_date": "26/09/2022",
-      "content_hash": "fd1fee067f1abb6e"
-    },
-    {
-      "section_code": "U3.40",
-      "title": "U3.40 Students who wish to change their study conditions",
-      "file": "student-visa\\U3.40.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/40311.htm",
-      "effective_date": "08/12/2025",
-      "content_hash": "0d34dff6f824a7e9"
-    },
-    {
-      "section_code": "U3.45",
-      "title": "U3.45 Insurance requirements for fee-paying foreign students",
-      "file": "student-visa\\U3.45.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/44908.htm",
-      "effective_date": "31/07/2022",
-      "content_hash": "7b32913d0864441c"
-    },
-    {
-      "section_code": "U4",
-      "title": "U4 Categories of foreign student",
-      "file": "student-visa\\U4.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/34235.htm",
-      "effective_date": null,
-      "content_hash": "9ec7698928567096"
-    },
-    {
-      "section_code": "U4.10",
-      "title": "U4.10 Fee-paying foreign students",
-      "file": "student-visa\\U4.10.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/34238.htm",
-      "effective_date": "02/12/2013",
-      "content_hash": "bcb6f998b4595db3"
-    },
-    {
-      "section_code": "U5",
-      "title": "U5 Programmes of study available to foreign students",
-      "file": "student-visa\\U5.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/34241.htm",
-      "effective_date": null,
-      "content_hash": "d2385f18a5d74c1d"
-    },
-    {
-      "section_code": "U5.1",
-      "title": "U5.1 Status of education providers and programmes",
-      "file": "student-visa\\U5.1.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/44910.htm",
-      "effective_date": "31/07/2022",
-      "content_hash": "5d1dd3b6f7f16c3d"
-    },
-    {
-      "section_code": "U5.20",
-      "title": "U5.20 Tertiary institutions (Universities, Polytechnics, Colleges of Education, Wananga)",
-      "file": "student-visa\\U5.20.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/44912.htm",
-      "effective_date": "01/01/2022",
-      "content_hash": "c05c1349df3eda02"
-    },
-    {
-      "section_code": "U6",
-      "title": "U6 Obtaining student visas",
-      "file": "student-visa\\U6.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/34247.htm",
-      "effective_date": null,
-      "content_hash": "d1784d1bb1793c97"
-    },
-    {
-      "section_code": "U6.1",
-      "title": "U6.1 Programmes of study lasting longer than 3 months",
-      "file": "student-visa\\U6.1.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/42647.htm",
-      "effective_date": "02/12/2013",
-      "content_hash": "324a3968232ebe9d"
-    },
-    {
-      "section_code": "U6.15",
-      "title": "U6.15 Graduation",
-      "file": "student-visa\\U6.15.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/34251.htm",
-      "effective_date": "29/11/2010",
-      "content_hash": "483ce8dfa3aea7ba"
-    },
-    {
-      "section_code": "U6.25",
-      "title": "U6.25 Further temporary visas",
-      "file": "student-visa\\U6.25.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/41782.htm",
-      "effective_date": null,
-      "content_hash": "9908926ededacd29"
-    },
-    {
-      "section_code": "U6.30",
-      "title": "U6.30 Currency of student visas",
-      "file": "student-visa\\U6.30.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/34254.htm",
-      "effective_date": "02/12/2013",
-      "content_hash": "0b665fa4fefff588"
-    },
-    {
-      "section_code": "U6.40",
-      "title": "U6.40 Conditions of student visas",
-      "file": "student-visa\\U6.40.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/34256.htm",
-      "effective_date": "09/09/2025",
-      "content_hash": "6974ca13a6acec12"
-    },
-    {
-      "section_code": "U7",
-      "title": "U7 After the student visa is granted",
-      "file": "student-visa\\U7.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/34257.htm",
-      "effective_date": null,
-      "content_hash": "218427142d3221f1"
-    },
-    {
-      "section_code": "U7.5",
-      "title": "U7.5 Second and subsequent programmes of study",
-      "file": "student-visa\\U7.5.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/34259.htm",
-      "effective_date": "02/12/2013",
-      "content_hash": "90a646cf582c19b5"
-    },
-    {
-      "section_code": "U7.20",
-      "title": "U7.20 Part-time study",
-      "file": "student-visa\\U7.20.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/34262.htm",
-      "effective_date": "09/10/2023",
-      "content_hash": "6fc385fd0f3884dc"
-    },
-    {
-      "section_code": "U8.25",
-      "title": "U8.25 Dependent children of holders of student visas",
-      "file": "student-visa\\U8.25.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/42649.htm",
-      "effective_date": "13/05/2019",
-      "content_hash": "3944fdb76f1f78df"
-    },
-    {
-      "section_code": "U13",
-      "title": "U13 Students undertaking employment",
-      "file": "student-visa\\U13.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/47530.htm",
-      "effective_date": null,
-      "content_hash": "17e490ee85b736cc"
-    },
-    {
-      "section_code": "U13.1",
-      "title": "U13.1 Work conditions for all students",
-      "file": "student-visa\\U13.1.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/47536.htm",
-      "effective_date": "02/12/2013",
-      "content_hash": "9ca5a78a098a7722"
-    },
-    {
-      "section_code": "U13.5",
-      "title": "U13.5 Work conditions for practical experience requirements",
-      "file": "student-visa\\U13.5.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/47538.htm",
-      "effective_date": "02/12/2013",
-      "content_hash": "af40cfab3f9295f6"
-    },
-    {
-      "section_code": "U13.15",
-      "title": "U13.15 Work conditions for students enrolled at a tertiary institution or private training establishment",
-      "file": "student-visa\\U13.15.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/47535.htm",
-      "effective_date": "03/11/2025",
-      "content_hash": "26f46ed4179be530"
-    },
-    {
-      "section_code": "V3.10",
-      "title": "V3.10 Partners and dependent children of student or work visa holders",
-      "file": "visitor-visa\\V3.10.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/46189.htm",
-      "effective_date": "09/03/2026",
-      "content_hash": "33659db39bc58c33"
-    },
-    {
-      "section_code": "A4",
-      "title": "A4 Health Requirements",
-      "file": "administration\\A4.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/35154.htm",
-      "effective_date": null,
-      "content_hash": "6e628a9a2a703b8b"
-    },
     {
       "section_code": "A4.1",
       "title": "A4.1 Objective",
-      "file": "administration\\A4.1.md",
+      "file": "operational_manual\\A4.1.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/35037.htm",
       "effective_date": "29/11/2010",
-      "content_hash": "7462b69ba742888a"
-    },
-    {
-      "section_code": "A4.5",
-      "title": "A4.5 Overview of health instructions",
-      "file": "administration\\A4.5.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/44860.htm",
-      "effective_date": "08/12/2025",
-      "content_hash": "20859cf95de55911"
+      "content_hash": "a8e09e08624346d6",
+      "source_archive_file": "source_archive\\operational_manual\\A4.1.mhtml"
     },
     {
       "section_code": "A4.10",
       "title": "A4.10 Acceptable standard of health (applicants for residence)",
-      "file": "administration\\A4.10.md",
+      "file": "operational_manual\\A4.10.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/46506.htm",
-      "effective_date": "16/03/2024",
-      "content_hash": "6078bd2fc2137617"
+      "effective_date": "03/08/2026",
+      "content_hash": "fb1fd0e2bfdb41d4",
+      "source_archive_file": "source_archive\\operational_manual\\A4.10.mhtml"
     },
     {
       "section_code": "A4.15",
       "title": "A4.15 Acceptable standard of health (applicants for temporary entry class visas)",
-      "file": "administration\\A4.15.md",
+      "file": "operational_manual\\A4.15.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/44856.htm",
       "effective_date": "17/03/2025",
-      "content_hash": "8278d86133a57ae0"
+      "content_hash": "5aaf1afb8a5048bf",
+      "source_archive_file": "source_archive\\operational_manual\\A4.15.mhtml"
     },
     {
       "section_code": "A4.20",
       "title": "A4.20 Medical and Chest X-ray Certificates: residence class visa applications",
-      "file": "administration\\A4.20.md",
+      "file": "operational_manual\\A4.20.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/46161.htm",
-      "effective_date": null,
-      "content_hash": "2c0987fdbc135625"
+      "effective_date": "1/08/2024",
+      "content_hash": "db077a4d81fc447d",
+      "source_archive_file": "source_archive\\operational_manual\\A4.20.mhtml"
     },
     {
       "section_code": "A4.25",
       "title": "A4.25 Medical and Chest X-ray Certificates: temporary entry class visa applications",
-      "file": "administration\\A4.25.md",
+      "file": "operational_manual\\A4.25.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/46507.htm",
       "effective_date": "8/12/2025",
-      "content_hash": "b4bf4e8b79596c73"
+      "content_hash": "01f3b0fa5988374e",
+      "source_archive_file": "source_archive\\operational_manual\\A4.25.mhtml"
     },
     {
       "section_code": "A4.30",
       "title": "A4.30 Completion of medical certificates",
-      "file": "administration\\A4.30.md",
+      "file": "operational_manual\\A4.30.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/44859.htm",
       "effective_date": "05/10/2021",
-      "content_hash": "068cbc405d54794a"
+      "content_hash": "2e2f945aebff2b5d",
+      "source_archive_file": "source_archive\\operational_manual\\A4.30.mhtml"
     },
     {
       "section_code": "A4.40",
       "title": "A4.40 Seeking comment concerning health assessments",
-      "file": "administration\\A4.40.md",
+      "file": "operational_manual\\A4.40.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/41437.htm",
       "effective_date": "25/07/2011",
-      "content_hash": "e6fb6ffef140f390"
+      "content_hash": "edbd84081851254e",
+      "source_archive_file": "source_archive\\operational_manual\\A4.40.mhtml"
     },
     {
       "section_code": "A4.45",
       "title": "A4.45 Second opinion assessments by Immigration New Zealand medical assessors (residence applications)",
-      "file": "administration\\A4.45.md",
+      "file": "operational_manual\\A4.45.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/35045.htm",
       "effective_date": "29/11/2010",
-      "content_hash": "f5c7227d78d43a2a"
+      "content_hash": "60dd8764411d9dbf",
+      "source_archive_file": "source_archive\\operational_manual\\A4.45.mhtml"
+    },
+    {
+      "section_code": "A4.5",
+      "title": "A4.5 Overview of health instructions",
+      "file": "operational_manual\\A4.5.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/44860.htm",
+      "effective_date": "08/12/2025",
+      "content_hash": "414c0ec209eba47a",
+      "source_archive_file": "source_archive\\operational_manual\\A4.5.mhtml"
     },
     {
       "section_code": "A4.50",
       "title": "A4.50 Second opinion assessments by Ministry of Education (residence class visa applications)",
-      "file": "administration\\A4.50.md",
+      "file": "operational_manual\\A4.50.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/42612.htm",
       "effective_date": "07/11/2011",
-      "content_hash": "67747eb6d0688849"
+      "content_hash": "e2e19bdbebce612b",
+      "source_archive_file": "source_archive\\operational_manual\\A4.50.mhtml"
     },
     {
       "section_code": "A4.55",
       "title": "A4.55 Deferral of decisions on residence applications pending treatment for medical conditions",
-      "file": "administration\\A4.55.md",
+      "file": "operational_manual\\A4.55.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/44861.htm",
       "effective_date": "30/07/2012",
-      "content_hash": "ddac324891b98406"
+      "content_hash": "2a5a4038d72fdb7c",
+      "source_archive_file": "source_archive\\operational_manual\\A4.55.mhtml"
     },
     {
       "section_code": "A4.60",
       "title": "A4.60 Medical waivers (applicants for residence class visas)",
-      "file": "administration\\A4.60.md",
+      "file": "operational_manual\\A4.60.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/45636.htm",
       "effective_date": "29/09/2025",
-      "content_hash": "125e7069c91236a3"
+      "content_hash": "2201a21bac016a58",
+      "source_archive_file": "source_archive\\operational_manual\\A4.60.mhtml"
     },
     {
       "section_code": "A4.65",
       "title": "A4.65 Medical waivers (applicants for temporary entry class visas)",
-      "file": "administration\\A4.65.md",
+      "file": "operational_manual\\A4.65.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/44863.htm",
       "effective_date": "29/09/2025",
-      "content_hash": "3b5d4e65fc84c690"
+      "content_hash": "d951d27b51a69a83",
+      "source_archive_file": "source_archive\\operational_manual\\A4.65.mhtml"
     },
     {
       "section_code": "A4.70",
       "title": "A4.70 Determination of whether a medical waiver should be granted (residence and temporary entry)",
-      "file": "administration\\A4.70.md",
+      "file": "operational_manual\\A4.70.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/44864.htm",
       "effective_date": "17/03/2025",
-      "content_hash": "b4e0e7f4a9d6769e"
+      "content_hash": "5a9d817a6be84ad9",
+      "source_archive_file": "source_archive\\operational_manual\\A4.70.mhtml"
     },
     {
       "section_code": "A4.74",
       "title": "A4.74 Health requirements for mandated refugees and Refugee Quota Family Reunification Category applicants",
-      "file": "administration\\A4.74.md",
+      "file": "operational_manual\\A4.74.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/46508.htm",
       "effective_date": "15/12/2017",
-      "content_hash": "ce91013e36f39602"
+      "content_hash": "f3f5711500706382",
+      "source_archive_file": "source_archive\\operational_manual\\A4.74.mhtml"
     },
     {
       "section_code": "A4.75",
       "title": "A4.75 Exception to health requirements instructions for people entering New Zealand for medical treatment",
-      "file": "administration\\A4.75.md",
+      "file": "operational_manual\\A4.75.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/35051.htm",
       "effective_date": "29/11/2010",
-      "content_hash": "d196136ee0f3b9a6"
-    },
-    {
-      "section_code": "A5",
-      "title": "A5 Character requirements",
-      "file": "administration\\A5.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/35052.htm",
-      "effective_date": null,
-      "content_hash": "73f3c81558050376"
+      "content_hash": "e365d5cf30dc5dff",
+      "source_archive_file": "source_archive\\operational_manual\\A4.75.mhtml"
     },
     {
       "section_code": "A5.1",
       "title": "A5.1 Visa applicants must meet character requirements",
-      "file": "administration\\A5.1.md",
+      "file": "operational_manual\\A5.1.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/35053.htm",
       "effective_date": "25/09/2023",
-      "content_hash": "11340ef9998fa8a5"
-    },
-    {
-      "section_code": "A5.5",
-      "title": "A5.5 Character checks",
-      "file": "administration\\A5.5.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/45181.htm",
-      "effective_date": "08/12/2025",
-      "content_hash": "cf7c525d562ff378"
+      "content_hash": "8ef68f376487c2c2",
+      "source_archive_file": "source_archive\\operational_manual\\A5.1.mhtml"
     },
     {
       "section_code": "A5.10",
       "title": "A5.10 Police certificates",
-      "file": "administration\\A5.10.md",
+      "file": "operational_manual\\A5.10.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/41439.htm",
       "effective_date": "06/07/2015",
-      "content_hash": "70463009ecf52f8a"
+      "content_hash": "e1dd0288b2d8556f",
+      "source_archive_file": "source_archive\\operational_manual\\A5.10.mhtml"
     },
     {
       "section_code": "A5.15",
       "title": "A5.15 Summary of character requirements",
-      "file": "administration\\A5.15.md",
+      "file": "operational_manual\\A5.15.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/35056.htm",
       "effective_date": "25/09/2023",
-      "content_hash": "f2b6fe03caccd4cb"
+      "content_hash": "adafdf56cef59740",
+      "source_archive_file": "source_archive\\operational_manual\\A5.15.mhtml"
     },
     {
       "section_code": "A5.20",
       "title": "A5.20 Who must not be granted a visa or entry permission",
-      "file": "administration\\A5.20.md",
+      "file": "operational_manual\\A5.20.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/35057.htm",
       "effective_date": "25/09/2023",
-      "content_hash": "4c9670e87e785bd4"
+      "content_hash": "9018887fea133803",
+      "source_archive_file": "source_archive\\operational_manual\\A5.20.mhtml"
     },
     {
       "section_code": "A5.25",
       "title": "A5.25 Convictions, false information and other matters which may cause applicants not to meet character requirements for residence",
-      "file": "administration\\A5.25.md",
+      "file": "operational_manual\\A5.25.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/35058.htm",
       "effective_date": "25/09/2023",
-      "content_hash": "5b17e0c2311ee717"
+      "content_hash": "7fc439f1d8d712bd",
+      "source_archive_file": "source_archive\\operational_manual\\A5.25.mhtml"
     },
     {
       "section_code": "A5.30",
       "title": "A5.30 Applicants normally ineligible for a residence or temporary entry class visa (risk to reputation)",
-      "file": "administration\\A5.30.md",
+      "file": "operational_manual\\A5.30.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/35059.htm",
       "effective_date": "02/07/2021",
-      "content_hash": "16413ee699c108a2"
+      "content_hash": "8efd888e38a91202",
+      "source_archive_file": "source_archive\\operational_manual\\A5.30.mhtml"
     },
     {
       "section_code": "A5.35",
       "title": "A5.35 Residence applications usually deferred",
-      "file": "administration\\A5.35.md",
+      "file": "operational_manual\\A5.35.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/35060.htm",
       "effective_date": "25/09/2023",
-      "content_hash": "7fee00dc59f1eee4"
+      "content_hash": "effef79c70323194",
+      "source_archive_file": "source_archive\\operational_manual\\A5.35.mhtml"
     },
     {
       "section_code": "A5.45",
       "title": "A5.45 Convictions, charges and other matters which may cause applicants not to meet character requirements for temporary entry",
-      "file": "administration\\A5.45.md",
+      "file": "operational_manual\\A5.45.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/43627.htm",
       "effective_date": "25/09/2023",
-      "content_hash": "95392864102ca1f4"
+      "content_hash": "45daf2db55872a3e",
+      "source_archive_file": "source_archive\\operational_manual\\A5.45.mhtml"
     },
     {
-      "section_code": "WA2",
-      "title": "WA2 Employer accreditation instructions",
-      "file": "administration\\WA2.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77095.htm",
-      "effective_date": "23/05/2022",
-      "content_hash": "fd0a7e6056b3eff5"
-    },
-    {
-      "section_code": "WA2.1",
-      "title": "WA2.1 Overview",
-      "file": "administration\\WA2.1.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77100.htm",
+      "section_code": "A5.5",
+      "title": "A5.5 Character checks",
+      "file": "operational_manual\\A5.5.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/45181.htm",
       "effective_date": "08/12/2025",
-      "content_hash": "a4a85e3d0930b23a"
-    },
-    {
-      "section_code": "WA2.5",
-      "title": "WA2.5 Applying for employer accreditation",
-      "file": "administration\\WA2.5.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77101.htm",
-      "effective_date": "23/05/2022",
-      "content_hash": "25e5e73be8fe56a9"
-    },
-    {
-      "section_code": "WA2.10",
-      "title": "WA2.10 Requirements for all employers",
-      "file": "administration\\WA2.10.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77102.htm",
-      "effective_date": "29/09/2025",
-      "content_hash": "5c6ce8eae652e5d6"
-    },
-    {
-      "section_code": "WA2.15",
-      "title": "WA2.15 Requirements for Standard Accreditation",
-      "file": "administration\\WA2.15.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77103.htm",
-      "effective_date": "29/09/2025",
-      "content_hash": "66b0328d4e109d35"
-    },
-    {
-      "section_code": "WA2.20",
-      "title": "WA2.20 Requirements for employers using triangular employment arrangements",
-      "file": "administration\\WA2.20.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77106.htm",
-      "effective_date": "27/01/2025",
-      "content_hash": "92db47acae79d48f"
-    },
-    {
-      "section_code": "WA2.25",
-      "title": "WA2.25 Requirements for franchisee employers",
-      "file": "administration\\WA2.25.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77110.htm",
-      "effective_date": "16/06/2024",
-      "content_hash": "fb8e9c21716f33fe"
-    },
-    {
-      "section_code": "WA2.30",
-      "title": "WA2.30 Subsequent applications for employer accreditation",
-      "file": "administration\\WA2.30.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77111.htm",
-      "effective_date": "27/01/2025",
-      "content_hash": "ecde7c8ed1c92df0"
-    },
-    {
-      "section_code": "WA2.35",
-      "title": "WA2.35 Processing and verification requirements",
-      "file": "administration\\WA2.35.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77112.htm",
-      "effective_date": "08/12/2025",
-      "content_hash": "2a45b941094b32b9"
-    },
-    {
-      "section_code": "WA2.40",
-      "title": "WA2.40 Considering an application for employer accreditation",
-      "file": "administration\\WA2.40.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77113.htm",
-      "effective_date": "23/05/2022",
-      "content_hash": "da8185940ce9bc7e"
-    },
-    {
-      "section_code": "WA2.45",
-      "title": "WA2.45 Currency and approval specifications of employer accreditation",
-      "file": "administration\\WA2.45.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77114.htm",
-      "effective_date": "29/09/2025",
-      "content_hash": "947a3f54b4312db0"
-    },
-    {
-      "section_code": "WA2.50",
-      "title": "WA2.50 Verification activities after accreditation has been granted",
-      "file": "administration\\WA2.50.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77115.htm",
-      "effective_date": "23/05/2022",
-      "content_hash": "c7fbb8f10f6b141b"
-    },
-    {
-      "section_code": "WA2.55",
-      "title": "WA2.55 Suspending and revoking employer accreditation",
-      "file": "administration\\WA2.55.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77116.htm",
-      "effective_date": "11/04/2024",
-      "content_hash": "f96b7540efb24ca1"
-    },
-    {
-      "section_code": "WA2.60",
-      "title": "WA2.60 Definitions",
-      "file": "administration\\WA2.60.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/77117.htm",
-      "effective_date": "16/06/2024",
-      "content_hash": "b231ed4df4c9b5a9"
+      "content_hash": "000585f895584ec4",
+      "source_archive_file": "source_archive\\operational_manual\\A5.5.mhtml"
     },
     {
       "section_code": "R1",
       "title": "R1 Objective",
-      "file": "generic-residence\\R1.md",
+      "file": "operational_manual\\R1.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/30959.htm",
-      "effective_date": "29/11/2010"
-    },
-    {
-      "section_code": "R2",
-      "title": "R2 Lodging an application",
-      "file": "generic-residence\\R2.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/30960.htm",
-      "effective_date": null
+      "effective_date": "29/11/2010",
+      "content_hash": "364e8857fab6751b",
+      "source_archive_file": "source_archive\\operational_manual\\R1.mhtml"
     },
     {
       "section_code": "R2.1",
       "title": "R2.1 Who may be included in an application",
-      "file": "generic-residence\\R2.1.md",
+      "file": "operational_manual\\R2.1.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/46504.htm",
-      "effective_date": "01/10/2024"
-    },
-    {
-      "section_code": "R2.5",
-      "title": "R2.5 Who may not be included in an application",
-      "file": "generic-residence\\R2.5.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/30962.htm",
-      "effective_date": "29/11/2010"
+      "effective_date": "01/10/2024",
+      "content_hash": "b3220cc8d22fc67d",
+      "source_archive_file": "source_archive\\operational_manual\\R2.1.mhtml"
     },
     {
       "section_code": "R2.35",
       "title": "R2.35 How an application must be lodged",
-      "file": "generic-residence\\R2.35.md",
+      "file": "operational_manual\\R2.35.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/30968.htm",
-      "effective_date": "29/11/2010"
+      "effective_date": "29/11/2010",
+      "content_hash": "d1604b7f6a70f722",
+      "source_archive_file": "source_archive\\operational_manual\\R2.35.mhtml"
     },
     {
       "section_code": "R2.40",
       "title": "R2.40 Mandatory requirements for lodging an application for a residence class visa",
-      "file": "generic-residence\\R2.40.md",
+      "file": "operational_manual\\R2.40.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/44893.htm",
       "effective_date": "12/04/2022",
-      "content_hash": "71399d6d4f5e2843"
+      "content_hash": "8afe3518ae70673d",
+      "source_archive_file": "source_archive\\operational_manual\\R2.40.mhtml"
+    },
+    {
+      "section_code": "R2.5",
+      "title": "R2.5 Who may not be included in an application",
+      "file": "operational_manual\\R2.5.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/30962.htm",
+      "effective_date": "29/11/2010",
+      "content_hash": "6cb0eacc1834942b",
+      "source_archive_file": "source_archive\\operational_manual\\R2.5.mhtml"
     },
     {
       "section_code": "R2.60",
       "title": "R2.60 Payment of the fee and immigration levy",
-      "file": "generic-residence\\R2.60.md",
+      "file": "operational_manual\\R2.60.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/30975.htm",
-      "effective_date": "24/06/2021"
-    },
-    {
-      "section_code": "R5",
-      "title": "R5 Determining an Application",
-      "file": "generic-residence\\R5.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/30987.htm",
-      "effective_date": null
-    },
-    {
-      "section_code": "R5.5",
-      "title": "R5.5 Evidential requirements",
-      "file": "generic-residence\\R5.5.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/30989.htm",
-      "effective_date": "29/11/2010"
-    },
-    {
-      "section_code": "R5.7",
-      "title": "R5.7 Australian and New Zealand Standard Classification of Occupations (ANZSCO)",
-      "file": "generic-residence\\R5.7.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/72986.htm",
-      "effective_date": "15/02/2021"
-    },
-    {
-      "section_code": "R5.6",
-      "title": "R5.6 Age of applicant",
-      "file": "generic-residence\\R5.6.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/30990.htm",
-      "effective_date": "29/11/2010"
+      "effective_date": "24/06/2021",
+      "content_hash": "62e2e9516a7f811a",
+      "source_archive_file": "source_archive\\operational_manual\\R2.60.mhtml"
     },
     {
       "section_code": "R5.10",
       "title": "R5.10 Verification",
-      "file": "generic-residence\\R5.10.md",
+      "file": "operational_manual\\R5.10.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/30991.htm",
-      "effective_date": "23/03/2026"
-    },
-    {
-      "section_code": "R5.11",
-      "title": "R5.11 Verification and false information",
-      "file": "generic-residence\\R5.11.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/89072.htm",
-      "effective_date": "23/03/2026"
-    },
-    {
-      "section_code": "R5.15",
-      "title": "R5.15 Explaining discrepancies in family details",
-      "file": "generic-residence\\R5.15.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/30992.htm",
-      "effective_date": "25/09/2023"
-    },
-    {
-      "section_code": "R5.20",
-      "title": "R5.20 Assessment of applications",
-      "file": "generic-residence\\R5.20.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/30994.htm",
-      "effective_date": "25/09/2023"
-    },
-    {
-      "section_code": "R5.30",
-      "title": "R5.30 Approving an application",
-      "file": "generic-residence\\R5.30.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/30996.htm",
-      "effective_date": "14/12/2025"
-    },
-    {
-      "section_code": "R5.55",
-      "title": "R5.55 Declining an application",
-      "file": "generic-residence\\R5.55.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/66595.htm",
-      "effective_date": "21/05/2018"
-    },
-    {
-      "section_code": "R5.60",
-      "title": "R5.60 Date of final decision",
-      "file": "generic-residence\\R5.60.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/31001.htm",
-      "effective_date": "06/07/2015"
-    },
-    {
-      "section_code": "R5.65",
-      "title": "R5.65 Approved applications for residence class visas",
-      "file": "generic-residence\\R5.65.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/31002.htm",
-      "effective_date": "14/12/2025"
-    },
-    {
-      "section_code": "R5.66",
-      "title": "R5.66 Travel conditions on resident visas",
-      "file": "generic-residence\\R5.66.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/44894.htm",
-      "effective_date": "01/04/2025"
-    },
-    {
-      "section_code": "R5.70",
-      "title": "R5.70 Newborn children of residence class visa holders",
-      "file": "generic-residence\\R5.70.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/44895.htm",
-      "effective_date": "01/04/2025"
-    },
-    {
-      "section_code": "R5.75",
-      "title": "R5.75 Status of people applying for a residence class visa while in New Zealand",
-      "file": "generic-residence\\R5.75.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/31004.htm",
-      "effective_date": "29/11/2010"
-    },
-    {
-      "section_code": "R5.90",
-      "title": "R5.90 Migrant Levy",
-      "file": "generic-residence\\R5.90.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/41485.htm",
-      "effective_date": "07/12/2015"
-    },
-    {
-      "section_code": "R5.96",
-      "title": "R5.96 Health requirement for partners or dependent children not included in or withdrawn from a residence class visa application",
-      "file": "generic-residence\\R5.96.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/44896.htm",
-      "effective_date": "30/07/2012"
+      "effective_date": "23/03/2026",
+      "content_hash": "148546a7961d4b24",
+      "source_archive_file": "source_archive\\operational_manual\\R5.10.mhtml"
     },
     {
       "section_code": "R5.100",
       "title": "R5.100 Ban on the grant of residence class visas to certain individuals and classes of individuals",
-      "file": "generic-residence\\R5.100.md",
+      "file": "operational_manual\\R5.100.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/44449.htm",
-      "effective_date": "16/03/2026"
+      "effective_date": "16/03/2026",
+      "content_hash": "3e48b4875cabd20a",
+      "source_archive_file": "source_archive\\operational_manual\\R5.100.mhtml"
+    },
+    {
+      "section_code": "R5.11",
+      "title": "R5.11 Verification and false information",
+      "file": "operational_manual\\R5.11.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/89072.htm",
+      "effective_date": "23/03/2026",
+      "content_hash": "a8c787c4f7a42cb1",
+      "source_archive_file": "source_archive\\operational_manual\\R5.11.mhtml"
     },
     {
       "section_code": "R5.110",
       "title": "R5.110 Compliance with employment and immigration law",
-      "file": "generic-residence\\R5.110.md",
+      "file": "operational_manual\\R5.110.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/64549.htm",
-      "effective_date": "11/04/2024"
+      "effective_date": "11/04/2024",
+      "content_hash": "88045d988ba677b5",
+      "source_archive_file": "source_archive\\operational_manual\\R5.110.mhtml"
     },
     {
       "section_code": "R5.111",
       "title": "R5.111 Compliance with the Crimes Act",
-      "file": "generic-residence\\R5.111.md",
+      "file": "operational_manual\\R5.111.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/82397.htm",
-      "effective_date": "11/04/2024"
+      "effective_date": "11/04/2024",
+      "content_hash": "c566e9b374dc7a52",
+      "source_archive_file": "source_archive\\operational_manual\\R5.111.mhtml"
     },
     {
       "section_code": "R5.115",
       "title": "R5.115 Partners and dependent children who must be included in a residence class visa application",
-      "file": "generic-residence\\R5.115.md",
+      "file": "operational_manual\\R5.115.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/64732.htm",
-      "effective_date": "08/05/2017"
+      "effective_date": "08/05/2017",
+      "content_hash": "ed3d4cdfe5c05304",
+      "source_archive_file": "source_archive\\operational_manual\\R5.115.mhtml"
     },
     {
-      "section_code": "R7",
-      "title": "R7 Confirming or transferring a residence class visa",
-      "file": "generic-residence\\R7.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/31013.htm",
-      "effective_date": null
+      "section_code": "R5.15",
+      "title": "R5.15 Explaining discrepancies in family details",
+      "file": "operational_manual\\R5.15.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/30992.htm",
+      "effective_date": "25/09/2023",
+      "content_hash": "9b6daf4220b45b86",
+      "source_archive_file": "source_archive\\operational_manual\\R5.15.mhtml"
+    },
+    {
+      "section_code": "R5.20",
+      "title": "R5.20 Assessment of applications",
+      "file": "operational_manual\\R5.20.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/30994.htm",
+      "effective_date": "25/09/2023",
+      "content_hash": "7dd251b85df8a1eb",
+      "source_archive_file": "source_archive\\operational_manual\\R5.20.mhtml"
+    },
+    {
+      "section_code": "R5.30",
+      "title": "R5.30 Approving an application",
+      "file": "operational_manual\\R5.30.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/30996.htm",
+      "effective_date": "14/12/2025",
+      "content_hash": "e4cb9df62baeff60",
+      "source_archive_file": "source_archive\\operational_manual\\R5.30.mhtml"
+    },
+    {
+      "section_code": "R5.5",
+      "title": "R5.5 Evidential requirements",
+      "file": "operational_manual\\R5.5.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/30989.htm",
+      "effective_date": "29/11/2010",
+      "content_hash": "dcb255652e44d7fa",
+      "source_archive_file": "source_archive\\operational_manual\\R5.5.mhtml"
+    },
+    {
+      "section_code": "R5.55",
+      "title": "R5.55 Declining an application",
+      "file": "operational_manual\\R5.55.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/66595.htm",
+      "effective_date": "21/05/2018",
+      "content_hash": "8703c046f60afb45",
+      "source_archive_file": "source_archive\\operational_manual\\R5.55.mhtml"
+    },
+    {
+      "section_code": "R5.6",
+      "title": "R5.6 Age of applicant",
+      "file": "operational_manual\\R5.6.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/30990.htm",
+      "effective_date": "29/11/2010",
+      "content_hash": "a55ccdd4ecf8a1e8",
+      "source_archive_file": "source_archive\\operational_manual\\R5.6.mhtml"
+    },
+    {
+      "section_code": "R5.60",
+      "title": "R5.60 Date of final decision",
+      "file": "operational_manual\\R5.60.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/31001.htm",
+      "effective_date": "06/07/2015",
+      "content_hash": "1b0c9453a13b96a3",
+      "source_archive_file": "source_archive\\operational_manual\\R5.60.mhtml"
+    },
+    {
+      "section_code": "R5.65",
+      "title": "R5.65 Approved applications for residence class visas",
+      "file": "operational_manual\\R5.65.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/31002.htm",
+      "effective_date": "14/12/2025",
+      "content_hash": "f586f27e79e01d28",
+      "source_archive_file": "source_archive\\operational_manual\\R5.65.mhtml"
+    },
+    {
+      "section_code": "R5.66",
+      "title": "R5.66 Travel conditions on resident visas",
+      "file": "operational_manual\\R5.66.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/44894.htm",
+      "effective_date": "12/08/2026",
+      "content_hash": "05e29a445bbf5356",
+      "source_archive_file": "source_archive\\operational_manual\\R5.66.mhtml"
+    },
+    {
+      "section_code": "R5.7",
+      "title": "R5.7 Australian and New Zealand Standard Classification of Occupations (ANZSCO)",
+      "file": "operational_manual\\R5.7.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/72986.htm",
+      "effective_date": "15/02/2021",
+      "content_hash": "53d945f6748d4aa2",
+      "source_archive_file": "source_archive\\operational_manual\\R5.7.mhtml"
+    },
+    {
+      "section_code": "R5.70",
+      "title": "R5.70 Newborn children of residence class visa holders",
+      "file": "operational_manual\\R5.70.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/44895.htm",
+      "effective_date": "01/04/2025",
+      "content_hash": "b1affdf4f45b105e",
+      "source_archive_file": "source_archive\\operational_manual\\R5.70.mhtml"
+    },
+    {
+      "section_code": "R5.75",
+      "title": "R5.75 Status of people applying for a residence class visa while in New Zealand",
+      "file": "operational_manual\\R5.75.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/31004.htm",
+      "effective_date": "29/11/2010",
+      "content_hash": "33011341145da513",
+      "source_archive_file": "source_archive\\operational_manual\\R5.75.mhtml"
+    },
+    {
+      "section_code": "R5.90",
+      "title": "R5.90 Migrant Levy",
+      "file": "operational_manual\\R5.90.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/41485.htm",
+      "effective_date": "07/12/2015",
+      "content_hash": "7c566a3412997af9",
+      "source_archive_file": "source_archive\\operational_manual\\R5.90.mhtml"
+    },
+    {
+      "section_code": "R5.96",
+      "title": "R5.96 Health requirement for partners or dependent children not included in or withdrawn from a residence class visa application",
+      "file": "operational_manual\\R5.96.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/44896.htm",
+      "effective_date": "30/07/2012",
+      "content_hash": "355fdaaad068f7c8",
+      "source_archive_file": "source_archive\\operational_manual\\R5.96.mhtml"
     },
     {
       "section_code": "R7.1",
       "title": "R7.1 When confirmation is required",
-      "file": "generic-residence\\R7.1.md",
+      "file": "operational_manual\\R7.1.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/31014.htm",
-      "effective_date": "29/11/2010"
-    },
-    {
-      "section_code": "R7.5",
-      "title": "R7.5 When transfer is required",
-      "file": "generic-residence\\R7.5.md",
-      "source_url": "https://www.immigration.govt.nz/opsmanual/31015.htm",
-      "effective_date": "29/11/2010"
+      "effective_date": "29/11/2010",
+      "content_hash": "984c614c9ad4bbf8",
+      "source_archive_file": "source_archive\\operational_manual\\R7.1.mhtml"
     },
     {
       "section_code": "R7.10",
       "title": "R7.10 Procedure for confirming or transferring a residence class visa",
-      "file": "generic-residence\\R7.10.md",
+      "file": "operational_manual\\R7.10.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/43638.htm",
-      "effective_date": "29/05/2023"
+      "effective_date": "29/05/2023",
+      "content_hash": "be650a1765d52778",
+      "source_archive_file": "source_archive\\operational_manual\\R7.10.mhtml"
     },
     {
       "section_code": "R7.15",
       "title": "R7.15 Evidence",
-      "file": "generic-residence\\R7.15.md",
+      "file": "operational_manual\\R7.15.md",
       "source_url": "https://www.immigration.govt.nz/opsmanual/31017.htm",
-      "effective_date": "29/11/2010"
+      "effective_date": "29/11/2010",
+      "content_hash": "4099de717d0eb106",
+      "source_archive_file": "source_archive\\operational_manual\\R7.15.mhtml"
+    },
+    {
+      "section_code": "R7.5",
+      "title": "R7.5 When transfer is required",
+      "file": "operational_manual\\R7.5.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/31015.htm",
+      "effective_date": "29/11/2010",
+      "content_hash": "1b788bd31ac42d57",
+      "source_archive_file": "source_archive\\operational_manual\\R7.5.mhtml"
+    },
+    {
+      "section_code": "SR1.1",
+      "title": "SR1.1 Overview",
+      "file": "operational_manual\\SR1.1.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/77803.htm",
+      "effective_date": "09/10/2023",
+      "content_hash": "160a282a3fc1c8bd",
+      "source_archive_file": "source_archive\\operational_manual\\SR1.1.mhtml"
+    },
+    {
+      "section_code": "SR2.1",
+      "title": "SR2.1 Assessment of employment",
+      "file": "operational_manual\\SR2.1.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/77806.htm",
+      "effective_date": "24/08/2026",
+      "content_hash": "70460fbd1cd3b3b4",
+      "source_archive_file": "source_archive\\operational_manual\\SR2.1.mhtml"
+    },
+    {
+      "section_code": "SR2.10",
+      "title": "SR2.10 English Language Requirements",
+      "file": "operational_manual\\SR2.10.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/77808.htm",
+      "effective_date": "24/08/2026",
+      "content_hash": "07956b59664a1a13",
+      "source_archive_file": "source_archive\\operational_manual\\SR2.10.mhtml"
+    },
+    {
+      "section_code": "SR2.5",
+      "title": "SR2.5 Calculating remuneration",
+      "file": "operational_manual\\SR2.5.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/77807.htm",
+      "effective_date": "09/10/2023",
+      "content_hash": "ebf824cd5b961156",
+      "source_archive_file": "source_archive\\operational_manual\\SR2.5.mhtml"
+    },
+    {
+      "section_code": "SR3.1",
+      "title": "SR3.1 Objective",
+      "file": "operational_manual\\SR3.1.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/77810.htm",
+      "effective_date": "09/10/2023",
+      "content_hash": "2ee01b8ab2578f6e",
+      "source_archive_file": "source_archive\\operational_manual\\SR3.1.mhtml"
+    },
+    {
+      "section_code": "SR3.10",
+      "title": "SR3.10 Summary of requirements",
+      "file": "operational_manual\\SR3.10.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/77812.htm",
+      "effective_date": "24/08/2026",
+      "content_hash": "f0c2fc9d14697609",
+      "source_archive_file": "source_archive\\operational_manual\\SR3.10.mhtml"
+    },
+    {
+      "section_code": "SR3.15",
+      "title": "SR3.15 Skilled employment",
+      "file": "operational_manual\\SR3.15.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/79840.htm",
+      "effective_date": "24/08/2026",
+      "content_hash": "145695fbaf78206d",
+      "source_archive_file": "source_archive\\operational_manual\\SR3.15.mhtml"
+    },
+    {
+      "section_code": "SR3.20",
+      "title": "SR3.20 Skilled work experience in New Zealand",
+      "file": "operational_manual\\SR3.20.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/80476.htm",
+      "effective_date": "24/08/2026",
+      "content_hash": "3215c28c92246679",
+      "source_archive_file": "source_archive\\operational_manual\\SR3.20.mhtml"
+    },
+    {
+      "section_code": "SR3.25",
+      "title": "SR3.25 Points-based pathway",
+      "file": "operational_manual\\SR3.25.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/80474.htm",
+      "effective_date": "24/08/2026",
+      "content_hash": "7d0f9dff7e353ef7",
+      "source_archive_file": "source_archive\\operational_manual\\SR3.25.mhtml"
+    },
+    {
+      "section_code": "SR3.30",
+      "title": "SR3.30 Points for New Zealand registration, licensing, or certification",
+      "file": "operational_manual\\SR3.30.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/80475.htm",
+      "effective_date": "24/08/2026",
+      "content_hash": "a71f91acf55e8431",
+      "source_archive_file": "source_archive\\operational_manual\\SR3.30.mhtml"
+    },
+    {
+      "section_code": "SR3.35",
+      "title": "SR3.35 Skilled Work Experience Pathway",
+      "file": "operational_manual\\SR3.35.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/90257.htm",
+      "effective_date": "24/08/2026",
+      "content_hash": "6ec4d5cf01fdc6f5",
+      "source_archive_file": "source_archive\\operational_manual\\SR3.35.mhtml"
+    },
+    {
+      "section_code": "SR3.40",
+      "title": "SR3.40 Trades and Technician Pathway",
+      "file": "operational_manual\\SR3.40.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/90261.htm",
+      "effective_date": "24/08/2026",
+      "content_hash": "036181de024f97f2",
+      "source_archive_file": "source_archive\\operational_manual\\SR3.40.mhtml"
+    },
+    {
+      "section_code": "SR3.5",
+      "title": "SR3.5 Applying for a Skilled Migrant Category Visa",
+      "file": "operational_manual\\SR3.5.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/77811.htm",
+      "effective_date": "24/08/2026",
+      "content_hash": "8f8b0e41e748368f",
+      "source_archive_file": "source_archive\\operational_manual\\SR3.5.mhtml"
+    },
+    {
+      "section_code": "SR4.1",
+      "title": "SR4.1 Objective",
+      "file": "operational_manual\\SR4.1.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/77814.htm",
+      "effective_date": "09/10/2023",
+      "content_hash": "f62ea329e582f865",
+      "source_archive_file": "source_archive\\operational_manual\\SR4.1.mhtml"
+    },
+    {
+      "section_code": "SR4.10",
+      "title": "SR4.10 Acceptable employment in a Tier 1 Green List role",
+      "file": "operational_manual\\SR4.10.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/77817.htm",
+      "effective_date": "09/03/2026",
+      "content_hash": "e9c09fd46f1195de",
+      "source_archive_file": "source_archive\\operational_manual\\SR4.10.mhtml"
+    },
+    {
+      "section_code": "SR4.5",
+      "title": "SR4.5 Summary of requirements",
+      "file": "operational_manual\\SR4.5.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/77816.htm",
+      "effective_date": "28/02/2024",
+      "content_hash": "3af1310300664586",
+      "source_archive_file": "source_archive\\operational_manual\\SR4.5.mhtml"
+    },
+    {
+      "section_code": "SR5.1",
+      "title": "SR5.1 Objective",
+      "file": "operational_manual\\SR5.1.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/77819.htm",
+      "effective_date": "09/10/2023",
+      "content_hash": "9340b9996e932cf0",
+      "source_archive_file": "source_archive\\operational_manual\\SR5.1.mhtml"
+    },
+    {
+      "section_code": "SR5.10",
+      "title": "SR5.10 Acceptable employment in a Tier 2 Green List role",
+      "file": "operational_manual\\SR5.10.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/77822.htm",
+      "effective_date": "24/08/2026",
+      "content_hash": "f28e98ce25e40b1a",
+      "source_archive_file": "source_archive\\operational_manual\\SR5.10.mhtml"
+    },
+    {
+      "section_code": "SR5.15",
+      "title": "SR5.15 Requirements for 24 months of work in New Zealand in a Tier 2 Green List role",
+      "file": "operational_manual\\SR5.15.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/77823.htm",
+      "effective_date": "24/08/2026",
+      "content_hash": "b433496b31125237",
+      "source_archive_file": "source_archive\\operational_manual\\SR5.15.mhtml"
+    },
+    {
+      "section_code": "SR5.20",
+      "title": "SR5.20 Work in New Zealand earning at least twice the median wage",
+      "file": "operational_manual\\SR5.20.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/80485.htm",
+      "effective_date": "24/08/2026",
+      "content_hash": "e2af658cd3fd45e2",
+      "source_archive_file": "source_archive\\operational_manual\\SR5.20.mhtml"
+    },
+    {
+      "section_code": "SR5.5",
+      "title": "SR5.5 Summary of requirements",
+      "file": "operational_manual\\SR5.5.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/77820.htm",
+      "effective_date": "24/08/2026",
+      "content_hash": "33df7d35f2d38ef7",
+      "source_archive_file": "source_archive\\operational_manual\\SR5.5.mhtml"
+    },
+    {
+      "section_code": "SR6.1",
+      "title": "SR6.1 Care Workforce: Work to Residence objective",
+      "file": "operational_manual\\SR6.1.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/78789.htm",
+      "effective_date": "09/10/2023",
+      "content_hash": "be7002378b8a3477",
+      "source_archive_file": "source_archive\\operational_manual\\SR6.1.mhtml"
+    },
+    {
+      "section_code": "SR6.10",
+      "title": "SR6.10 Acceptable employment in a Care Workforce sector role",
+      "file": "operational_manual\\SR6.10.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/78791.htm",
+      "effective_date": "24/08/2026",
+      "content_hash": "a535e03e619f1dbe",
+      "source_archive_file": "source_archive\\operational_manual\\SR6.10.mhtml"
+    },
+    {
+      "section_code": "SR6.15",
+      "title": "SR6.15 Requirements for 24 months of work in New Zealand in a Care Workforce sector role",
+      "file": "operational_manual\\SR6.15.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/78792.htm",
+      "effective_date": "24/08/2026",
+      "content_hash": "cae856779efed44e",
+      "source_archive_file": "source_archive\\operational_manual\\SR6.15.mhtml"
+    },
+    {
+      "section_code": "SR6.5",
+      "title": "SR6.5 Summary of requirements",
+      "file": "operational_manual\\SR6.5.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/78790.htm",
+      "effective_date": "24/08/2026",
+      "content_hash": "fe428d984e5dc2ac",
+      "source_archive_file": "source_archive\\operational_manual\\SR6.5.mhtml"
+    },
+    {
+      "section_code": "SR7.1",
+      "title": "SR7.1 Transport Sector: Work to Residence objective",
+      "file": "operational_manual\\SR7.1.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/79665.htm",
+      "effective_date": "20/04/2026",
+      "content_hash": "8aefc6eb3a51c923",
+      "source_archive_file": "source_archive\\operational_manual\\SR7.1.mhtml"
+    },
+    {
+      "section_code": "SR7.10",
+      "title": "SR7.10 Acceptable employment in a Transport Sector role",
+      "file": "operational_manual\\SR7.10.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/87143.htm",
+      "effective_date": "24/08/2026",
+      "content_hash": "adf4b83ec36e984b",
+      "source_archive_file": "source_archive\\operational_manual\\SR7.10.mhtml"
+    },
+    {
+      "section_code": "SR7.15",
+      "title": "SR7.15 Requirements for 24 months of work in New Zealand in a Transport Sector role",
+      "file": "operational_manual\\SR7.15.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/79670.htm",
+      "effective_date": "24/08/2026",
+      "content_hash": "032bf0d726862532",
+      "source_archive_file": "source_archive\\operational_manual\\SR7.15.mhtml"
+    },
+    {
+      "section_code": "SR7.5",
+      "title": "SR7.5 Transport Sector: Work to Residence Summary of requirements",
+      "file": "operational_manual\\SR7.5.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/79666.htm",
+      "effective_date": "24/08/2026",
+      "content_hash": "e0c8a38334983868",
+      "source_archive_file": "source_archive\\operational_manual\\SR7.5.mhtml"
+    },
+    {
+      "section_code": "U1",
+      "title": "U1 Objectives",
+      "file": "operational_manual\\U1.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/34221.htm",
+      "effective_date": "29/11/2010",
+      "content_hash": "aa77d3866a652f0e",
+      "source_archive_file": "source_archive\\operational_manual\\U1.mhtml"
+    },
+    {
+      "section_code": "U13.1",
+      "title": "U13.1 Work conditions for all students",
+      "file": "operational_manual\\U13.1.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/47536.htm",
+      "effective_date": "02/12/2013",
+      "content_hash": "19566384d5dfe593",
+      "source_archive_file": "source_archive\\operational_manual\\U13.1.mhtml"
+    },
+    {
+      "section_code": "U13.15",
+      "title": "U13.15 Work conditions for students enrolled at a tertiary institution or private training establishment",
+      "file": "operational_manual\\U13.15.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/47535.htm",
+      "effective_date": "03/11/2025",
+      "content_hash": "d9937b397b0c4bbc",
+      "source_archive_file": "source_archive\\operational_manual\\U13.15.mhtml"
+    },
+    {
+      "section_code": "U13.5",
+      "title": "U13.5 Work conditions for practical experience requirements",
+      "file": "operational_manual\\U13.5.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/47538.htm",
+      "effective_date": "02/12/2013",
+      "content_hash": "241b3ca3a9693013",
+      "source_archive_file": "source_archive\\operational_manual\\U13.5.mhtml"
+    },
+    {
+      "section_code": "U2.1",
+      "title": "U2.1 Persons requiring a student visa",
+      "file": "operational_manual\\U2.1.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/34223.htm",
+      "effective_date": "02/12/2013",
+      "content_hash": "9df750be468b3aae",
+      "source_archive_file": "source_archive\\operational_manual\\U2.1.mhtml"
+    },
+    {
+      "section_code": "U3.1",
+      "title": "U3.1 Summary",
+      "file": "operational_manual\\U3.1.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/44905.htm",
+      "effective_date": "07/09/2022",
+      "content_hash": "314ac5d9e3259d89",
+      "source_archive_file": "source_archive\\operational_manual\\U3.1.mhtml"
+    },
+    {
+      "section_code": "U3.10",
+      "title": "U3.10 Tuition fees",
+      "file": "operational_manual\\U3.10.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/45656.htm",
+      "effective_date": "10/12/2022",
+      "content_hash": "922a4d43f3fdcd6c",
+      "source_archive_file": "source_archive\\operational_manual\\U3.10.mhtml"
+    },
+    {
+      "section_code": "U3.20",
+      "title": "U3.20 Sufficient funds for maintenance while in New Zealand",
+      "file": "operational_manual\\U3.20.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/43653.htm",
+      "effective_date": "26/09/2022",
+      "content_hash": "50d24319f2e013cf",
+      "source_archive_file": "source_archive\\operational_manual\\U3.20.mhtml"
+    },
+    {
+      "section_code": "U3.40",
+      "title": "U3.40 Students who wish to change their study conditions",
+      "file": "operational_manual\\U3.40.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/40311.htm",
+      "effective_date": "08/12/2025",
+      "content_hash": "987d0baf040d9613",
+      "source_archive_file": "source_archive\\operational_manual\\U3.40.mhtml"
+    },
+    {
+      "section_code": "U3.45",
+      "title": "U3.45 Insurance requirements for fee-paying foreign students",
+      "file": "operational_manual\\U3.45.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/44908.htm",
+      "effective_date": "31/07/2022",
+      "content_hash": "670c6be6f948e1b6",
+      "source_archive_file": "source_archive\\operational_manual\\U3.45.mhtml"
+    },
+    {
+      "section_code": "U3.5",
+      "title": "U3.5 Offer of a place",
+      "file": "operational_manual\\U3.5.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/44909.htm",
+      "effective_date": "21/11/2016",
+      "content_hash": "67713f13674bf386",
+      "source_archive_file": "source_archive\\operational_manual\\U3.5.mhtml"
+    },
+    {
+      "section_code": "U3.7",
+      "title": "U3.7 Confirmation of enrolment",
+      "file": "operational_manual\\U3.7.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/42767.htm",
+      "effective_date": "02/12/2013",
+      "content_hash": "e6ec54ad48beccde",
+      "source_archive_file": "source_archive\\operational_manual\\U3.7.mhtml"
+    },
+    {
+      "section_code": "U4.10",
+      "title": "U4.10 Fee-paying foreign students",
+      "file": "operational_manual\\U4.10.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/34238.htm",
+      "effective_date": "02/12/2013",
+      "content_hash": "1ababe52aec466b6",
+      "source_archive_file": "source_archive\\operational_manual\\U4.10.mhtml"
+    },
+    {
+      "section_code": "U5.1",
+      "title": "U5.1 Status of education providers and programmes",
+      "file": "operational_manual\\U5.1.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/44910.htm",
+      "effective_date": "31/07/2022",
+      "content_hash": "48185b3c55a31782",
+      "source_archive_file": "source_archive\\operational_manual\\U5.1.mhtml"
+    },
+    {
+      "section_code": "U5.20",
+      "title": "U5.20 Tertiary institutions (Universities, Polytechnics, Colleges of Education, Wananga)",
+      "file": "operational_manual\\U5.20.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/44912.htm",
+      "effective_date": "01/01/2022",
+      "content_hash": "9a69e0a9a4ac03a8",
+      "source_archive_file": "source_archive\\operational_manual\\U5.20.mhtml"
+    },
+    {
+      "section_code": "U6.1",
+      "title": "U6.1 Programmes of study lasting longer than 3 months",
+      "file": "operational_manual\\U6.1.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/42647.htm",
+      "effective_date": "02/12/2013",
+      "content_hash": "2eaf9f00d1c32410",
+      "source_archive_file": "source_archive\\operational_manual\\U6.1.mhtml"
+    },
+    {
+      "section_code": "U6.15",
+      "title": "U6.15 Graduation",
+      "file": "operational_manual\\U6.15.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/34251.htm",
+      "effective_date": "29/11/2010",
+      "content_hash": "b28380288513c694",
+      "source_archive_file": "source_archive\\operational_manual\\U6.15.mhtml"
+    },
+    {
+      "section_code": "U6.25",
+      "title": "U6.25 Further temporary visas",
+      "file": "operational_manual\\U6.25.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/41782.htm",
+      "effective_date": null,
+      "content_hash": "74c402da237e37ae",
+      "source_archive_file": "source_archive\\operational_manual\\U6.25.mhtml"
+    },
+    {
+      "section_code": "U6.30",
+      "title": "U6.30 Currency of student visas",
+      "file": "operational_manual\\U6.30.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/34254.htm",
+      "effective_date": "02/12/2013",
+      "content_hash": "2e357c388117dae2",
+      "source_archive_file": "source_archive\\operational_manual\\U6.30.mhtml"
+    },
+    {
+      "section_code": "U6.40",
+      "title": "U6.40 Conditions of student visas",
+      "file": "operational_manual\\U6.40.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/34256.htm",
+      "effective_date": "09/09/2025",
+      "content_hash": "d04dcc4dfd65c32b",
+      "source_archive_file": "source_archive\\operational_manual\\U6.40.mhtml"
+    },
+    {
+      "section_code": "U7.20",
+      "title": "U7.20 Part-time study",
+      "file": "operational_manual\\U7.20.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/34262.htm",
+      "effective_date": "09/10/2023",
+      "content_hash": "437a7d6918e63c88",
+      "source_archive_file": "source_archive\\operational_manual\\U7.20.mhtml"
+    },
+    {
+      "section_code": "U7.5",
+      "title": "U7.5 Second and subsequent programmes of study",
+      "file": "operational_manual\\U7.5.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/34259.htm",
+      "effective_date": "02/12/2013",
+      "content_hash": "f6ab33c9d8e9a3c8",
+      "source_archive_file": "source_archive\\operational_manual\\U7.5.mhtml"
+    },
+    {
+      "section_code": "U8.25",
+      "title": "U8.25 Dependent children of holders of student visas",
+      "file": "operational_manual\\U8.25.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/42649.htm",
+      "effective_date": "13/05/2019",
+      "content_hash": "54a00c1b64cbdb03",
+      "source_archive_file": "source_archive\\operational_manual\\U8.25.mhtml"
+    },
+    {
+      "section_code": "V3.10",
+      "title": "V3.10 Partners and dependent children of student or work visa holders",
+      "file": "operational_manual\\V3.10.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/46189.htm",
+      "effective_date": "09/03/2026",
+      "content_hash": "53612771c21484d5",
+      "source_archive_file": "source_archive\\operational_manual\\V3.10.mhtml"
+    },
+    {
+      "section_code": "WA2.1",
+      "title": "WA2.1 Overview",
+      "file": "operational_manual\\WA2.1.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/77100.htm",
+      "effective_date": "08/12/2025",
+      "content_hash": "d3c1a3b29f6880cd",
+      "source_archive_file": "source_archive\\operational_manual\\WA2.1.mhtml"
+    },
+    {
+      "section_code": "WA2.10",
+      "title": "WA2.10 Requirements for all employers",
+      "file": "operational_manual\\WA2.10.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/77102.htm",
+      "effective_date": "29/09/2025",
+      "content_hash": "50d4c71e15db3356",
+      "source_archive_file": "source_archive\\operational_manual\\WA2.10.mhtml"
+    },
+    {
+      "section_code": "WA2.15",
+      "title": "WA2.15 Requirements for Standard Accreditation",
+      "file": "operational_manual\\WA2.15.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/77103.htm",
+      "effective_date": "29/09/2025",
+      "content_hash": "a727cd2ce7661b06",
+      "source_archive_file": "source_archive\\operational_manual\\WA2.15.mhtml"
+    },
+    {
+      "section_code": "WA2.20",
+      "title": "WA2.20 Requirements for employers using triangular employment arrangements",
+      "file": "operational_manual\\WA2.20.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/77106.htm",
+      "effective_date": "27/01/2025",
+      "content_hash": "68410e1e17e3d17d",
+      "source_archive_file": "source_archive\\operational_manual\\WA2.20.mhtml"
+    },
+    {
+      "section_code": "WA2.25",
+      "title": "WA2.25 Requirements for franchisee employers",
+      "file": "operational_manual\\WA2.25.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/77110.htm",
+      "effective_date": "16/06/2024",
+      "content_hash": "cf89d94af73f6a34",
+      "source_archive_file": "source_archive\\operational_manual\\WA2.25.mhtml"
+    },
+    {
+      "section_code": "WA2.30",
+      "title": "WA2.30 Subsequent applications for employer accreditation",
+      "file": "operational_manual\\WA2.30.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/77111.htm",
+      "effective_date": "27/01/2025",
+      "content_hash": "9ea97b708d286425",
+      "source_archive_file": "source_archive\\operational_manual\\WA2.30.mhtml"
+    },
+    {
+      "section_code": "WA2.35",
+      "title": "WA2.35 Processing and verification requirements",
+      "file": "operational_manual\\WA2.35.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/77112.htm",
+      "effective_date": "08/12/2025",
+      "content_hash": "447e19954a0d09a3",
+      "source_archive_file": "source_archive\\operational_manual\\WA2.35.mhtml"
+    },
+    {
+      "section_code": "WA2.40",
+      "title": "WA2.40 Considering an application for employer accreditation",
+      "file": "operational_manual\\WA2.40.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/77113.htm",
+      "effective_date": "23/05/2022",
+      "content_hash": "6919e3b9ed6f0654",
+      "source_archive_file": "source_archive\\operational_manual\\WA2.40.mhtml"
+    },
+    {
+      "section_code": "WA2.45",
+      "title": "WA2.45 Currency and approval specifications of employer accreditation",
+      "file": "operational_manual\\WA2.45.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/77114.htm",
+      "effective_date": "29/09/2025",
+      "content_hash": "477360c593a01793",
+      "source_archive_file": "source_archive\\operational_manual\\WA2.45.mhtml"
+    },
+    {
+      "section_code": "WA2.5",
+      "title": "WA2.5 Applying for employer accreditation",
+      "file": "operational_manual\\WA2.5.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/77101.htm",
+      "effective_date": "23/05/2022",
+      "content_hash": "2689435fafd9beca",
+      "source_archive_file": "source_archive\\operational_manual\\WA2.5.mhtml"
+    },
+    {
+      "section_code": "WA2.50",
+      "title": "WA2.50 Verification activities after accreditation has been granted",
+      "file": "operational_manual\\WA2.50.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/77115.htm",
+      "effective_date": "23/05/2022",
+      "content_hash": "853b1d63d4e138fc",
+      "source_archive_file": "source_archive\\operational_manual\\WA2.50.mhtml"
+    },
+    {
+      "section_code": "WA2.55",
+      "title": "WA2.55 Suspending and revoking employer accreditation",
+      "file": "operational_manual\\WA2.55.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/77116.htm",
+      "effective_date": "11/04/2024",
+      "content_hash": "48d0b1dc0ff6edf7",
+      "source_archive_file": "source_archive\\operational_manual\\WA2.55.mhtml"
+    },
+    {
+      "section_code": "WA2.60",
+      "title": "WA2.60 Definitions",
+      "file": "operational_manual\\WA2.60.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/77117.htm",
+      "effective_date": "16/06/2024",
+      "content_hash": "387b8f35418314d0",
+      "source_archive_file": "source_archive\\operational_manual\\WA2.60.mhtml"
+    },
+    {
+      "section_code": "WD1",
+      "title": "WD1 Objective",
+      "file": "operational_manual\\WD1.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/71682.htm",
+      "effective_date": "26/11/2018",
+      "content_hash": "bb2a2ef77fa51f2d",
+      "source_archive_file": "source_archive\\operational_manual\\WD1.mhtml"
+    },
+    {
+      "section_code": "WD2",
+      "title": "WD2 Lodging an application under Post-Study work visa instructions",
+      "file": "operational_manual\\WD2.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/71683.htm",
+      "effective_date": "16/12/2025",
+      "content_hash": "49183653e870b364",
+      "source_archive_file": "source_archive\\operational_manual\\WD2.mhtml"
+    },
+    {
+      "section_code": "WD3.1",
+      "title": "WD3.1 Determining a Post-Study work visa",
+      "file": "operational_manual\\WD3.1.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/71685.htm",
+      "effective_date": "18/11/2024",
+      "content_hash": "3b6b4bf913349730",
+      "source_archive_file": "source_archive\\operational_manual\\WD3.1.mhtml"
+    },
+    {
+      "section_code": "WD3.5",
+      "title": "WD3.5 Currency and conditions of Post-study work visas",
+      "file": "operational_manual\\WD3.5.md",
+      "source_url": "https://www.immigration.govt.nz/opsmanual/71752.htm",
+      "effective_date": "20/04/2026",
+      "content_hash": "5e2d7f8c3f7c6b04",
+      "source_archive_file": "source_archive\\operational_manual\\WD3.5.mhtml"
     }
   ]
 }

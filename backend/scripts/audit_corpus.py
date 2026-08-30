@@ -130,7 +130,7 @@ def split_text(
 
 
 def source_content_hash(body: str) -> str:
-    """Mirror scraper/check_for_updates.py content_hash()."""
+    """Compute the canonical corpus content hash."""
     normalized = re.sub(r"\s+", " ", body).strip()
     return hashlib.sha256(normalized.encode("utf-8")).hexdigest()[:16]
 
