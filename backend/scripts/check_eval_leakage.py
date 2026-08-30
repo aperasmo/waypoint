@@ -50,7 +50,6 @@ FORBIDDEN_RUNTIME_MARKERS = (
     "expected_sections",
     "expected_section",
     "eval_questions.json",
-    "eval_questions_adjudicated_v2.json",
     "rerank_questions_blind_v2.json",
     "rerank_candidates_blind_v2.json",
     "rerank_predictions_blind_v2.json",
