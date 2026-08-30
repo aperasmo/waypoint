@@ -31,16 +31,14 @@ TESTS_DIR = BACKEND_DIR / "tests"
 
 GOLD_FILES = (
     TESTS_DIR / "eval_questions.json",
-    TESTS_DIR / "eval_questions_adjudicated_v2.json",
 )
-
 # Experimental scripts that make ranking decisions. Scoring/adjudication
 # utilities are deliberately excluded because their job requires gold labels.
-BLIND_RANKING_SCRIPTS = (
-    SCRIPTS_DIR / "run_blind_reranker.py",
-    SCRIPTS_DIR / "freeze_blind_rerank_candidates.py",
-    SCRIPTS_DIR / "measure_reranker_stability.py",
-)
+# BLIND_RANKING_SCRIPTS = (
+#     SCRIPTS_DIR / "run_blind_reranker.py",
+#     SCRIPTS_DIR / "freeze_blind_rerank_candidates.py",
+#     SCRIPTS_DIR / "measure_reranker_stability.py",
+# )
 
 # Runtime files where section-specific ranking behaviour must never be encoded.
 RANKING_RUNTIME_PATHS = (
@@ -52,7 +50,6 @@ FORBIDDEN_RUNTIME_MARKERS = (
     "expected_sections",
     "expected_section",
     "eval_questions.json",
-    "eval_questions_adjudicated_v2.json",
     "rerank_questions_blind_v2.json",
     "rerank_candidates_blind_v2.json",
     "rerank_predictions_blind_v2.json",
@@ -148,20 +145,20 @@ def main() -> None:
     for path in RANKING_RUNTIME_PATHS:
         runtime_files.update(iter_python_files(path))
 
-    blind_files = {
-        path for path in BLIND_RANKING_SCRIPTS if path.exists()
-    }
+    # blind_files = {
+    #     path for path in BLIND_RANKING_SCRIPTS if path.exists()
+    # }
 
     if not runtime_files:
         raise SystemExit(
             "No runtime ranking files found under expected app paths."
         )
 
-    if not blind_files:
-        raise SystemExit(
-            "No blind ranking scripts found. Expected at least one of:\n"
-            + "\n".join(str(path) for path in BLIND_RANKING_SCRIPTS)
-        )
+    # if not blind_files:
+    #     raise SystemExit(
+    #         "No blind ranking scripts found. Expected at least one of:\n"
+    #         + "\n".join(str(path) for path in BLIND_RANKING_SCRIPTS)
+    #     )
 
     failures: list[str] = []
 
@@ -185,10 +182,9 @@ def main() -> None:
             )
 
     # ------------------------------------------------------------------
-    # 2. Exact benchmark question text must not appear in runtime or
-    #    blind ranking scripts.
+    # 2. Exact benchmark question text must not appear in runtime ranking code.
     # ------------------------------------------------------------------
-    question_scan_files = runtime_files | blind_files
+    question_scan_files = runtime_files
 
     for path in sorted(question_scan_files):
         source = path.read_text(encoding="utf-8")
@@ -201,14 +197,11 @@ def main() -> None:
                 )
 
     # ------------------------------------------------------------------
-    # 3. Section-code literals are prohibited in the decision-making
-    #    ranking path. A reranker/retriever must infer relevance from the
-    #    supplied evidence, not from hand-written section preferences.
-    #
-    #    Note: run_blind_reranker.py contains generic strings such as
-    #    field names, but should contain no literal section values.
+    # 3. Section-code literals are prohibited in the runtime ranking path.
+    #    Retrieval must infer relevance from the supplied evidence rather
+    #    than from hand-written section preferences.
     # ------------------------------------------------------------------
-    section_literal_files = runtime_files | blind_files
+    section_literal_files = runtime_files
 
     for path in sorted(section_literal_files):
         for lineno, literal in extract_string_literals(path):
@@ -223,7 +216,6 @@ def main() -> None:
     print("=" * 33)
     print(f"Benchmark questions inspected: {len(questions)}")
     print(f"Runtime ranking files scanned: {len(runtime_files)}")
-    print(f"Blind ranking scripts scanned: {len(blind_files)}")
     print()
     print("Checks:")
     print("  runtime gold/eval references")

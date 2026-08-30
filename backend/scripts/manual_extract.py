@@ -455,7 +455,7 @@ def _remove_navigation_chrome(target: Tag) -> tuple[int, int]:
 
 
 def content_hash(text: str) -> str:
-    """Return the same stable policy-body hash used by check_for_updates.py."""
+    """Return a stable hash of the extracted policy body for change detection."""
     normalized = re.sub(r"\s+", " ", text).strip()
     return hashlib.sha256(normalized.encode("utf-8")).hexdigest()[:16]
 

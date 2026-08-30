@@ -30,3 +30,8 @@ data/source_archive/
 data/staging/
 data/staging_pre_fidelity_fix_*/
 data/manifest_pre_mhtml_*.json
+############################
+# -- AI GIT ASSISTANT --
+############################
+WAYPOINT_DEPLOYMENT_RUNBOOK.md
+WAYPOINT_DEPLOYMENT.md

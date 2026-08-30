@@ -27,7 +27,7 @@ class Settings(BaseSettings):
     # Required. No default, so a missing value fails at startup, not mid-request.
     database_url: str
 
-        # Corpus lives outside backend/ because the scraper and the API both read it.
+        # Corpus lives outside backend/ so ingestion, auditing, and the API share one source.
     corpus_dir: Path = REPO_ROOT / "data"
     manifest_filename: str = "manifest.json"
     acronyms_filename: str = "acronyms.json"
