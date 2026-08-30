@@ -349,7 +349,7 @@ The current audited corpus contains:
 
 ```mermaid
 flowchart LR
-    INZ[Public INZ Operational Manual] --> COLLECT[Collector / scraper]
+    INZ[Public INZ Operational Manual] --> COLLECT[Manual MHTML capture]
     COLLECT --> MAN[manifest.json]
     COLLECT --> MD[Section markdown files]
     MAN --> AUDIT[Corpus audit]
