@@ -31,9 +31,7 @@ TESTS_DIR = BACKEND_DIR / "tests"
 
 GOLD_FILES = (
     TESTS_DIR / "eval_questions.json",
-    TESTS_DIR / "eval_questions_adjudicated_v2.json",
 )
-
 # Experimental scripts that make ranking decisions. Scoring/adjudication
 # utilities are deliberately excluded because their job requires gold labels.
 # BLIND_RANKING_SCRIPTS = (
