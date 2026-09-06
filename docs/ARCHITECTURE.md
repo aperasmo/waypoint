@@ -22,9 +22,9 @@ The frontend is built with React and Vite.
 
 It provides three main user experiences:
 
-- **Ask** — ask a question and receive an evidence-grounded response.
-- **Browse** — browse indexed Operational Manual sections directly.
-- **Feedback** — report an answer or source that appears incorrect or incomplete.
+- **Ask** - ask a question and receive an evidence-grounded response.
+- **Browse** - browse indexed Operational Manual sections directly.
+- **Feedback** - report an answer or source that appears incorrect or incomplete.
 
 The frontend does not contain immigration rules or secret API keys.
 
@@ -109,9 +109,9 @@ Waypoint therefore keeps policy evidence separate from personal decision-making.
 
 It distinguishes between:
 
-- **general information** — the published rule can be explained directly;
-- **case-specific application** — additional personal facts materially affect the result; and
-- **discretionary judgement** — the outcome depends on judgement by an authorised decision-maker.
+- **general information** - the published rule can be explained directly;
+- **case-specific application** - additional personal facts materially affect the result; and
+- **discretionary judgement** - the outcome depends on judgement by an authorised decision-maker.
 
 Waypoint explains the published rule but does not make the final immigration decision for the user.
 

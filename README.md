@@ -195,6 +195,19 @@ The corpus may not always contain every Operational Manual section or the latest
 
 Waypoint provides **general information only**. It does not provide immigration advice and should not be used as a substitute for Immigration New Zealand, a licensed immigration adviser, or another appropriate professional authority.
 
+## INZ Website Terms of Use
+
+Waypoint's source-acquisition workflow is designed to respect Immigration New Zealand's website terms of use.
+
+Under the **“Your obligation to act in good faith”** section, Immigration New Zealand states that users must not use scraping, harvesting, data-mining robots, spiders, automation, or similar data-gathering methods on its websites or systems. It also states that the website must be accessed through standard web browsers unless Immigration New Zealand agrees otherwise.
+
+For that reason, Waypoint does **not** automatically crawl or scrape the Immigration New Zealand website. Operational Manual pages used by the project are accessed through a standard web browser, manually saved as MHTML, and then processed locally through the validation and ingestion pipeline.
+
+Official terms:
+https://www.immigration.govt.nz/about-us/about-this-site/using-our-website-and-online-tools/terms-of-use-of-our-online-systems/
+
+The terms may change over time, so contributors should review the current Immigration New Zealand terms before changing the source-acquisition process.
+
 ## Feedback
 
 Users can report answers that appear unsupported, incomplete, outside the current coverage, or linked to irrelevant sources.

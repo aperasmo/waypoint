@@ -13,7 +13,11 @@ import json
 from typing import Literal
 
 from fastapi import APIRouter, Depends, HTTPException
-from openai import AsyncOpenAI
+from app.llm.base import (
+    LLMMessage,
+    LLMRequest,
+)
+from app.llm.factory import get_llm_provider
 from pydantic import BaseModel, Field, ValidationError
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -435,6 +439,21 @@ def _clean_missing_information(
 
     return cleaned
 
+def _strip_json_code_fence(value: str) -> str:
+    """Remove an optional Markdown JSON code fence from model output."""
+
+    text = value.strip()
+
+    if text.startswith("```json"):
+        text = text[len("```json"):].strip()
+    elif text.startswith("```"):
+        text = text[len("```"):].strip()
+
+    if text.endswith("```"):
+        text = text[:-3].strip()
+
+    return text
+
 
 @router.post("", response_model=AskResponse)
 async def ask(
@@ -464,26 +483,39 @@ async def ask(
 
     expansion = expand_acronyms(request.question)
 
-    client = AsyncOpenAI(api_key=settings.openai_api_key)
-    completion = await client.chat.completions.create(
-        model=settings.answer_model,
-        max_completion_tokens=settings.answer_max_tokens,
-        reasoning_effort=settings.answer_reasoning_effort,
-        response_format={"type": "json_object"},
-        temperature=0,
-        messages=[
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {
-                "role": "user",
-                "content": (
-                    f"Question: {request.question}\n\n"
-                    f"Manual sections:\n\n{_format_context(results)}"
-                ),
-            },
-        ],
+    # The API route uses Waypoint's provider-neutral LLM interface.
+    # Provider-specific SDK calls and response formats stay inside app/llm/.
+    provider = get_llm_provider(settings)
+
+    llm_response = await provider.generate(
+        LLMRequest(
+            system_prompt=SYSTEM_PROMPT,
+            messages=[
+                LLMMessage(
+                    role="user",
+                    content=(
+                        f"Question: {request.question}\n\n"
+                        f"Manual sections:\n\n"
+                        f"{_format_context(results)}"
+                    ),
+                )
+            ],
+            max_tokens=settings.llm_max_tokens,
+            temperature=0.0,
+            json_mode=True,
+        )
     )
 
-    raw = completion.choices[0].message.content or "{}"
+    # All providers return the same Waypoint response contract.
+    # The existing Pydantic validation below remains the final structure guard.
+    raw = _strip_json_code_fence(
+        llm_response.text or "{}"
+    )
+    # Log the raw provider response in development so malformed structured
+    # output can be diagnosed before changing provider behaviour.
+    # if settings.environment == "development":
+    #     print(f"[DEBUG] Raw LLM response: {raw!r}")    
+
     try:
         parsed = json.loads(raw)
         model_answer = ModelAnswer.model_validate(parsed)

@@ -27,19 +27,28 @@ class Settings(BaseSettings):
     # Required. No default, so a missing value fails at startup, not mid-request.
     database_url: str
 
-        # Corpus lives outside backend/ so ingestion, auditing, and the API share one source.
+    # Corpus lives outside backend/ so ingestion, auditing, and the API share one source.
     corpus_dir: Path = REPO_ROOT / "data"
     manifest_filename: str = "manifest.json"
     acronyms_filename: str = "acronyms.json"
     categories_filename: str = "categories.json"
 
     # Model configuration used when generating answers from retrieved evidence.
-    answer_model: str = "gpt-5.4-mini"
-    answer_max_tokens: int = 800
+    llm_provider: str = "openai"  
+    llm_model: str = "gpt-5.4-mini"
+    llm_max_tokens: int = 800
+    
 
-    # "none" keeps the answer stage focused on the retrieved policy evidence.
-    # This can be re-evaluated later against the retrieval/answer evaluation set.
-    answer_reasoning_effort: str = "none"
+    # Provider-specific OpenAI option. Other providers ignore this.
+    openai_reasoning_effort: str = "none"
+
+    # Bedrock uses the AWS credential chain rather than API keys in application config.    
+    bedrock_region: str = "ap-southeast-2"
+
+    # Nova 2 Lite pricing per 1M tokens.
+    # Keep pricing configurable because AWS model rates can change over time.
+    bedrock_input_cost_per_million: float = 0.30
+    bedrock_output_cost_per_million: float = 2.50
 
     @property
     def manifest_path(self) -> Path:
