@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
+import { useQuery } from "@tanstack/react-query"
 import {
   CircleAlert,
   ExternalLink,
@@ -82,71 +83,58 @@ function BrowseSectionDetail({
   sectionCode,
   onInvalidSection,
 }) {
-  const [section, setSection] = useState(null)
-  const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState(null)
+  // The useQuery hook from React Query is used to fetch the section data from the backend.
+  const {
+    data: section,
+    isPending: isLoading,
+    error: sectionError,
+  } = useQuery({
+    queryKey: [
+      "browse",
+      "section",
+      sectionCode,
+    ],
+    // The backend reconstructs the section from its stored chunks before sending
+    queryFn: ({ signal }) =>
+      getBrowseSection(sectionCode, signal),
+    // The section content is not expected to change often, so a 5-minute cache is reasonable.
+    staleTime: 5 * 60 * 1000,
 
-  useEffect(() => {
-    const controller = new AbortController()
-
-    /**
-     * Reload the section whenever the section code in the URL changes.
-     *
-     * Cancelling the previous request prevents stale section data from being
-     * rendered if the user navigates quickly between sections.
-     */
-    async function loadSection() {
-      setIsLoading(true)
-      setError(null)
-      setSection(null)
-
-      try {
-        const data = await getBrowseSection(
-          sectionCode,
-          controller.signal,
-        )
-
-        setSection(data)
-    } catch (requestError) {
-        if (requestError.name === "AbortError") {
-            return
-        }
-
-        /*
-        * A 404 means the section code in the URL does not exist.
-        *
-        * This is navigation validation rather than an application failure, so
-        * return the user to the valid branch level instead of showing an error.
-        */
-        if (
-            requestError instanceof ApiError &&
-            requestError.status === 404
-        ) {
-            onInvalidSection()
-            return
-        }
-
-        console.error(
-            `Waypoint /browse/sections/${sectionCode} request failed:`,
-            requestError,
-        )
-
-        setError(
-            "Waypoint could not load this Operational Manual section. Please try again.",
-        )
-    } finally {
-        if (!controller.signal.aborted) {
-          setIsLoading(false)
-        }
+    // An invalid section will never succeed on retry.
+    // Other GET failures get one inexpensive retry.
+    retry: (failureCount, error) => {
+      if (
+        error instanceof ApiError &&
+        error.status === 404
+      ) {
+        return false
       }
-    }
 
-    loadSection()
-
-    return () => {
-      controller.abort()
+      return failureCount < 1
+    },
+  })  
+  // The onInvalidSection callback is called when the backend returns a 404 for
+  // the requested section. This is a signal to the parent page that the user
+  // has navigated to a non-existent section, so it can redirect them to a
+  // valid location.
+  useEffect(() => {
+    if (
+      sectionError instanceof ApiError &&
+      sectionError.status === 404
+    ) {
+      onInvalidSection()
     }
-  }, [sectionCode])
+  }, [sectionError, onInvalidSection])
+  // The error message is only shown for non-404 errors, because a 404 is handled 
+  // by the parent page redirecting the user to a valid section.
+  const error =
+    sectionError &&
+    !(
+      sectionError instanceof ApiError &&
+      sectionError.status === 404
+    )
+      ? "Waypoint could not load this Operational Manual section. Please try again."
+      : null
 
   if (isLoading) {
     return (

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useQuery } from "@tanstack/react-query"
 import { ChevronRight, CircleAlert, FileText } from "lucide-react"
 
 import { getBrowseSections } from "@/api/browse"
@@ -27,58 +27,35 @@ function BrowseSectionList({
   selectedSection,
   onSectionSelect,
 }) {
-  const [sections, setSections] = useState([])
-  const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState(null)
 
-  useEffect(() => {
-    const controller = new AbortController()
+  const {
+    data: sections = [],
+    isPending: isLoading,
+    error: sectionsError,
+  } = useQuery({
+    queryKey: [
+      "browse",
+      "sections",
+      groupId,
+      branch.label,
+    ],
 
-    /**
-     * Reload the section list whenever the selected group or branch changes.
-     *
-     * The previous request is cancelled if the user navigates away before
-     * it finishes.
-     */
-    async function loadSections() {
-      setIsLoading(true)
-      setError(null)
-      setSections([])
+    queryFn: ({ signal }) =>
+      getBrowseSections({
+        group: groupId,
+        branch: branch.label,
+        signal,
+      }),
 
-      try {
-        const data = await getBrowseSections({
-          group: groupId,
-          branch: branch.label,
-          signal: controller.signal,
-        })
+    staleTime: 5 * 60 * 1000,
 
-        setSections(data)
-      } catch (requestError) {
-        if (requestError.name === "AbortError") {
-          return
-        }
+    // This is a safe GET request, so one automatic retry is reasonable.
+    retry: 1,
+  })
 
-        console.error(
-          "Waypoint /browse/sections request failed:",
-          requestError,
-        )
-
-        setError(
-          "Waypoint could not load the sections for this area. Please try again.",
-        )
-      } finally {
-        if (!controller.signal.aborted) {
-          setIsLoading(false)
-        }
-      }
-    }
-
-    loadSections()
-
-    return () => {
-      controller.abort()
-    }
-  }, [groupId, branch.label])
+  const error = sectionsError
+    ? "Waypoint could not load the sections for this area. Please try again."
+    : null  
 
   return (
     <section aria-labelledby="browse-sections-heading">

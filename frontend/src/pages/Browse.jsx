@@ -1,4 +1,6 @@
-import { useEffect, useState } from "react"
+
+import { useEffect } from "react"
+import { useQuery } from "@tanstack/react-query"
 import { BookOpen, ChevronRight, CircleAlert } from "lucide-react"
 import { useSearchParams } from "react-router-dom"
 
@@ -31,13 +33,26 @@ import { Skeleton } from "@/components/ui/skeleton"
 function Browse() {
   const [searchParams, setSearchParams] = useSearchParams()
 
+  const {
+      data: categories = [],
+      isPending: isLoading,
+      error: categoriesError,
+    } = useQuery({
+      queryKey: ["browse", "categories"],
+
+      queryFn: ({ signal }) =>
+        getBrowseCategories(signal),
+
+      staleTime: 5 * 60 * 1000,
+    })
+
   // Browse categories come from /browse/categories so taxonomy labels,
   // descriptions, branches, and section counts remain backend-controlled.
-  const [categories, setCategories] = useState([])
+  // const [categories, setCategories] = useState([])
 
   // Request state for the initial category load.
-  const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState(null)
+  // const [isLoading, setIsLoading] = useState(true)
+  // const [error, setError] = useState(null)
 
   /*
    * Browse navigation is stored in the URL rather than local React state.
@@ -73,50 +88,54 @@ function Browse() {
    * AbortController prevents an unfinished request from updating React state
    * if the user navigates away before the request completes.
    */
-  useEffect(() => {
-    const controller = new AbortController()
+  // useEffect(() => {
+  //   const controller = new AbortController()
 
-    async function loadCategories() {
-      setIsLoading(true)
-      setError(null)
+  //   async function loadCategories() {
+  //     setIsLoading(true)
+  //     setError(null)
 
-      try {
-        const data = await getBrowseCategories(controller.signal)
+  //     try {
+  //       const data = await getBrowseCategories(controller.signal)
 
-        setCategories(data)
-      } catch (requestError) {
-        /*
-         * An aborted request is expected during component cleanup and should
-         * not be shown to the user as an application failure.
-         */
-        if (requestError.name === "AbortError") {
-          return
-        }
+  //       setCategories(data)
+  //     } catch (requestError) {
+  //       /*
+  //        * An aborted request is expected during component cleanup and should
+  //        * not be shown to the user as an application failure.
+  //        */
+  //       if (requestError.name === "AbortError") {
+  //         return
+  //       }
 
-        console.error(
-          "Waypoint /browse/categories request failed:",
-          requestError,
-        )
+  //       console.error(
+  //         "Waypoint /browse/categories request failed:",
+  //         requestError,
+  //       )
 
-        setError(
-          "Waypoint could not load the Operational Manual topics. Please try again.",
-        )
-      } finally {
-        /*
-         * Do not update loading state after this request has been cancelled.
-         */
-        if (!controller.signal.aborted) {
-          setIsLoading(false)
-        }
-      }
-    }
+  //       setError(
+  //         "Waypoint could not load the Operational Manual topics. Please try again.",
+  //       )
+  //     } finally {
+  //       /*
+  //        * Do not update loading state after this request has been cancelled.
+  //        */
+  //       if (!controller.signal.aborted) {
+  //         setIsLoading(false)
+  //       }
+  //     }
+  //   }
 
-    loadCategories()
+  //   loadCategories()
 
-    return () => {
-      controller.abort()
-    }
-  }, [])
+  //   return () => {
+  //     controller.abort()
+  //   }
+  // }, [])
+
+  const error = categoriesError
+    ? "Waypoint could not load the Operational Manual topics. Please try again."
+    : null
 
   /**
    * Keep the Browse URL consistent with the real backend taxonomy.
