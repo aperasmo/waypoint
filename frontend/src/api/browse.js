@@ -1,5 +1,8 @@
-import { fetchJson } from "@/api/client"
+import { fetchJsonFrom } from "@/api/client"
 
+const BROWSE_API_BASE_URL =
+  import.meta.env.VITE_BROWSE_API_BASE_URL ||
+  "http://localhost:8200"
 /**
  * Loads the human-facing browse taxonomy with live database section counts.
  *
@@ -7,7 +10,7 @@ import { fetchJson } from "@/api/client"
  * @returns {Promise<Array>} Browse groups and their branches.
  */
 export async function getBrowseCategories(signal) {
-  return fetchJson("/browse/categories", {
+  return fetchJsonFrom(BROWSE_API_BASE_URL, "/browse/categories", {
     signal,
   })
 }
@@ -41,7 +44,7 @@ export async function getBrowseSections({
     ? `/browse/sections?${query}`
     : "/browse/sections"
 
-  return fetchJson(path, {
+  return fetchJsonFrom(BROWSE_API_BASE_URL, path, {
     signal,
   })
 }
@@ -59,7 +62,9 @@ export async function getBrowseSections({
 export async function getBrowseSection(sectionCode, signal) {
   const encodedSectionCode = encodeURIComponent(sectionCode)
 
-  return fetchJson(`/browse/sections/${encodedSectionCode}`, {
-    signal,
-  })
+  return fetchJsonFrom(
+    BROWSE_API_BASE_URL,
+    `/browse/sections/${encodedSectionCode}`,
+    { signal },
+  )
 }
