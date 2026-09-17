@@ -34,8 +34,24 @@ services:
     depends_on:
       db:
         condition: service_healthy
-    ports:
-      - "8100:8100"
+    expose:
+      - "8100"
+    networks:
+      - public
+      - private
+
+  browse-api:
+    build:
+      context: .
+      dockerfile: spikes/hono-api/Dockerfile
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
+    depends_on:
+      db:
+        condition: service_healthy
+    expose:
+      - "8200"
     networks:
       - public
       - private
@@ -45,17 +61,16 @@ services:
       context: .
       dockerfile: frontend/Dockerfile
       args:
-        VITE_API_BASE_URL: ${BACKEND_ORIGIN}
+        VITE_API_BASE_URL: /api
+        VITE_BROWSE_API_BASE_URL: /api
     restart: unless-stopped
-    environment:
-      API_ORIGIN: ${BACKEND_ORIGIN}
     depends_on:
       - backend
+      - browse-api
     ports:
       - "8080:8080"
     networks:
       - public
-
 volumes:
   waypoint_pgdata:
     name: waypoint_prod_pgdata

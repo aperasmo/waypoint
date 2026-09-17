@@ -28,19 +28,16 @@ export class ApiError extends Error {
 }
 
 /**
- * Fetch JSON from the Waypoint API with consistent HTTP error handling.
+ * Fetch JSON from a specific API origin with consistent HTTP error handling.
  *
- * fetch() rejects automatically for network failures, but HTTP responses
- * such as 404 and 500 still resolve. We therefore check response.ok and
- * convert unsuccessful HTTP responses into ApiError instances.
- *
+ * @param {string} baseUrl - API origin, such as http://localhost:8200.
  * @param {string} path - API path beginning with "/".
  * @param {RequestInit} [options] - Standard fetch configuration.
  * @returns {Promise<unknown>} Parsed JSON response.
  * @throws {ApiError} When the server returns a non-success HTTP status.
  */
-export async function fetchJson(path, options = {}) {
-  const response = await fetch(`${API_BASE_URL}${path}`, options)
+export async function fetchJsonFrom(baseUrl, path, options = {}) {
+  const response = await fetch(`${baseUrl}${path}`, options)
 
   if (!response.ok) {
     throw new ApiError(
@@ -52,4 +49,11 @@ export async function fetchJson(path, options = {}) {
   }
 
   return response.json()
+}
+
+/**
+ * Fetch JSON from the primary Waypoint API.
+ */
+export async function fetchJson(path, options = {}) {
+  return fetchJsonFrom(API_BASE_URL, path, options)
 }
