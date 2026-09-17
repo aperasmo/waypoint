@@ -1,0 +1,44 @@
+# syntax=docker/dockerfile:1
+
+FROM node:24-alpine AS builder
+
+WORKDIR /app/spikes/hono-api
+
+COPY spikes/hono-api/package.json spikes/hono-api/package-lock.json ./
+RUN npm ci
+
+COPY spikes/hono-api/tsconfig.json ./
+COPY spikes/hono-api/src ./src
+
+RUN npm run build
+
+
+FROM node:24-alpine AS runtime
+
+RUN apk upgrade --no-cache
+
+WORKDIR /app/spikes/hono-api
+
+ENV NODE_ENV=production
+
+COPY --from=public.ecr.aws/awsguru/aws-lambda-adapter:1.0.1 \
+    /lambda-adapter /opt/extensions/lambda-adapter
+
+ENV PORT=8080
+ENV AWS_LWA_PORT=8080
+ENV AWS_LWA_READINESS_CHECK_PATH=/health
+ENV AWS_LWA_READINESS_CHECK_HEALTHY_STATUS=200-399
+ENV AWS_LWA_ASYNC_INIT=true
+ENV AWS_LWA_REMOVE_BASE_PATH=/prod
+
+COPY spikes/hono-api/package.json spikes/hono-api/package-lock.json ./
+RUN npm ci --omit=dev
+
+COPY --from=builder /app/spikes/hono-api/dist ./dist
+COPY data/categories.json /app/data/categories.json
+
+EXPOSE 8080
+
+USER node
+
+CMD ["node", "dist/index.js"]

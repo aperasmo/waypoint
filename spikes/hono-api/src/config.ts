@@ -18,4 +18,5 @@ if (!databaseUrl) {
 
 export const config = {
   databaseUrl,
+  corsOrigin: process.env.CORS_ORIGIN ?? 'http://localhost:5174',
 }
