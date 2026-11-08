@@ -12,7 +12,7 @@ server {
     add_header X-Frame-Options "DENY" always;
     add_header Referrer-Policy "strict-origin-when-cross-origin" always;
     add_header Permissions-Policy "camera=(), microphone=(), geolocation=()" always;
-    add_header Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'" always;
+    add_header Content-Security-Policy "default-src 'self'; script-src 'self' https://l2bvqnx6-4173.auc1.devtunnels.ms; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://l2bvqnx6-8010.auc1.devtunnels.ms; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'" always;
 
     # Browse is handled by the Hono service.
     location /api/browse/ {
